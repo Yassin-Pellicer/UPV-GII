@@ -1,0 +1,68 @@
+  0 INCTOP              ,            ,  i:   0    
+  1 GOTOS               ,            ,  e:  30    
+  2 PUSHFP              ,            ,            
+  3 FPTOP               ,            ,            
+  4 INCTOP              ,            ,  i:  12    
+  5 EASIG     p: (1, -3),            ,  p: (1,  1)
+  6 EASIG     i:   1    ,            ,  p: (1,  2)
+  7 EASIG     i:   1    ,            ,  p: (1,  3)
+  8 EMENEQ    p: (1,  1),  p: (1,  2),  e:  10    
+  9 EASIG     i:   0    ,            ,  p: (1,  3)
+ 10 EIGUAL    p: (1,  3),  i:   0    ,  e:  14    
+ 11 EASIG     i:   1    ,            ,  p: (1,  4)
+ 12 EASIG     p: (1,  4),            ,  p: (1,  0)
+ 13 GOTOS               ,            ,  e:  25    
+ 14 EASIG     p: (1, -3),            ,  p: (1,  5)
+ 15 INCTOP              ,            ,  i:   1    
+ 16 EASIG     p: (1, -3),            ,  p: (1,  6)
+ 17 EASIG     i:   1    ,            ,  p: (1,  7)
+ 18 EDIF      p: (1,  6),  p: (1,  7),  p: (1,  8)
+ 19 EPUSH               ,            ,  p: (1,  8)
+ 20 CALL                ,            ,  e:   2    
+ 21 DECTOP              ,            ,  i:   1    
+ 22 EPOP                ,            ,  p: (1,  9)
+ 23 EMULT     p: (1,  5),  p: (1,  9),  p: (1, 10)
+ 24 EASIG     p: (1, 10),            ,  p: (1,  0)
+ 25 EASIG     p: (1,  0),            ,  p: (1, 11)
+ 26 EASIG     p: (1, 11),            ,  p: (1, -4)
+ 27 TOPFP               ,            ,            
+ 28 FPPOP               ,            ,            
+ 29 RET                 ,            ,            
+ 30 PUSHFP              ,            ,            
+ 31 FPTOP               ,            ,            
+ 32 INCTOP              ,            ,  i:  13    
+ 33 EASIG     e:   1    ,            ,  p: (1,  1)
+ 34 EASIG     p: (1,  1),            ,  p: (1,  2)
+ 35 EIGUAL    p: (1,  2),  i:   1    ,  e:  38    
+ 36 GOTOS               ,            ,  e:  63    
+ 37 GOTOS               ,            ,  e:  34    
+ 38 EREAD               ,            ,  p: (1,  0)
+ 39 EASIG     p: (1,  0),            ,  p: (1,  3)
+ 40 EASIG     i:   0    ,            ,  p: (1,  4)
+ 41 EASIG     i:   1    ,            ,  p: (1,  5)
+ 42 EMAY      p: (1,  3),  p: (1,  4),  e:  44    
+ 43 EASIG     i:   0    ,            ,  p: (1,  5)
+ 44 EIGUAL    p: (1,  5),  i:   0    ,  e:  62    
+ 45 EASIG     p: (1,  0),            ,  p: (1,  6)
+ 46 EASIG     i:  13    ,            ,  p: (1,  7)
+ 47 EASIG     i:   1    ,            ,  p: (1,  8)
+ 48 EMEN      p: (1,  6),  p: (1,  7),  e:  50    
+ 49 EASIG     i:   0    ,            ,  p: (1,  8)
+ 50 EIGUAL    p: (1,  8),  i:   0    ,  e:  61    
+ 51 INCTOP              ,            ,  i:   1    
+ 52 EASIG     p: (1,  0),            ,  p: (1,  9)
+ 53 EPUSH               ,            ,  p: (1,  9)
+ 54 CALL                ,            ,  e:   2    
+ 55 DECTOP              ,            ,  i:   1    
+ 56 EPOP                ,            ,  p: (1, 10)
+ 57 EWRITE              ,            ,  p: (1, 10)
+ 58 EASIG     i:   0    ,            ,  p: (1, 11)
+ 59 EASIG     p: (1, 11),            ,  p: (1,  1)
+ 60 GOTOS               ,            ,  e:  61    
+ 61 GOTOS               ,            ,  e:  62    
+ 62 GOTOS               ,            ,  e:  37    
+ 63 EASIG     i:   0    ,            ,  p: (1, 12)
+ 64 EASIG     p: (1, 12),            ,  p: (1, -3)
+ 65 TOPFP               ,            ,            
+ 66 FPPOP               ,            ,            
+ 67 FIN                 ,            ,            

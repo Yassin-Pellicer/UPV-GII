@@ -1,1 +1,0 @@
-jupyter nbconvert --to html --embed-images RYP.ipynb 
