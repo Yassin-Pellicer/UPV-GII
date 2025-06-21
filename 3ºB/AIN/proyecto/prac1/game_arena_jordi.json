@@ -1,0 +1,39 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "manager_jcanfer1",
+    "manager_password": "secret",
+    "service": "service_jcanfer1",
+    "service_password": "secret",
+    "axis": [
+        {
+            "rank": "BDISoldier",
+            "name": "luchador_yjpellam",
+            "password": "secret",
+            "amount": 10,
+            "asl": "luchador.asl"
+        },
+        {
+            "rank": "BDISoldier",
+            "name": "BICHARRACO_yjpellam",
+            "password": "secret",
+            "amount": 1,
+            "asl": "o.asl"
+        }
+    ],
+    "allied": [
+        {
+            "rank": "invencibleM.BDIMInvencible",
+            "name": "medic_yjpellam",
+            "password": "secret",
+            "amount": 1,
+            "asl": "medic_arena.asl"
+        },
+        {
+            "rank": "invencibleF.BDIFInvencible",
+            "name": "fieldop_yjpellam",
+            "password": "secret",
+            "amount": 1,
+            "asl": "fieldop_arena.asl"
+        }
+    ]
+}

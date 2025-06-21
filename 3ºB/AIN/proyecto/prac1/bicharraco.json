@@ -1,0 +1,15 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "manager",
+    "manager_password": "secret",
+    "service":"service",
+    "service_password":"secret",
+    "axis":[
+        {
+            "rank":"BDISoldier",
+            "name":"BICHARRACO",
+            "password":"secret",
+            "asl":"o.asl"
+        }
+    ]
+}
