@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="611.0" style="-fx-background-color: #d6ffe3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.FXMLDocumentController">
+   <center>
+      <GridPane prefHeight="386.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="102.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="149.0" minHeight="110.0" prefHeight="128.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.0" minHeight="35.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="45.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="227.0" minHeight="80.0" prefHeight="99.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="219.0" minHeight="0.0" prefHeight="47.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="UsernameField" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="227.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="60.0" right="40.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text fx:id="errorUsername" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="220.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="50.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Text>
+            <PasswordField fx:id="PasswordField" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="60.0" right="40.0" />
+               </GridPane.margin>
+            </PasswordField>
+            <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="219.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="50.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="LoginButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnClickedLogin" prefHeight="25.0" prefWidth="193.0" text="Log In!" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="60.0" left="60.0" right="40.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account yet? Sign up!" textAlignment="CENTER" wrappingWidth="109.88671875" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="80.0" right="140.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="SignupButton" mnemonicParsing="false" onAction="#OnClickedSignup" prefHeight="25.0" prefWidth="83.0" text="Sign up!" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="80.0" right="40.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="@../img/ball.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <Button fx:id="buttonAvailability" graphicTextGap="2.0" mnemonicParsing="false" onAction="#onButtonAvailability" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #00e985;" text="Courts today" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="80.0" left="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <VBox alignment="CENTER" prefHeight="386.0" prefWidth="194.0" style="-fx-background-color: #00c370;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="386.0" prefWidth="190.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenis World!" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="142.13671875" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="120.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ImageView fitHeight="112.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../img/rackets.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="100.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

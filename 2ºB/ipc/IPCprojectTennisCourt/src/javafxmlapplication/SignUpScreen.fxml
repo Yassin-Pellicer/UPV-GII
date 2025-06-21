@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="407.0" style="-fx-background-color: #d6ffe3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.SignUpScreenController">
+   <center>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="612.0" prefWidth="414.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="202.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="205.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="682.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="523.0" minHeight="-Infinity" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="-Infinity" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="144.0" minHeight="-Infinity" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="151.0" minHeight="-Infinity" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="142.0" minHeight="-Infinity" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.0" minHeight="-Infinity" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="-Infinity" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="117.0" minHeight="-Infinity" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="211.0" minHeight="-Infinity" prefHeight="150.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameField" promptText="i. e, Richard" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Family Name:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="familyNameField" promptText="i. e, Richardson" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="phoneField" promptText="i. e, 612345678" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <Text fx:id="errorPhone" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="164.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Must be unique)" textAlignment="CENTER" wrappingWidth="78.587890625" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="userField" promptText="i. e, Golden_Hat" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <Text fx:id="errorUsername" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="162.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Must be at least 6 characters)" textAlignment="CENTER" wrappingWidth="137.587890625" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="passwordField" promptText="i. e, banana" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cardField" promptText="i. e, 9999444433332222" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card Number:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(16 digits, all numbers, no spaces) (Optional field)" textAlignment="CENTER" wrappingWidth="155.587890625" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-20.0" top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SVC:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="csvField" promptText="i. e, 123" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text layoutX="10.0" layoutY="729.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(3 digits at the back of the credit card) (Optional field)" textAlignment="CENTER" wrappingWidth="176.587890625" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-20.0" top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="errorPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="164.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="errorCardNumber" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="161.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Icon:" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Optional field)" textAlignment="CENTER" wrappingWidth="72.587890625" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="signUpSuccessful" fill="#ff9000" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="188.587890625" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="75.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="userIcon" mnemonicParsing="false" onAction="#onUserIconClicked" prefHeight="25.0" prefWidth="166.0" text="Upload Icon" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="doneButton" mnemonicParsing="false" onAction="#onClickDoneLogin" prefHeight="74.0" prefWidth="361.0" text="Done!" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fx:id="imagePath" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="162.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="errorCSV" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="161.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please, fill out the Sign Up form in order to register in the application system. " textAlignment="CENTER" wrappingWidth="370.587890625" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

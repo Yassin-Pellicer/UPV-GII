@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1112.0" style="-fx-background-color: #d6ffe3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.MainMenuController">
+   <top>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="105.0" prefWidth="1249.0" style="-fx-background-color: #00c370;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.0" minWidth="-Infinity" prefWidth="233.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="175.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="406.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="userPictureBanner" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="138.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../img/Avatar_icon_green.svg.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nameSurnameFieldBanner" strokeType="OUTSIDE" strokeWidth="0.0" text="Name and Family name" textAlignment="RIGHT" wrappingWidth="612.13671875" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets bottom="-40.0" right="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="usernameFieldBanner" layoutX="760.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Username" textAlignment="RIGHT" wrappingWidth="589.13671875" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets bottom="20.0" right="220.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="68.0" layoutX="30.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../img/rackets.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Button fx:id="signOutButton" mnemonicParsing="false" onAction="#onSignOutButtonClicked" style="-fx-background-color: #FF0000;" text="Sign out" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="-20.0" left="20.0" right="50.0" top="20.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="checkInfoButton" mnemonicParsing="false" onAction="#onCheckInfoButtonClicked" style="-fx-background-color: #007644;" text="Check info" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="60.0" left="20.0" right="45.0" top="20.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenis World!" wrappingWidth="536.9013671875" GridPane.columnSpan="2">
+               <font>
+                  <Font name="System Bold Italic" size="74.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+      </GridPane>
+   </top>
+   <left>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" prefHeight="621.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="204.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="206.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="NorthCourt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickEastCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="East Court" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="SouthCourt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickMillCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="Mill Court" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="WestCourt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickNorthCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="North Court" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="EastCourt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickPondCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="Pond Court" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="PondCourt" layoutX="10.0" layoutY="348.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickSouthCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="South Court" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="MillCourt" layoutX="110.0" layoutY="348.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onClickWestCourt" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: #00e985;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="West Court" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a Court..." textAlignment="CENTER" wrappingWidth="411.9013671875" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="And consult their state, other user's reservations on it or make your own reservation" textAlignment="CENTER" wrappingWidth="359.484375" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="65.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Text>
+            <Button fx:id="viewAllCourts" layoutX="30.0" layoutY="236.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onViewAllCourts" prefHeight="150.0" prefWidth="681.0" style="-fx-background-color: #00c370;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="View all Courts" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="myReservationsButton" layoutX="30.0" layoutY="370.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onMyReservations" prefHeight="150.0" prefWidth="738.0" style="-fx-background-color: #009657;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="My reservations" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </GridPane>
+   </left>
+   <center>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="601.0" prefWidth="584.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="7.0" prefWidth="442.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="208.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="110.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="362.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dateSelector" editable="false" maxWidth="1.7976931348623157E308" onAction="#onDateSelected" prefHeight="25.0" prefWidth="656.0" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="4.0" left="20.0" right="20.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Court selection:" wrappingWidth="233.9013671875" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="60.0" left="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the day you want to consult:" wrappingWidth="234.9013671875" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="35.0" left="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="previousDayB" mnemonicParsing="false" onAction="#onDayminus1" text="Previous day" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="20.0" top="5.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nextDayB" mnemonicParsing="false" onAction="#onDayplus1" text="Next day" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="20.0" top="5.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reservationB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onMakeReservation" prefHeight="96.0" prefWidth="630.0" style="-fx-background-color: #ffef63;" styleClass="buttonDecorado" stylesheets="@../style/style.css" text="Make Reservation" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fx:id="courtSelected" layoutX="30.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="200.9013671875" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="50.0" right="20.0" />
+               </GridPane.margin>
+            </Text>
+            <TableView fx:id="TableList" editable="true" fixedCellSize="25.0" prefHeight="258.0" prefWidth="457.0" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+              <columns>
+                  <TableColumn fx:id="HourCol" prefWidth="75.0" text="Hour" />
+                  <TableColumn fx:id="CourtCol" prefWidth="75.0" text="Court" />
+                  <TableColumn fx:id="NameCol" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="PaidCol" prefWidth="75.0" text="Paid" />
+              </columns>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="80.0" />
+               </GridPane.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TableView fx:id="TableList1" fixedCellSize="25.0" layoutX="30.0" layoutY="161.0" prefHeight="258.0" prefWidth="231.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="HourCol1" prefWidth="75.0" text="Hour" />
+                  <TableColumn fx:id="CourtCol1" prefWidth="75.0" text="Court" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="80.0" />
+               </GridPane.margin>
+            </TableView>
+            <Text layoutX="30.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservations made at..." wrappingWidth="268.9013671875" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="30.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available slots:" textAlignment="CENTER" wrappingWidth="138.9013671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text layoutX="30.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users cannot make more than two reservations back to back. Reservations are a fixed size of one hour." textAlignment="RIGHT" wrappingWidth="318.9013671875" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="10.0" right="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="DatePrompt" layoutX="30.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="156.9013671875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Italic" size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="20.0" top="40.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="ErrorBooking" fill="RED" layoutX="321.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="LEFT" wrappingWidth="318.9013671875" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </GridPane>
+   </center>
+</BorderPane>

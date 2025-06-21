@@ -1,0 +1,8 @@
+.buttonDecorado{
+    -fx-background-radius: 25px;
+}
+
+.buttonDecorado:hover{
+    -fx-text-fill: white;
+    -fx-background-color: #006633
+}
