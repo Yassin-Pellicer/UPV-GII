@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MainExam
+comment0.text=\r\n\ Class\ MainExam\:\ This\ is\ a\ main\ class\ that\ uses\ the\ hidden\ class\ others.Point,\ \r\n\ which\ is\ identical\ to\ your\ class\ Point,\ with\ a\ checked\ method\ yIntercept(double,\ Point).\ \r\n\ \r\n\ @author\ IIP\ -\ Lab\ Midterm\ Exam\r\n\ @version\ academic\ year\ 2021-22\r\n
+comment1.params=
+comment1.target=MainExam()
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+numComments=3

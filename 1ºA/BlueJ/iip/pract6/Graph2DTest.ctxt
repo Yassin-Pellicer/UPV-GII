@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Graph2DTest
+comment0.text=\r\n\ Class\ Graph2DTest\:\ simple\ test\ for\ class\ Graph2D.\r\n\ Draws\ functions\ Math.sin(x)\ and\ Math.sin(x)/x.\r\n\ \r\n\ @author\ IIP\r\n\ @version\ Academic\ Year\ 2021-2022\r\n
+comment1.params=
+comment1.target=Graph2DTest()
+comment1.text=It\ is\ not\ possible\ to\ create\ new\ objects\ for\ this\ class.
+comment2.params=
+comment2.target=void\ test()
+comment2.text=\ Draw\ sin(x)\ and\ sin(x)/x\ with\r\n\ \ x\ in\ [-1.0\ \:\ +PI*4]\ and\ f(x)\ in\ [-1.10\ \:\ +1.10].\r\n\ \ Representation\ by\ consecutive\ dots.\r\n
+numComments=3

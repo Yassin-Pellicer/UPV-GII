@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=IIPMath
+comment0.text=\r\n\ Class\ IIPMath\:\ utility\ class\ that\ implements\ some\ mathematical\ operations\:\ \r\n\ IIPMath.sqrt(double)\ and\ IIPMath.log(double).\r\n\r\n\ @author\ IIP\r\n\ @version\ Academic\ Year\ 2021-2022\r\n
+comment1.params=
+comment1.target=IIPMath()
+comment1.text=It\ is\ not\ possible\ to\ create\ new\ objects\ for\ this\ class.
+comment2.params=x\ epsilon
+comment2.target=double\ sqrt(double,\ double)
+comment2.text=\r\n\ Returns\ the\ square\ root\ of\ x\ >\=\ 0\ with\ a\ precision\ epsilon\ >\ 0.\ \r\n\ //\ COMPLETE\ COMMENTS\r\n
+comment3.params=x
+comment3.target=double\ sqrt(double)
+comment3.text=\r\n\ Returns\ the\ square\ root\ of\ x\ >\=\ 0\ with\ a\ precision\ 1e-15.\ \r\n\ //\ COMPLETE\ COMMENTS\r\n
+comment4.params=z\ epsilon
+comment4.target=double\ logBase(double,\ double)
+comment4.text=\r\n\ Returns\ log(z),\ 1/2\ <\=\ z\ <\ 1,\ with\ an\ error\ epsilon\ >\ 0.\r\n\ //\ COMPLETE\ COMMENTS\r\n
+comment5.params=x\ epsilon
+comment5.target=double\ log(double,\ double)
+comment5.text=\r\n\ Returns\ log(x),\ x\ >\ 0,\ with\ an\ error\ epsilon\ >\ 0.\r\n\ //\ COMPLETE\ COMMENTS\r\n
+comment6.params=x
+comment6.target=double\ log(double)
+comment6.text=\r\n\ Returns\ log(x),\ x\ >\ 0,\ with\ error\ 1e-15.\r\n\ //\ COMPLETE\ COMMENTS\r\n
+numComments=7
