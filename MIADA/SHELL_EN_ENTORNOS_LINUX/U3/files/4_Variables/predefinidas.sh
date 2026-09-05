@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo LINENO: $LINENO
+echo SECONDS: $SECONDS
+
+echo HOME: $HOME
+echo LOGNAME: $LOGNAME
+echo UID: $UID  EUID: $EUID
+echo RANDOM: $RANDOM
+
+echo LINENO: $LINENO
+echo SECONDS: $SECONDS
+
+echo HOSTNAME: $HOSTNAME
+echo HOSTTYPE: $HOSTTYPE
+echo MACHTYPE: $MACHTYPE
+
+echo LINENO: $LINENO
+echo SECONDS: $SECONDS
+
+echo SHELL: $BASH
+echo BASH: $BASH
+echo BASHOPTS: $BASHOPTS
+
+cd /tmp
+echo OLDPWD: $OLDPWD
+echo PWD: $PWD
+
+echo LANG: $LANG
+
+echo PATH: $PATH
+echo PS1: $PS1
+
+
