@@ -1,0 +1,1249 @@
+[2026/09/06 20:22:26.611] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:22:26.696] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:22:26.697] - Sanitizing constituents-financials_20260906.csv
+	[20:22:26.699] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:22:26.700] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:22:26.701] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:22:26.702] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:22:26.702] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:22:26.704] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:22:26.704] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:22:26.705] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:22:26.706] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:22:26.707] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:22:26.708] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:22:26.709] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:22:26.710] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:22:26.710] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:22:26.711] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:22:26.712] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:22:26.716] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:22:26.717] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:22:26.719] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:22:26.719] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:22:26.720] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:22:38.010] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:22:38.118] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:22:38.120] - Sanitizing constituents-financials_20260906.csv
+	[20:22:38.122] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:22:38.123] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:22:38.124] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:22:38.124] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:22:38.125] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:22:38.126] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:22:38.127] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:22:38.128] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:22:38.129] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:22:38.130] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:22:38.131] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:22:38.132] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:22:38.132] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:22:38.133] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:22:38.134] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:22:38.135] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:22:38.138] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:22:38.140] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:22:38.142] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:22:38.142] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:22:38.142] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:23:38.470] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:23:38.727] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:23:38.729] - Sanitizing constituents-financials_20260906.csv
+	[20:23:38.731] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:23:38.732] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:23:38.733] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:23:38.734] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:23:38.734] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:23:38.735] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:23:38.736] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:23:38.737] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:23:38.738] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:23:38.739] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:23:38.740] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:23:38.741] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:23:38.742] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:23:38.742] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:23:38.743] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:23:38.744] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:23:38.748] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:23:38.749] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:23:38.751] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:23:38.751] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:23:38.752] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:25:09.690] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:25:09.765] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:25:09.766] - Sanitizing constituents-financials_20260906.csv
+	[20:25:09.768] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:25:09.770] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:25:09.770] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:25:09.771] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:25:09.772] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:25:09.773] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:25:09.774] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:25:09.774] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:25:09.776] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:25:09.777] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:25:09.777] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:25:09.778] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:25:09.779] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:25:09.780] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:25:09.781] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:25:09.781] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:25:09.785] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:25:09.786] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:25:09.788] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:25:09.789] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:25:09.789] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:25:51.079] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:25:51.182] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:25:51.183] - Sanitizing constituents-financials_20260906.csv
+	[20:25:51.185] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:25:51.186] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:25:51.187] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:25:51.188] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:25:51.188] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:25:51.190] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:25:51.190] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:25:51.191] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:25:51.192] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:25:51.193] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:25:51.194] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:25:51.195] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:25:51.196] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:25:51.196] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:25:51.197] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:25:51.198] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:25:51.201] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:25:51.203] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:25:51.205] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:25:51.205] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:25:51.205] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:26:08.736] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:08.847] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:26:08.848] - Sanitizing constituents-financials_20260906.csv
+	[20:26:08.851] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:26:08.852] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:26:08.852] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:26:08.853] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:26:08.854] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:26:08.855] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:26:08.856] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:26:08.856] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:26:08.858] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:26:08.859] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:26:08.859] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:26:08.860] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:26:08.861] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:26:08.862] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:26:08.863] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:26:08.863] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:26:08.867] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:26:08.868] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:26:08.870] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:08.871] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:26:08.871] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:26:10.679] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:10.786] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:26:10.788] - Sanitizing constituents-financials_20260906.csv
+	[20:26:10.790] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:26:10.791] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:26:10.792] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:26:10.792] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:26:10.793] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:26:10.794] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:26:10.795] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:26:10.796] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:26:10.797] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:26:10.798] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:26:10.799] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:26:10.799] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:26:10.800] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:26:10.801] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:26:10.802] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:26:10.802] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:26:10.806] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:26:10.807] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:26:10.809] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:10.810] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:26:10.810] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:26:18.086] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:18.171] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:26:18.173] - Sanitizing constituents-financials_20260906.csv
+	[20:26:18.175] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:26:18.176] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:26:18.177] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:26:18.177] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:26:18.178] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:26:18.180] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:26:18.180] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:26:18.181] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:26:18.182] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:26:18.184] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:26:18.184] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:26:18.185] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:26:18.186] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:26:18.186] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:26:18.187] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:26:18.188] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:26:18.192] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:26:18.193] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:26:18.195] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:26:18.195] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:26:18.196] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:27:06.493] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:06.601] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:27:06.602] - Sanitizing constituents-financials_20260906.csv
+	[20:27:06.605] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:27:06.606] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:27:06.606] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:27:06.607] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:27:06.608] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:27:06.609] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:27:06.610] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:27:06.610] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:27:06.612] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:27:06.613] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:27:06.614] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:27:06.614] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:27:06.615] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:27:06.616] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:27:06.617] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:27:06.617] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:27:06.621] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:27:06.623] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:27:06.624] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:06.625] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:27:06.625] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:27:25.478] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:25.557] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:27:25.559] - Sanitizing constituents-financials_20260906.csv
+	[20:27:25.561] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:27:25.562] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:27:25.562] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:27:25.563] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:27:25.564] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:27:25.565] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:27:25.566] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:27:25.566] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:27:25.568] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:27:25.569] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:27:25.570] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:27:25.571] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:27:25.571] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:27:25.572] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:27:25.573] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:27:25.573] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:27:25.577] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:27:25.579] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:27:25.581] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:25.581] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:27:25.581] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:27:39.551] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:39.632] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:27:39.634] - Sanitizing constituents-financials_20260906.csv
+	[20:27:39.636] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:27:39.637] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:27:39.638] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:27:39.638] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:27:39.639] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:27:39.640] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:27:39.641] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:27:39.642] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:27:39.643] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:27:39.644] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:27:39.645] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:27:39.646] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:27:39.647] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:27:39.647] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:27:39.648] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:27:39.649] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:27:39.653] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:27:39.654] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:27:39.656] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:27:39.656] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:27:39.656] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+[2026/09/06 20:32:06.524] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:32:06.843] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:32:06.845] - Sanitizing constituents-financials_20260906.csv
+	[20:32:06.847] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:32:06.848] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:32:06.849] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:32:06.849] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:32:06.850] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:32:06.851] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:32:06.852] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:32:06.853] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:32:06.854] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:32:06.855] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:32:06.856] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:32:06.857] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:32:06.857] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:32:06.858] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:32:06.859] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:32:06.860] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:32:06.864] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:32:06.865] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:32:06.867] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:32:06.867] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:32:06.868] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:32:06.870] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:32:06.871] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:32:06.873] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:32:35.893] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:32:35.998] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:32:36.000] - Sanitizing constituents-financials_20260906.csv
+	[20:32:36.002] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:32:36.003] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:32:36.004] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:32:36.004] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:32:36.005] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:32:36.006] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:32:36.007] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:32:36.008] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:32:36.009] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:32:36.010] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:32:36.011] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:32:36.012] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:32:36.013] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:32:36.013] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:32:36.014] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:32:36.015] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:32:36.019] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:32:36.020] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:32:36.022] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:32:36.022] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:32:36.023] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:32:36.025] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:32:36.026] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:32:36.028] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:33:02.497] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:33:02.576] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:33:02.578] - Sanitizing constituents-financials_20260906.csv
+	[20:33:02.580] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:33:02.581] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:33:02.582] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:33:02.583] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:33:02.583] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:33:02.585] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:33:02.586] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:33:02.586] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:33:02.588] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:33:02.589] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:33:02.589] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:33:02.590] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:33:02.591] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:33:02.591] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:33:02.593] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:33:02.593] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:33:02.597] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:33:02.598] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:33:02.600] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:33:02.601] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:33:02.601] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:33:02.603] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:33:02.604] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:33:02.606] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:37:14.878] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:37:15.138] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:37:15.140] - Sanitizing constituents-financials_20260906.csv
+	[20:37:15.142] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:37:15.143] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:37:15.144] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:37:15.145] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:37:15.145] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:37:15.147] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:37:15.147] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:37:15.148] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:37:15.149] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:37:15.150] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:37:15.151] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:37:15.152] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:37:15.153] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:37:15.153] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:37:15.154] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:37:15.155] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:37:15.159] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:37:15.161] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:37:15.162] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:37:15.163] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:37:15.163] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:37:15.166] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:37:15.166] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:37:15.168] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:37:50.456] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:37:50.540] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:37:50.541] - Sanitizing constituents-financials_20260906.csv
+	[20:37:50.543] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:37:50.545] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:37:50.545] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:37:50.546] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:37:50.547] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:37:50.548] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:37:50.549] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:37:50.549] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:37:50.551] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:37:50.552] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:37:50.552] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:37:50.553] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:37:50.554] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:37:50.555] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:37:50.556] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:37:50.556] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:37:50.560] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:37:50.561] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:37:50.563] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:37:50.564] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:37:50.564] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:37:50.567] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:37:50.567] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:37:50.569] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:38:30.964] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:38:31.048] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:38:31.049] - Sanitizing constituents-financials_20260906.csv
+	[20:38:31.051] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:38:31.052] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:38:31.053] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:38:31.054] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:38:31.054] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:38:31.056] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:38:31.056] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:38:31.057] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:38:31.058] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:38:31.060] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:38:31.060] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:38:31.061] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:38:31.062] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:38:31.062] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:38:31.063] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:38:31.064] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:38:31.068] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:38:31.069] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:38:31.071] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:38:31.071] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:38:31.072] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:38:31.074] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:38:31.075] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:38:31.076] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:49:03.095] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:49:03.340] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:49:03.342] - Sanitizing constituents-financials_20260906.csv
+	[20:49:03.344] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:49:03.345] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:49:03.346] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:49:03.347] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:49:03.347] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:49:03.349] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:49:03.349] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:49:03.350] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:49:03.352] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:49:03.353] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:49:03.353] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:49:03.354] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:49:03.355] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:49:03.356] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:49:03.357] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:49:03.357] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:49:03.361] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:49:03.362] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:49:03.364] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:49:03.365] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:49:03.365] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:49:03.368] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:49:03.368] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:49:03.380] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:51:56.300] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:51:56.377] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:51:56.379] - Sanitizing constituents-financials_20260906.csv
+	[20:51:56.381] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:51:56.382] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:51:56.383] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:51:56.383] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:51:56.384] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:51:56.385] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:51:56.386] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:51:56.387] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:51:56.388] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:51:56.389] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:51:56.390] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:51:56.391] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:51:56.392] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:51:56.392] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:51:56.393] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:51:56.394] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:51:56.398] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:51:56.399] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:51:56.401] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:51:56.401] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:51:56.402] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:51:56.404] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:51:56.405] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:51:56.407] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:52:19.072] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:52:19.167] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:52:19.169] - Sanitizing constituents-financials_20260906.csv
+	[20:52:19.171] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:52:19.172] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:52:19.173] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:52:19.173] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:52:19.174] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:52:19.175] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:52:19.176] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:52:19.177] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:52:19.178] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:52:19.179] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:52:19.180] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:52:19.181] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:52:19.182] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:52:19.182] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:52:19.183] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:52:19.184] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:52:19.187] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:52:19.189] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:52:19.191] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:52:19.191] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:52:19.191] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:52:19.194] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:52:19.194] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:52:19.197] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:53:15.458] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:15.537] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:53:15.539] - Sanitizing constituents-financials_20260906.csv
+	[20:53:15.541] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:53:15.542] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:53:15.542] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:53:15.543] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:53:15.544] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:53:15.545] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:53:15.546] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:53:15.546] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:53:15.548] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:53:15.549] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:53:15.550] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:53:15.551] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:53:15.551] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:53:15.552] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:53:15.553] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:53:15.554] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:53:15.558] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:53:15.559] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:53:15.561] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:15.561] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:53:15.561] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:53:15.564] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:53:15.564] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:53:15.566] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:53:25.335] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:25.434] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:53:25.435] - Sanitizing constituents-financials_20260906.csv
+	[20:53:25.437] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:53:25.438] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:53:25.439] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:53:25.440] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:53:25.440] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:53:25.442] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:53:25.442] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:53:25.443] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:53:25.445] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:53:25.446] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:53:25.446] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:53:25.447] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:53:25.448] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:53:25.448] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:53:25.449] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:53:25.450] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:53:25.454] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:53:25.455] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:53:25.457] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:25.457] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:53:25.458] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:53:25.460] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:53:25.461] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:53:25.462] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:53:56.793] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:56.904] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:53:56.906] - Sanitizing constituents-financials_20260906.csv
+	[20:53:56.908] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:53:56.909] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:53:56.909] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:53:56.910] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:53:56.911] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:53:56.912] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:53:56.913] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:53:56.913] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:53:56.915] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:53:56.916] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:53:56.916] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:53:56.917] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:53:56.918] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:53:56.918] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:53:56.919] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:53:56.920] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:53:56.924] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:53:56.925] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:53:56.927] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:53:56.928] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:53:56.928] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:53:56.930] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:53:56.931] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:53:56.934] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:54:33.501] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:54:33.747] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:54:33.749] - Sanitizing constituents-financials_20260906.csv
+	[20:54:33.751] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:54:33.752] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:54:33.753] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:54:33.753] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:54:33.754] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:54:33.755] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:54:33.756] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:54:33.757] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:54:33.758] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:54:33.759] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:54:33.760] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:54:33.761] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:54:33.761] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:54:33.762] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:54:33.763] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:54:33.764] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:54:33.767] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:54:33.769] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:54:33.771] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:54:33.771] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:54:33.771] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:54:33.774] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:54:33.774] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:54:33.777] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:54:52.517] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:54:52.604] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:54:52.606] - Sanitizing constituents-financials_20260906.csv
+	[20:54:52.608] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:54:52.609] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:54:52.610] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:54:52.610] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:54:52.611] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:54:52.612] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:54:52.613] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:54:52.614] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:54:52.615] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:54:52.616] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:54:52.617] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:54:52.618] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:54:52.619] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:54:52.619] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:54:52.620] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:54:52.621] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:54:52.625] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:54:52.626] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:54:52.628] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:54:52.628] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:54:52.628] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:54:52.631] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:54:52.631] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:54:52.634] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:55:41.260] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:55:41.343] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:55:41.345] - Sanitizing constituents-financials_20260906.csv
+	[20:55:41.347] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:55:41.348] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:55:41.349] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:55:41.349] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:55:41.350] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:55:41.351] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:55:41.352] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:55:41.353] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:55:41.354] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:55:41.355] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:55:41.356] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:55:41.357] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:55:41.357] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:55:41.358] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:55:41.359] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:55:41.359] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:55:41.363] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:55:41.364] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:55:41.366] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:55:41.367] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:55:41.367] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:55:41.370] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:55:41.370] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:55:41.373] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:56:04.847] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:04.925] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:56:04.927] - Sanitizing constituents-financials_20260906.csv
+	[20:56:04.929] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:56:04.930] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:56:04.931] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:56:04.931] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:56:04.932] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:56:04.933] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:56:04.934] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:56:04.935] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:56:04.936] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:56:04.937] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:56:04.938] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:56:04.939] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:56:04.939] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:56:04.940] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:56:04.941] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:56:04.942] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:56:04.945] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:56:04.947] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:56:04.948] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:04.949] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:56:04.949] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:56:04.952] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:56:04.952] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:56:04.955] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:56:13.466] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:13.550] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:56:13.551] - Sanitizing constituents-financials_20260906.csv
+	[20:56:13.553] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:56:13.554] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:56:13.555] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:56:13.556] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:56:13.557] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:56:13.558] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:56:13.559] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:56:13.559] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:56:13.561] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:56:13.562] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:56:13.562] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:56:13.563] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:56:13.564] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:56:13.565] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:56:13.566] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:56:13.566] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:56:13.570] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:56:13.571] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:56:13.573] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:13.574] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:56:13.574] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:56:13.577] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:56:13.577] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:56:13.580] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:56:28.119] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:28.202] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:56:28.204] - Sanitizing constituents-financials_20260906.csv
+	[20:56:28.206] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:56:28.207] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:56:28.208] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:56:28.208] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:56:28.209] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:56:28.210] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:56:28.211] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:56:28.212] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:56:28.213] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:56:28.214] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:56:28.215] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:56:28.216] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:56:28.216] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:56:28.217] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:56:28.218] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:56:28.218] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:56:28.222] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:56:28.223] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:56:28.225] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:56:28.226] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:56:28.226] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:56:28.229] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:56:28.229] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:56:28.232] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:58:15.139] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:15.222] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:58:15.224] - Sanitizing constituents-financials_20260906.csv
+	[20:58:15.226] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:58:15.227] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:58:15.228] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:58:15.228] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:58:15.229] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:58:15.230] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:58:15.231] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:58:15.232] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:58:15.233] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:58:15.234] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:58:15.235] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:58:15.236] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:58:15.237] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:58:15.237] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:58:15.238] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:58:15.239] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:58:15.242] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:58:15.244] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:58:15.246] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:15.246] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:58:15.246] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:58:15.249] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:58:15.249] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:58:15.252] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:58:37.553] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:37.663] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:58:37.665] - Sanitizing constituents-financials_20260906.csv
+	[20:58:37.667] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:58:37.668] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:58:37.668] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:58:37.669] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:58:37.670] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:58:37.671] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:58:37.672] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:58:37.672] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:58:37.674] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:58:37.675] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:58:37.676] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:58:37.676] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:58:37.677] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:58:37.678] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:58:37.679] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:58:37.679] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:58:37.683] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:58:37.685] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:58:37.687] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:37.687] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:58:37.687] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:58:37.690] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:58:37.690] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:58:37.693] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:58:51.545] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:51.620] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:58:51.621] - Sanitizing constituents-financials_20260906.csv
+	[20:58:51.623] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:58:51.625] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:58:51.625] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:58:51.626] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:58:51.627] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:58:51.628] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:58:51.628] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:58:51.629] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:58:51.631] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:58:51.632] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:58:51.632] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:58:51.633] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:58:51.634] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:58:51.634] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:58:51.635] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:58:51.636] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:58:51.640] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:58:51.641] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:58:51.643] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:58:51.643] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:58:51.644] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:58:51.646] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:58:51.647] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:58:51.649] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:59:18.794] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:59:18.873] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:59:18.875] - Sanitizing constituents-financials_20260906.csv
+	[20:59:18.877] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:59:18.878] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:59:18.878] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:59:18.879] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:59:18.880] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:59:18.881] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:59:18.882] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:59:18.883] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:59:18.884] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:59:18.885] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:59:18.886] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:59:18.887] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:59:18.888] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:59:18.888] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:59:18.889] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:59:18.890] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:59:18.894] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:59:18.895] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:59:18.897] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:59:18.897] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:59:18.898] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:59:18.900] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:59:18.901] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:59:18.904] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 20:59:53.368] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:59:53.579] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 20:59:53.581] - Sanitizing constituents-financials_20260906.csv
+	[20:59:53.583] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[20:59:53.584] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[20:59:53.584] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[20:59:53.585] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[20:59:53.586] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[20:59:53.587] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[20:59:53.588] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[20:59:53.589] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[20:59:53.590] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[20:59:53.591] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[20:59:53.592] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[20:59:53.592] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[20:59:53.593] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[20:59:53.594] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[20:59:53.595] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[20:59:53.595] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[20:59:53.599] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 20:59:53.601] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 20:59:53.602] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 20:59:53.603] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[20:59:53.603] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[20:59:53.606] - DUMP SUCCESSFUL analysis_20260906.txt
+	[20:59:53.606] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[20:59:53.609] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:00:06.101] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:06.210] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:00:06.212] - Sanitizing constituents-financials_20260906.csv
+	[21:00:06.214] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:00:06.215] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:00:06.215] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:00:06.216] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:00:06.217] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:00:06.218] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:00:06.219] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:00:06.220] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:00:06.221] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:00:06.222] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:00:06.223] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:00:06.224] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:00:06.224] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:00:06.225] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:00:06.226] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:00:06.226] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:00:06.230] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:00:06.232] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:00:06.233] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:06.234] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:00:06.234] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:00:06.237] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:00:06.237] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:00:06.240] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:00:18.210] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:18.318] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:00:18.320] - Sanitizing constituents-financials_20260906.csv
+	[21:00:18.322] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:00:18.323] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:00:18.324] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:00:18.324] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:00:18.325] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:00:18.326] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:00:18.327] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:00:18.328] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:00:18.329] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:00:18.330] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:00:18.331] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:00:18.332] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:00:18.333] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:00:18.333] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:00:18.334] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:00:18.335] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:00:18.339] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:00:18.340] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:00:18.342] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:18.342] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:00:18.342] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:00:18.345] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:00:18.345] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:00:18.348] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:00:53.671] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:53.757] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:00:53.759] - Sanitizing constituents-financials_20260906.csv
+	[21:00:53.761] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:00:53.762] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:00:53.762] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:00:53.763] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:00:53.764] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:00:53.765] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:00:53.766] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:00:53.766] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:00:53.768] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:00:53.769] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:00:53.770] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:00:53.770] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:00:53.771] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:00:53.772] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:00:53.773] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:00:53.773] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:00:53.777] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:00:53.779] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:00:53.781] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:00:53.781] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:00:53.781] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:00:53.784] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:00:53.784] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:00:53.787] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:01:04.720] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:04.801] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:01:04.802] - Sanitizing constituents-financials_20260906.csv
+	[21:01:04.804] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:01:04.805] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:01:04.806] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:01:04.807] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:01:04.808] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:01:04.809] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:01:04.809] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:01:04.810] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:01:04.812] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:01:04.813] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:01:04.813] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:01:04.814] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:01:04.815] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:01:04.816] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:01:04.817] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:01:04.817] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:01:04.821] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:01:04.822] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:01:04.824] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:04.825] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:01:04.825] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:01:04.827] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:01:04.828] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:01:04.831] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:01:17.434] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:17.511] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:01:17.513] - Sanitizing constituents-financials_20260906.csv
+	[21:01:17.515] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:01:17.516] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:01:17.516] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:01:17.517] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:01:17.518] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:01:17.519] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:01:17.520] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:01:17.521] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:01:17.522] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:01:17.523] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:01:17.524] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:01:17.525] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:01:17.525] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:01:17.526] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:01:17.527] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:01:17.528] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:01:17.531] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:01:17.533] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:01:17.535] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:17.535] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:01:17.535] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:01:17.538] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:01:17.538] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:01:17.541] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:01:36.006] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:36.085] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:01:36.087] - Sanitizing constituents-financials_20260906.csv
+	[21:01:36.089] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:01:36.090] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:01:36.091] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:01:36.091] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:01:36.092] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:01:36.093] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:01:36.094] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:01:36.095] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:01:36.096] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:01:36.097] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:01:36.098] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:01:36.099] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:01:36.100] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:01:36.100] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:01:36.101] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:01:36.102] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:01:36.106] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:01:36.107] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:01:36.109] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:01:36.109] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:01:36.109] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:01:36.112] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:01:36.112] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:01:36.115] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:04:05.554] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:04:05.661] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:04:05.663] - Sanitizing constituents-financials_20260906.csv
+	[21:04:05.665] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:04:05.666] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:04:05.666] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:04:05.667] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:04:05.668] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:04:05.669] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:04:05.670] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:04:05.670] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:04:05.672] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:04:05.673] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:04:05.673] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:04:05.674] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:04:05.675] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:04:05.675] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:04:05.676] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:04:05.677] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:04:05.681] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:04:05.682] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:04:05.684] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:04:05.684] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:04:05.685] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:04:05.687] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:04:05.687] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:04:05.692] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:04:05.692] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:04:55.257] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:04:55.517] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:04:55.519] - Sanitizing constituents-financials_20260906.csv
+	[21:04:55.521] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:04:55.522] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:04:55.523] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:04:55.523] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:04:55.524] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:04:55.525] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:04:55.526] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:04:55.527] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:04:55.528] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:04:55.529] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:04:55.530] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:04:55.531] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:04:55.531] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:04:55.532] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:04:55.533] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:04:55.534] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:04:55.537] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:04:55.539] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:04:55.540] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:04:55.541] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:04:55.541] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:04:55.544] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:04:55.544] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:04:55.547] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:06:06.567] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:06:06.676] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:06:06.678] - Sanitizing constituents-financials_20260906.csv
+	[21:06:06.680] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:06:06.681] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:06:06.681] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:06:06.682] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:06:06.683] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:06:06.684] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:06:06.685] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:06:06.685] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:06:06.687] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:06:06.688] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:06:06.688] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:06:06.689] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:06:06.690] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:06:06.691] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:06:06.692] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:06:06.692] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:06:06.696] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:06:06.697] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:06:06.699] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:06:06.700] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:06:06.700] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:06:06.703] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:06:06.703] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:06:06.707] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:26:20.295] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:26:20.541] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:26:20.543] - Sanitizing constituents-financials_20260906.csv
+	[21:26:20.545] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:26:20.546] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:26:20.546] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:26:20.547] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:26:20.548] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:26:20.549] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:26:20.550] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:26:20.551] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:26:20.552] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:26:20.553] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:26:20.554] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:26:20.554] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:26:20.555] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:26:20.556] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:26:20.557] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:26:20.557] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:26:20.561] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:26:20.563] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:26:20.564] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:26:20.565] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:26:20.565] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:26:20.568] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:26:20.568] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:26:20.572] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:26:20.573] - HIGHEST WINNERS (52 WEEK HIGHS) analysis_20260906.txt
+	[21:26:20.576] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:27:24.000] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:27:24.075] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:27:24.076] - Sanitizing constituents-financials_20260906.csv
+	[21:27:24.078] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:27:24.079] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:27:24.080] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:27:24.081] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:27:24.082] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:27:24.083] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:27:24.084] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:27:24.084] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:27:24.086] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:27:24.087] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:27:24.087] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:27:24.088] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:27:24.089] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:27:24.089] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:27:24.090] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:27:24.091] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:27:24.095] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:27:24.096] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:27:24.098] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:27:24.098] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:27:24.099] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:27:24.101] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:27:24.102] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:27:24.105] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:27:24.106] - HIGHEST WINNERS (52 WEEK HIGHS) analysis_20260906.txt
+	[21:27:24.109] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:30:20.817] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:30:20.898] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:30:20.900] - Sanitizing constituents-financials_20260906.csv
+	[21:30:20.902] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:30:20.903] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:30:20.904] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:30:20.904] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:30:20.905] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:30:20.906] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:30:20.907] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:30:20.908] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:30:20.909] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:30:20.910] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:30:20.911] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:30:20.912] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:30:20.912] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:30:20.913] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:30:20.914] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:30:20.915] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:30:20.919] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:30:20.920] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:30:20.922] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:30:20.922] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:30:20.923] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:30:20.925] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:30:20.925] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:30:20.930] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:30:20.930] - HIGHEST WINNERS (52 WEEK METRIC) analysis_20260906.txt
+	[21:30:20.933] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:30:20.934] - HIGHEST LOSERS (52 WEEK METRIC) analysis_20260906.txt
+	[21:30:20.937] - DUMP SUCCESSFUL analysis_20260906.txt
+[2026/09/06 21:31:17.124] - Downloading S&P 500 constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:31:17.207] [ok] - Downloaded constituents-financials_20260906.csv successfully
+[2026/09/06 21:31:17.208] - Sanitizing constituents-financials_20260906.csv
+	[21:31:17.210] (Row no: 38) - Deleted row missing required field: ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[21:31:17.212] (Row no: 62) - Deleted row missing required field: BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[21:31:17.212] (Row no: 68) - Deleted row missing required field: BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[21:31:17.213] (Row no: 77) - Deleted row missing required field: BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[21:31:17.214] (Row no: 91) - Deleted row missing required field: CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[21:31:17.215] (Row no: 133) - Deleted row missing required field: CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[21:31:17.216] (Row no: 143) - Deleted row missing required field: DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[21:31:17.216] (Row no: 152) - Deleted row missing required field: DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[21:31:17.218] (Row no: 200) - Deleted row missing required field: FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[21:31:17.219] (Row no: 232) - Deleted row missing required field: HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[21:31:17.219] (Row no: 235) - Deleted row missing required field: HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[21:31:17.220] (Row no: 257) - Deleted row missing required field: IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[21:31:17.221] (Row no: 272) - Deleted row missing required field: JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[21:31:17.221] (Row no: 273) - Deleted row missing required field: K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[21:31:17.223] (Row no: 302) - Deleted row missing required field: MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[21:31:17.223] (Row no: 306) - Deleted row missing required field: MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[21:31:17.227] (Row no: 484) - Deleted row missing required field: WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+[2026/09/06 21:31:17.228] - constituents-financials_20260906.csv Sanitized and saved successfully
+[2026/09/06 21:31:17.230] - Analyzing constituents-financials_20260906.csv in route /project/datasets/constituents-financials_20260906.csv
+[2026/09/06 21:31:17.231] - Creating analysis_20260906.txt in route /project/informes/analysis_20260906.txt
+	[21:31:17.231] - DUMPING TOP MARKET CAP COMPANIES IN analysis_20260906.txt
+	[21:31:17.234] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:31:17.234] - DUMPING HIGHEST GROSSING SECTORS analysis_20260906.txt
+	[21:31:17.238] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:31:17.238] - HIGHEST WINNERS (52 WEEK METRIC) analysis_20260906.txt
+	[21:31:17.242] - DUMP SUCCESSFUL analysis_20260906.txt
+	[21:31:17.242] - HIGHEST LOSERS (52 WEEK METRIC) analysis_20260906.txt
+	[21:31:17.246] - DUMP SUCCESSFUL analysis_20260906.txt

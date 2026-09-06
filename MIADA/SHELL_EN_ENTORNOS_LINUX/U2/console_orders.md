@@ -171,8 +171,8 @@ find ruta [criterios]
 
 sort [-fnr][-k cols][-t delim] [ficheros(s)]
 
-# -f numerico
-# -n alfabeticamente
+# -n numerico
+# -f alfabeticamente
 # -r orden reverso
 # -k columnas
 # -t delimitador
