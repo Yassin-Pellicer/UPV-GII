@@ -1,8 +1,119 @@
-\documentclass{article}
-\title{Análisis y evolución de las 500 empresas más rentables de la bolsa estadounidense (S\&P 500)}
-\author{Your Name}
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xurl}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
+
+\title{Análisis y evolución de las empresas del S\&P 500\\\large Memoria del proyecto de Shell y Entornos Linux}
+\author{Yassin Pellicer Lamla}
 \date{\today}
 
 \begin{document}
 \maketitle
+\tableofcontents
+\newpage
+
+\section{Objetivo}
+El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. El informe permite consultar el ranking de capitalización bursátil, la agrupación por sectores, los valores más próximos a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
+
+\section{Elección del dataset}
+La elección de uno o varios datasets corresponde a cada proyecto. En este caso se utiliza un único dataset en formato CSV: \texttt{constituents-financials.csv}, publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
+
+\begin{center}
+\url{https://raw.githubusercontent.com/datasets/s-and-p-500-companies-financials/main/data/constituents-financials.csv}
+\end{center}
+
+El repositorio público del dataset es:
+\begin{center}
+\url{https://github.com/datasets/s-and-p-500-companies-financials}
+\end{center}
+
+La fuente es pública y reconocida en el ecosistema de datos abiertos. El proyecto no presupone que el archivo sea una fuente de cotización en tiempo real: satisface el requisito de actualización mediante una descarga programada diariamente, que guarda una instantánea con fecha propia. La URL de SEC incluida en cada registro permite enlazar con la documentación regulatoria de la empresa.
+
+\subsection{Formato y estructura}
+El formato es CSV con una fila de cabecera y una fila por compañía. El script de descarga lo almacena como \texttt{datasets/constituents-financials\_AAAAMMDD.csv}. Los campos son los siguientes:
+
+\begin{longtable}{p{0.24\textwidth}p{0.67\textwidth}}
+\toprule
+Campo & Descripción \\
+\midrule
+\endhead
+\texttt{Symbol} & Símbolo bursátil de la compañía. \\
+\texttt{Name} & Nombre de la compañía. \\
+\texttt{Sector} & Sector o industria asignada. \\
+\texttt{Price} & Precio de la acción. \\
+\texttt{Price/Earnings} & Relación precio-beneficio. \\
+\texttt{Dividend Yield} & Rentabilidad por dividendo. \\
+\texttt{Earnings/Share} & Beneficio por acción. \\
+\texttt{52 Week Low}, \texttt{52 Week High} & Mínimo y máximo de 52 semanas. \\
+\texttt{Market Cap} & Capitalización bursátil. \\
+\texttt{EBITDA}, \texttt{Price/Sales}, \texttt{Price/Book} & Métricas financieras complementarias. \\
+\texttt{SEC Filings} & URL de consulta de documentación de la SEC. \\
+\bottomrule
+\end{longtable}
+
+Antes del análisis, \texttt{script\_sanitize.sh} descarta registros sin los campos necesarios (símbolo, nombre, sector, precio, beneficio por acción, mínimo y máximo de 52 semanas y capitalización). También elimina comas embebidas en nombre y sector para conservar la consistencia del CSV.
+
+\section{Automatización mediante cron}
+El archivo \texttt{cron/crontab.txt} define una ejecución diaria a las 12:00:
+\begin{verbatim}
+0 12 * * * /ruta/al/proyecto/cron/script_cron.sh
+\end{verbatim}
+El orquestador \texttt{cron/script\_cron.sh} ejecuta las etapas de limpieza, descarga, saneamiento y creación de informes. Cada etapa se comprueba; si alguna falla, el proceso se detiene y se registra el error.
+
+\section{Script de procesamiento}
+El procesamiento está separado en scripts Bash con una responsabilidad concreta:
+\begin{itemize}[noitemsep]
+  \item \texttt{script\_delete.sh}: elimina snapshots CSV con más de 30 días.
+  \item \texttt{script\_download.sh}: descarga el CSV y reintenta la operación hasta diez veces ante un fallo de red.
+  \item \texttt{script\_sanitize.sh}: valida los campos requeridos y normaliza el CSV.
+  \item \texttt{script\_analisis\_csv\_txt.sh}: genera los informes de texto.
+  \item \texttt{script\_analisis\_csv\_html.sh}: genera el informe HTML a partir de las plantillas de \texttt{scripts/html/}.
+\end{itemize}
+Los scripts de análisis aceptan opcionalmente una fecha \texttt{AAAAMMDD}; si se omite, emplean la fecha actual. Esto permite regenerar un informe histórico sin volver a descargar el dataset.
+
+\section{Extracción y análisis de datos}
+La extracción se realiza con \texttt{curl} sobre la URL pública indicada. El análisis usa herramientas estándar de Unix, principalmente \texttt{awk}, \texttt{sort}, \texttt{tail}, \texttt{sed} y \texttt{wc}. Las operaciones principales son:
+\begin{enumerate}[noitemsep]
+  \item ordenar las empresas por \texttt{Market Cap} para el ranking principal;
+  \item sumar la capitalización por \texttt{Sector} y ordenar los sectores de forma descendente;
+  \item calcular la distancia porcentual entre el precio actual y el máximo de 52 semanas;
+  \item recorrer los snapshots disponibles hasta la fecha solicitada para mostrar la evolución de precio y capitalización por empresa.
+\end{enumerate}
+El informe de evolución no incorpora datasets posteriores a la fecha de su propia instantánea, por lo que una ejecución histórica se mantiene coherente con el periodo analizado.
+
+\section{Formato de los informes generados}
+Para cada fecha se crea el directorio \texttt{analysis/AAAAMMDD/}. Los informes de texto son archivos \texttt{.txt} con tablas monoespaciadas. El informe HTML se genera en \texttt{analysis/AAAAMMDD/report/report\_AAAAMMDD.html}, junto con su hoja de estilos y JavaScript.
+
+El HTML incluye el ranking por capitalización, las tablas por sector, los mayores ganadores y la evolución. Las tablas incluyen numeración donde corresponde y un total de entradas procesadas, situado fuera del contenedor desplazable de cada bloque. El CSS y JavaScript se separan de la plantilla HTML para facilitar su mantenimiento.
+
+\section{Registro (log)}
+El archivo \texttt{log.txt} conserva un registro cronológico de todas las ejecuciones. Cada línea incluye fecha y hora con milisegundos, además del estado \texttt{[ok]} o \texttt{[ko]}. Se registran el inicio y el final de cada etapa, los archivos de entrada y salida, los reintentos de descarga y los registros descartados durante el saneamiento. Este registro permite auditar la automatización y diagnosticar errores.
+
+\section{Estructura de ficheros del proyecto}
+\begin{verbatim}
+project/
+|-- analysis/       informes generados, agrupados por fecha
+|-- cron/           crontab y script orquestador diario
+|-- datasets/       snapshots CSV descargados
+|-- scripts/        descarga, limpieza, saneamiento y análisis
+|   `-- html/       plantilla, estilos y JavaScript del informe web
+`-- log.txt         registro de ejecuciones
+project_doc/
+`-- proyecto_shell_Yassin_Pellicer.tex
+\end{verbatim}
+
+\section{Entrega del proyecto}
+La entrega incluye los scripts ejecutables, el archivo de \texttt{cron}, las plantillas HTML/CSS/JavaScript, los datasets de ejemplo, los informes generados y esta memoria en formato \LaTeX. Para ejecutar el flujo completo se configura la entrada de \texttt{crontab} con la ruta absoluta del script orquestador o se ejecuta manualmente \texttt{cron/script\_cron.sh}.
+
+\appendix
+\section{Uso de IA en funciones de ayuda y formateo}
+Se utilizó asistencia de IA como apoyo al desarrollo, centrada en tareas de bajo riesgo y revisables: mejora del formato del informe HTML, definición de estilos CSS, incorporación de numeración y totales en tablas, y redacción inicial de esta memoria. La IA no sustituye la validación del proyecto: las decisiones sobre el dataset, la automatización, los comandos ejecutados y la verificación de los resultados se revisaron sobre los archivos y scripts del repositorio. No se empleó para inventar datos financieros ni para modificar la fuente de datos descargada.
+
 \end{document}

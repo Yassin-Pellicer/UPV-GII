@@ -86,7 +86,9 @@ awk -F',' '
   }
 
   {
+    row_count++
     printf "              <tr>\n"
+    printf "                <td class=\"row-number\">%d</td>\n", row_count
     printf "                <td>%s</td>\n", commas($10)
     printf "                <td>%s</td>\n", fit($1, 8)
     printf "                <td>%s</td>\n", fit($2, 30)
@@ -98,12 +100,11 @@ sed -i '/<!-- TOP MARKET CAP ROWS -->/{
   r rows.html
   d
 }' "$HTML_REPORT"
+sed -i "s|<!-- TOP MARKET CAP TOTAL -->|<p class=\"table-row-total\">Total de filas procesadas: $entries</p>|" "$HTML_REPORT"
 
 log_detail "[ok] - Added top market-cap analysis"
 
 # HIGHEST GROSSING SECTORS
-
-SECTORS_REPORT="$DAY_DIR/highest_grossing_sectors_${REPORT_DATE}.txt"
 
 log_detail "[ok] - Adding sector market-cap analysis to: $HTML_REPORT"
 
@@ -128,7 +129,9 @@ awk -F',' '
 
   {
     sector_sum[$3] += $10
+    sector_count[$3]++
     companies[$3] = companies[$3] sprintf("              <tr>\n")
+    companies[$3] = companies[$3] sprintf("                <td class=\"row-number\"></td>\n")
     companies[$3] = companies[$3] sprintf("                <td>%s</td>\n", fit($1, 8))
     companies[$3] = companies[$3] sprintf("                <td>%s</td>\n", fit($2, 31))
     companies[$3] = companies[$3] sprintf("                <td>%s</td>\n", commas($10))
@@ -156,12 +159,15 @@ awk -F',' '
 
       printf "    <div class=\"sector-table\">\n"
 
-      printf "      <h3 class=\"table-header\">%s</h3>\n", fit(sector, 63)
-
       printf "      <table>\n"
 
       printf "        <thead>\n"
+      printf "          <tr class=\"table-title-row\">\n"
+      printf "            <th class=\"row-number\">%d</th>\n", i
+      printf "            <th class=\"table-title\" colspan=\"3\">%s</th>\n", fit(sector, 63)
+      printf "          </tr>\n"
       printf "          <tr>\n"
+      printf "            <th class=\"row-number\"></th>\n"
       printf "            <th>Symbol</th>\n"
       printf "            <th>Company</th>\n"
       printf "            <th>Capitalización Bursátil</th>\n"
@@ -173,10 +179,9 @@ awk -F',' '
       printf "%s", companies[sector]
 
       printf "          <tr class=\"sector-total\">\n"
-      printf "            <td colspan=\"2\">SECTOR TOTAL</td>\n"
+      printf "            <td colspan=\"3\">SECTOR TOTAL</td>\n"
       printf "            <td>%s</td>\n", commas(sector_sum[sector])
       printf "          </tr>\n"
-
       printf "        </tbody>\n"
       printf "      </table>\n"
       printf "    </div>\n\n"
@@ -188,15 +193,13 @@ sed -i '/<!-- SECTOR_ROWS -->/{
   r rows.html
   d
 }' "$HTML_REPORT"
+sed -i "s|<!-- SECTOR TOTAL -->|<p class=\"table-row-total\">Total de filas procesadas: $entries</p>|" "$HTML_REPORT"
 
 log_detail "[ok] - Added sector market-cap analysis"
 
 # TOP WINNERS
 
-WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric_${REPORT_DATE}.txt"
-
 log_detail "[ok] - Adding 52-week winners analysis to: $HTML_REPORT"
-
 
 tail -n +2 "$DATA_FILE" |
 awk -F',' '
@@ -229,7 +232,9 @@ awk -F'|' '
     return text result
   }
   {
+    row_count++
     printf "              <tr>\n"
+    printf "                <td class=\"row-number\">%d</td>\n", row_count
     printf "                <td>%s</td>\n", $1
     printf "                <td>%s</td>\n", $2
     printf "                <td>%s</td>\n", $3
@@ -244,11 +249,12 @@ sed -i '/<!-- TOP MARKET WINNERS -->/{
   d
 }' "$HTML_REPORT"
 
+winners_count=$(awk '/^[[:space:]]*<tr>/ { count++ } END { print count + 0 }' rows.html)
+sed -i "s|<!-- TOP MARKET WINNERS TOTAL -->|<p class=\"table-row-total\">Total de filas procesadas: $winners_count</p>|" "$HTML_REPORT"
+
 log_detail "[ok] - Added 52-week winners analysis"
 
 # PRICE AND MARKET CAP EVOLUTION
-
-EVOLUTION_REPORT="$DAY_DIR/price_market_cap_evolution_${REPORT_DATE}.txt"
 
 log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPORT"
 
@@ -336,14 +342,18 @@ log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPO
         current_company = company
         previous_price = ""
         previous_market_cap = ""
+        company_count++
 
         printf "    <div class=\"sector-table\">\n"
-        printf "      <h3 class=\"table-header\">%s | %s</h3>\n", symbol, fit(company, 63)
-
         printf "      <table>\n"
 
         printf "        <thead>\n"
+        printf "          <tr class=\"table-title-row\">\n"
+        printf "            <th class=\"row-number\">%d</th>\n", company_count
+        printf "            <th class=\"table-title\" colspan=\"5\">%s | %s</th>\n", symbol, fit(company, 63)
+        printf "          </tr>\n"
         printf "          <tr>\n"
+        printf "            <th class=\"row-number\"></th>\n"
         printf "            <th class=\"date-row\">Fecha</th>\n"
         printf "            <th class=\"price-row\">Precio</th>\n"
         printf "            <th class=\"price-row-diff\">Diferencia de precio</th>\n"
@@ -356,6 +366,7 @@ log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPO
       }
 
       printf "          <tr>\n"
+      printf "            <td class=\"row-number\"></td>\n"
       printf "            <td class=\"date-row\">%s</td>\n", format_date(date)
       printf "            <td class=\"price-row\">%.2f</td>\n", price
 
@@ -389,10 +400,13 @@ log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPO
   '
 } > rows.html
 
+evolution_count=$(awk '/<tr class="table-title-row">/ { count++ } END { print count + 0 }' rows.html)
+
 sed -i '/<!-- EVOLUTION -->/{
   r rows.html
   d
 }' "$HTML_REPORT" && rm -f rows.html
+sed -i "s|<!-- EVOLUTION TOTAL -->|<p class=\"table-row-total\">Total de filas procesadas: $evolution_count</p>|" "$HTML_REPORT"
 
 log_detail "[ok] - Added price and market-cap evolution analysis"
 log "HTML REPORT CREATION COMPLETED SUCCESSFULLY"
