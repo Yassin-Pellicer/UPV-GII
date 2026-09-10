@@ -5626,3 +5626,9 @@
 [2026/09/10 01:56:46.196] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260910/highest_winners_52_week_metric.txt
 [2026/09/10 01:56:46.199] - Analysis complete: reports created in /project/analysis/20260910
 [2026/09/10 01:56:46.199] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260910/price_market_cap_evolution.txt
+[2026/09/10 02:02:00.721] - Analyzing constituents-financials_20260906.csv; reports will be stored in /project/analysis/20260906
+[2026/09/10 02:02:00.722] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260906/top_market_cap_companies.txt
+[2026/09/10 02:02:00.725] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260906/highest_grossing_sectors.txt
+[2026/09/10 02:02:00.730] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260906/highest_winners_52_week_metric.txt
+[2026/09/10 02:02:00.733] - Analysis complete: reports created in /project/analysis/20260906
+[2026/09/10 02:02:00.734] - Creating /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260906/price_market_cap_evolution.txt
