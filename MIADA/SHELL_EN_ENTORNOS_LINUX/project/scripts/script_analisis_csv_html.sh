@@ -377,4 +377,4 @@ log "Creating $EVOLUTION_REPORT"
 sed -i '/<!-- EVOLUTION -->/{
   r rows.html
   d
-}' "$HTML_REPORT"
+}' "$HTML_REPORT" && rm -f rows.html
