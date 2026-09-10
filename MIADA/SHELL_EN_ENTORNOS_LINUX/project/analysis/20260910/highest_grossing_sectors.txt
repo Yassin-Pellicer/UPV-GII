@@ -7,1010 +7,988 @@
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| NVDA     | Nvidia                          |  5,450,701,996,032 |
-| AVGO     | Broadcom                        |  1,753,453,821,952 |
-| MU       | Micron Technology               |  1,129,686,761,472 |
-| AMD      | Advanced Micro Devices          |    825,607,913,472 |
-| INTC     | Intel                           |    552,239,431,680 |
-| TXN      | Texas Instruments               |    236,458,098,688 |
-| QCOM     | Qualcomm                        |    185,938,640,896 |
-| ADI      | Analog Devices                  |    175,994,191,872 |
-| MPWR     | Monolithic Power Systems        |     59,880,747,008 |
-| NXPI     | NXP Semiconductors              |     56,451,993,600 |
-| MCHP     | Microchip Technology            |     39,845,978,112 |
-| ON       | ON Semiconductor                |     27,672,768,512 |
-| FSLR     | First Solar                     |     22,917,933,056 |
-| SWKS     | Skyworks Solutions              |     11,342,638,080 |
-| QRVO     | Qorvo                           |      9,181,224,960 |
+| NVDA     | Nvidia                          |  5,400,959,123,456 |
+| AVGO     | Broadcom                        |  1,733,567,184,896 |
+| MU       | Micron Technology               |  1,160,756,461,568 |
+| AMD      | Advanced Micro Devices          |    850,674,515,968 |
+| INTC     | Intel                           |    561,595,809,792 |
+| TXN      | Texas Instruments               |    238,896,463,872 |
+| QCOM     | Qualcomm                        |    188,405,858,304 |
+| ADI      | Analog Devices                  |    176,900,325,376 |
+| MPWR     | Monolithic Power Systems        |     59,155,886,080 |
+| NXPI     | NXP Semiconductors              |     56,313,307,136 |
+| MCHP     | Microchip Technology            |     39,645,065,216 |
+| ON       | ON Semiconductor                |     27,633,838,080 |
+| FSLR     | First Solar                     |     21,827,115,008 |
+| SWKS     | Skyworks Solutions              |     11,517,187,072 |
+| QRVO     | Qorvo                           |      9,284,444,160 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                 10,537,374,139,392 |
+| SECTOR TOTAL                                 10,537,132,585,984 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Interactive Media & Services                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| GOOGL    | Alphabet Inc. (Class A)         |  4,138,120,773,632 |
-| GOOG     | Alphabet Inc. (Class C)         |  4,101,675,679,744 |
-| META     | Meta Platforms                  |  1,562,844,069,888 |
-| MTCH     | Match Group                     |      9,598,917,632 |
+| GOOGL    | Alphabet Inc. (Class A)         |  4,043,827,838,976 |
+| GOOG     | Alphabet Inc. (Class C)         |  4,016,066,265,088 |
+| META     | Meta Platforms                  |  1,665,279,328,256 |
+| MTCH     | Match Group                     |      9,664,232,448 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  9,812,239,440,896 |
+| SECTOR TOTAL                                  9,734,837,664,768 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Technology Hardware Storage & Peripherals                       |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| AAPL     | Apple Inc.                      |  4,614,971,719,680 |
-| DELL     | Dell Technologies               |    344,962,498,560 |
-| STX      | Seagate Technology              |    204,972,769,280 |
-| WDC      | Western Digital                 |    172,086,181,888 |
-| HPE      | Hewlett Packard Enterprise      |     74,377,854,976 |
-| NTAP     | NetApp                          |     37,148,729,344 |
-| HPQ      | HP Inc.                         |     28,108,824,576 |
-| SMCI     | Supermicro                      |     26,449,424,384 |
+| AAPL     | Apple Inc.                      |  4,602,128,760,832 |
+| DELL     | Dell Technologies               |    340,318,781,440 |
+| STX      | Seagate Technology              |    201,452,011,520 |
+| WDC      | Western Digital                 |    173,881,671,680 |
+| HPE      | Hewlett Packard Enterprise      |     78,187,683,840 |
+| NTAP     | NetApp                          |     36,286,447,616 |
+| HPQ      | HP Inc.                         |     29,209,010,176 |
+| SMCI     | Supermicro                      |     25,575,661,568 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  5,503,078,002,688 |
+| SECTOR TOTAL                                  5,487,040,028,672 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Systems Software                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MSFT     | Microsoft                       |  3,667,848,331,264 |
-| PANW     | Palo Alto Networks              |    274,638,716,928 |
-| CRWD     | CrowdStrike                     |    215,046,799,360 |
-| NOW      | ServiceNow                      |    138,754,621,440 |
-| FTNT     | Fortinet                        |    115,537,895,424 |
-| GEN      | Gen Digital                     |     17,843,877,888 |
+| MSFT     | Microsoft                       |  3,650,769,387,520 |
+| PANW     | Palo Alto Networks              |    273,106,501,632 |
+| CRWD     | CrowdStrike                     |    212,773,666,816 |
+| NOW      | ServiceNow                      |    135,549,648,896 |
+| FTNT     | Fortinet                        |    115,354,460,160 |
+| GEN      | Gen Digital                     |     17,813,950,464 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  4,429,670,242,304 |
+| SECTOR TOTAL                                  4,405,367,615,488 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Broadline Retail                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| AMZN     | Amazon                          |  2,771,758,874,624 |
-| EBAY     | eBay                            |     46,542,548,992 |
+| AMZN     | Amazon                          |  2,722,465,316,864 |
+| EBAY     | eBay                            |     46,061,948,928 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  2,818,301,423,616 |
+| SECTOR TOTAL                                  2,768,527,265,792 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Pharmaceuticals                                                 |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| LLY      | Lilly (Eli)                     |  1,002,237,067,264 |
-| JNJ      | Johnson & Johnson               |    648,551,858,176 |
-| MRK      | Merck & Co.                     |    366,276,313,088 |
-| PFE      | Pfizer                          |    158,393,942,016 |
-| BMY      | Bristol Myers Squibb            |    132,143,210,496 |
-| ZTS      | Zoetis                          |     30,396,727,296 |
-| VTRS     | Viatris                         |     19,078,094,848 |
+| LLY      | Lilly (Eli)                     |  1,002,504,519,680 |
+| JNJ      | Johnson & Johnson               |    643,635,675,136 |
+| MRK      | Merck & Co.                     |    363,981,832,192 |
+| PFE      | Pfizer                          |    158,336,942,080 |
+| BMY      | Bristol Myers Squibb            |    131,571,253,248 |
+| ZTS      | Zoetis                          |     30,293,422,080 |
+| VTRS     | Viatris                         |     18,951,749,632 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  2,357,077,213,184 |
+| SECTOR TOTAL                                  2,349,275,394,048 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Diversified Banks                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| JPM      | JPMorgan Chase                  |    939,695,472,640 |
-| BAC      | Bank of America                 |    436,277,575,680 |
-| WFC      | Wells Fargo                     |    265,990,963,200 |
-| C        | Citigroup                       |    229,372,723,200 |
-| USB      | U.S. Bancorp                    |     97,362,640,896 |
-| PNC      | PNC Financial Services          |     96,907,411,456 |
-| TFC      | Truist Financial                |     61,753,204,736 |
+| JPM      | JPMorgan Chase                  |    942,885,240,832 |
+| BAC      | Bank of America                 |    438,235,529,216 |
+| WFC      | Wells Fargo                     |    271,161,999,360 |
+| C        | Citigroup                       |    231,150,796,800 |
+| USB      | U.S. Bancorp                    |     96,770,580,480 |
+| PNC      | PNC Financial Services          |     96,021,757,952 |
+| TFC      | Truist Financial                |     61,264,556,032 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  2,127,359,991,808 |
+| SECTOR TOTAL                                  2,137,490,460,672 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Automobile Manufacturers                                        |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TSLA     | Tesla Inc.                      |  1,454,065,451,008 |
-| GM       | General Motors                  |     77,592,895,488 |
-| F        | Ford Motor Company              |     55,826,341,888 |
+| TSLA     | Tesla Inc.                      |  1,452,683,034,624 |
+| GM       | General Motors                  |     75,756,863,488 |
+| F        | Ford Motor Company              |     53,633,163,264 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,587,484,688,384 |
+| SECTOR TOTAL                                  1,582,073,061,376 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Consumer Staples Merchandise Retail                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WMT      | Walmart                         |    843,954,323,456 |
-| COST     | Costco                          |    403,645,530,112 |
-| TGT      | Target Corporation              |     73,918,627,840 |
-| DG       | Dollar General                  |     28,210,268,160 |
-| DLTR     | Dollar Tree                     |     23,273,662,464 |
+| WMT      | Walmart                         |    842,203,529,216 |
+| COST     | Costco                          |    400,283,959,296 |
+| TGT      | Target Corporation              |     71,560,822,784 |
+| DG       | Dollar General                  |     27,482,232,832 |
+| DLTR     | Dollar Tree                     |     22,213,552,128 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,373,002,412,032 |
+| SECTOR TOTAL                                  1,363,744,096,256 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Aerospace & Defense                                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| GE       | GE Aerospace                    |    347,490,058,240 |
-| RTX      | RTX Corporation                 |    267,947,786,240 |
-| BA       | Boeing                          |    166,554,681,344 |
-| LMT      | Lockheed Martin                 |    123,738,464,256 |
-| GD       | General Dynamics                |     96,475,275,264 |
-| HWM      | Howmet Aerospace                |     92,334,489,600 |
-| NOC      | Northrop Grumman                |     73,671,049,216 |
-| TDG      | TransDigm Group                 |     63,299,358,720 |
-| LHX      | L3Harris                        |     47,622,529,024 |
-| AXON     | Axon Enterprise                 |     41,059,827,712 |
-| TXT      | Textron                         |     13,679,839,232 |
-| HII      | Huntington Ingalls Industries   |     11,335,522,304 |
+| GE       | GE Aerospace                    |    337,643,601,920 |
+| RTX      | RTX Corporation                 |    266,249,617,408 |
+| BA       | Boeing                          |    163,148,185,600 |
+| LMT      | Lockheed Martin                 |    121,040,519,168 |
+| GD       | General Dynamics                |     95,417,409,536 |
+| HWM      | Howmet Aerospace                |     92,769,181,696 |
+| NOC      | Northrop Grumman                |     73,243,435,008 |
+| TDG      | TransDigm Group                 |     62,223,679,488 |
+| LHX      | L3Harris                        |     46,630,002,688 |
+| AXON     | Axon Enterprise                 |     39,806,332,928 |
+| TXT      | Textron                         |     13,740,034,048 |
+| HII      | Huntington Ingalls Industries   |     11,066,781,696 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,345,208,881,152 |
+| SECTOR TOTAL                                  1,322,978,781,184 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Transaction & Payment Processing Services                       |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| V        | Visa Inc.                       |    688,268,312,576 |
-| MA       | Mastercard                      |    500,105,314,304 |
-| PYPL     | PayPal                          |     45,493,407,744 |
-| CPAY     | Corpay                          |     26,726,739,968 |
-| GPN      | Global Payments                 |     23,662,176,256 |
-| FIS      | Fidelity National Information... |     20,329,125,888 |
-| JKHY     | Jack Henry & Associates         |     11,206,097,920 |
+| V        | Visa Inc.                       |    685,934,510,080 |
+| MA       | Mastercard                      |    497,135,616,000 |
+| PYPL     | PayPal                          |     44,629,393,408 |
+| CPAY     | Corpay                          |     26,663,706,624 |
+| GPN      | Global Payments                 |     23,027,091,456 |
+| FIS      | Fidelity National Information... |     19,632,924,672 |
+| JKHY     | Jack Henry & Associates         |     11,111,445,504 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,315,791,174,656 |
+| SECTOR TOTAL                                  1,308,134,687,744 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Biotechnology                                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ABBV     | AbbVie                          |    439,623,450,624 |
-| AMGN     | Amgen                           |    212,560,297,984 |
-| GILD     | Gilead Sciences                 |    181,827,026,944 |
-| VRTX     | Vertex Pharmaceuticals          |    134,055,493,632 |
-| REGN     | Regeneron Pharmaceuticals       |     83,425,460,224 |
-| MRNA     | Moderna                         |     56,024,776,704 |
-| BIIB     | Biogen                          |     31,397,724,160 |
-| INCY     | Incyte                          |     25,215,600,640 |
+| ABBV     | AbbVie                          |    443,387,412,480 |
+| AMGN     | Amgen                           |    211,533,070,336 |
+| GILD     | Gilead Sciences                 |    180,599,472,128 |
+| VRTX     | Vertex Pharmaceuticals          |    132,083,556,352 |
+| REGN     | Regeneron Pharmaceuticals       |     83,151,601,664 |
+| MRNA     | Moderna                         |     54,140,383,232 |
+| BIIB     | Biogen                          |     31,136,200,704 |
+| INCY     | Incyte                          |     25,541,943,296 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,164,129,830,912 |
+| SECTOR TOTAL                                  1,161,573,640,192 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Application Software                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ORCL     | Oracle Corporation              |    468,134,166,528 |
-| CRM      | Salesforce                      |    205,025,755,136 |
-| ADBE     | Adobe Inc.                      |    102,260,850,688 |
-| INTU     | Intuit                          |     87,239,147,520 |
-| CDNS     | Cadence Design Systems          |     78,241,898,496 |
-| SNPS     | Synopsys                        |     75,127,308,288 |
-| ADSK     | Autodesk                        |     44,351,889,408 |
-| FICO     | Fair Isaac                      |     20,157,073,408 |
-| PTC      | PTC Inc.                        |     14,459,002,880 |
-| TYL      | Tyler Technologies              |     14,244,019,200 |
+| ORCL     | Oracle Corporation              |    465,570,562,048 |
+| CRM      | Salesforce                      |    200,943,681,536 |
+| ADBE     | Adobe Inc.                      |    101,306,851,328 |
+| INTU     | Intuit                          |     85,874,204,672 |
+| CDNS     | Cadence Design Systems          |     78,376,845,312 |
+| SNPS     | Synopsys                        |     75,355,357,184 |
+| ADSK     | Autodesk                        |     43,183,579,136 |
+| FICO     | Fair Isaac                      |     21,234,579,456 |
+| TYL      | Tyler Technologies              |     14,033,524,736 |
+| PTC      | PTC Inc.                        |     13,985,372,160 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,109,241,111,552 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Semiconductor Materials & Equipment                             |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| LRCX     | Lam Research                    |    400,948,264,960 |
-| AMAT     | Applied Materials               |    375,204,937,728 |
-| KLAC     | KLA Corporation                 |    246,911,205,376 |
-| TER      | Teradyne                        |     58,168,139,776 |
-| ENPH     | Enphase Energy                  |      5,131,176,960 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,086,363,724,800 |
+| SECTOR TOTAL                                  1,099,864,557,568 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Integrated Oil & Gas                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| XOM      | ExxonMobil                      |    660,619,788,288 |
-| CVX      | Chevron Corporation             |    411,544,387,584 |
+| XOM      | ExxonMobil                      |    675,299,262,464 |
+| CVX      | Chevron Corporation             |    419,410,411,520 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                  1,072,164,175,872 |
+| SECTOR TOTAL                                  1,094,709,673,984 |
++-----------------------------------------------------------------+
++=================================================================+
+| Semiconductor Materials & Equipment                             |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| LRCX     | Lam Research                    |    395,217,207,296 |
+| AMAT     | Applied Materials               |    372,078,149,632 |
+| KLAC     | KLA Corporation                 |    238,980,481,024 |
+| TER      | Teradyne                        |     59,986,382,848 |
+| ENPH     | Enphase Energy                  |      4,852,351,488 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                  1,071,114,572,288 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Equipment                                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ABT      | Abbott Laboratories             |    182,590,046,208 |
-| ISRG     | Intuitive Surgical              |    125,454,639,104 |
-| MDT      | Medtronic                       |    118,179,553,280 |
-| SYK      | Stryker Corporation             |    106,031,095,808 |
-| BSX      | Boston Scientific               |     65,186,344,960 |
-| EW       | Edwards Lifesciences            |     49,985,409,024 |
-| BDX      | Becton Dickinson                |     48,784,482,304 |
-| IDXX     | Idexx Laboratories              |     40,982,728,704 |
-| DXCM     | Dexcom                          |     31,898,304,512 |
-| RMD      | ResMed                          |     31,886,972,928 |
-| GEHC     | GE HealthCare                   |     30,161,348,608 |
-| STE      | Steris                          |     21,297,924,096 |
-| ZBH      | Zimmer Biomet                   |     17,971,306,496 |
-| RVTY     | Revvity                         |     14,180,400,128 |
-| BAX      | Baxter International            |     12,852,520,960 |
-| PODD     | Insulet Corporation             |      9,867,715,584 |
-| TFX      | Teleflex                        |      5,805,018,112 |
+| ABT      | Abbott Laboratories             |    182,088,253,440 |
+| ISRG     | Intuitive Surgical              |    126,558,134,272 |
+| MDT      | Medtronic                       |    117,539,979,264 |
+| SYK      | Stryker Corporation             |    105,632,186,368 |
+| BSX      | Boston Scientific               |     65,157,361,664 |
+| EW       | Edwards Lifesciences            |     49,674,153,984 |
+| BDX      | Becton Dickinson                |     48,975,151,104 |
+| IDXX     | Idexx Laboratories              |     40,584,097,792 |
+| RMD      | ResMed                          |     31,728,293,888 |
+| DXCM     | Dexcom                          |     31,653,019,648 |
+| GEHC     | GE HealthCare                   |     29,436,391,424 |
+| STE      | Steris                          |     20,971,298,816 |
+| ZBH      | Zimmer Biomet                   |     18,045,693,952 |
+| RVTY     | Revvity                         |     13,819,975,680 |
+| BAX      | Baxter International            |     12,609,531,904 |
+| PODD     | Insulet Corporation             |      9,565,331,456 |
+| TFX      | Teleflex                        |      5,750,781,440 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    913,115,810,816 |
+| SECTOR TOTAL                                    909,789,636,096 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Investment Banking & Brokerage                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MS       | Morgan Stanley                  |    339,619,250,176 |
-| GS       | Goldman Sachs                   |    301,807,894,528 |
-| SCHW     | Charles Schwab Corporation      |    184,814,108,672 |
-| RJF      | Raymond James Financial         |     33,915,254,784 |
+| MS       | Morgan Stanley                  |    338,221,465,600 |
+| GS       | Goldman Sachs                   |    299,551,326,208 |
+| SCHW     | Charles Schwab Corporation      |    184,243,421,184 |
+| RJF      | Raymond James Financial         |     33,707,786,240 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    860,156,508,160 |
+| SECTOR TOTAL                                    855,723,999,232 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Communications Equipment                                        |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CSCO     | Cisco                           |    430,412,201,984 |
-| ANET     | Arista Networks                 |    245,888,368,640 |
-| MSI      | Motorola Solutions              |     76,620,316,672 |
-| FFIV     | F5 Inc.                         |     22,063,083,520 |
+| CSCO     | Cisco                           |    431,437,283,328 |
+| ANET     | Arista Networks                 |    243,328,073,728 |
+| MSI      | Motorola Solutions              |     76,108,939,264 |
+| FFIV     | F5 Inc.                         |     22,913,056,768 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    774,983,970,816 |
+| SECTOR TOTAL                                    773,787,353,088 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Electric Utilities                                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CEG      | Constellation Energy            |    105,955,622,912 |
-| SO       | Southern Company                |    102,370,803,712 |
-| DUK      | Duke Energy                     |     94,531,092,480 |
-| AEP      | American Electric Power         |     68,278,317,056 |
-| ETR      | Entergy                         |     51,853,189,120 |
-| VST      | Vistra Corp.                    |     50,922,573,824 |
-| EXC      | Exelon                          |     45,279,662,080 |
-| PEG      | Public Service Enterprise Group |     37,002,702,848 |
-| WEC      | WEC Energy Group                |     34,885,435,392 |
-| ES       | Eversource Energy               |     26,928,478,208 |
-| FE       | FirstEnergy                     |     26,877,825,024 |
-| PPL      | PPL Corporation                 |     26,399,275,008 |
-| EIX      | Edison International            |     22,831,013,888 |
-| EVRG     | Evergy                          |     18,961,844,224 |
-| LNT      | Alliant Energy                  |     17,789,523,968 |
+| CEG      | Constellation Energy            |    104,132,714,496 |
+| SO       | Southern Company                |    101,623,062,528 |
+| DUK      | Duke Energy                     |     93,899,538,432 |
+| AEP      | American Electric Power         |     67,870,019,584 |
+| ETR      | Entergy                         |     51,203,411,968 |
+| VST      | Vistra Corp.                    |     50,714,480,640 |
+| EXC      | Exelon                          |     45,022,097,408 |
+| PEG      | Public Service Enterprise Group |     36,185,292,800 |
+| WEC      | WEC Energy Group                |     34,588,913,664 |
+| FE       | FirstEnergy                     |     26,738,950,144 |
+| ES       | Eversource Energy               |     26,532,970,496 |
+| PPL      | PPL Corporation                 |     26,000,422,912 |
+| EIX      | Edison International            |     22,103,713,792 |
+| EVRG     | Evergy                          |     18,726,666,240 |
+| LNT      | Alliant Energy                  |     17,595,060,224 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    730,867,359,744 |
+| SECTOR TOTAL                                    722,937,315,328 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Soft Drinks & Non-alcoholic Beverages                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| KO       | Coca-Cola Company (The)         |    380,173,221,888 |
-| PEP      | PepsiCo                         |    189,122,691,072 |
-| MNST     | Monster Beverage                |     84,533,084,160 |
-| KDP      | Keurig Dr Pepper                |     44,294,885,376 |
+| KO       | Coca-Cola Company (The)         |    376,688,181,248 |
+| PEP      | PepsiCo                         |    186,718,535,680 |
+| MNST     | Monster Beverage                |     83,925,778,432 |
+| KDP      | Keurig Dr Pepper                |     43,655,299,072 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    698,123,882,496 |
+| SECTOR TOTAL                                    690,987,794,432 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Asset Management & Custody Banks                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BLK      | BlackRock                       |    177,971,544,064 |
-| BX       | Blackstone Inc.                 |    160,134,053,888 |
-| KKR      | KKR                             |     97,651,228,672 |
-| STT      | State Street Corporation        |     52,709,773,312 |
-| AMP      | Ameriprise Financial            |     49,172,451,328 |
-| NTRS     | Northern Trust                  |     33,824,841,728 |
-| TROW     | T. Rowe Price                   |     23,341,021,184 |
-| BEN      | Franklin Resources              |     17,604,866,048 |
-| IVZ      | Invesco                         |     14,278,103,040 |
+| BLK      | BlackRock                       |    174,179,352,576 |
+| BX       | Blackstone Inc.                 |    154,277,101,568 |
+| KKR      | KKR                             |     96,136,536,064 |
+| STT      | State Street Corporation        |     52,712,521,728 |
+| AMP      | Ameriprise Financial            |     48,749,334,528 |
+| NTRS     | Northern Trust                  |     33,790,078,976 |
+| TROW     | T. Rowe Price                   |     22,982,649,856 |
+| BEN      | Franklin Resources              |     17,335,582,720 |
+| IVZ      | Invesco                         |     14,167,728,128 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    626,687,883,264 |
+| SECTOR TOTAL                                    614,330,886,144 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Construction Machinery & Heavy Transportation Equipment         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CAT      | Caterpillar Inc.                |    378,073,382,912 |
-| CMI      | Cummins                         |     77,305,487,360 |
-| PCAR     | Paccar                          |     64,479,707,136 |
-| WAB      | Wabtec                          |     48,046,694,400 |
+| CAT      | Caterpillar Inc.                |    374,892,429,312 |
+| CMI      | Cummins                         |     76,370,747,392 |
+| PCAR     | Paccar                          |     64,153,358,336 |
+| WAB      | Wabtec                          |     47,374,426,112 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    567,905,271,808 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Multi-Utilities                                                 |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| NEE      | NextEra Energy                  |    174,867,562,496 |
-| D        | Dominion Energy                 |     58,242,207,744 |
-| SRE      | Sempra                          |     55,888,863,232 |
-| XEL      | Xcel Energy                     |     48,021,884,928 |
-| ED       | Consolidated Edison             |     40,041,345,024 |
-| PCG      | PG&E Corporation                |     32,639,078,400 |
-| AEE      | Ameren                          |     29,547,483,136 |
-| DTE      | DTE Energy                      |     28,562,165,760 |
-| CNP      | CenterPoint Energy              |     26,427,856,896 |
-| CMS      | CMS Energy                      |     21,570,971,648 |
-| NI       | NiSource                        |     20,093,569,024 |
-| PNW      | Pinnacle West                   |     11,882,176,512 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    547,785,164,800 |
+| SECTOR TOTAL                                    562,790,961,152 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Life Sciences Tools & Services                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TMO      | Thermo Fisher Scientific        |    222,965,022,720 |
-| DHR      | Danaher Corporation             |    144,273,817,600 |
-| IQV      | IQVIA                           |     42,665,963,520 |
-| A        | Agilent Technologies            |     41,406,681,088 |
-| WAT      | Waters Corporation              |     39,560,065,024 |
-| MTD      | Mettler Toledo                  |     26,558,861,312 |
-| CRL      | Charles River Laboratories      |     13,523,571,712 |
-| TECH     | Bio-Techne                      |     11,339,526,144 |
+| TMO      | Thermo Fisher Scientific        |    223,952,240,640 |
+| DHR      | Danaher Corporation             |    144,006,692,864 |
+| IQV      | IQVIA                           |     42,298,908,672 |
+| A        | Agilent Technologies            |     40,814,551,040 |
+| WAT      | Waters Corporation              |     39,746,617,344 |
+| MTD      | Mettler Toledo                  |     25,854,375,936 |
+| CRL      | Charles River Laboratories      |     13,407,486,976 |
+| TECH     | Bio-Techne                      |     11,330,117,632 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    542,293,509,120 |
+| SECTOR TOTAL                                    541,410,991,104 |
++-----------------------------------------------------------------+
++=================================================================+
+| Multi-Utilities                                                 |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| NEE      | NextEra Energy                  |    172,406,112,256 |
+| D        | Dominion Energy                 |     57,257,136,128 |
+| SRE      | Sempra                          |     55,588,069,376 |
+| XEL      | Xcel Energy                     |     47,590,887,424 |
+| ED       | Consolidated Edison             |     39,752,880,128 |
+| PCG      | PG&E Corporation                |     31,251,587,072 |
+| AEE      | Ameren                          |     29,414,596,608 |
+| DTE      | DTE Energy                      |     28,312,461,312 |
+| CNP      | CenterPoint Energy              |     26,197,305,344 |
+| CMS      | CMS Energy                      |     21,376,552,960 |
+| NI       | NiSource                        |     19,983,267,840 |
+| PNW      | Pinnacle West                   |     11,777,946,624 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    540,908,803,072 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Movies & Entertainment                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| NFLX     | Netflix                         |    319,665,635,328 |
-| DIS      | Walt Disney Company (The)       |    181,405,712,384 |
-| LYV      | Live Nation Entertainment       |     39,707,947,008 |
-| PARA     | Paramount Global                |          3,728,509 |
+| NFLX     | Netflix                         |    316,584,329,216 |
+| DIS      | Walt Disney Company (The)       |    179,886,243,840 |
+| LYV      | Live Nation Entertainment       |     39,600,787,456 |
+| PARA     | Paramount Global                |          3,764,018 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    540,783,023,229 |
+| SECTOR TOTAL                                    536,075,124,530 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Financial Exchanges & Data                                      |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SPGI     | S&P Global                      |    126,560,583,680 |
-| CME      | CME Group                       |    100,045,742,080 |
-| ICE      | Intercontinental Exchange       |     88,565,596,160 |
-| MCO      | Moody's Corporation             |     83,343,351,808 |
-| NDAQ     | Nasdaq Inc.                     |     53,125,206,016 |
-| MSCI     | MSCI                            |     40,086,052,864 |
-| CBOE     | Cboe Global Markets             |     30,632,749,056 |
-| FDS      | FactSet                         |     10,278,441,984 |
-| MKTX     | MarketAxess                     |      5,747,703,296 |
+| SPGI     | S&P Global                      |    123,332,526,080 |
+| CME      | CME Group                       |     98,776,424,448 |
+| ICE      | Intercontinental Exchange       |     87,858,241,536 |
+| MCO      | Moody's Corporation             |     82,186,502,144 |
+| NDAQ     | Nasdaq Inc.                     |     52,666,847,232 |
+| MSCI     | MSCI                            |     40,315,056,128 |
+| CBOE     | Cboe Global Markets             |     30,480,279,552 |
+| FDS      | FactSet                         |      9,928,833,024 |
+| MKTX     | MarketAxess                     |      5,745,591,296 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    538,385,426,944 |
+| SECTOR TOTAL                                    531,290,301,440 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Managed Health Care                                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| UNH      | UnitedHealth Group              |    359,791,919,104 |
-| ELV      | Elevance Health                 |     87,168,442,368 |
-| HUM      | Humana                          |     48,403,169,280 |
-| CNC      | Centene Corporation             |     31,902,197,760 |
-| MOH      | Molina Healthcare               |     10,246,859,776 |
+| UNH      | UnitedHealth Group              |    352,808,632,320 |
+| ELV      | Elevance Health                 |     86,075,424,768 |
+| HUM      | Humana                          |     48,034,521,088 |
+| CNC      | Centene Corporation             |     31,645,319,168 |
+| MOH      | Molina Healthcare               |     10,133,585,920 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    537,512,588,288 |
+| SECTOR TOTAL                                    528,697,483,264 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Hotels Resorts & Cruise Lines                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BKNG     | Booking Holdings                |    135,473,905,664 |
-| ABNB     | Airbnb                          |    104,512,045,056 |
-| MAR      | Marriott International          |     85,737,349,120 |
-| RCL      | Royal Caribbean Group           |     70,741,073,920 |
-| HLT      | Hilton Worldwide                |     68,525,514,752 |
-| EXPE     | Expedia Group                   |     32,952,059,904 |
-| CCL      | Carnival                        |     31,775,860,736 |
-| NCLH     | Norwegian Cruise Line Holdings  |      7,066,900,992 |
+| BKNG     | Booking Holdings                |    130,311,913,472 |
+| ABNB     | Airbnb                          |    101,572,018,176 |
+| MAR      | Marriott International          |     86,449,233,920 |
+| RCL      | Royal Caribbean Group           |     69,473,353,728 |
+| HLT      | Hilton Worldwide                |     69,092,671,488 |
+| EXPE     | Expedia Group                   |     32,718,020,608 |
+| CCL      | Carnival                        |     31,091,036,160 |
+| NCLH     | Norwegian Cruise Line Holdings  |      6,818,939,392 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    536,784,710,144 |
+| SECTOR TOTAL                                    527,527,186,944 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Property & Casualty Insurance                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CB       | Chubb Limited                   |    129,875,673,088 |
-| PGR      | Progressive Corporation         |    124,878,389,248 |
-| TRV      | Travelers Companies (The)       |     76,267,544,576 |
-| ALL      | Allstate                        |     64,089,378,816 |
-| HIG      | Hartford (The)                  |     36,746,498,048 |
-| ACGL     | Arch Capital Group              |     32,659,038,208 |
-| CINF     | Cincinnati Financial            |     25,959,276,544 |
-| WRB      | W. R. Berkley Corporation       |     25,900,541,952 |
+| CB       | Chubb Limited                   |    130,253,750,272 |
+| PGR      | Progressive Corporation         |    125,227,057,152 |
+| TRV      | Travelers Companies (The)       |     76,515,745,792 |
+| ALL      | Allstate                        |     64,119,717,888 |
+| HIG      | Hartford (The)                  |     36,990,279,680 |
+| ACGL     | Arch Capital Group              |     32,797,235,200 |
+| CINF     | Cincinnati Financial            |     25,970,022,400 |
+| WRB      | W. R. Berkley Corporation       |     25,952,518,144 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    516,376,340,480 |
+| SECTOR TOTAL                                    517,826,326,528 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Industrial Machinery & Supplies & Components                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| PH       | Parker Hannifin                 |    120,484,995,072 |
-| ITW      | Illinois Tool Works             |     76,522,913,792 |
-| GWW      | W. W. Grainger                  |     60,721,127,424 |
-| IR       | Ingersoll Rand                  |     29,142,636,544 |
-| OTIS     | Otis Worldwide                  |     26,669,692,928 |
-| DOV      | Dover Corporation               |     26,227,628,032 |
-| XYL      | Xylem Inc.                      |     25,405,700,096 |
-| HUBB     | Hubbell Incorporated            |     24,553,936,896 |
-| SNA      | Snap-on                         |     19,650,099,200 |
-| NDSN     | Nordson Corporation             |     17,645,559,808 |
-| FTV      | Fortive                         |     17,066,983,424 |
-| IEX      | IDEX Corporation                |     16,635,631,616 |
-| SWK      | Stanley Black & Decker          |     14,166,871,040 |
-| PNR      | Pentair                         |      9,355,751,424 |
+| PH       | Parker Hannifin                 |    119,678,287,872 |
+| ITW      | Illinois Tool Works             |     75,184,349,184 |
+| GWW      | W. W. Grainger                  |     60,234,096,640 |
+| IR       | Ingersoll Rand                  |     28,548,999,168 |
+| OTIS     | Otis Worldwide                  |     26,380,386,304 |
+| DOV      | Dover Corporation               |     25,780,488,192 |
+| XYL      | Xylem Inc.                      |     25,132,521,472 |
+| HUBB     | Hubbell Incorporated            |     24,037,234,688 |
+| SNA      | Snap-on                         |     19,522,850,816 |
+| NDSN     | Nordson Corporation             |     17,486,260,224 |
+| FTV      | Fortive                         |     16,855,572,480 |
+| IEX      | IDEX Corporation                |     16,594,349,056 |
+| SWK      | Stanley Black & Decker          |     13,845,206,016 |
+| PNR      | Pentair                         |      9,180,191,744 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    484,249,527,296 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Internet Services & Infrastructure                              |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| PLTR     | Palantir Technologies           |    409,240,862,720 |
-| VRSN     | Verisign                        |     25,510,881,280 |
-| AKAM     | Akamai Technologies             |     15,177,911,296 |
-| GDDY     | GoDaddy                         |     11,763,038,208 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    461,692,693,504 |
+| SECTOR TOTAL                                    478,460,793,856 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Oil & Gas Exploration & Production                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| COP      | ConocoPhillips                  |    162,228,600,832 |
-| EOG      | EOG Resources                   |     76,245,565,440 |
-| OXY      | Occidental Petroleum            |     60,628,008,960 |
-| FANG     | Diamondback Energy              |     55,905,947,648 |
-| DVN      | Devon Energy                    |     53,240,000,512 |
-| EQT      | EQT Corporation                 |     34,478,444,544 |
-| APA      | APA Corporation                 |     15,257,808,896 |
+| COP      | ConocoPhillips                  |    164,018,601,984 |
+| EOG      | EOG Resources                   |     77,111,033,856 |
+| OXY      | Occidental Petroleum            |     61,277,769,728 |
+| FANG     | Diamondback Energy              |     56,740,409,344 |
+| DVN      | Devon Energy                    |     53,877,997,568 |
+| EQT      | EQT Corporation                 |     34,171,940,864 |
+| APA      | APA Corporation                 |     15,709,762,560 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    457,984,376,832 |
+| SECTOR TOTAL                                    462,907,515,904 |
++-----------------------------------------------------------------+
++=================================================================+
+| Internet Services & Infrastructure                              |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| PLTR     | Palantir Technologies           |    407,390,486,528 |
+| VRSN     | Verisign                        |     25,939,376,128 |
+| AKAM     | Akamai Technologies             |     15,916,614,656 |
+| GDDY     | GoDaddy                         |     11,854,225,408 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    461,100,702,720 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Home Improvement Retail                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| HD       | Home Depot (The)                |    312,975,228,928 |
-| LOW      | Lowe's                          |    112,659,644,416 |
+| HD       | Home Depot (The)                |    309,732,737,024 |
+| LOW      | Lowe's                          |    111,425,331,200 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    425,634,873,344 |
+| SECTOR TOTAL                                    421,158,068,224 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Restaurants                                                     |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MCD      | McDonald's                      |    181,021,786,112 |
-| SBUX     | Starbucks                       |    116,291,403,776 |
-| CMG      | Chipotle Mexican Grill          |     46,769,848,320 |
-| YUM      | Yum! Brands                     |     40,801,439,744 |
-| DRI      | Darden Restaurants              |     24,175,310,848 |
-| DPZ      | Domino's                        |     11,095,945,216 |
+| MCD      | McDonald's                      |    179,372,965,888 |
+| SBUX     | Starbucks                       |    114,045,599,744 |
+| CMG      | Chipotle Mexican Grill          |     45,593,010,176 |
+| YUM      | Yum! Brands                     |     39,614,324,736 |
+| DRI      | Darden Restaurants              |     23,777,914,880 |
+| DPZ      | Domino's                        |     10,634,455,040 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    420,155,734,016 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Personal Care Products                                          |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| PG       | Procter & Gamble                |    338,134,663,168 |
-| EL       | Estée Lauder Companies (The)    |     36,791,296,000 |
-| KVUE     | Kenvue                          |     35,323,023,360 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    410,248,982,528 |
+| SECTOR TOTAL                                    413,038,270,464 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Tobacco                                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| PM       | Philip Morris International     |    287,922,651,136 |
-| MO       | Altria                          |    113,826,439,168 |
+| PM       | Philip Morris International     |    289,450,098,688 |
+| MO       | Altria                          |    113,358,913,536 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    401,749,090,304 |
+| SECTOR TOTAL                                    402,809,012,224 |
++-----------------------------------------------------------------+
++=================================================================+
+| Personal Care Products                                          |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| PG       | Procter & Gamble                |    331,305,975,808 |
+| EL       | Estée Lauder Companies (The)    |     35,734,843,392 |
+| KVUE     | Kenvue                          |     34,093,729,792 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    401,134,548,992 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Integrated Telecommunication Services                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| VZ       | Verizon                         |    209,442,226,176 |
-| T        | AT&T                            |    175,421,079,552 |
+| VZ       | Verizon                         |    206,658,535,424 |
+| T        | AT&T                            |    172,337,496,064 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    384,863,305,728 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Consumer Finance                                                |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| AXP      | American Express                |    220,218,540,032 |
-| COF      | Capital One                     |    131,261,227,008 |
-| SYF      | Synchrony Financial             |     25,580,656,640 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    377,060,423,680 |
+| SECTOR TOTAL                                    378,996,031,488 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | IT Consulting & Other Services                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| IBM      | IBM                             |    218,659,962,880 |
-| ACN      | Accenture                       |    109,555,990,528 |
-| CTSH     | Cognizant                       |     26,990,616,576 |
-| IT       | Gartner                         |     10,898,881,536 |
-| EPAM     | EPAM Systems                    |      5,948,494,336 |
+| IBM      | IBM                             |    226,055,733,248 |
+| ACN      | Accenture                       |    107,579,416,576 |
+| CTSH     | Cognizant                       |     26,215,854,080 |
+| IT       | Gartner                         |     10,715,750,400 |
+| EPAM     | EPAM Systems                    |      5,915,995,136 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    372,053,945,856 |
+| SECTOR TOTAL                                    376,482,749,440 |
++-----------------------------------------------------------------+
++=================================================================+
+| Consumer Finance                                                |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| AXP      | American Express                |    217,314,689,024 |
+| COF      | Capital One                     |    129,359,421,440 |
+| SYF      | Synchrony Financial             |     25,167,433,728 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    371,841,544,192 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Electrical Components & Equipment                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ETN      | Eaton Corporation               |    163,955,294,208 |
-| EMR      | Emerson Electric                |     84,869,267,456 |
-| AME      | Ametek                          |     54,509,154,304 |
-| ROK      | Rockwell Automation             |     47,750,991,872 |
-| GNRC     | Generac                         |     11,223,600,128 |
+| ETN      | Eaton Corporation               |    161,271,447,552 |
+| EMR      | Emerson Electric                |     83,859,652,608 |
+| AME      | Ametek                          |     54,167,556,096 |
+| ROK      | Rockwell Automation             |     47,411,605,504 |
+| GNRC     | Generac                         |     11,003,505,664 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    362,308,307,968 |
+| SECTOR TOTAL                                    357,713,767,424 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Electronic Components                                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| APH      | Amphenol                        |    201,617,457,152 |
-| GLW      | Corning Inc.                    |    142,956,019,712 |
+| APH      | Amphenol                        |    200,581,726,208 |
+| GLW      | Corning Inc.                    |    145,109,483,520 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    344,573,476,864 |
+| SECTOR TOTAL                                    345,691,209,728 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Rail Transportation                                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| UNP      | Union Pacific Corporation       |    171,361,091,584 |
-| CSX      | CSX Corporation                 |     90,771,267,584 |
-| NSC      | Norfolk Southern Railway        |     73,653,575,680 |
+| UNP      | Union Pacific Corporation       |    169,157,050,368 |
+| CSX      | CSX Corporation                 |     89,604,210,688 |
+| NSC      | Norfolk Southern Railway        |     72,615,878,656 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    335,785,934,848 |
+| SECTOR TOTAL                                    331,377,139,712 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Oil & Gas Refining & Marketing                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MPC      | Marathon Petroleum              |    111,703,662,592 |
-| VLO      | Valero Energy                   |    110,233,026,560 |
-| PSX      | Phillips 66                     |    103,898,300,416 |
+| MPC      | Marathon Petroleum              |    112,172,646,400 |
+| VLO      | Valero Energy                   |    111,989,391,360 |
+| PSX      | Phillips 66                     |    104,555,831,296 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    325,834,989,568 |
+| SECTOR TOTAL                                    328,717,869,056 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Oil & Gas Storage & Transportation                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WMB      | Williams Companies              |     92,752,789,504 |
-| KMI      | Kinder Morgan                   |     71,213,129,728 |
-| TRGP     | Targa Resources                 |     63,104,909,312 |
-| OKE      | ONEOK                           |     61,467,348,992 |
+| WMB      | Williams Companies              |     91,921,039,360 |
+| KMI      | Kinder Morgan                   |     69,943,853,056 |
+| TRGP     | Targa Resources                 |     62,480,912,384 |
+| OKE      | ONEOK                           |     60,402,020,352 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    288,538,177,536 |
+| SECTOR TOTAL                                    284,747,825,152 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Industrial Gases                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| LIN      | Linde plc                       |    215,913,889,792 |
-| APD      | Air Products                    |     66,295,709,696 |
+| LIN      | Linde plc                       |    215,116,382,208 |
+| APD      | Air Products                    |     65,745,674,240 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    282,209,599,488 |
+| SECTOR TOTAL                                    280,862,056,448 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Building Products                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TT       | Trane Technologies              |     98,130,337,792 |
-| JCI      | Johnson Controls                |     88,662,368,256 |
-| CARR     | Carrier Global                  |     48,725,856,256 |
-| MAS      | Masco                           |     13,986,503,680 |
-| ALLE     | Allegion                        |     13,269,990,400 |
-| AOS      | A. O. Smith                     |      7,994,142,208 |
-| BLDR     | Builders FirstSource            |      6,733,386,240 |
+| TT       | Trane Technologies              |     97,727,700,992 |
+| JCI      | Johnson Controls                |     87,784,046,592 |
+| CARR     | Carrier Global                  |     47,769,636,864 |
+| MAS      | Masco                           |     13,680,863,232 |
+| ALLE     | Allegion                        |     12,902,630,400 |
+| AOS      | A. O. Smith                     |      7,859,593,216 |
+| BLDR     | Builders FirstSource            |      6,605,346,304 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    277,502,584,832 |
+| SECTOR TOTAL                                    274,329,817,600 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Specialty Chemicals                                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SHW      | Sherwin-Williams                |     79,160,999,936 |
-| ECL      | Ecolab                          |     77,962,182,656 |
-| PPG      | PPG Industries                  |     24,390,756,352 |
-| IFF      | International Flavors & Fragr... |     21,845,940,224 |
-| LYB      | LyondellBasell                  |     20,865,019,904 |
-| DD       | DuPont                          |     17,733,844,992 |
-| ALB      | Albemarle Corporation           |     15,289,916,416 |
-| EMN      | Eastman Chemical Company        |      8,047,451,136 |
-| CE       | Celanese                        |      4,887,119,872 |
+| SHW      | Sherwin-Williams                |     77,837,975,552 |
+| ECL      | Ecolab                          |     76,308,250,624 |
+| PPG      | PPG Industries                  |     23,821,668,352 |
+| IFF      | International Flavors & Fragr... |     21,511,692,288 |
+| LYB      | LyondellBasell                  |     20,839,178,240 |
+| DD       | DuPont                          |     17,274,697,728 |
+| ALB      | Albemarle Corporation           |     14,858,016,768 |
+| EMN      | Eastman Chemical Company        |      7,813,081,088 |
+| CE       | Celanese                        |      4,878,340,096 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    270,183,231,488 |
+| SECTOR TOTAL                                    265,142,900,736 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Services                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CVS      | CVS Health                      |    122,870,685,696 |
-| CI       | Cigna                           |     72,885,444,608 |
-| LH       | LabCorp                         |     26,346,145,792 |
-| DGX      | Quest Diagnostics               |     25,992,927,232 |
-| DVA      | DaVita                          |     11,487,827,968 |
+| CVS      | CVS Health                      |    121,988,186,112 |
+| CI       | Cigna                           |     73,503,776,768 |
+| LH       | LabCorp                         |     26,041,210,880 |
+| DGX      | Quest Diagnostics               |     25,988,511,744 |
+| DVA      | DaVita                          |     11,676,038,144 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    259,583,031,296 |
+| SECTOR TOTAL                                    259,197,723,648 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Heavy Electrical Equipment                                      |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| GEV      | GE Vernova                      |    258,692,464,640 |
+| GEV      | GE Vernova                      |    253,293,887,488 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    258,692,464,640 |
+| SECTOR TOTAL                                    253,293,887,488 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Packaged Foods & Meats                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MDLZ     | Mondelez International          |     78,658,871,296 |
-| HSY      | Hershey Company (The)           |     34,814,390,272 |
-| KHC      | Kraft Heinz                     |     29,527,011,328 |
-| GIS      | General Mills                   |     20,150,183,936 |
-| TSN      | Tyson Foods                     |     18,392,182,784 |
-| MKC      | McCormick & Company             |     13,953,395,712 |
-| SJM      | J.M. Smucker Company (The)      |     13,316,578,304 |
-| HRL      | Hormel Foods                    |     11,672,939,520 |
-| CAG      | Conagra Brands                  |      7,302,911,488 |
-| LW       | Lamb Weston                     |      6,791,667,712 |
-| CPB      | Campbell Soup Company           |      6,488,967,680 |
+| MDLZ     | Mondelez International          |     79,667,150,848 |
+| HSY      | Hershey Company (The)           |     34,597,392,384 |
+| KHC      | Kraft Heinz                     |     29,183,123,456 |
+| GIS      | General Mills                   |     19,829,407,744 |
+| TSN      | Tyson Foods                     |     18,202,210,304 |
+| MKC      | McCormick & Company             |     13,840,478,208 |
+| SJM      | J.M. Smucker Company (The)      |     13,172,366,336 |
+| HRL      | Hormel Foods                    |     11,540,855,808 |
+| CAG      | Conagra Brands                  |      7,231,126,528 |
+| LW       | Lamb Weston                     |      6,617,064,448 |
+| CPB      | Campbell Soup Company           |      6,524,752,384 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    241,069,100,032 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Health Care REITs                                               |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| WELL     | Welltower                       |    170,955,718,656 |
-| VTR      | Ventas                          |     46,098,493,440 |
-| DOC      | Healthpeak Properties           |     14,540,508,160 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    231,594,720,256 |
+| SECTOR TOTAL                                    240,405,928,448 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Distributors                                        |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MCK      | McKesson Corporation            |    103,662,821,376 |
-| COR      | Cencora                         |     61,959,671,808 |
-| CAH      | Cardinal Health                 |     55,932,137,472 |
-| HSIC     | Henry Schein                    |      9,903,139,840 |
+| MCK      | McKesson Corporation            |    103,961,288,704 |
+| COR      | Cencora                         |     61,698,240,512 |
+| CAH      | Cardinal Health                 |     55,818,174,464 |
+| HSIC     | Henry Schein                    |      9,803,952,128 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    231,457,770,496 |
+| SECTOR TOTAL                                    231,281,655,808 |
++-----------------------------------------------------------------+
++=================================================================+
+| Health Care REITs                                               |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| WELL     | Welltower                       |    169,982,935,040 |
+| VTR      | Ventas                          |     45,847,146,496 |
+| DOC      | Healthpeak Properties           |     14,455,434,240 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    230,285,515,776 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Apparel Retail                                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TJX      | TJX Companies                   |    141,808,648,192 |
-| ROST     | Ross Stores                     |     73,558,310,912 |
+| TJX      | TJX Companies                   |    138,728,718,336 |
+| ROST     | Ross Stores                     |     72,262,361,088 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    215,366,959,104 |
+| SECTOR TOTAL                                    210,991,079,424 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Air Freight & Logistics                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| UPS      | United Parcel Service           |     85,486,534,656 |
-| FDX      | FedEx                           |     74,345,283,584 |
-| EXPD     | Expeditors International        |     24,173,058,048 |
-| CHRW     | C.H. Robinson                   |     17,539,375,104 |
+| UPS      | United Parcel Service           |     84,414,545,920 |
+| FDX      | FedEx                           |     73,176,129,536 |
+| EXPD     | Expeditors International        |     24,478,533,632 |
+| CHRW     | C.H. Robinson                   |     17,580,271,616 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    201,544,251,392 |
+| SECTOR TOTAL                                    199,649,480,704 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Life & Health Insurance                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MET      | MetLife                         |     60,688,048,128 |
-| AFL      | Aflac                           |     57,734,696,960 |
-| PRU      | Prudential Financial            |     41,186,099,200 |
-| PFG      | Principal Financial Group       |     24,630,597,632 |
-| GL       | Globe Life                      |     13,116,662,784 |
+| MET      | MetLife                         |     60,808,790,016 |
+| AFL      | Aflac                           |     57,524,129,792 |
+| PRU      | Prudential Financial            |     40,568,549,376 |
+| PFG      | Principal Financial Group       |     24,412,211,200 |
+| GL       | Globe Life                      |     13,050,573,824 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    197,356,104,704 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Insurance Brokers                                               |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| AON      | Aon                             |     66,987,094,016 |
-| AJG      | Arthur J. Gallagher & Co.       |     64,456,941,568 |
-| WTW      | Willis Towers Watson            |     30,214,955,008 |
-| BRO      | Brown & Brown                   |     22,813,734,912 |
-| ERIE     | Erie Indemnity                  |     12,724,740,096 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    197,197,465,600 |
+| SECTOR TOTAL                                    196,364,254,208 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Regional Banks                                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| FITB     | Fifth Third Bancorp             |     49,434,710,016 |
-| MTB      | M&T Bank                        |     34,434,613,248 |
-| HBAN     | Huntington Bancshares           |     33,862,154,240 |
-| CFG      | Citizens Financial Group        |     29,478,162,432 |
-| RF       | Regions Financial Corporation   |     25,617,520,640 |
-| KEY      | KeyCorp                         |     23,252,731,904 |
+| FITB     | Fifth Third Bancorp             |     49,144,504,320 |
+| MTB      | M&T Bank                        |     34,371,067,904 |
+| HBAN     | Huntington Bancshares           |     33,599,498,240 |
+| CFG      | Citizens Financial Group        |     29,217,036,288 |
+| RF       | Regions Financial Corporation   |     25,464,172,544 |
+| KEY      | KeyCorp                         |     23,188,703,232 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    196,079,892,480 |
+| SECTOR TOTAL                                    194,984,982,528 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Environmental & Facilities Services                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WM       | Waste Management                |     87,049,977,856 |
-| RSG      | Republic Services               |     67,865,985,024 |
-| VLTO     | Veralto                         |     23,289,577,472 |
-| ROL      | Rollins Inc.                    |     16,816,032,768 |
+| WM       | Waste Management                |     86,514,360,320 |
+| RSG      | Republic Services               |     68,123,205,632 |
+| VLTO     | Veralto                         |     23,092,105,216 |
+| ROL      | Rollins Inc.                    |     16,618,763,264 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    195,021,573,120 |
+| SECTOR TOTAL                                    194,348,434,432 |
++-----------------------------------------------------------------+
++=================================================================+
+| Insurance Brokers                                               |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| AON      | Aon                             |     64,632,500,224 |
+| AJG      | Arthur J. Gallagher & Co.       |     62,618,976,256 |
+| WTW      | Willis Towers Watson            |     29,135,783,936 |
+| BRO      | Brown & Brown                   |     22,261,626,880 |
+| ERIE     | Erie Indemnity                  |     12,749,838,336 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    191,398,725,632 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Wireless Telecommunication Services                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TMUS     | T-Mobile US                     |    194,893,709,312 |
+| TMUS     | T-Mobile US                     |    190,227,578,880 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    194,893,709,312 |
+| SECTOR TOTAL                                    190,227,578,880 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Agricultural & Farm Machinery                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| DE       | Deere & Company                 |    183,542,104,064 |
+| DE       | Deere & Company                 |    182,593,028,096 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    183,542,104,064 |
+| SECTOR TOTAL                                    182,593,028,096 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Oil & Gas Equipment & Services                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SLB      | Schlumberger                    |     84,744,577,024 |
-| BKR      | Baker Hughes                    |     63,451,721,728 |
-| HAL      | Halliburton                     |     30,659,196,928 |
+| SLB      | Schlumberger                    |     84,670,373,888 |
+| BKR      | Baker Hughes                    |     63,173,775,360 |
+| HAL      | Halliburton                     |     30,934,130,688 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    178,855,495,680 |
+| SECTOR TOTAL                                    178,778,279,936 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Retail REITs                                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SPG      | Simon Property Group            |     80,434,626,560 |
-| O        | Realty Income                   |     57,738,227,712 |
-| KIM      | Kimco Realty                    |     15,937,955,840 |
-| REG      | Regency Centers                 |     14,195,776,512 |
-| FRT      | Federal Realty Investment Trust |     10,249,799,680 |
+| SPG      | Simon Property Group            |     77,644,390,400 |
+| O        | Realty Income                   |     56,877,166,592 |
+| KIM      | Kimco Realty                    |     15,810,505,728 |
+| REG      | Regency Centers                 |     14,085,470,208 |
+| FRT      | Federal Realty Investment Trust |     10,067,095,552 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    178,556,386,304 |
+| SECTOR TOTAL                                    174,484,628,480 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Data Center REITs                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| EQIX     | Equinix                         |    102,737,944,576 |
-| DLR      | Digital Realty                  |     71,567,269,888 |
+| EQIX     | Equinix                         |    102,920,495,104 |
+| DLR      | Digital Realty                  |     71,408,656,384 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    174,305,214,464 |
+| SECTOR TOTAL                                    174,329,151,488 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Human Resource & Employment Services                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ADP      | Automatic Data Processing       |    106,450,526,208 |
-| PAYX     | Paychex                         |     41,624,797,184 |
-| PAYC     | Paycom                          |      9,877,896,192 |
+| ADP      | Automatic Data Processing       |    105,362,030,592 |
+| PAYX     | Paychex                         |     40,848,760,832 |
+| PAYC     | Paycom                          |      9,716,540,416 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    157,953,219,584 |
+| SECTOR TOTAL                                    155,927,331,840 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Electronic Equipment & Instruments                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| KEYS     | Keysight Technologies           |     56,763,006,976 |
-| ROP      | Roper Technologies              |     39,130,128,384 |
-| TDY      | Teledyne Technologies           |     28,048,889,856 |
-| ZBRA     | Zebra Technologies              |     16,678,900,736 |
-| TRMB     | Trimble Inc.                    |     13,706,310,656 |
+| KEYS     | Keysight Technologies           |     56,352,718,848 |
+| ROP      | Roper Technologies              |     38,605,955,072 |
+| TDY      | Teledyne Technologies           |     27,592,286,208 |
+| ZBRA     | Zebra Technologies              |     16,314,134,528 |
+| TRMB     | Trimble Inc.                    |     13,384,522,752 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    154,327,236,608 |
+| SECTOR TOTAL                                    152,249,617,408 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Industrial Conglomerates                                        |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MMM      | 3M                              |     86,393,823,232 |
-| HON      | Honeywell                       |     65,999,589,376 |
+| MMM      | 3M                              |     84,784,766,976 |
+| HON      | Honeywell                       |     64,950,513,664 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    152,393,412,608 |
+| SECTOR TOTAL                                    149,735,280,640 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Passenger Ground Transportation                                 |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| UBER     | Uber                            |    149,372,420,096 |
+| UBER     | Uber                            |    145,185,177,600 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    149,372,420,096 |
+| SECTOR TOTAL                                    145,185,177,600 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Household Products                                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CL       | Colgate-Palmolive               |     70,478,053,376 |
-| KMB      | Kimberly-Clark                  |     34,232,360,960 |
-| CHD      | Church & Dwight                 |     22,899,664,896 |
-| CLX      | Clorox                          |     11,077,279,744 |
+| CL       | Colgate-Palmolive               |     70,175,121,408 |
+| KMB      | Kimberly-Clark                  |     32,825,550,848 |
+| CHD      | Church & Dwight                 |     22,579,439,616 |
+| CLX      | Clorox                          |     10,837,836,800 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    138,687,358,976 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Telecom Tower REITs                                             |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| AMT      | American Tower                  |     81,883,160,576 |
-| CCI      | Crown Castle                    |     33,198,891,008 |
-| SBAC     | SBA Communications              |     20,017,766,400 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    135,099,817,984 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Industrial REITs                                                |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| PLD      | Prologis                        |    134,615,212,032 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    134,615,212,032 |
+| SECTOR TOTAL                                    136,417,948,672 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Gold                                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| NEM      | Newmont                         |    133,913,747,456 |
+| NEM      | Newmont                         |    135,620,739,072 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    133,913,747,456 |
+| SECTOR TOTAL                                    135,620,739,072 |
++-----------------------------------------------------------------+
++=================================================================+
+| Telecom Tower REITs                                             |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| AMT      | American Tower                  |     81,743,372,288 |
+| CCI      | Crown Castle                    |     32,853,659,648 |
+| SBAC     | SBA Communications              |     19,810,893,824 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    134,407,925,760 |
++-----------------------------------------------------------------+
++=================================================================+
+| Industrial REITs                                                |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| PLD      | Prologis                        |    131,873,923,072 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    131,873,923,072 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Diversified Support Services                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CTAS     | Cintas                          |     80,233,996,288 |
-| CPRT     | Copart                          |     30,181,451,776 |
-| LDOS     | Leidos                          |     16,218,613,760 |
-| AMTM     | Amentum                         |      4,924,359,168 |
+| CTAS     | Cintas                          |     80,049,913,856 |
+| CPRT     | Copart                          |     29,653,739,520 |
+| LDOS     | Leidos                          |     16,080,571,392 |
+| AMTM     | Amentum                         |      4,721,418,752 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    131,558,420,992 |
+| SECTOR TOTAL                                    130,505,643,520 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Broadcasting                                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WBD      | Warner Bros. Discovery          |     70,500,687,872 |
-| FOXA     | Fox Corporation (Class A)       |     27,425,138,688 |
-| FOX      | Fox Corporation (Class B)       |     24,486,279,168 |
+| WBD      | Warner Bros. Discovery          |     69,974,188,032 |
+| FOXA     | Fox Corporation (Class A)       |     26,849,136,640 |
+| FOX      | Fox Corporation (Class B)       |     24,006,979,584 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    122,412,105,728 |
+| SECTOR TOTAL                                    120,830,304,256 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Trading Companies & Distributors                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| URI      | United Rentals                  |     63,186,706,432 |
-| FAST     | Fastenal                        |     56,663,433,216 |
+| URI      | United Rentals                  |     64,033,206,272 |
+| FAST     | Fastenal                        |     55,986,409,472 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    119,850,139,648 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Cable & Satellite                                               |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| CMCSA    | Comcast                         |     93,435,600,896 |
-| CHTR     | Charter Communications          |     19,642,472,448 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    113,078,073,344 |
+| SECTOR TOTAL                                    120,019,615,744 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Construction & Engineering                                      |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| PWR      | Quanta Services                 |     96,076,939,264 |
-| J        | Jacobs Solutions                |     16,885,160,960 |
+| PWR      | Quanta Services                 |     94,262,296,576 |
+| J        | Jacobs Solutions                |     16,590,222,336 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    112,962,100,224 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Apparel Accessories & Luxury Goods                              |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| NKE      | Nike Inc.                       |     56,521,302,016 |
-| TPR      | Tapestry Inc.                   |     23,444,473,856 |
-| RL       | Ralph Lauren Corporation        |     20,688,742,400 |
-| LULU     | Lululemon Athletica             |     11,424,167,936 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                    112,078,686,208 |
+| SECTOR TOTAL                                    110,852,518,912 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Multi-Family Residential REITs                                  |
@@ -1019,67 +997,99 @@
 +----------+------------------------------------------------------+
 | AVB      | AvalonBay Communities           |     26,283,393,024 |
 | EQR      | Equity Residential              |     24,611,481,600 |
-| ESS      | Essex Property Trust            |     19,122,673,664 |
-| MAA      | Mid-America Apartment Communi... |     15,214,279,680 |
-| UDR      | UDR Inc.                        |     13,265,522,688 |
-| CPT      | Camden Property Trust           |     12,118,358,016 |
+| ESS      | Essex Property Trust            |     18,913,116,160 |
+| MAA      | Mid-America Apartment Communi... |     15,165,504,512 |
+| UDR      | UDR Inc.                        |     13,004,694,528 |
+| CPT      | Camden Property Trust           |     12,048,918,528 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    110,615,708,672 |
+| SECTOR TOTAL                                    110,027,108,352 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Copper                                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| FCX      | Freeport-McMoRan                |    110,027,669,504 |
+| FCX      | Freeport-McMoRan                |    109,467,623,424 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    110,027,669,504 |
+| SECTOR TOTAL                                    109,467,623,424 |
++-----------------------------------------------------------------+
++=================================================================+
+| Apparel Accessories & Luxury Goods                              |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| NKE      | Nike Inc.                       |     55,408,676,864 |
+| TPR      | Tapestry Inc.                   |     22,672,828,416 |
+| RL       | Ralph Lauren Corporation        |     19,996,395,520 |
+| LULU     | Lululemon Athletica             |     11,040,004,096 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                    109,117,904,896 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Passenger Airlines                                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| DAL      | Delta Air Lines                 |     51,925,913,600 |
-| UAL      | United Airlines Holdings        |     35,129,802,752 |
-| LUV      | Southwest Airlines              |     18,917,679,104 |
+| DAL      | Delta Air Lines                 |     51,787,812,864 |
+| UAL      | United Airlines Holdings        |     34,767,908,864 |
+| LUV      | Southwest Airlines              |     18,922,573,824 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                    105,973,395,456 |
+| SECTOR TOTAL                                    105,478,295,552 |
 +-----------------------------------------------------------------+
 +=================================================================+
-| Homebuilding                                                    |
+| Cable & Satellite                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| DHI      | D. R. Horton                    |     38,735,831,040 |
-| PHM      | PulteGroup                      |     22,871,695,360 |
-| LEN      | Lennar                          |     19,360,743,424 |
-| NVR      | NVR Inc.                        |     16,381,886,464 |
+| CMCSA    | Comcast                         |     87,260,979,200 |
+| CHTR     | Charter Communications          |     18,045,358,080 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     97,350,156,288 |
+| SECTOR TOTAL                                    105,306,337,280 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Facilities                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| HCA      | HCA Healthcare                  |     87,037,935,616 |
-| UHS      | Universal Health Services       |     10,130,597,888 |
+| HCA      | HCA Healthcare                  |     91,326,824,448 |
+| UHS      | Universal Health Services       |     10,359,860,224 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     97,168,533,504 |
+| SECTOR TOTAL                                    101,686,684,672 |
++-----------------------------------------------------------------+
++=================================================================+
+| Homebuilding                                                    |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| DHI      | D. R. Horton                    |     38,858,895,360 |
+| PHM      | PulteGroup                      |     22,654,541,824 |
+| LEN      | Lennar                          |     19,454,691,328 |
+| NVR      | NVR Inc.                        |     16,570,535,936 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                     97,538,664,448 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Paper & Plastic Packaging Products & Materials                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SW       | Smurfit WestRock                |     23,215,382,528 |
-| PKG      | Packaging Corporation of America |     20,669,915,136 |
-| AMCR     | Amcor                           |     20,500,408,320 |
-| IP       | International Paper             |     19,324,006,400 |
-| AVY      | Avery Dennison                  |     12,937,035,776 |
+| SW       | Smurfit WestRock                |     22,134,867,968 |
+| PKG      | Packaging Corporation of America |     20,250,261,504 |
+| AMCR     | Amcor                           |     19,940,970,496 |
+| IP       | International Paper             |     18,344,300,544 |
+| AVY      | Avery Dennison                  |     12,868,068,352 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     96,646,748,160 |
+| SECTOR TOTAL                                     93,538,468,864 |
++-----------------------------------------------------------------+
++=================================================================+
+| Steel                                                           |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| NUE      | Nucor                           |     58,513,506,304 |
+| STLD     | Steel Dynamics                  |     34,497,638,400 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                     93,011,144,704 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Interactive Home Entertainment                                  |
@@ -1087,403 +1097,393 @@
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
 | EA       | Electronic Arts                 |     52,925,640,704 |
-| TTWO     | Take-Two Interactive            |     39,881,060,352 |
+| TTWO     | Take-Two Interactive            |     39,479,050,240 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     92,806,701,056 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Steel                                                           |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| NUE      | Nucor                           |     58,170,920,960 |
-| STLD     | Steel Dynamics                  |     34,443,173,888 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                     92,614,094,848 |
+| SECTOR TOTAL                                     92,404,690,944 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Electronic Manufacturing Services                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TEL      | TE Connectivity                 |     59,347,316,736 |
-| JBL      | Jabil                           |     32,728,150,016 |
+| TEL      | TE Connectivity                 |     59,257,561,088 |
+| JBL      | Jabil                           |     32,627,554,304 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     92,075,466,752 |
+| SECTOR TOTAL                                     91,885,115,392 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Fertilizers & Agricultural Chemicals                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CTVA     | Corteva                         |     57,312,141,312 |
-| CF       | CF Industries                   |     20,329,250,816 |
-| MOS      | Mosaic Company (The)            |      8,433,771,520 |
-| FMC      | FMC Corporation                 |      1,604,155,904 |
+| CTVA     | Corteva                         |     56,544,862,208 |
+| CF       | CF Industries                   |     20,901,308,416 |
+| MOS      | Mosaic Company (The)            |      8,332,044,800 |
+| FMC      | FMC Corporation                 |      1,539,037,824 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     87,679,319,552 |
+| SECTOR TOTAL                                     87,317,253,248 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Self-Storage REITs                                              |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| PSA      | Public Storage                  |     56,322,519,040 |
-| EXR      | Extra Space Storage             |     30,712,967,168 |
+| PSA      | Public Storage                  |     55,046,684,672 |
+| EXR      | Extra Space Storage             |     29,933,887,488 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     87,035,486,208 |
+| SECTOR TOTAL                                     84,980,572,160 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Automotive Retail                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ORLY     | O'Reilly Auto Parts             |     69,481,635,840 |
-| KMX      | CarMax                          |      8,595,555,328 |
+| ORLY     | O'Reilly Auto Parts             |     69,635,342,336 |
+| KMX      | CarMax                          |      8,555,820,544 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     78,077,191,168 |
+| SECTOR TOTAL                                     78,191,162,880 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Multi-line Insurance                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| AIG      | American International Group    |     39,049,662,464 |
-| L        | Loews Corporation               |     22,129,299,456 |
-| AIZ      | Assurant                        |     13,860,472,832 |
+| AIG      | American International Group    |     39,232,675,840 |
+| L        | Loews Corporation               |     22,217,203,712 |
+| AIZ      | Assurant                        |     13,832,357,888 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     75,039,434,752 |
+| SECTOR TOTAL                                     75,282,237,440 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Construction Materials                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MLM      | Martin Marietta Materials       |     36,360,503,296 |
-| VMC      | Vulcan Materials Company        |     33,470,185,472 |
+| MLM      | Martin Marietta Materials       |     35,722,039,296 |
+| VMC      | Vulcan Materials Company        |     32,380,430,336 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     69,830,688,768 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Cargo Ground Transportation                                     |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| ODFL     | Old Dominion                    |     38,892,146,688 |
-| JBHT     | J.B. Hunt                       |     25,805,946,880 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                     64,698,093,568 |
+| SECTOR TOTAL                                     68,102,469,632 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Agricultural Products & Services                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ADM      | Archer Daniels Midland          |     40,725,585,920 |
-| BG       | Bunge Global                    |     23,801,636,864 |
+| ADM      | Archer Daniels Midland          |     41,713,602,560 |
+| BG       | Bunge Global                    |     23,726,710,784 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     64,527,222,784 |
+| SECTOR TOTAL                                     65,440,313,344 |
++-----------------------------------------------------------------+
++=================================================================+
+| Cargo Ground Transportation                                     |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| ODFL     | Old Dominion                    |     37,841,911,808 |
+| JBHT     | J.B. Hunt                       |     25,150,418,944 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                     62,992,330,752 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Casinos & Gaming                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| LVS      | Las Vegas Sands                 |     28,485,898,240 |
-| MGM      | MGM Resorts                     |     10,423,379,968 |
-| WYNN     | Wynn Resorts                    |      9,496,252,416 |
-| CZR      | Caesars Entertainment           |      6,044,036,608 |
+| LVS      | Las Vegas Sands                 |     28,064,892,928 |
+| MGM      | MGM Resorts                     |     10,402,911,232 |
+| WYNN     | Wynn Resorts                    |      9,291,334,656 |
+| CZR      | Caesars Entertainment           |      6,046,074,368 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     54,449,567,232 |
-+-----------------------------------------------------------------+
-+=================================================================+
-| Real Estate Services                                            |
-+=================================================================+
-| Symbol   | Company                         |  Market Cap        |
-+----------+------------------------------------------------------+
-| CBRE     | CBRE Group                      |     41,194,979,328 |
-| CSGP     | CoStar Group                    |     12,293,695,488 |
-+-----------------------------------------------------------------+
-| SECTOR TOTAL                                     53,488,674,816 |
+| SECTOR TOTAL                                     53,805,213,184 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Consumer Electronics                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| GRMN     | Garmin                          |     53,165,588,480 |
+| GRMN     | Garmin                          |     52,490,604,544 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     53,165,588,480 |
+| SECTOR TOTAL                                     52,490,604,544 |
++-----------------------------------------------------------------+
++=================================================================+
+| Real Estate Services                                            |
++=================================================================+
+| Symbol   | Company                         |  Market Cap        |
++----------+------------------------------------------------------+
+| CBRE     | CBRE Group                      |     40,447,877,120 |
+| CSGP     | CoStar Group                    |     11,985,744,896 |
++-----------------------------------------------------------------+
+| SECTOR TOTAL                                     52,433,622,016 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Supplies                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WST      | West Pharmaceutical Services    |     23,769,413,632 |
-| COO      | Cooper Companies (The)          |     13,201,623,040 |
-| ALGN     | Align Technology                |     10,903,908,352 |
+| WST      | West Pharmaceutical Services    |     23,712,409,600 |
+| COO      | Cooper Companies (The)          |     12,380,544,000 |
+| ALGN     | Align Technology                |     10,863,414,272 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     47,874,945,024 |
+| SECTOR TOTAL                                     46,956,367,872 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Hotel & Resort REITs                                            |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| VICI     | Vici Properties                 |     27,824,228,352 |
-| HST      | Host Hotels & Resorts           |     15,332,613,120 |
+| VICI     | Vici Properties                 |     27,758,161,920 |
+| HST      | Host Hotels & Resorts           |     15,311,771,648 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     43,156,841,472 |
+| SECTOR TOTAL                                     43,069,933,568 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Research & Consulting Services                                  |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| VRSK     | Verisk Analytics                |     22,841,079,808 |
-| EFX      | Equifax                         |     20,162,756,608 |
+| VRSK     | Verisk Analytics                |     23,166,470,144 |
+| EFX      | Equifax                         |     19,748,036,608 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     43,003,836,416 |
+| SECTOR TOTAL                                     42,914,506,752 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Other Specialty Retail                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ULTA     | Ulta Beauty                     |     23,483,684,864 |
-| TSCO     | Tractor Supply                  |     18,387,507,200 |
+| ULTA     | Ulta Beauty                     |     23,168,563,200 |
+| TSCO     | Tractor Supply                  |     17,715,363,840 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     41,871,192,064 |
+| SECTOR TOTAL                                     40,883,927,040 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Food Distributors                                               |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SYY      | Sysco                           |     38,251,024,384 |
+| SYY      | Sysco                           |     39,079,862,272 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     38,251,024,384 |
+| SECTOR TOTAL                                     39,079,862,272 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Independent Power Producers & Energy Traders                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| NRG      | NRG Energy                      |     25,149,581,312 |
-| AES      | AES Corporation                 |     10,580,295,680 |
+| NRG      | NRG Energy                      |     24,251,983,872 |
+| AES      | AES Corporation                 |     10,573,160,448 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     35,729,876,992 |
+| SECTOR TOTAL                                     34,825,144,320 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Food Retail                                                     |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| KR       | Kroger                          |     35,043,426,304 |
+| KR       | Kroger                          |     34,577,813,504 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     35,043,426,304 |
+| SECTOR TOTAL                                     34,577,813,504 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Other Specialized REITs                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| IRM      | Iron Mountain                   |     34,557,341,696 |
+| IRM      | Iron Mountain                   |     34,301,319,168 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     34,557,341,696 |
+| SECTOR TOTAL                                     34,301,319,168 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Publishing                                                      |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| NWS      | News Corp (Class B)             |     17,890,977,792 |
-| NWSA     | News Corp (Class A)             |     16,002,067,456 |
+| NWS      | News Corp (Class B)             |     17,748,678,656 |
+| NWSA     | News Corp (Class A)             |     15,886,892,032 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     33,893,045,248 |
+| SECTOR TOTAL                                     33,635,570,688 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Distributors                                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| GPC      | Genuine Parts Company           |     18,481,479,680 |
-| POOL     | Pool Corporation                |      6,444,667,904 |
-| LKQ      | LKQ Corporation                 |      6,299,751,936 |
+| GPC      | Genuine Parts Company           |     18,644,154,368 |
+| POOL     | Pool Corporation                |      6,465,745,920 |
+| LKQ      | LKQ Corporation                 |      6,120,120,320 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     31,225,899,520 |
+| SECTOR TOTAL                                     31,230,020,608 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Gas Utilities                                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| ATO      | Atmos Energy                    |     28,401,907,712 |
+| ATO      | Atmos Energy                    |     28,151,803,904 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     28,401,907,712 |
+| SECTOR TOTAL                                     28,151,803,904 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Water Utilities                                                 |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| AWK      | American Water Works            |     27,897,577,472 |
+| AWK      | American Water Works            |     27,887,640,576 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     27,897,577,472 |
+| SECTOR TOTAL                                     27,887,640,576 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Automotive Parts & Equipment                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BWA      | BorgWarner                      |     13,494,932,480 |
-| APTV     | Aptiv                           |      9,495,071,744 |
+| BWA      | BorgWarner                      |     13,291,267,072 |
+| APTV     | Aptiv                           |      9,241,758,720 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     22,990,004,224 |
+| SECTOR TOTAL                                     22,533,025,792 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Advertising                                                     |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| OMC      | Omnicom Group                   |     22,257,686,528 |
+| OMC      | Omnicom Group                   |     21,481,289,728 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     22,257,686,528 |
+| SECTOR TOTAL                                     21,481,289,728 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Commodity Chemicals                                             |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| DOW      | Dow Inc.                        |     21,359,616,000 |
+| DOW      | Dow Inc.                        |     21,236,817,920 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     21,359,616,000 |
+| SECTOR TOTAL                                     21,236,817,920 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Distillers & Vintners                                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| STZ      | Constellation Brands            |     20,663,910,400 |
+| STZ      | Constellation Brands            |     20,761,270,272 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     20,663,910,400 |
+| SECTOR TOTAL                                     20,761,270,272 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Office REITs                                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BXP      | BXP Inc.                        |     11,890,881,536 |
-| ARE      | Alexandria Real Estate Equities |      8,737,277,952 |
+| BXP      | BXP Inc.                        |     11,628,609,536 |
+| ARE      | Alexandria Real Estate Equities |      8,663,276,544 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     20,628,159,488 |
+| SECTOR TOTAL                                     20,291,886,080 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Data Processing & Outsourced Services                           |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BR       | Broadridge Financial Solutions  |     19,226,355,712 |
+| BR       | Broadridge Financial Solutions  |     19,167,066,112 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     19,226,355,712 |
+| SECTOR TOTAL                                     19,167,066,112 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Computer & Electronics Retail                                   |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BBY      | Best Buy                        |     18,734,974,976 |
+| BBY      | Best Buy                        |     18,462,328,832 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     18,734,974,976 |
+| SECTOR TOTAL                                     18,462,328,832 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Technology Distributors                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| CDW      | CDW                             |     18,062,516,224 |
+| CDW      | CDW                             |     17,798,729,728 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     18,062,516,224 |
+| SECTOR TOTAL                                     17,798,729,728 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Single-Family Residential REITs                                 |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| INVH     | Invitation Homes                |     16,763,864,064 |
+| INVH     | Invitation Homes                |     16,643,763,200 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     16,763,864,064 |
+| SECTOR TOTAL                                     16,643,763,200 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Timber REITs                                                    |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| WY       | Weyerhaeuser                    |     16,353,500,160 |
+| WY       | Weyerhaeuser                    |     16,281,425,920 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     16,353,500,160 |
+| SECTOR TOTAL                                     16,281,425,920 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Metal Glass & Plastic Containers                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| BALL     | Ball Corporation                |     16,152,199,168 |
+| BALL     | Ball Corporation                |     15,958,966,272 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     16,152,199,168 |
+| SECTOR TOTAL                                     15,958,966,272 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Health Care Technology                                          |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| SOLV     | Solventum                       |     15,338,860,544 |
+| SOLV     | Solventum                       |     15,325,242,368 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     15,338,860,544 |
+| SECTOR TOTAL                                     15,325,242,368 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Reinsurance                                                     |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| EG       | Everest Group                   |     14,180,293,632 |
+| EG       | Everest Group                   |     14,105,142,272 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     14,180,293,632 |
+| SECTOR TOTAL                                     14,105,142,272 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Leisure Products                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| HAS      | Hasbro                          |     12,737,725,440 |
+| HAS      | Hasbro                          |     12,548,725,760 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     12,737,725,440 |
+| SECTOR TOTAL                                     12,548,725,760 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Footwear                                                        |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| DECK     | Deckers Brands                  |     11,248,621,568 |
+| DECK     | Deckers Brands                  |     10,925,871,104 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                     11,248,621,568 |
+| SECTOR TOTAL                                     10,925,871,104 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Home Furnishings                                                |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| MHK      | Mohawk Industries               |      8,786,992,128 |
+| MHK      | Mohawk Industries               |      8,666,418,176 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                      8,786,992,128 |
+| SECTOR TOTAL                                      8,666,418,176 |
 +-----------------------------------------------------------------+
 +=================================================================+
 | Brewers                                                         |
 +=================================================================+
 | Symbol   | Company                         |  Market Cap        |
 +----------+------------------------------------------------------+
-| TAP      | Molson Coors Beverage Company   |      7,241,870,848 |
+| TAP      | Molson Coors Beverage Company   |      7,174,747,136 |
 +-----------------------------------------------------------------+
-| SECTOR TOTAL                                      7,241,870,848 |
+| SECTOR TOTAL                                      7,174,747,136 |
 +-----------------------------------------------------------------+

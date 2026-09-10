@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Website</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main style="
+    display: flex; 
+    flex-direction: column;
+    max-width: 1000px !important;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+    
+    border: 1px solid; 
+    border-color: lightgray; 
+    padding-left: 18px;
+    padding-right: 18px;
+
+    background-color: white !important;
+  ">
+    <section>
+      <h1 style="font-size: 40px">Análisis y evolución de las 500 empresas más rentables de
+        la bolsa estadounidense (S&P 500) </h1>
+      <p>En este documento se hace un reporte de los datos de las 500 empresas con más beneficios en la bolsa
+        estadounidense (S&P 500), entre los cuales encontramos un análisis de los sectores más rentables y de los
+        mayores ganadores, un ránking de capitalización bursátil y un informe que recoge la evolución del precio de
+        acción y de la capitalización de las empresas en base a los registros guardados en el proyecto.
+      </p>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <p><b>MIADA UPV</b> — SHELL Y ENTORNOS LINUX</p>
+        <p><b>Alumno</b> — Yassin Pellicer Lamla</p>
+      </div>
+      <hr>
+      <div>
+        <h2>Ránking de compañías con mayor capitalización bursátil</h2>
+        <em>En orden descendiente</em>
+
+        <div style="
+          max-height: 600px; 
+          overflow-y: auto;
+          border: 2px solid; 
+          border-color: lightgray; 
+          
+          margin-top: 10px; 
+          margin-bottom: 10px;
+          
+          border-radius: 10px;
+          corner-shape: squircle;
+        ">
+          <table style="
+            width: 100%; 
+            border-radius: 10px;
+            corner-shape: squircle;
+          ">
+            <thead>
+              <tr>
+                <th>Capitalización bursátil</th>
+                <th>Símbolo</th>
+                <th>Nombre</th>
+              </tr>
+            </thead>
+
+            <tbody id="topMarketCapCompanies">
+              <!-- TOP MARKET CAP ROWS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h2>Ránking de sectores con mayor capitalización bursátil</h2>
+        <em>En orden descendiente</em>
+
+        <div style="
+          max-height: 800px; 
+          overflow-y: auto;
+          border: 2px solid; 
+          border-color: lightgray; 
+          
+          margin-top: 10px; 
+          margin-bottom: 10px;
+          
+          border-radius: 10px;
+          corner-shape: squircle;
+        ">
+          <!-- SECTOR_ROWS -->
+        </div>
+      </div>
+
+      <div>
+        <h2>Ránking de mayores ganadores</h2>
+        <em>En orden descendiente, y teniendo en cuenta la cercanía a su máximo bursátil en las últimas 52 semanas</em>
+
+        <div style="
+          max-height: 600px; 
+          overflow-y: auto;
+          border: 2px solid; 
+          border-color: lightgray; 
+          
+          margin-top: 10px; 
+          margin-bottom: 10px;
+          
+          border-radius: 10px;
+          corner-shape: squircle;
+        ">
+          <table style="
+            width: 100%; 
+            border-radius: 10px;
+            corner-shape: squircle;
+          ">
+            <thead>
+              <tr>
+                <th>Símbolo</th>
+                <th>Compañía</th>
+                <th>Precio de Acción</th>
+                <th>52 Week High</th>
+                <th>Distancia</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- TOP MARKET WINNERS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h2>Evolución de los precios y capitalización bursátil</h2>
+        <em>En orden descendiente, empezando por aquellas con mayor capitalización en bolsa</em>
+
+        <div style="
+          max-height: 800px; 
+          overflow-y: auto;
+          border: 2px solid; 
+          border-color: lightgray; 
+          
+          margin-top: 10px; 
+          margin-bottom: 10px;
+          
+          border-radius: 10px;
+          corner-shape: squircle;
+        ">
+          <!-- EVOLUTION -->
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <hr>
+      <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: smaller;">
+        <p><b>MIADA UPV</b> 2026/2027</p>
+        <p>Yassin Pellicer Lamla</p>
+      </div>
+    </footer>
+  </main>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

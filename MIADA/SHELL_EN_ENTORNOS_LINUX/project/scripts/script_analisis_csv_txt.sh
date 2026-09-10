@@ -33,6 +33,8 @@ fi
 entries=$(( $(wc -l < "$DATA_FILE") - 1 ))
 mkdir -p "$DAY_DIR"
 
+log "BEGAN CREATION OF TXT REPORTS"
+
 log "Analyzing $FILE; reports will be stored in /project/analysis/$REPORT_DATE"
 
 table_preamble() {
@@ -89,6 +91,8 @@ awk -F',' '
     print "+--------------------+----------+--------------------------------+"
   }
 ' >> "$TOP_REPORT"
+
+log "$TOP_REPORT CREATED SUCCESSFULLY"
 
 # HIGHEST GROSSING SECTORS
 
@@ -149,6 +153,8 @@ awk -F',' '
   }
   ' >> "$SECTORS_REPORT"
 
+log "$SECTORS_REPORT CREATED SUCCESSFULLY"
+
 # TOPP WINNERS
 
 WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric.txt"
@@ -180,6 +186,8 @@ table_preamble "$WINNERS_REPORT" "HIGHEST WINNERS (52-WEEK METRIC)" 68
 } >> "$WINNERS_REPORT"
 
 log "Analysis complete: reports created in /project/analysis/$REPORT_DATE"
+
+log "$WINNERS_REPORT CREATED SUCCESSFULLY"
 
 # PRICE AND MARKET CAP EVOLUTION
 
@@ -306,3 +314,5 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
     }
   '
 } >> "$EVOLUTION_REPORT"
+
+log "$EVOLUTION_REPORT CREATED SUCCESSFULLY"
