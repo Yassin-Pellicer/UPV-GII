@@ -55,6 +55,7 @@ mkdir -p "$DAY_DIR/report"
 cp "$HTML_TEMPLATE" "$HTML_REPORT"
 cp "$JAVASCRIPT_TEMPLATE" "$JAVASCRIPT_REPORT"
 cp "$CSS_TEMPLATE" "$CSS_REPORT"
+sed -i "s|{{REPORT_DATE}}|$DATE_FORMATTED|g" "$HTML_REPORT"
 
 log "HTML REPORT CREATION STARTED: $FILE"
 log_detail "[ok] - Input dataset: /project/datasets/$FILE ($entries records)"
