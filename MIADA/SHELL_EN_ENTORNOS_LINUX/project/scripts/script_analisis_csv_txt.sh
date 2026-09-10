@@ -196,6 +196,9 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
 
       DATE_DAY=$(basename "$DATA_FILE_DAY" | sed 's/constituents-financials_//' | sed 's/.csv//')
 
+      # An evolution report is a snapshot: never include a later dataset.
+      [[ "$DATE_DAY" =~ ^[0-9]{8}$ && "$DATE_DAY" -le "$REPORT_DATE" ]] || continue
+
       tail -n +2 "$DATA_FILE_DAY" |
       sort -t',' -k10,10nr |
       awk -F',' -v date="$DATE_DAY" '
