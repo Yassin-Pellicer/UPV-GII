@@ -1,1 +1,0 @@
-0 12 * * * /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/planificacion/script_cron.sh
