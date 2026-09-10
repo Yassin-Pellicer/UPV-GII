@@ -7,7 +7,8 @@ DATASETS_DIR="$PROJECT_DIR/datasets"
 LOG="$PROJECT_DIR/log.txt"
 FILE="constituents-financials_$(date +"%Y%m%d").csv"
 
-echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - Sanitizing $FILE" >> "$LOG"
+echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - DATASET SANITIZATION STARTED: $FILE" >> "$LOG"
+echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Checking required fields and removing embedded commas" >> "$LOG"
 
 cd "$DATASETS_DIR" || exit 1
 
@@ -60,7 +61,7 @@ awk '
     cmd | getline now
     close(cmd)
 
-    print "\t[" now "] (Row no: " NR ") - Deleted row missing required field: " $0 >> log_file
+    print "\t[" now "] [ko] - Removed row " NR " (missing required field): " $0 >> log_file
     next
   }
 
@@ -74,4 +75,5 @@ awk '
 }
 ' log_file="$LOG" "$FILE" > tmp.csv && mv tmp.csv "$FILE"
 
-echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - $FILE Sanitized and saved successfully" >> "$LOG"
+echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Sanitized dataset saved: $FILE" >> "$LOG"
+echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - DATASET SANITIZATION COMPLETED" >> "$LOG"

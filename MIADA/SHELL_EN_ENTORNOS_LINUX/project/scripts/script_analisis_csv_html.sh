@@ -19,7 +19,7 @@ HTML_TEMPLATE="$SCRIPT_DIR/html/template.html"
 JAVASCRIPT_TEMPLATE="$SCRIPT_DIR/html/script.js"
 CSS_TEMPLATE="$SCRIPT_DIR/html/style.css"
 
-HTML_REPORT="$DAY_DIR/report/report.html"
+HTML_REPORT="$DAY_DIR/report/report_${REPORT_DATE}.html"
 JAVASCRIPT_REPORT="$DAY_DIR/report/script.js"
 CSS_REPORT="$DAY_DIR/report/style.css"
 
@@ -29,10 +29,21 @@ log() {
   echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - $*" >> "$LOG"
 }
 
+log_detail() {
+  echo -e "\t[$(date +"%H:%M:%S.%3N")] $*" >> "$LOG"
+}
+
+log_command_error() {
+  local tool="$1" error
+  while IFS= read -r error; do
+    log_detail "[ko] [ERROR] [$tool] - $error"
+  done
+}
+
 # If the download fails (the file does not exist), we log the error and exit
 
 if [[ ! -f "$DATA_FILE" ]]; then
-  log "Dataset not found: $DATA_FILE"
+  log "HTML REPORT CREATION FAILED: dataset not found: $DATA_FILE"
   exit 1
 fi
 
@@ -45,16 +56,17 @@ cp "$HTML_TEMPLATE" "$HTML_REPORT"
 cp "$JAVASCRIPT_TEMPLATE" "$JAVASCRIPT_REPORT"
 cp "$CSS_TEMPLATE" "$CSS_REPORT"
 
-log "BEGAN CREATION OF HTML REPORTS"
-
-log "Analyzing $FILE; reports will be stored in /project/analysis/$REPORT_DATE/report"
+log "HTML REPORT CREATION STARTED: $FILE"
+log_detail "[ok] - Input dataset: /project/datasets/$FILE ($entries records)"
+log_detail "[ok] - Output folder: /project/analysis/$REPORT_DATE/report"
+log_detail "[ok] - Copied HTML, CSS, and JavaScript templates"
 
 # TOP MARKET CAP COMPANIES
 
-log "Creating TOP MARKET CAP ANALYSIS in $HTML_REPORT"
+log_detail "[ok] - Adding top market-cap analysis to: $HTML_REPORT"
 
 tail -n +2 "$DATA_FILE" |
-sort -t',' -k10,10nr |
+sort -t',' -k10,10nr 2> >(log_command_error "sort") |
 awk -F',' '
   function fit(value, width) {
     return length(value) <= width ? value : substr(value, 1, width - 3) "..."
@@ -86,16 +98,16 @@ sed -i '/<!-- TOP MARKET CAP ROWS -->/{
   d
 }' "$HTML_REPORT"
 
-log "TOP MARKET CAP ANALYSIS CREATED SUCCESSFULLY in $HTML_REPORT"
+log_detail "[ok] - Added top market-cap analysis"
 
 # HIGHEST GROSSING SECTORS
 
-SECTORS_REPORT="$DAY_DIR/highest_grossing_sectors.txt"
+SECTORS_REPORT="$DAY_DIR/highest_grossing_sectors_${REPORT_DATE}.txt"
 
-log "Creating $SECTORS_REPORT"
+log_detail "[ok] - Adding sector market-cap analysis to: $HTML_REPORT"
 
 tail -n +2 "$DATA_FILE" |
-sort -t',' -k10,10nr |
+sort -t',' -k10,10nr 2> >(log_command_error "sort") |
 awk -F',' '
   function fit(value, width) {
     return length(value) <= width ? value : substr(value, 1, width - 3) "..."
@@ -176,11 +188,13 @@ sed -i '/<!-- SECTOR_ROWS -->/{
   d
 }' "$HTML_REPORT"
 
+log_detail "[ok] - Added sector market-cap analysis"
+
 # TOP WINNERS
 
-WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric.txt"
+WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric_${REPORT_DATE}.txt"
 
-log "Creating $WINNERS_REPORT"
+log_detail "[ok] - Adding 52-week winners analysis to: $HTML_REPORT"
 
 
 tail -n +2 "$DATA_FILE" |
@@ -199,8 +213,8 @@ awk -F',' '
       $9, \
       distance
   }
-' "$DATA_FILE" |
-sort -t'|' -k1,1n |
+' |
+sort -t'|' -k1,1n 2> >(log_command_error "sort") |
 cut -d'|' -f2- |
 awk -F'|' '
   function commas(value, text, result) {
@@ -229,13 +243,13 @@ sed -i '/<!-- TOP MARKET WINNERS -->/{
   d
 }' "$HTML_REPORT"
 
-log "Analysis complete: reports created in /project/analysis/$REPORT_DATE"
+log_detail "[ok] - Added 52-week winners analysis"
 
 # PRICE AND MARKET CAP EVOLUTION
 
-EVOLUTION_REPORT="$DAY_DIR/price_market_cap_evolution.txt"
+EVOLUTION_REPORT="$DAY_DIR/price_market_cap_evolution_${REPORT_DATE}.txt"
 
-log "Creating $EVOLUTION_REPORT"
+log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPORT"
 
 {
   {
@@ -248,7 +262,7 @@ log "Creating $EVOLUTION_REPORT"
       [[ "$DATE_DAY" =~ ^[0-9]{8}$ && "$DATE_DAY" -le "$REPORT_DATE" ]] || continue
 
       tail -n +2 "$DATA_FILE_DAY" |
-      sort -t',' -k10,10nr |
+      sort -t',' -k10,10nr 2> >(log_command_error "sort") |
       awk -F',' -v date="$DATE_DAY" '
       {
         printf "%s|%s|%s|%.6f|%.6f\n",
@@ -276,7 +290,7 @@ log "Creating $EVOLUTION_REPORT"
         printf "%.6f|%s|%s\n", mean, symbol, data[i]
       }
     }' |
-    sort -t'|' -k1,1nr -k2,2 -k4,4 |
+    sort -t'|' -k1,1nr -k2,2 -k4,4 2> >(log_command_error "sort") |
     cut -d'|' -f3-
   } |
   awk -F'|' '
@@ -378,3 +392,6 @@ sed -i '/<!-- EVOLUTION -->/{
   r rows.html
   d
 }' "$HTML_REPORT" && rm -f rows.html
+
+log_detail "[ok] - Added price and market-cap evolution analysis"
+log "HTML REPORT CREATION COMPLETED SUCCESSFULLY"

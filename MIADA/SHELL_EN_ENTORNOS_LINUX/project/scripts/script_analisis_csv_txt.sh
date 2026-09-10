@@ -21,10 +21,21 @@ log() {
   echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - $*" >> "$LOG"
 }
 
+log_detail() {
+  echo -e "\t[$(date +"%H:%M:%S.%3N")] $*" >> "$LOG"
+}
+
+log_command_error() {
+  local tool="$1" error
+  while IFS= read -r error; do
+    log_detail "[ko] [ERROR] [$tool] - $error"
+  done
+}
+
 # If the download fails (the file does not exist), we log the error and exit
 
 if [[ ! -f "$DATA_FILE" ]]; then
-  log "Dataset not found: $DATA_FILE"
+  log "TXT REPORT CREATION FAILED: dataset not found: $DATA_FILE"
   exit 1
 fi
 
@@ -33,9 +44,9 @@ fi
 entries=$(( $(wc -l < "$DATA_FILE") - 1 ))
 mkdir -p "$DAY_DIR"
 
-log "BEGAN CREATION OF TXT REPORTS"
-
-log "Analyzing $FILE; reports will be stored in /project/analysis/$REPORT_DATE"
+log "TXT REPORT CREATION STARTED: $FILE"
+log_detail "[ok] - Input dataset: /project/datasets/$FILE ($entries records)"
+log_detail "[ok] - Output folder: /project/analysis/$REPORT_DATE"
 
 table_preamble() {
   local output="$1"
@@ -55,14 +66,14 @@ table_preamble() {
 
 # TOP MARKET CAP COMPANIES
 
-TOP_REPORT="$DAY_DIR/top_market_cap_companies.txt"
+TOP_REPORT="$DAY_DIR/top_market_cap_companies_${REPORT_DATE}.txt"
 
 table_preamble "$TOP_REPORT" "TOP MARKET CAP COMPANIES" 64
 
-log "Creating $TOP_REPORT"
+log_detail "[ok] - Creating top market-cap report: $TOP_REPORT"
 
 tail -n +2 "$DATA_FILE" |
-sort -t',' -k10,10nr |
+sort -t',' -k10,10nr 2> >(log_command_error "sort") |
 awk -F',' '
   function fit(value, width) {
     return length(value) <= width ? value : substr(value, 1, width - 3) "..."
@@ -92,18 +103,18 @@ awk -F',' '
   }
 ' >> "$TOP_REPORT"
 
-log "$TOP_REPORT CREATED SUCCESSFULLY"
+log_detail "[ok] - Created: $TOP_REPORT"
 
 # HIGHEST GROSSING SECTORS
 
-SECTORS_REPORT="$DAY_DIR/highest_grossing_sectors.txt"
+SECTORS_REPORT="$DAY_DIR/highest_grossing_sectors_${REPORT_DATE}.txt"
 
-log "Creating $SECTORS_REPORT"
+log_detail "[ok] - Creating sector market-cap report: $SECTORS_REPORT"
 
 table_preamble "$SECTORS_REPORT" "HIGHEST GROSSING SECTORS" 65
 
 tail -n +2 "$DATA_FILE" |
-sort -t',' -k10,10nr |
+sort -t',' -k10,10nr 2> >(log_command_error "sort") |
 awk -F',' '
   function fit(value, width) {
     return length(value) <= width ? value : substr(value, 1, width - 3) "..."
@@ -153,13 +164,13 @@ awk -F',' '
   }
   ' >> "$SECTORS_REPORT"
 
-log "$SECTORS_REPORT CREATED SUCCESSFULLY"
+log_detail "[ok] - Created: $SECTORS_REPORT"
 
 # TOPP WINNERS
 
-WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric.txt"
+WINNERS_REPORT="$DAY_DIR/highest_winners_52_week_metric_${REPORT_DATE}.txt"
 
-log "Creating $WINNERS_REPORT"
+log_detail "[ok] - Creating 52-week winners report: $WINNERS_REPORT"
 
 table_preamble "$WINNERS_REPORT" "HIGHEST WINNERS (52-WEEK METRIC)" 68
 
@@ -179,21 +190,19 @@ table_preamble "$WINNERS_REPORT" "HIGHEST WINNERS (52-WEEK METRIC)" 68
         distance, $1, fit($2, 22), $4, $9, distance
     }
   ' |
-  sort -t'|' -k1,1n |
+  sort -t'|' -k1,1n 2> >(log_command_error "sort") |
   cut -d'|' -f2-
 
   echo "+----------+------------------------+----------+----------+----------+"
 } >> "$WINNERS_REPORT"
 
-log "Analysis complete: reports created in /project/analysis/$REPORT_DATE"
-
-log "$WINNERS_REPORT CREATED SUCCESSFULLY"
+log_detail "[ok] - Created: $WINNERS_REPORT"
 
 # PRICE AND MARKET CAP EVOLUTION
 
-EVOLUTION_REPORT="$DAY_DIR/price_market_cap_evolution.txt"
+EVOLUTION_REPORT="$DAY_DIR/price_market_cap_evolution_${REPORT_DATE}.txt"
 
-log "Creating $EVOLUTION_REPORT"
+log_detail "[ok] - Creating price and market-cap evolution report: $EVOLUTION_REPORT"
 
 table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
 
@@ -208,7 +217,7 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
       [[ "$DATE_DAY" =~ ^[0-9]{8}$ && "$DATE_DAY" -le "$REPORT_DATE" ]] || continue
 
       tail -n +2 "$DATA_FILE_DAY" |
-      sort -t',' -k10,10nr |
+      sort -t',' -k10,10nr 2> >(log_command_error "sort") |
       awk -F',' -v date="$DATE_DAY" '
       {
         printf "%s|%s|%s|%.6f|%.6f\n",
@@ -235,7 +244,7 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
       printf "%.6f|%s|%s\n", mean, symbol, data[i]
     }
   }' |
-  sort -t'|' -k1,1nr -k2,2 -k4,4 |
+  sort -t'|' -k1,1nr -k2,2 -k4,4 2> >(log_command_error "sort") |
   cut -d'|' -f3-
   } | awk -F'|' '
     function commas(value, text, result) {
@@ -315,4 +324,5 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
   '
 } >> "$EVOLUTION_REPORT"
 
-log "$EVOLUTION_REPORT CREATED SUCCESSFULLY"
+log_detail "[ok] - Created: $EVOLUTION_REPORT"
+log "TXT REPORT CREATION COMPLETED SUCCESSFULLY"

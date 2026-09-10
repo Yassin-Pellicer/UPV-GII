@@ -7,7 +7,16 @@ DATASETS_DIR="$PROJECT_DIR/datasets"
 LOG="$PROJECT_DIR/log.txt"
 FILE="constituents-financials_$(date +"%Y%m%d").csv"
 
-echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - Downloading S&P 500 $FILE in route /project/datasets/$FILE" >> "$LOG"
+log_command_error() {
+  local tool="$1" error
+  while IFS= read -r error; do
+    echo -e "\t[$(date +"%H:%M:%S.%3N")] [ko] [ERROR] [$tool] - $error" >> "$LOG"
+  done
+}
+
+echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - DATASET DOWNLOAD STARTED: $FILE" >> "$LOG"
+echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Source: S&P 500 financial dataset" >> "$LOG"
+echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Destination: /project/datasets/$FILE" >> "$LOG"
 
 cd "$DATASETS_DIR" || exit 1
 
@@ -15,7 +24,7 @@ attempt=1
 
 until curl -fsSL -o "$FILE" \
   "https://raw.githubusercontent.com/datasets/s-and-p-500-companies-financials/main/data/constituents-financials.csv" \
-  >> "$LOG" 2>&1
+  2> >(log_command_error "curl")
 do
   echo -e "\t[$(date +"%H:%M:%S.%3N")] [ko] - Error downloading $FILE, retry $attempt/10" >> "$LOG"
 
@@ -28,4 +37,5 @@ do
   sleep 4
 done
 
-echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] [ok] - Downloaded $FILE successfully" >> "$LOG"
+echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Downloaded $FILE successfully" >> "$LOG"
+echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - DATASET DOWNLOAD COMPLETED" >> "$LOG"
