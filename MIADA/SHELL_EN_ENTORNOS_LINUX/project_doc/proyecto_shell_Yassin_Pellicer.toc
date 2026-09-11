@@ -4,8 +4,8 @@
 \contentsline {section}{\numberline {3}Automatización mediante cron}{3}{section.3}%
 \contentsline {section}{\numberline {4}Script de procesamiento}{3}{section.4}%
 \contentsline {section}{\numberline {5}Extracción y análisis de datos}{3}{section.5}%
-\contentsline {section}{\numberline {6}Formato de los informes generados}{3}{section.6}%
-\contentsline {section}{\numberline {7}Registro (log)}{3}{section.7}%
+\contentsline {section}{\numberline {6}Formato de los informes generados}{4}{section.6}%
+\contentsline {section}{\numberline {7}Registro (log)}{4}{section.7}%
 \contentsline {section}{\numberline {8}Estructura de ficheros del proyecto}{4}{section.8}%
 \contentsline {section}{\numberline {9}Entrega del proyecto}{4}{section.9}%
-\contentsline {section}{\numberline {A}Uso de IA en funciones de ayuda y formateo}{4}{appendix.A}%
+\contentsline {section}{\numberline {A}Uso de IA en funciones de ayuda y formateo}{5}{appendix.A}%

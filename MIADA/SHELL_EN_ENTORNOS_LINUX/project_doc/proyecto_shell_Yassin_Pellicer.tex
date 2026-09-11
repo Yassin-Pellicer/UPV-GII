@@ -7,10 +7,9 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{xurl}
-\geometry{margin=2.5cm}
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
 
-\title{Análisis y evolución de las empresas del S\&P 500\\\large Memoria del proyecto de Shell y Entornos Linux}
+\title{\LARGE Análisis y evolución de las empresas del S\&P 500\\\large Memoria del proyecto de Shell y Entornos Linux}
 \author{Yassin Pellicer Lamla}
 \date{\today}
 
@@ -20,10 +19,10 @@
 \newpage
 
 \section{Objetivo}
-El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. El informe permite consultar el ranking de capitalización bursátil, la agrupación por sectores, los valores más próximos a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
+El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. \newline Los informes permiten consultar el ranking de capitalización bursátil, la agrupación por sectores y su ránking, las empresas que más próximas están a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
 
 \section{Elección del dataset}
-La elección de uno o varios datasets corresponde a cada proyecto. En este caso se utiliza un único dataset en formato CSV: \texttt{constituents-financials.csv}, publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
+El dataset utilizado en este proyecto consiste en un archivo .csv de 500 entradas correspondientes a los datos de cada una de las 500 empresas más rentables de la bolsa estadounidense. En este caso se utiliza un único dataset en formato CSV: \texttt{constituents-financials.csv}, publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
 
 \begin{center}
 \url{https://raw.githubusercontent.com/datasets/s-and-p-500-companies-financials/main/data/constituents-financials.csv}

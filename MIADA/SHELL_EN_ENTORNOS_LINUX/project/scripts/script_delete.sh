@@ -22,14 +22,20 @@ if [ ! -d "$DATASETS_DIR" ]; then
   exit 1
 fi
 
-files_to_delete=$(find "$DATASETS_DIR" -type f -name "constituents-financials_*.csv" -mtime +$DAYS 2> >(log_command_error "find") | wc -l)
+files_to_delete=0
 
-if [ "$files_to_delete" -gt 0 ]; then
-  find "$DATASETS_DIR" -type f -name "constituents-financials_*.csv" -mtime +$DAYS -delete 2> >(log_command_error "find")
-  
-  echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Deleted $files_to_delete expired dataset(s)" >> "$LOG"
-else
+for dataset in "$DATASETS_DIR"/constituents-financials_*.csv; do
+  [ -f "$dataset" ] || continue
+  dataset_date=$(basename "$dataset" | grep -oE '[0-9]{8}')
+  if [[ "$dataset_date" < "$(date -d "$DAYS days ago" +%Y%m%d)" ]]; then
+    rm -- "$dataset" 2> >(log_command_error "rm") && files_to_delete=$((files_to_delete + 1))
+  fi
+done
+
+if [ "$files_to_delete" -eq 0 ]; then
   echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - No expired datasets found" >> "$LOG"
+else
+  echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Deleted $files_to_delete expired dataset(s)" >> "$LOG"
 fi
 
 echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - DATASET CLEANUP COMPLETED" >> "$LOG"
