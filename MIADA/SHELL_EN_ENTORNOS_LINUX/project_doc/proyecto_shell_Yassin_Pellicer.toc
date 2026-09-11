@@ -1,11 +1,14 @@
 \contentsline {section}{\numberline {1}Objetivo}{2}{section.1}%
 \contentsline {section}{\numberline {2}Elección del dataset}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Formato y estructura}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Datos relevantes y preprocesamiento}{3}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Automatización mediante cron}{3}{section.3}%
-\contentsline {section}{\numberline {4}Script de procesamiento}{3}{section.4}%
-\contentsline {section}{\numberline {5}Extracción y análisis de datos}{3}{section.5}%
+\contentsline {section}{\numberline {4}Scripts de procesamiento}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}\texttt {script\_delete.sh}}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}\texttt {script\_download.sh}}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Extracción y análisis de datos}{4}{section.5}%
 \contentsline {section}{\numberline {6}Formato de los informes generados}{4}{section.6}%
-\contentsline {section}{\numberline {7}Registro (log)}{4}{section.7}%
-\contentsline {section}{\numberline {8}Estructura de ficheros del proyecto}{4}{section.8}%
-\contentsline {section}{\numberline {9}Entrega del proyecto}{4}{section.9}%
+\contentsline {section}{\numberline {7}Registro (log)}{5}{section.7}%
+\contentsline {section}{\numberline {8}Estructura de ficheros del proyecto}{5}{section.8}%
+\contentsline {section}{\numberline {9}Entrega del proyecto}{5}{section.9}%
 \contentsline {section}{\numberline {A}Uso de IA en funciones de ayuda y formateo}{5}{appendix.A}%

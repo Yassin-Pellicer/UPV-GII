@@ -7,6 +7,12 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{listings}
+
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
 
 \title{\LARGE Análisis y evolución de las empresas del S\&P 500\\\large Memoria del proyecto de Shell y Entornos Linux}
@@ -22,27 +28,28 @@
 El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. \newline Los informes permiten consultar el ranking de capitalización bursátil, la agrupación por sectores y su ránking, las empresas que más próximas están a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
 
 \section{Elección del dataset}
-El dataset utilizado en este proyecto consiste en un archivo .csv de 500 entradas correspondientes a los datos de cada una de las 500 empresas más rentables de la bolsa estadounidense. En este caso se utiliza un único dataset en formato CSV: \texttt{constituents-financials.csv}, publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
+El dataset utilizado en este proyecto consiste en un archivo .csv de 500 entradas correspondientes a los datos de cada una de las 500 empresas más rentables de la bolsa estadounidense. En este caso se utiliza un único dataset en formato CSV publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
 
-\begin{center}
+\begin{flushleft}
+\small
 \url{https://raw.githubusercontent.com/datasets/s-and-p-500-companies-financials/main/data/constituents-financials.csv}
-\end{center}
-
+\newline\newline
 El repositorio público del dataset es:
-\begin{center}
-\url{https://github.com/datasets/s-and-p-500-companies-financials}
-\end{center}
 
-La fuente es pública y reconocida en el ecosistema de datos abiertos. El proyecto no presupone que el archivo sea una fuente de cotización en tiempo real: satisface el requisito de actualización mediante una descarga programada diariamente, que guarda una instantánea con fecha propia. La URL de SEC incluida en cada registro permite enlazar con la documentación regulatoria de la empresa.
+\url{https://github.com/datasets/s-and-p-500-companies-financials}
+\end{flushleft}
+
+La fuente es pública y accesible por descarga mediante el comando \texttt{wget}. El proyecto no presupone que el archivo sea una fuente de datos en tiempo real, ya que se actualiza una vez al día: simplemente satisface el requisito de actualización mediante una descarga programada diariamente, que guarda una instantánea con fecha propia.
 
 \subsection{Formato y estructura}
 El formato es CSV con una fila de cabecera y una fila por compañía. El script de descarga lo almacena como \texttt{datasets/constituents-financials\_AAAAMMDD.csv}. Los campos son los siguientes:
 
-\begin{longtable}{p{0.24\textwidth}p{0.67\textwidth}}
+\begin{longtable}{@{}p{0.37\textwidth}p{0.59\textwidth}@{}}
 \toprule
 Campo & Descripción \\
 \midrule
 \endhead
+
 \texttt{Symbol} & Símbolo bursátil de la compañía. \\
 \texttt{Name} & Nombre de la compañía. \\
 \texttt{Sector} & Sector o industria asignada. \\
@@ -50,32 +57,71 @@ Campo & Descripción \\
 \texttt{Price/Earnings} & Relación precio-beneficio. \\
 \texttt{Dividend Yield} & Rentabilidad por dividendo. \\
 \texttt{Earnings/Share} & Beneficio por acción. \\
-\texttt{52 Week Low}, \texttt{52 Week High} & Mínimo y máximo de 52 semanas. \\
+\texttt{52 Week Low} & Precio mínimo durante las últimas 52 semanas. \\
+\texttt{52 Week High} & Precio máximo durante las últimas 52 semanas. \\
 \texttt{Market Cap} & Capitalización bursátil. \\
-\texttt{EBITDA}, \texttt{Price/Sales}, \texttt{Price/Book} & Métricas financieras complementarias. \\
-\texttt{SEC Filings} & URL de consulta de documentación de la SEC. \\
+\texttt{EBITDA} & Beneficio antes de intereses, impuestos, depreciaciones y amortizaciones. \\
+\texttt{Price/Sales} & Relación entre el precio y las ventas. \\
+\texttt{Price/Book} & Relación entre el precio de mercado y el valor contable. \\
+\texttt{SEC Filings} & URL de documentación presentada ante la SEC. \\
+
 \bottomrule
 \end{longtable}
 
-Antes del análisis, \texttt{script\_sanitize.sh} descarta registros sin los campos necesarios (símbolo, nombre, sector, precio, beneficio por acción, mínimo y máximo de 52 semanas y capitalización). También elimina comas embebidas en nombre y sector para conservar la consistencia del CSV.
+\subsection{Datos relevantes y preprocesamiento}
+
+No todos estos datos son relevantes para el estudio. En el proyecto sólo se consideran los campos \texttt{Symbol, Name, Sector, Price, 52 Week High y Market Cap}. El preprocesador invocado en el servicio de descarga automático se deshace de cualquier entrada que no tenga, como mínimo, estas columnas. Sin embargo, las columnas no significativas se conservan de todas maneras para permitir la ampliación y creación de métricas más complejas en un futuro.
 
 \section{Automatización mediante cron}
 El archivo \texttt{cron/crontab.txt} define una ejecución diaria a las 12:00:
 \begin{verbatim}
 0 12 * * * /ruta/al/proyecto/cron/script_cron.sh
 \end{verbatim}
-El orquestador \texttt{cron/script\_cron.sh} ejecuta las etapas de limpieza, descarga, saneamiento y creación de informes. Cada etapa se comprueba; si alguna falla, el proceso se detiene y se registra el error.
-
-\section{Script de procesamiento}
-El procesamiento está separado en scripts Bash con una responsabilidad concreta:
+El script \texttt{cron/\allowbreak script\_cron.sh} ejecuta las etapas de limpieza, descarga, saneamiento y creación de informes. El procesamiento está separado en scripts Bash con responsabilidades concretas para cada uno:
 \begin{itemize}[noitemsep]
   \item \texttt{script\_delete.sh}: elimina snapshots CSV con más de 30 días.
   \item \texttt{script\_download.sh}: descarga el CSV y reintenta la operación hasta diez veces ante un fallo de red.
   \item \texttt{script\_sanitize.sh}: valida los campos requeridos y normaliza el CSV.
   \item \texttt{script\_analisis\_csv\_txt.sh}: genera los informes de texto.
-  \item \texttt{script\_analisis\_csv\_html.sh}: genera el informe HTML a partir de las plantillas de \texttt{scripts/html/}.
+  \item \texttt{script\_analisis\_csv\_html.sh}: genera el informe HTML a partir de las plantillas localizadas en \texttt{scripts/html/}.
 \end{itemize}
 Los scripts de análisis aceptan opcionalmente una fecha \texttt{AAAAMMDD}; si se omite, emplean la fecha actual. Esto permite regenerar un informe histórico sin volver a descargar el dataset.
+
+\newpage
+\section{Scripts de procesamiento}
+
+\texttt{cron/\allowbreak script\_cron.sh} inicia el proceso automatizado por el servicio \texttt{cron} y ejecuta los 3 siguientes scripts de procesamiento
+
+\begin{itemize}[noitemsep]
+    \item \texttt{script\_delete.sh}
+    \item \texttt{script\_download.sh}
+    \item \texttt{script\_sanitize.sh}
+\end{itemize}
+
+\subsection{\texttt{script\_delete.sh}}
+
+Este script borra por defecto los datasets con una antigüedad mayor de 30 días. Concretamente, extrae la fecha del nombre de los archivos y, mediante un bucle, comprueba si el archivo consultado tiene una antigüedad superior a 30 días respecto a la fecha actual. En ese caso, elimina el archivo.
+
+% \lstset{
+%     basicstyle=\ttfamily\small,
+%     keywordstyle=\color{blue},
+%     commentstyle=\color{gray},
+%     stringstyle=\color{purple},
+%     breaklines=true,
+% }
+
+% \begin{lstlisting}
+% # ...
+%   if [[ "$dataset_date" < "$(date -d "$DAYS days ago" +%Y%m%d)" ]]; then
+%    rm -- "$dataset" 2> >(log_command_error "rm") && files_to_delete=$((files_to_delete + 1))
+% # ...
+% \end{lstlisting}
+
+\subsection{\texttt{script\_download.sh}}
+
+Este script descarga el .csv del remoto y le da un nombre especial que le añade la coletilla \texttt{\_<date>} al final, de manera que el .csv descargado el 11/09/2026 se llamaría \texttt{constituents-financials\_20260911.csv}.
+
+El script es a prueba de fallos de conexión desde el cliente. Es decir, si 
 
 \section{Extracción y análisis de datos}
 La extracción se realiza con \texttt{curl} sobre la URL pública indicada. El análisis usa herramientas estándar de Unix, principalmente \texttt{awk}, \texttt{sort}, \texttt{tail}, \texttt{sed} y \texttt{wc}. Las operaciones principales son:
@@ -88,7 +134,7 @@ La extracción se realiza con \texttt{curl} sobre la URL pública indicada. El a
 El informe de evolución no incorpora datasets posteriores a la fecha de su propia instantánea, por lo que una ejecución histórica se mantiene coherente con el periodo analizado.
 
 \section{Formato de los informes generados}
-Para cada fecha se crea el directorio \texttt{analysis/AAAAMMDD/}. Los informes de texto son archivos \texttt{.txt} con tablas monoespaciadas. El informe HTML se genera en \texttt{analysis/AAAAMMDD/report/report\_AAAAMMDD.html}, junto con su hoja de estilos y JavaScript.
+Para cada fecha se crea el directorio \path{analysis/AAAAMMDD/}. Los informes de texto son archivos \texttt{.txt} con tablas monoespaciadas. El informe HTML se genera en \path{analysis/AAAAMMDD/report/report_AAAAMMDD.html}, junto con su hoja de estilos y JavaScript.
 
 El HTML incluye el ranking por capitalización, las tablas por sector, los mayores ganadores y la evolución. Las tablas incluyen numeración donde corresponde y un total de entradas procesadas, situado fuera del contenedor desplazable de cada bloque. El CSS y JavaScript se separan de la plantilla HTML para facilitar su mantenimiento.
 
