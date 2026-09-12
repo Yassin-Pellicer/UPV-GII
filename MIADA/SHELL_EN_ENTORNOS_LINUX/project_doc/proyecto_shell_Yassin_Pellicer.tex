@@ -1,6 +1,5 @@
+% !TeX program = lualatex
 \documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{booktabs}
@@ -8,10 +7,10 @@
 \usepackage{enumitem}
 \usepackage{xurl}
 \usepackage{xcolor}
-\usepackage{longtable}
-\usepackage{booktabs}
 \usepackage{url}
 \usepackage{listings}
+\usepackage{fontspec}
+\setmonofont{Ubuntu Mono}
 
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
 
@@ -25,13 +24,16 @@
 \newpage
 
 \section{Objetivo}
-El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. \newline Los informes permiten consultar el ranking de capitalización bursátil, la agrupación por sectores y su ránking, las empresas que más próximas están a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
+El proyecto automatiza la descarga, depuración, análisis y presentación de información financiera de las compañías del índice S\&P 500. Para cada ejecución diaria se conserva una instantánea del conjunto de datos y se generan informes de texto y HTML. 
+
+Los informes permiten consultar el ranking de capitalización bursátil, la agrupación por sectores y su ranking, las empresas que más próximas están a su máximo de 52 semanas y la evolución histórica de precio y capitalización.
+
+El objetivo final es disponer de un sistema reproducible y automatizado que permita obtener periódicamente una visión general del estado de las empresas del S\&P 500, al mismo tiempo que se aplican herramientas y conceptos propios de Shell y de la administración de sistemas Linux, como la ejecución programada de tareas, el procesamiento de archivos y la generación automática de informes.
 
 \section{Elección del dataset}
 El dataset utilizado en este proyecto consiste en un archivo .csv de 500 entradas correspondientes a los datos de cada una de las 500 empresas más rentables de la bolsa estadounidense. En este caso se utiliza un único dataset en formato CSV publicado por el repositorio abierto \emph{S\&P 500 Companies Financials} de la organización \texttt{datasets} en GitHub. Se descarga desde:
 
 \begin{flushleft}
-\small
 \url{https://raw.githubusercontent.com/datasets/s-and-p-500-companies-financials/main/data/constituents-financials.csv}
 \newline\newline
 El repositorio público del dataset es:
@@ -43,6 +45,9 @@ La fuente es pública y accesible por descarga mediante el comando \texttt{wget}
 
 \subsection{Formato y estructura}
 El formato es CSV con una fila de cabecera y una fila por compañía. El script de descarga lo almacena como \texttt{datasets/constituents-financials\_AAAAMMDD.csv}. Los campos son los siguientes:
+
+{
+\renewcommand{\arraystretch}{0.85}
 
 \begin{longtable}{@{}p{0.37\textwidth}p{0.59\textwidth}@{}}
 \toprule
@@ -67,13 +72,14 @@ Campo & Descripción \\
 
 \bottomrule
 \end{longtable}
+}
 
 \subsection{Datos relevantes y preprocesamiento}
 
 No todos estos datos son relevantes para el estudio. En el proyecto sólo se consideran los campos \texttt{Symbol, Name, Sector, Price, 52 Week High y Market Cap}. El preprocesador invocado en el servicio de descarga automático se deshace de cualquier entrada que no tenga, como mínimo, estas columnas. Sin embargo, las columnas no significativas se conservan de todas maneras para permitir la ampliación y creación de métricas más complejas en un futuro.
 
 \section{Automatización mediante cron}
-El archivo \texttt{cron/crontab.txt} define una ejecución diaria a las 12:00:
+El archivo \texttt{cron/crontab.txt} define una ejecución diaria a las 12:00 horas
 \begin{verbatim}
 0 12 * * * /ruta/al/proyecto/cron/script_cron.sh
 \end{verbatim}
@@ -102,6 +108,8 @@ Los scripts de análisis aceptan opcionalmente una fecha \texttt{AAAAMMDD}; si s
 
 Este script borra por defecto los datasets con una antigüedad mayor de 30 días. Concretamente, extrae la fecha del nombre de los archivos y, mediante un bucle, comprueba si el archivo consultado tiene una antigüedad superior a 30 días respecto a la fecha actual. En ese caso, elimina el archivo.
 
+La conservación del histórico de archivos durante 30 días permite comparar e interpretar cambios y comprender mejor la evolución de la economía durante un período corto y significativo sin generar reportes excesivamente largos.
+
 % \lstset{
 %     basicstyle=\ttfamily\small,
 %     keywordstyle=\color{blue},
@@ -119,24 +127,102 @@ Este script borra por defecto los datasets con una antigüedad mayor de 30 días
 
 \subsection{\texttt{script\_download.sh}}
 
-Este script descarga el .csv del remoto y le da un nombre especial que le añade la coletilla \texttt{\_<date>} al final, de manera que el .csv descargado el 11/09/2026 se llamaría \texttt{constituents-financials\_20260911.csv}.
+Este script descarga el .csv del remoto y le da un nombre especial que le añade la coletilla \texttt{\_<date>} al final, de manera que el .csv descargado el 11/09/2026 se llamaría \texttt{constituents-financials\_20260911.csv}. 
 
-El script es a prueba de fallos de conexión desde el cliente. Es decir, si 
+El script es a prueba de fallos de conexión desde el cliente. Es decir, si por algún motivo el equipo pierde la red, el programa reintentará la descarga hasta 10 veces en un plazo de 6 minutos. También controla las descargas vacías o la ausencia del recurso a descargar. 
+
+\subsection{\texttt{script\_sanitize.sh}}
+
+Este script toma el dataset recién descargado y comprueba que su estructura es válida para la extracción y análisis de datos posterior.
+
+En primer lugar elimina todas aquellas entradas del .csv que carezcan de las columnas \texttt{Symbol, Name, Sector, Price, 52 Week High y Market Cap}. A continuación reformatea los campos \texttt{Name y Sector} para eliminar las ',' embebidas entre comillas '"'  que dificultan la lectura del archivo (ya que el archivo utiliza la ',' como símbolo ortográfico en nombres como "Nike, Inc.", lo que impide la correcta separación de los campos entre comas).
 
 \section{Extracción y análisis de datos}
-La extracción se realiza con \texttt{curl} sobre la URL pública indicada. El análisis usa herramientas estándar de Unix, principalmente \texttt{awk}, \texttt{sort}, \texttt{tail}, \texttt{sed} y \texttt{wc}. Las operaciones principales son:
+
+Una vez ejecutados satisfactoriamente los tres primeros scripts de procesamiento, se ejecutan los dos scripts correspondientes a la extracción y análisis de los datos del dataset:
+
+\begin{itemize}[noitemsep]
+\item \texttt{script\_analisis\_csv\_txt.sh}
+\item \texttt{script\_analisis\_csv\_html.sh}
+\end{itemize}
+
+Ambos scripts realizan los mismos análisis sobre el dataset (y con los mismos algoritmos), pero generan los resultados en formatos diferentes.
+
+El script \texttt{script\_analisis\_csv\_txt.sh} genera cuatro archivos de texto, cuyos nombres siguen el formato indicado a continuación:
+
+\begin{itemize}[noitemsep]
+\item \texttt{highest\_grossing\_sectors\_<date>.txt}
+\item \texttt{highest\_winners\_52\_week\_metric\_<date>.txt}
+\item \texttt{price\_marketcap\_evolution\_<date>.txt}
+\item \texttt{top\_market\_cap\_companies\_<date>.txt}
+\end{itemize}
+
+En todos los casos, \texttt{<date>} corresponde a la fecha del día en que se generan los archivos.
+
+Por otro lado, el script \texttt{script\_analisis\_csv\_html.sh} genera un informe en formato HTML compuesto por los siguientes archivos:
+
+\begin{itemize}[noitemsep]
+\item \texttt{report\_<date>.html}
+\item \texttt{script.js}
+\item \texttt{style.css}
+\end{itemize}
+
+Los reportes \texttt{.txt} se almacenan en la ruta \texttt{project/analysis/<date>} donde \texttt{<date>} es la fecha del reporte en cuestión. El HTML generado se anida en una carpeta adicional llamada \texttt{report}. Esta es la estructura de los archivos de reporte.
+\begin{verbatim}
+project/
+└── analysis/
+    └── <date>/
+        ├── highest_grossing_sectors_<date>.txt
+        ├── highest_winners_52_week_metric_<date>.txt
+        ├── price_marketcap_evolution_<date>.txt
+        ├── top_market_cap_companies_<date>.txt
+        └── report/
+            ├── report_<date>.html
+            ├── script.js
+            └── style.css
+\end{verbatim}
+
+\subsection{Reporte de empresas con mayor capitalización bursátil}
+Este reporte se genera ordenando la columna de capitalización bursátil (\texttt{Market Cap}) en orden descendiente por medio del siguiente flujo:
+
 \begin{enumerate}[noitemsep]
-  \item ordenar las empresas por \texttt{Market Cap} para el ranking principal;
-  \item sumar la capitalización por \texttt{Sector} y ordenar los sectores de forma descendente;
-  \item calcular la distancia porcentual entre el precio actual y el máximo de 52 semanas;
-  \item recorrer los snapshots disponibles hasta la fecha solicitada para mostrar la evolución de precio y capitalización por empresa.
+\item Se lee el fichero excluyendo la cabecera mediante el comando \texttt{tail}.
+\item \texttt{sort} ordena las entradas por la columna \texttt{Market Cap} en orden descendente.
 \end{enumerate}
-El informe de evolución no incorpora datasets posteriores a la fecha de su propia instantánea, por lo que una ejecución histórica se mantiene coherente con el periodo analizado.
 
-\section{Formato de los informes generados}
-Para cada fecha se crea el directorio \path{analysis/AAAAMMDD/}. Los informes de texto son archivos \texttt{.txt} con tablas monoespaciadas. El informe HTML se genera en \path{analysis/AAAAMMDD/report/report_AAAAMMDD.html}, junto con su hoja de estilos y JavaScript.
+\subsection{Reporte de sectores con mayor capitalización bursátil}
 
-El HTML incluye el ranking por capitalización, las tablas por sector, los mayores ganadores y la evolución. Las tablas incluyen numeración donde corresponde y un total de entradas procesadas, situado fuera del contenedor desplazable de cada bloque. El CSS y JavaScript se separan de la plantilla HTML para facilitar su mantenimiento.
+Este reporte agrupa las empresas según su sector y calcula la capitalización
+bursátil total de cada uno mediante el siguiente flujo:
+
+\begin{enumerate}[noitemsep]
+\item Se lee el fichero sin la cabecera mediante \texttt{tail}.
+\item \texttt{sort} ordena las entradas por la columna \texttt{Market Cap} en orden descendente.
+\item \texttt{awk} agrupa las empresas por sector y suma sus valores de \texttt{Market Cap}.
+\item Los sectores se ordenan de forma descendente según su capitalización total mediante un algoritmo de ordenación en \texttt{awk} 
+\end{enumerate}
+
+\subsection{Reporte de mayores ganadores por métrica de 52 semanas}
+
+Este reporte identifica las empresas cuyo precio está más próximo al máximo de las últimas 52 semanas:
+
+\begin{enumerate}[noitemsep]
+\item Se lee el fichero sin la cabecera mediante \texttt{tail}.
+\item \texttt{awk} calcula la distancia porcentual entre \texttt{Price} y
+\texttt{52 Week High}.
+\item \texttt{sort} ordena las empresas de menor a mayor distancia.
+\item \texttt{cut} elimina el campo auxiliares donde se calculó esta distancia.
+\end{enumerate}
+
+\subsection{Reporte de evolución del mercado}
+
+Este reporte muestra la evolución histórica del precio y de la capitalización bursátil de las empresas:
+
+\begin{enumerate}[noitemsep]
+\item Se recorren los datasets disponibles hasta la fecha seleccionada y mediante \texttt{awk} se vuelca cada entrada de cada empresa por día en la salida. \texttt{sort} las ordena previamente por capitlización, aunque no es necesario.
+\item la salida anterior se le pasa a \texttt{awk}, que calcula la capitalización media de la empresa durante el período analizado y se la añade a cada fila suministrada.
+\item \texttt{sort} ordena la entrada por prioridad, primero por \texttt{Symbol}, luego por \texttt{Name} y por último
+\end{enumerate}
 
 \section{Registro (log)}
 El archivo \texttt{log.txt} conserva un registro cronológico de todas las ejecuciones. Cada línea incluye fecha y hora con milisegundos, además del estado \texttt{[ok]} o \texttt{[ko]}. Se registran el inicio y el final de cada etapa, los archivos de entrada y salida, los reintentos de descarga y los registros descartados durante el saneamiento. Este registro permite auditar la automatización y diagnosticar errores.
@@ -144,18 +230,19 @@ El archivo \texttt{log.txt} conserva un registro cronológico de todas las ejecu
 \section{Estructura de ficheros del proyecto}
 \begin{verbatim}
 project/
-|-- analysis/       informes generados, agrupados por fecha
-|-- cron/           crontab y script orquestador diario
-|-- datasets/       snapshots CSV descargados
-|-- scripts/        descarga, limpieza, saneamiento y análisis
-|   `-- html/       plantilla, estilos y JavaScript del informe web
-`-- log.txt         registro de ejecuciones
-project_doc/
-`-- proyecto_shell_Yassin_Pellicer.tex
+├── analysis/
+│   ├── highest_grossing_sectors_<date>.txt
+│   ├── highest_winners_52_week_metric_<date>.txt
+│   ├── price_marketcap_evolution_<date>.txt
+│   ├── top_market_cap_companies_<date>.txt
+│   └── report/
+│       ├── report_<date>.html
+│       ├── script.js
+│       └── style.css
+├── cron/
 \end{verbatim}
 
-\section{Entrega del proyecto}
-La entrega incluye los scripts ejecutables, el archivo de \texttt{cron}, las plantillas HTML/CSS/JavaScript, los datasets de ejemplo, los informes generados y esta memoria en formato \LaTeX. Para ejecutar el flujo completo se configura la entrada de \texttt{crontab} con la ruta absoluta del script orquestador o se ejecuta manualmente \texttt{cron/script\_cron.sh}.
+\newpage
 
 \appendix
 \section{Uso de IA en funciones de ayuda y formateo}

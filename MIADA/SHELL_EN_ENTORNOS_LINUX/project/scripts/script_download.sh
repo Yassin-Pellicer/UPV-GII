@@ -34,7 +34,7 @@ do
   fi
 
   attempt=$((attempt + 1))
-  sleep 4
+  sleep 30
 done
 
 echo -e "\t[$(date +"%H:%M:%S.%3N")] [ok] - Downloaded $FILE successfully" >> "$LOG"

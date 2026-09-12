@@ -6,9 +6,12 @@
 \contentsline {section}{\numberline {4}Scripts de procesamiento}{4}{section.4}%
 \contentsline {subsection}{\numberline {4.1}\texttt {script\_delete.sh}}{4}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}\texttt {script\_download.sh}}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}\texttt {script\_sanitize.sh}}{4}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Extracción y análisis de datos}{4}{section.5}%
-\contentsline {section}{\numberline {6}Formato de los informes generados}{4}{section.6}%
-\contentsline {section}{\numberline {7}Registro (log)}{5}{section.7}%
-\contentsline {section}{\numberline {8}Estructura de ficheros del proyecto}{5}{section.8}%
-\contentsline {section}{\numberline {9}Entrega del proyecto}{5}{section.9}%
-\contentsline {section}{\numberline {A}Uso de IA en funciones de ayuda y formateo}{5}{appendix.A}%
+\contentsline {subsection}{\numberline {5.1}Reporte de empresas con mayor capitalización bursátil}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Reporte de sectores con mayor capitalización bursátil}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Reporte de mayores ganadores por métrica de 52 semanas}{6}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Reporte de evolución del mercado}{6}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Registro (log)}{6}{section.6}%
+\contentsline {section}{\numberline {7}Estructura de ficheros del proyecto}{7}{section.7}%
+\contentsline {section}{\numberline {A}Uso de IA en funciones de ayuda y formateo}{8}{appendix.A}%
