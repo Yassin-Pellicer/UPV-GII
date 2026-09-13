@@ -241,11 +241,11 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
       symbol = f[1]
       mean = sum[symbol] / count[symbol]
 
-      printf "%.6f|%s|%s\n", mean, symbol, data[i]
+      printf "%.6f|%s\n", mean, data[i]
     }
   }' |
   sort -t'|' -k1,1nr -k2,2 -k4,4 2> >(log_command_error "sort") |
-  cut -d'|' -f3-
+  cut -d'|' -f2-
   } | awk -F'|' '
     function commas(value, text, result) {
       if (value < 0) {
@@ -302,7 +302,7 @@ table_preamble "$EVOLUTION_REPORT" "PRICE AND MARKET CAP EVOLUTION" 90
         price_diff = price - previous_price
         market_cap_diff = market_cap - previous_market_cap 
         
-        if (price_diff != 0) {
+        if (price_diff != 0 && market_cap_diff != 0) {
           printf "| %-8s | %10.2f | %10s | %24s | %22s |\n",
             format_date(date),
             price,

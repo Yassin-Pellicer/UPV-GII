@@ -686,3 +686,624 @@
 [2026/09/12 09:01:00.836] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
 	[09:01:00.840] [ok] - Completed: creating HTML reports
 [2026/09/12 09:01:00.844] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 12:19:59.180] - DAILY AUTOMATION STARTED
+	[12:19:59.180] [ok] - Starting: removing expired datasets
+[2026/09/13 12:19:59.181] - DATASET CLEANUP STARTED
+	[12:19:59.182] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[12:19:59.188] [ok] - No expired datasets found
+[2026/09/13 12:19:59.189] - DATASET CLEANUP COMPLETED
+	[12:19:59.189] [ok] - Completed: removing expired datasets
+	[12:19:59.189] [ok] - Starting: downloading the current dataset
+[2026/09/13 12:19:59.191] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[12:19:59.191] [ok] - Source: S&P 500 financial dataset
+	[12:19:59.191] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[12:20:00.017] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 12:20:00.017] - DATASET DOWNLOAD COMPLETED
+	[12:20:00.018] [ok] - Completed: downloading the current dataset
+	[12:20:00.018] [ok] - Starting: sanitizing the dataset
+[2026/09/13 12:20:00.020] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[12:20:00.020] [ok] - Checking required fields and removing embedded commas
+	[12:20:00.024] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[12:20:00.025] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[12:20:00.026] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[12:20:00.027] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[12:20:00.028] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[12:20:00.030] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[12:20:00.033] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[12:20:00.034] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[12:20:00.035] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[12:20:00.038] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[12:20:00.041] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[12:20:00.042] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[12:20:00.044] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[12:20:00.045] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[12:20:00.046] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[12:20:00.048] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[12:20:00.049] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[12:20:00.061] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[12:20:00.064] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 12:20:00.065] - DATASET SANITIZATION COMPLETED
+	[12:20:00.065] [ok] - Completed: sanitizing the dataset
+	[12:20:00.066] [ok] - Starting: creating text reports
+[2026/09/13 12:20:00.072] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:20:00.072] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:20:00.072] [ok] - Output folder: /project/analysis/20260913
+	[12:20:00.074] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:20:00.077] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:20:00.077] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:20:00.083] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:20:00.084] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:20:00.087] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:20:00.087] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[12:20:00.125] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 12:20:00.126] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:20:00.126] [ok] - Completed: creating text reports
+	[12:20:00.126] [ok] - Starting: creating HTML reports
+[2026/09/13 12:20:00.131] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:20:00.131] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:20:00.131] [ok] - Output folder: /project/analysis/20260913/report
+	[12:20:00.131] [ok] - Copied HTML, CSS, and JavaScript templates
+	[12:20:00.132] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:20:00.135] [ok] - Added top market-cap analysis
+	[12:20:00.135] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:20:00.142] [ok] - Added sector market-cap analysis
+	[12:20:00.142] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:20:00.150] [ok] - Added 52-week winners analysis
+	[12:20:00.150] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:20:00.197] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 12:20:00.198] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:20:00.198] [ok] - Completed: creating HTML reports
+[2026/09/13 12:20:00.198] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 12:58:34.575] - DAILY AUTOMATION STARTED
+	[12:58:34.575] [ok] - Starting: removing expired datasets
+[2026/09/13 12:58:34.576] - DATASET CLEANUP STARTED
+	[12:58:34.576] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[12:58:34.584] [ok] - No expired datasets found
+[2026/09/13 12:58:34.584] - DATASET CLEANUP COMPLETED
+	[12:58:34.584] [ok] - Completed: removing expired datasets
+	[12:58:34.585] [ok] - Starting: downloading the current dataset
+[2026/09/13 12:58:34.586] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[12:58:34.586] [ok] - Source: S&P 500 financial dataset
+	[12:58:34.586] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[12:58:34.832] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 12:58:34.832] - DATASET DOWNLOAD COMPLETED
+	[12:58:34.833] [ok] - Completed: downloading the current dataset
+	[12:58:34.833] [ok] - Starting: sanitizing the dataset
+[2026/09/13 12:58:34.834] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[12:58:34.835] [ok] - Checking required fields and removing embedded commas
+	[12:58:34.838] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[12:58:34.840] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[12:58:34.841] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[12:58:34.842] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[12:58:34.843] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[12:58:34.844] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[12:58:34.848] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[12:58:34.849] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[12:58:34.850] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[12:58:34.853] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[12:58:34.856] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[12:58:34.856] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[12:58:34.858] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[12:58:34.860] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[12:58:34.860] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[12:58:34.863] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[12:58:34.864] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[12:58:34.875] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[12:58:34.877] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 12:58:34.878] - DATASET SANITIZATION COMPLETED
+	[12:58:34.878] [ok] - Completed: sanitizing the dataset
+	[12:58:34.878] [ok] - Starting: creating text reports
+[2026/09/13 12:58:34.880] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:58:34.881] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:58:34.881] [ok] - Output folder: /project/analysis/20260913
+	[12:58:34.882] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:58:34.884] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:58:34.885] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:58:34.890] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:58:34.890] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:58:34.893] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:58:34.893] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[12:58:34.911] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 12:58:34.912] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:58:34.912] [ok] - Completed: creating text reports
+	[12:58:34.912] [ok] - Starting: creating HTML reports
+[2026/09/13 12:58:34.916] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:58:34.917] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:58:34.917] [ok] - Output folder: /project/analysis/20260913/report
+	[12:58:34.917] [ok] - Copied HTML, CSS, and JavaScript templates
+	[12:58:34.917] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:34.921] [ok] - Added top market-cap analysis
+	[12:58:34.921] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:34.928] [ok] - Added sector market-cap analysis
+	[12:58:34.928] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:34.936] [ok] - Added 52-week winners analysis
+	[12:58:34.936] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:34.984] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 12:58:34.984] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:58:34.985] [ok] - Completed: creating HTML reports
+[2026/09/13 12:58:34.985] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 12:58:43.366] - DAILY AUTOMATION STARTED
+	[12:58:43.366] [ok] - Starting: removing expired datasets
+[2026/09/13 12:58:43.367] - DATASET CLEANUP STARTED
+	[12:58:43.368] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[12:58:43.375] [ok] - No expired datasets found
+[2026/09/13 12:58:43.375] - DATASET CLEANUP COMPLETED
+	[12:58:43.376] [ok] - Completed: removing expired datasets
+	[12:58:43.376] [ok] - Starting: downloading the current dataset
+[2026/09/13 12:58:43.377] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[12:58:43.377] [ok] - Source: S&P 500 financial dataset
+	[12:58:43.378] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[12:58:43.462] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 12:58:43.462] - DATASET DOWNLOAD COMPLETED
+	[12:58:43.462] [ok] - Completed: downloading the current dataset
+	[12:58:43.463] [ok] - Starting: sanitizing the dataset
+[2026/09/13 12:58:43.464] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[12:58:43.464] [ok] - Checking required fields and removing embedded commas
+	[12:58:43.468] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[12:58:43.469] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[12:58:43.470] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[12:58:43.471] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[12:58:43.472] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[12:58:43.474] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[12:58:43.477] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[12:58:43.478] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[12:58:43.479] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[12:58:43.483] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[12:58:43.485] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[12:58:43.486] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[12:58:43.488] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[12:58:43.490] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[12:58:43.490] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[12:58:43.492] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[12:58:43.493] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[12:58:43.504] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[12:58:43.507] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 12:58:43.507] - DATASET SANITIZATION COMPLETED
+	[12:58:43.507] [ok] - Completed: sanitizing the dataset
+	[12:58:43.508] [ok] - Starting: creating text reports
+[2026/09/13 12:58:43.510] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:58:43.510] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:58:43.510] [ok] - Output folder: /project/analysis/20260913
+	[12:58:43.511] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:58:43.514] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:58:43.514] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:58:43.519] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:58:43.520] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:58:43.523] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:58:43.523] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[12:58:43.559] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 12:58:43.559] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:58:43.559] [ok] - Completed: creating text reports
+	[12:58:43.560] [ok] - Starting: creating HTML reports
+[2026/09/13 12:58:43.563] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:58:43.564] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:58:43.564] [ok] - Output folder: /project/analysis/20260913/report
+	[12:58:43.564] [ok] - Copied HTML, CSS, and JavaScript templates
+	[12:58:43.564] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:43.568] [ok] - Added top market-cap analysis
+	[12:58:43.568] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:43.575] [ok] - Added sector market-cap analysis
+	[12:58:43.575] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:43.583] [ok] - Added 52-week winners analysis
+	[12:58:43.584] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:58:43.631] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 12:58:43.632] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:58:43.632] [ok] - Completed: creating HTML reports
+[2026/09/13 12:58:43.632] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 12:59:12.370] - DAILY AUTOMATION STARTED
+	[12:59:12.370] [ok] - Starting: removing expired datasets
+[2026/09/13 12:59:12.371] - DATASET CLEANUP STARTED
+	[12:59:12.372] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[12:59:12.379] [ok] - No expired datasets found
+[2026/09/13 12:59:12.380] - DATASET CLEANUP COMPLETED
+	[12:59:12.380] [ok] - Completed: removing expired datasets
+	[12:59:12.380] [ok] - Starting: downloading the current dataset
+[2026/09/13 12:59:12.382] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[12:59:12.382] [ok] - Source: S&P 500 financial dataset
+	[12:59:12.382] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[12:59:12.466] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 12:59:12.466] - DATASET DOWNLOAD COMPLETED
+	[12:59:12.467] [ok] - Completed: downloading the current dataset
+	[12:59:12.467] [ok] - Starting: sanitizing the dataset
+[2026/09/13 12:59:12.468] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[12:59:12.469] [ok] - Checking required fields and removing embedded commas
+	[12:59:12.472] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[12:59:12.474] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[12:59:12.475] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[12:59:12.476] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[12:59:12.477] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[12:59:12.478] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[12:59:12.482] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[12:59:12.483] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[12:59:12.484] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[12:59:12.487] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[12:59:12.490] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[12:59:12.491] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[12:59:12.493] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[12:59:12.494] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[12:59:12.495] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[12:59:12.497] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[12:59:12.498] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[12:59:12.509] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[12:59:12.512] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 12:59:12.512] - DATASET SANITIZATION COMPLETED
+	[12:59:12.512] [ok] - Completed: sanitizing the dataset
+	[12:59:12.512] [ok] - Starting: creating text reports
+[2026/09/13 12:59:12.515] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:59:12.515] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:59:12.515] [ok] - Output folder: /project/analysis/20260913
+	[12:59:12.516] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:59:12.518] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[12:59:12.519] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:59:12.524] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[12:59:12.524] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:59:12.527] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[12:59:12.527] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[12:59:12.563] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 12:59:12.563] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:59:12.564] [ok] - Completed: creating text reports
+	[12:59:12.564] [ok] - Starting: creating HTML reports
+[2026/09/13 12:59:12.568] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[12:59:12.568] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[12:59:12.568] [ok] - Output folder: /project/analysis/20260913/report
+	[12:59:12.569] [ok] - Copied HTML, CSS, and JavaScript templates
+	[12:59:12.569] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:59:12.572] [ok] - Added top market-cap analysis
+	[12:59:12.572] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:59:12.579] [ok] - Added sector market-cap analysis
+	[12:59:12.579] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:59:12.587] [ok] - Added 52-week winners analysis
+	[12:59:12.587] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[12:59:12.635] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 12:59:12.636] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[12:59:12.636] [ok] - Completed: creating HTML reports
+[2026/09/13 12:59:12.636] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 13:02:50.928] - DAILY AUTOMATION STARTED
+	[13:02:50.928] [ok] - Starting: removing expired datasets
+[2026/09/13 13:02:50.929] - DATASET CLEANUP STARTED
+	[13:02:50.929] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[13:02:50.937] [ok] - No expired datasets found
+[2026/09/13 13:02:50.937] - DATASET CLEANUP COMPLETED
+	[13:02:50.938] [ok] - Completed: removing expired datasets
+	[13:02:50.938] [ok] - Starting: downloading the current dataset
+[2026/09/13 13:02:50.939] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[13:02:50.939] [ok] - Source: S&P 500 financial dataset
+	[13:02:50.940] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[13:02:51.019] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 13:02:51.019] - DATASET DOWNLOAD COMPLETED
+	[13:02:51.019] [ok] - Completed: downloading the current dataset
+	[13:02:51.020] [ok] - Starting: sanitizing the dataset
+[2026/09/13 13:02:51.021] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[13:02:51.021] [ok] - Checking required fields and removing embedded commas
+	[13:02:51.025] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[13:02:51.026] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[13:02:51.027] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[13:02:51.028] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[13:02:51.029] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[13:02:51.031] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[13:02:51.034] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[13:02:51.035] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[13:02:51.036] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[13:02:51.040] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[13:02:51.042] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[13:02:51.043] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[13:02:51.045] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[13:02:51.046] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[13:02:51.047] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[13:02:51.049] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[13:02:51.050] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[13:02:51.061] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[13:02:51.063] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 13:02:51.064] - DATASET SANITIZATION COMPLETED
+	[13:02:51.064] [ok] - Completed: sanitizing the dataset
+	[13:02:51.064] [ok] - Starting: creating text reports
+[2026/09/13 13:02:51.067] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:02:51.067] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:02:51.067] [ok] - Output folder: /project/analysis/20260913
+	[13:02:51.068] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:02:51.071] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:02:51.071] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:02:51.076] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:02:51.076] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:02:51.079] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:02:51.080] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[13:02:51.097] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 13:02:51.097] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:02:51.098] [ok] - Completed: creating text reports
+	[13:02:51.098] [ok] - Starting: creating HTML reports
+[2026/09/13 13:02:51.102] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:02:51.102] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:02:51.102] [ok] - Output folder: /project/analysis/20260913/report
+	[13:02:51.103] [ok] - Copied HTML, CSS, and JavaScript templates
+	[13:02:51.103] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:51.106] [ok] - Added top market-cap analysis
+	[13:02:51.107] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:51.113] [ok] - Added sector market-cap analysis
+	[13:02:51.114] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:51.121] [ok] - Added 52-week winners analysis
+	[13:02:51.122] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:51.170] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 13:02:51.170] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:02:51.171] [ok] - Completed: creating HTML reports
+[2026/09/13 13:02:51.171] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 13:02:56.573] - DAILY AUTOMATION STARTED
+	[13:02:56.573] [ok] - Starting: removing expired datasets
+[2026/09/13 13:02:56.574] - DATASET CLEANUP STARTED
+	[13:02:56.574] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[13:02:56.582] [ok] - No expired datasets found
+[2026/09/13 13:02:56.582] - DATASET CLEANUP COMPLETED
+	[13:02:56.583] [ok] - Completed: removing expired datasets
+	[13:02:56.583] [ok] - Starting: downloading the current dataset
+[2026/09/13 13:02:56.584] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[13:02:56.584] [ok] - Source: S&P 500 financial dataset
+	[13:02:56.585] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[13:02:56.662] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 13:02:56.662] - DATASET DOWNLOAD COMPLETED
+	[13:02:56.662] [ok] - Completed: downloading the current dataset
+	[13:02:56.663] [ok] - Starting: sanitizing the dataset
+[2026/09/13 13:02:56.664] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[13:02:56.664] [ok] - Checking required fields and removing embedded commas
+	[13:02:56.668] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[13:02:56.669] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[13:02:56.671] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[13:02:56.672] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[13:02:56.673] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[13:02:56.674] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[13:02:56.678] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[13:02:56.679] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[13:02:56.680] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[13:02:56.684] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[13:02:56.686] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[13:02:56.687] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[13:02:56.689] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[13:02:56.691] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[13:02:56.691] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[13:02:56.693] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[13:02:56.694] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[13:02:56.706] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[13:02:56.708] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 13:02:56.708] - DATASET SANITIZATION COMPLETED
+	[13:02:56.708] [ok] - Completed: sanitizing the dataset
+	[13:02:56.709] [ok] - Starting: creating text reports
+[2026/09/13 13:02:56.711] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:02:56.711] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:02:56.712] [ok] - Output folder: /project/analysis/20260913
+	[13:02:56.713] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:02:56.716] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:02:56.716] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:02:56.723] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:02:56.723] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:02:56.727] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:02:56.728] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[13:02:56.776] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 13:02:56.777] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:02:56.777] [ok] - Completed: creating text reports
+	[13:02:56.777] [ok] - Starting: creating HTML reports
+[2026/09/13 13:02:56.781] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:02:56.782] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:02:56.782] [ok] - Output folder: /project/analysis/20260913/report
+	[13:02:56.782] [ok] - Copied HTML, CSS, and JavaScript templates
+	[13:02:56.782] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:56.786] [ok] - Added top market-cap analysis
+	[13:02:56.786] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:56.793] [ok] - Added sector market-cap analysis
+	[13:02:56.793] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:56.801] [ok] - Added 52-week winners analysis
+	[13:02:56.801] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:02:56.849] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 13:02:56.849] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:02:56.850] [ok] - Completed: creating HTML reports
+[2026/09/13 13:02:56.850] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 13:04:27.546] - DAILY AUTOMATION STARTED
+	[13:04:27.546] [ok] - Starting: removing expired datasets
+[2026/09/13 13:04:27.547] - DATASET CLEANUP STARTED
+	[13:04:27.548] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[13:04:27.555] [ok] - No expired datasets found
+[2026/09/13 13:04:27.555] - DATASET CLEANUP COMPLETED
+	[13:04:27.556] [ok] - Completed: removing expired datasets
+	[13:04:27.556] [ok] - Starting: downloading the current dataset
+[2026/09/13 13:04:27.557] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[13:04:27.558] [ok] - Source: S&P 500 financial dataset
+	[13:04:27.558] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[13:04:27.810] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 13:04:27.810] - DATASET DOWNLOAD COMPLETED
+	[13:04:27.811] [ok] - Completed: downloading the current dataset
+	[13:04:27.811] [ok] - Starting: sanitizing the dataset
+[2026/09/13 13:04:27.812] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[13:04:27.813] [ok] - Checking required fields and removing embedded commas
+	[13:04:27.816] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[13:04:27.818] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[13:04:27.819] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[13:04:27.820] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[13:04:27.821] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[13:04:27.823] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[13:04:27.826] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[13:04:27.827] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[13:04:27.828] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[13:04:27.832] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[13:04:27.834] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[13:04:27.835] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[13:04:27.837] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[13:04:27.838] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[13:04:27.839] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[13:04:27.841] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[13:04:27.842] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[13:04:27.853] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[13:04:27.855] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 13:04:27.856] - DATASET SANITIZATION COMPLETED
+	[13:04:27.856] [ok] - Completed: sanitizing the dataset
+	[13:04:27.856] [ok] - Starting: creating text reports
+[2026/09/13 13:04:27.858] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:04:27.859] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:04:27.859] [ok] - Output folder: /project/analysis/20260913
+	[13:04:27.860] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:04:27.862] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:04:27.863] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:04:27.868] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:04:27.868] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:04:27.871] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:04:27.871] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[13:04:27.905] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 13:04:27.906] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:04:27.906] [ok] - Completed: creating text reports
+	[13:04:27.906] [ok] - Starting: creating HTML reports
+[2026/09/13 13:04:27.910] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:04:27.911] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:04:27.911] [ok] - Output folder: /project/analysis/20260913/report
+	[13:04:27.911] [ok] - Copied HTML, CSS, and JavaScript templates
+	[13:04:27.911] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:04:27.915] [ok] - Added top market-cap analysis
+	[13:04:27.915] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:04:27.922] [ok] - Added sector market-cap analysis
+	[13:04:27.922] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:04:27.930] [ok] - Added 52-week winners analysis
+	[13:04:27.930] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:04:27.978] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 13:04:27.978] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:04:27.978] [ok] - Completed: creating HTML reports
+[2026/09/13 13:04:27.979] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 13:06:35.410] - DAILY AUTOMATION STARTED
+	[13:06:35.410] [ok] - Starting: removing expired datasets
+[2026/09/13 13:06:35.411] - DATASET CLEANUP STARTED
+	[13:06:35.411] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[13:06:35.419] [ok] - No expired datasets found
+[2026/09/13 13:06:35.419] - DATASET CLEANUP COMPLETED
+	[13:06:35.420] [ok] - Completed: removing expired datasets
+	[13:06:35.420] [ok] - Starting: downloading the current dataset
+[2026/09/13 13:06:35.421] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[13:06:35.422] [ok] - Source: S&P 500 financial dataset
+	[13:06:35.422] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[13:06:35.499] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 13:06:35.500] - DATASET DOWNLOAD COMPLETED
+	[13:06:35.500] [ok] - Completed: downloading the current dataset
+	[13:06:35.500] [ok] - Starting: sanitizing the dataset
+[2026/09/13 13:06:35.502] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[13:06:35.502] [ok] - Checking required fields and removing embedded commas
+	[13:06:35.506] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[13:06:35.507] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[13:06:35.508] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[13:06:35.509] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[13:06:35.510] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[13:06:35.512] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[13:06:35.515] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[13:06:35.516] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[13:06:35.517] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[13:06:35.520] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[13:06:35.523] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[13:06:35.523] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[13:06:35.525] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[13:06:35.527] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[13:06:35.528] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[13:06:35.530] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[13:06:35.531] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[13:06:35.542] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[13:06:35.544] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 13:06:35.544] - DATASET SANITIZATION COMPLETED
+	[13:06:35.545] [ok] - Completed: sanitizing the dataset
+	[13:06:35.545] [ok] - Starting: creating text reports
+[2026/09/13 13:06:35.547] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:06:35.548] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:06:35.548] [ok] - Output folder: /project/analysis/20260913
+	[13:06:35.549] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:06:35.551] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:06:35.551] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:06:35.556] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:06:35.557] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:06:35.560] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:06:35.560] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[13:06:35.595] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 13:06:35.595] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:06:35.595] [ok] - Completed: creating text reports
+	[13:06:35.596] [ok] - Starting: creating HTML reports
+[2026/09/13 13:06:35.600] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:06:35.600] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:06:35.600] [ok] - Output folder: /project/analysis/20260913/report
+	[13:06:35.600] [ok] - Copied HTML, CSS, and JavaScript templates
+	[13:06:35.601] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:06:35.604] [ok] - Added top market-cap analysis
+	[13:06:35.604] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:06:35.611] [ok] - Added sector market-cap analysis
+	[13:06:35.611] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:06:35.619] [ok] - Added 52-week winners analysis
+	[13:06:35.620] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:06:35.665] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 13:06:35.665] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:06:35.666] [ok] - Completed: creating HTML reports
+[2026/09/13 13:06:35.666] - DAILY AUTOMATION COMPLETED SUCCESSFULLY
+
+[2026/09/13 13:12:10.799] - DAILY AUTOMATION STARTED
+	[13:12:10.800] [ok] - Starting: removing expired datasets
+[2026/09/13 13:12:10.801] - DATASET CLEANUP STARTED
+	[13:12:10.801] [ok] - Removing datasets older than 30 days from /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/scripts/../datasets
+	[13:12:10.809] [ok] - No expired datasets found
+[2026/09/13 13:12:10.809] - DATASET CLEANUP COMPLETED
+	[13:12:10.809] [ok] - Completed: removing expired datasets
+	[13:12:10.810] [ok] - Starting: downloading the current dataset
+[2026/09/13 13:12:10.811] - DATASET DOWNLOAD STARTED: constituents-financials_20260913.csv
+	[13:12:10.811] [ok] - Source: S&P 500 financial dataset
+	[13:12:10.811] [ok] - Destination: /project/datasets/constituents-financials_20260913.csv
+	[13:12:11.072] [ok] - Downloaded constituents-financials_20260913.csv successfully
+[2026/09/13 13:12:11.073] - DATASET DOWNLOAD COMPLETED
+	[13:12:11.073] [ok] - Completed: downloading the current dataset
+	[13:12:11.073] [ok] - Starting: sanitizing the dataset
+[2026/09/13 13:12:11.075] - DATASET SANITIZATION STARTED: constituents-financials_20260913.csv
+	[13:12:11.075] [ok] - Checking required fields and removing embedded commas
+	[13:12:11.079] [ko] - Removed row 38 (missing required field): ANSS,Ansys,Application Software,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
+	[13:12:11.080] [ko] - Removed row 53 (missing required field): AZO,AutoZone,Automotive Retail,2876.75,19.801418,,145.28,2865.1272,4357.81,,4263984896,,-16.911018,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AZO
+	[13:12:11.081] [ko] - Removed row 62 (missing required field): BRK.B,Berkshire Hathaway,Multi-Sector Holdings,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
+	[13:12:11.082] [ko] - Removed row 68 (missing required field): BK,BNY Mellon,Asset Management & Custody Banks,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BK
+	[13:12:11.083] [ko] - Removed row 77 (missing required field): BF.B,Brown–Forman,Distillers & Vintners,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
+	[13:12:11.085] [ko] - Removed row 91 (missing required field): CTLT,Catalent,Pharmaceuticals,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTLT
+	[13:12:11.088] [ko] - Removed row 133 (missing required field): CTRA,Coterra,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTRA
+	[13:12:11.089] [ko] - Removed row 143 (missing required field): DAY,Dayforce,Human Resource & Employment Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DAY
+	[13:12:11.090] [ko] - Removed row 152 (missing required field): DFS,Discover Financial,Consumer Finance,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DFS
+	[13:12:11.094] [ko] - Removed row 200 (missing required field): FI,Fiserv,Transaction & Payment Processing Services,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FI
+	[13:12:11.097] [ko] - Removed row 232 (missing required field): HES,Hess Corporation,Integrated Oil & Gas,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HES
+	[13:12:11.097] [ko] - Removed row 235 (missing required field): HOLX,Hologic,Health Care Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HOLX
+	[13:12:11.099] [ko] - Removed row 257 (missing required field): IPG,Interpublic Group of Companies (The),Advertising,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IPG
+	[13:12:11.101] [ko] - Removed row 272 (missing required field): JNPR,Juniper Networks,Communications Equipment,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNPR
+	[13:12:11.102] [ko] - Removed row 273 (missing required field): K,Kellanova,Packaged Foods & Meats,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=K
+	[13:12:11.104] [ko] - Removed row 302 (missing required field): MRO,Marathon Oil,Oil & Gas Exploration & Production,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MRO
+	[13:12:11.105] [ko] - Removed row 306 (missing required field): MMC,Marsh McLennan,Insurance Brokers,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MMC
+	[13:12:11.116] [ko] - Removed row 484 (missing required field): WBA,Walgreens Boots Alliance,Drug Retail,,,,,,,,,,,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WBA
+	[13:12:11.119] [ok] - Sanitized dataset saved: constituents-financials_20260913.csv
+[2026/09/13 13:12:11.119] - DATASET SANITIZATION COMPLETED
+	[13:12:11.119] [ok] - Completed: sanitizing the dataset
+	[13:12:11.120] [ok] - Starting: creating text reports
+[2026/09/13 13:12:11.122] - TXT REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:12:11.122] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:12:11.123] [ok] - Output folder: /project/analysis/20260913
+	[13:12:11.124] [ok] - Creating top market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:12:11.126] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/top_market_cap_companies_20260913.txt
+	[13:12:11.126] [ok] - Creating sector market-cap report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:12:11.131] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_grossing_sectors_20260913.txt
+	[13:12:11.132] [ok] - Creating 52-week winners report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:12:11.134] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/highest_winners_52_week_metric_20260913.txt
+	[13:12:11.135] [ok] - Creating price and market-cap evolution report: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+	[13:12:11.169] [ok] - Created: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/price_market_cap_evolution_20260913.txt
+[2026/09/13 13:12:11.170] - TXT REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:12:11.170] [ok] - Completed: creating text reports
+	[13:12:11.170] [ok] - Starting: creating HTML reports
+[2026/09/13 13:12:11.174] - HTML REPORT CREATION STARTED: constituents-financials_20260913.csv
+	[13:12:11.175] [ok] - Input dataset: /project/datasets/constituents-financials_20260913.csv (485 records)
+	[13:12:11.175] [ok] - Output folder: /project/analysis/20260913/report
+	[13:12:11.175] [ok] - Copied HTML, CSS, and JavaScript templates
+	[13:12:11.175] [ok] - Adding top market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:12:11.179] [ok] - Added top market-cap analysis
+	[13:12:11.179] [ok] - Adding sector market-cap analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:12:11.186] [ok] - Added sector market-cap analysis
+	[13:12:11.186] [ok] - Adding 52-week winners analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:12:11.194] [ok] - Added 52-week winners analysis
+	[13:12:11.194] [ok] - Adding price and market-cap evolution analysis to: /home/yassin/code/UPV-GII/MIADA/SHELL_EN_ENTORNOS_LINUX/project/analysis/20260913/report/report_20260913.html
+	[13:12:11.238] [ok] - Added price and market-cap evolution analysis
+[2026/09/13 13:12:11.238] - HTML REPORT CREATION COMPLETED SUCCESSFULLY
+	[13:12:11.239] [ok] - Completed: creating HTML reports
+[2026/09/13 13:12:11.239] - DAILY AUTOMATION COMPLETED SUCCESSFULLY

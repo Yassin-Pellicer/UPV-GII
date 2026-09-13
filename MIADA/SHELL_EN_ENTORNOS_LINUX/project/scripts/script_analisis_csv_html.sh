@@ -364,30 +364,32 @@ log_detail "[ok] - Adding price and market-cap evolution analysis to: $HTML_REPO
 
         printf "        <tbody>\n"
       }
+      
+      first_record = (previous_price == "")
+      price_diff = price - previous_price
+      market_cap_diff = market_cap - previous_market_cap
 
-      printf "          <tr>\n"
-      printf "            <td class=\"row-number\"></td>\n"
-      printf "            <td class=\"date-row\">%s</td>\n", format_date(date)
-      printf "            <td class=\"price-row\">%.2f</td>\n", price
+      if (first_record || (price_diff != 0 && market_cap_diff != 0)) {
+        printf "          <tr>\n"
+        printf "            <td class=\"row-number\"></td>\n"
+        printf "            <td class=\"date-row\">%s</td>\n", format_date(date)
+        printf "            <td class=\"price-row\">%.2f</td>\n", price
 
-      if (previous_price == "") {
-        printf "            <td class=\"price-row-diff\">No record</td>\n"
-        printf "            <td>%s</td>\n", commas(market_cap)
-        printf "            <td>No record</td>\n"
+        if (first_record) {
+          printf "            <td class=\"price-row-diff\">No record</td>\n"
+          printf "            <td>%s</td>\n", commas(market_cap)
+          printf "            <td>No record</td>\n"
+        }
+        else {
+          printf "            <td class=\"price-row-diff\">%.2f</td>\n", price_diff
+          printf "            <td>%s</td>\n", commas(market_cap)
+          printf "            <td>%s</td>\n", commas(market_cap_diff)
+        }
+
+        printf "          </tr>\n"
       }
-      else {
-        price_diff = price - previous_price
-        market_cap_diff = market_cap - previous_market_cap
-
-        printf "            <td class=\"price-row-diff\">%.2f</td>\n", price_diff
-        printf "            <td>%s</td>\n", commas(market_cap)
-        printf "            <td>%s</td>\n", commas(market_cap_diff)
-      }
-
-      printf "          </tr>\n"
-
-      previous_market_cap = market_cap
       previous_price = price
+      previous_market_cap = market_cap
     }
 
     END {

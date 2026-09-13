@@ -10,7 +10,11 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{fontspec}
-\setmonofont{Ubuntu Mono}
+\IfFontExistsTF{Ubuntu Mono}{
+  \setmonofont{Ubuntu Mono}
+}{
+  \setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
+}
 
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
 
@@ -41,7 +45,7 @@ El repositorio público del dataset es:
 \url{https://github.com/datasets/s-and-p-500-companies-financials}
 \end{flushleft}
 
-La fuente es pública y accesible por descarga mediante el comando \texttt{wget}. El proyecto no presupone que el archivo sea una fuente de datos en tiempo real, ya que se actualiza una vez al día: simplemente satisface el requisito de actualización mediante una descarga programada diariamente, que guarda una instantánea con fecha propia.
+La fuente es pública y accesible por descarga mediante el comando \texttt{curl}. El proyecto no presupone que el archivo sea una fuente de datos en tiempo real, ya que se actualiza una vez al día: simplemente satisface el requisito de actualización mediante una descarga programada diariamente, que guarda una instantánea con fecha propia.
 
 \subsection{Formato y estructura}
 El formato es CSV con una fila de cabecera y una fila por compañía. El script de descarga lo almacena como \texttt{datasets/constituents-financials\_AAAAMMDD.csv}. Los campos son los siguientes:
@@ -104,6 +108,8 @@ Los scripts de análisis aceptan opcionalmente una fecha \texttt{AAAAMMDD}; si s
     \item \texttt{script\_sanitize.sh}
 \end{itemize}
 
+Estos scripts se almacenan en la ruta \texttt{project/scripts/} del proyecto.
+
 \subsection{\texttt{script\_delete.sh}}
 
 Este script borra por defecto los datasets con una antigüedad mayor de 30 días. Concretamente, extrae la fecha del nombre de los archivos y, mediante un bucle, comprueba si el archivo consultado tiene una antigüedad superior a 30 días respecto a la fecha actual. En ese caso, elimina el archivo.
@@ -129,7 +135,7 @@ La conservación del histórico de archivos durante 30 días permite comparar e 
 
 Este script descarga el .csv del remoto y le da un nombre especial que le añade la coletilla \texttt{\_<date>} al final, de manera que el .csv descargado el 11/09/2026 se llamaría \texttt{constituents-financials\_20260911.csv}. 
 
-El script es a prueba de fallos de conexión desde el cliente. Es decir, si por algún motivo el equipo pierde la red, el programa reintentará la descarga hasta 10 veces en un plazo de 6 minutos. También controla las descargas vacías o la ausencia del recurso a descargar. 
+El script es a prueba de fallos de conexión desde el cliente. Es decir, si por algún motivo el equipo pierde la red, el programa reintentará la descarga hasta 10 veces en un plazo de 6 minutos. También controla las descargas vacías o la ausencia del recurso a descargar. Los datasets se almacenan en la ruta \texttt{project/datasets} del proyecto.
 
 \subsection{\texttt{script\_sanitize.sh}}
 
@@ -145,6 +151,8 @@ Una vez ejecutados satisfactoriamente los tres primeros scripts de procesamiento
 \item \texttt{script\_analisis\_csv\_txt.sh}
 \item \texttt{script\_analisis\_csv\_html.sh}
 \end{itemize}
+
+Estos scripts se almacenan en la ruta \texttt{project/scripts/} del proyecto.
 
 Ambos scripts realizan los mismos análisis sobre el dataset (y con los mismos algoritmos), pero generan los resultados en formatos diferentes.
 
@@ -182,6 +190,8 @@ project/
             └── style.css
 \end{verbatim}
 
+Se ha preferido separar los reportes de texto en 4 ficheros distintos para hacer la lectura y consulta de la información más sencilla, ya que cada reporte tiene un número de columnas variable y longitudes distintas.
+
 \subsection{Reporte de empresas con mayor capitalización bursátil}
 Este reporte se genera ordenando la columna de capitalización bursátil (\texttt{Market Cap}) en orden descendiente por medio del siguiente flujo:
 
@@ -199,7 +209,7 @@ bursátil total de cada uno mediante el siguiente flujo:
 \item Se lee el fichero sin la cabecera mediante \texttt{tail}.
 \item \texttt{sort} ordena las entradas por la columna \texttt{Market Cap} en orden descendente.
 \item \texttt{awk} agrupa las empresas por sector y suma sus valores de \texttt{Market Cap}.
-\item Los sectores se ordenan de forma descendente según su capitalización total mediante un algoritmo de ordenación en \texttt{awk} 
+\item Los sectores se ordenan de forma descendente según su capitalización total mediante un algoritmo de ordenación en \texttt{awk}. 
 \end{enumerate}
 
 \subsection{Reporte de mayores ganadores por métrica de 52 semanas}
@@ -211,18 +221,88 @@ Este reporte identifica las empresas cuyo precio está más próximo al máximo 
 \item \texttt{awk} calcula la distancia porcentual entre \texttt{Price} y
 \texttt{52 Week High}.
 \item \texttt{sort} ordena las empresas de menor a mayor distancia.
-\item \texttt{cut} elimina el campo auxiliares donde se calculó esta distancia.
+\item \texttt{cut} elimina el campo auxiliar donde se calculó esta distancia.
 \end{enumerate}
 
 \subsection{Reporte de evolución del mercado}
 
-Este reporte muestra la evolución histórica del precio y de la capitalización bursátil de las empresas:
+Este reporte muestra la evolución histórica del precio y de la capitalización bursátil de las empresas ordenados por capitalización media durante el período:
 
 \begin{enumerate}[noitemsep]
-\item Se recorren los datasets disponibles hasta la fecha seleccionada y mediante \texttt{awk} se vuelca cada entrada de cada empresa por día en la salida. \texttt{sort} las ordena previamente por capitlización, aunque no es necesario.
-\item la salida anterior se le pasa a \texttt{awk}, que calcula la capitalización media de la empresa durante el período analizado y se la añade a cada fila suministrada.
-\item \texttt{sort} ordena la entrada por prioridad, primero por \texttt{Symbol}, luego por \texttt{Name} y por último
+\item Se recorren los datasets disponibles hasta la fecha seleccionada y mediante \texttt{awk} se vuelca cada registro por día en la salida.
+\item La salida anterior se le pasa a \texttt{awk}, que calcula la capitalización media de la empresa durante el período analizado y se la añade a cada fila suministrada.
+\item \texttt{sort} ordena la entrada por prioridad, primero por capitalizacion media, (para conseguir una ordenación), luego por \texttt{Symbol}, y por último por fecha.
+\item Un último \texttt{awk} agrupa las empresas mostrando su evolución.
 \end{enumerate}
+
+\subsection{Volcado de resultados a los informes}
+
+El volcado de la información generada en los informes se hace de manera especial en ambos scripts de análisis.
+
+\subsubsection{Reportes .txt}
+
+En estos reportes la información se estructura tabularmente y se adapta al formato .txt mediante columnas y cabeceras formadas por caracteres ASCII para facilitar la lectura.
+
+\begin{center}
+\begin{minipage}{0.7575\textwidth}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{purple},
+    breaklines=true,
+    columns=fixed,
+    keepspaces=true,
+}
+\begin{lstlisting}
++=================================================================+
+| HIGHEST GROSSING SECTORS                                        |
++=================================================================+
+| Date: 13/09/2026 | Processed entries: 485                       |
++=================================================================+
+| Semiconductors                                                  |
++=================================================================+
+| Symbol   | Company                         | Market Cap         |
++----------+---------------------------------+--------------------+
+| NVDA     | Nvidia                          |  5,271,048,421,376 |
+| AVGO     | Broadcom                        |  1,728,006,324,224 |
+| MU       | Micron Technology               |  1,101,452,017,664 |
+| AMD      | Advanced Micro Devices          |    842,569,351,168 |
+\end{lstlisting}
+\end{minipage}
+\end{center}
+\subsubsection{Reportes .html}
+En estos reportes \texttt{script\_analisis\_csv\_html.sh} prepara la estructura HTML que sustituir en el \texttt{template.html} mediante el comando \texttt{sed}, y mediante el cual construir el informe final. 
+\begin{center}
+\begin{minipage}{0.7575\textwidth}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{purple},
+    breaklines=true,
+    columns=fixed,
+    keepspaces=true,
+}
+\begin{lstlisting}
+...
+  {
+    row_count++
+    printf "       <tr>\n"
+    printf "         <td class=\"row-number\">%d</td>\n", row_count
+    printf "         <td>%s</td>\n", commas($10)
+    printf "         <td>%s</td>\n", fit($1, 8)
+    printf "         <td>%s</td>\n", fit($2, 30)
+    printf "       </tr>\n"
+  }
+' > rows.html
+sed -i '/<!-- TOP MARKET CAP ROWS -->/{
+  r rows.html
+  d
+}' "$HTML_REPORT"
+\end{lstlisting}
+\end{minipage}
+\end{center}
 
 \section{Registro (log)}
 El archivo \texttt{log.txt} conserva un registro cronológico de todas las ejecuciones. Cada línea incluye fecha y hora con milisegundos, además del estado \texttt{[ok]} o \texttt{[ko]}. Se registran el inicio y el final de cada etapa, los archivos de entrada y salida, los reintentos de descarga y los registros descartados durante el saneamiento. Este registro permite auditar la automatización y diagnosticar errores.
