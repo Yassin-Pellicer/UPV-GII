@@ -1,6 +1,16 @@
 % !TeX program = lualatex
 \documentclass[11pt,a4paper]{article}
 \usepackage{geometry}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[L]{\footnotesize SHELL Y ENTORNOS LINUX}
+  \fancyfoot[C]{\footnotesize MIABD 2026/2027}
+  \fancyfoot[R]{\footnotesize\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+\pagestyle{plain}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -18,9 +28,10 @@
 
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,pdftitle={Memoria del proyecto S\&P 500}}
 
-\title{\LARGE Análisis y evolución de las empresas del S\&P 500\\\large Memoria del proyecto de Shell y Entornos Linux}
+\title{\Huge Análisis y evolución de las empresas del S\&P 500\\[0.5\baselineskip] \large Memoria del proyecto de Shell y Entornos Linux}
 \author{Yassin Pellicer Lamla}
-\date{\today}
+\date{13 de septiembre de 2026}
+\renewcommand{\contentsname}{Contenidos}
 
 \begin{document}
 \maketitle
@@ -114,7 +125,7 @@ Estos scripts se almacenan en la ruta \texttt{project/scripts/} del proyecto.
 
 Este script borra por defecto los datasets con una antigüedad mayor de 30 días. Concretamente, extrae la fecha del nombre de los archivos y, mediante un bucle, comprueba si el archivo consultado tiene una antigüedad superior a 30 días respecto a la fecha actual. En ese caso, elimina el archivo.
 
-La conservación del histórico de archivos durante 30 días permite comparar e interpretar cambios y comprender mejor la evolución de la economía durante un período corto y significativo sin generar reportes excesivamente largos.
+La conservación del histórico de archivos durante 30 días permite comparar e interpretar la evolución de la economía durante un período corto y significativo sin generar reportes excesivamente largos.
 
 % \lstset{
 %     basicstyle=\ttfamily\small,
@@ -305,27 +316,102 @@ sed -i '/<!-- TOP MARKET CAP ROWS -->/{
 \end{center}
 
 \section{Registro (log)}
-El archivo \texttt{log.txt} conserva un registro cronológico de todas las ejecuciones. Cada línea incluye fecha y hora con milisegundos, además del estado \texttt{[ok]} o \texttt{[ko]}. Se registran el inicio y el final de cada etapa, los archivos de entrada y salida, los reintentos de descarga y los registros descartados durante el saneamiento. Este registro permite auditar la automatización y diagnosticar errores.
 
-\section{Estructura de ficheros del proyecto}
-\begin{verbatim}
-project/
-├── analysis/
-│   ├── highest_grossing_sectors_<date>.txt
-│   ├── highest_winners_52_week_metric_<date>.txt
-│   ├── price_marketcap_evolution_<date>.txt
-│   ├── top_market_cap_companies_<date>.txt
-│   └── report/
-│       ├── report_<date>.html
-│       ├── script.js
-│       └── style.css
-├── cron/
-\end{verbatim}
+El archivo \texttt{log.txt} reúne los mensajes de las ejecuciones.
+Se registran el inicio y fin de las etapas, los archivos utilizados,
+los reintentos de descarga y las filas descartadas durante el saneamiento.
+La función \texttt{log} añade fecha y hora con milisegundos; el operador
+\texttt{>>} conserva las entradas anteriores:
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{purple},
+    breaklines=true,
+    columns=fixed,
+    keepspaces=true,
+}
+\begin{lstlisting}
+log() {
+  echo "[$(date +"%Y/%m/%d %H:%M:%S.%3N")] - $*" >> "$LOG"
+}
+log "DAILY AUTOMATION STARTED"
+\end{lstlisting}
+
+Los mensajes de detalle incluyen la hora y etiquetas como
+\texttt{[ok]} para operaciones correctas y \texttt{[ko]} para fallos.
+La funcion \texttt{run\_step} comprueba el estado de salida de cada
+script: si falla, registra la etapa afectada y termina la ejecución
+con \texttt{exit 1}.
+
+Para comandos como \texttt{sort}, se redirige la salida de error
+(descriptor 2) a una función que registra cada mensaje junto al
+nombre del comando:
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{purple},
+    breaklines=true,
+    columns=fixed,
+    keepspaces=true,
+}
+\begin{lstlisting}
+log_command_error() {
+  local tool="$1" error
+  while IFS= read -r error; do
+    log_detail "[ko] [ERROR] [$tool] - $error"
+  done
+}
+# Fragmento de una tuberia:
+sort -t',' -k10,10nr 2> >(log_command_error "sort") |
+\end{lstlisting}
+
+Este mecanismo permite localizar errores y conocer cuándo ocurrieron.
+
+\section{Conclusión}
+
+\begingroup
+
+Este proyecto permite seguir la evolución de las empresas del S\&P 500 y convertir datos financieros dispersos en información organizada y fácil de consultar. Su propósito es facilitar la comparación entre empresas y sectores, identificar cuáles concentran mayor capitalización y observar cómo cambian sus precios a lo largo del tiempo.
+
+En lo formativo se ha podido demostrar la utilidad de comandos de sellscript aplicados a la extracción de patrones comunes provenientes de una fuente de datos de manera automática mediante \texttt{awk, grep, sort, tail, sec}, y utilidades de automatización como \texttt{cron}.
+
+El proyecto deja frentes abiertos y margen de mejora. Como el procesado de las fuentes no ha borrado las columnas no utilizadas en un futuro se podrían extender los scripts de análisis para extraer más características de estas columnas.
+
+\par
+\endgroup
 
 \newpage
-
 \appendix
 \section{Uso de IA en funciones de ayuda y formateo}
-Se utilizó asistencia de IA como apoyo al desarrollo, centrada en tareas de bajo riesgo y revisables: mejora del formato del informe HTML, definición de estilos CSS, incorporación de numeración y totales en tablas, y redacción inicial de esta memoria. La IA no sustituye la validación del proyecto: las decisiones sobre el dataset, la automatización, los comandos ejecutados y la verificación de los resultados se revisaron sobre los archivos y scripts del repositorio. No se empleó para inventar datos financieros ni para modificar la fuente de datos descargada.
+
+Se ha utilizado asistencia de IA como apoyo al desarrollo en las siguientes tareas:
+
+\begin{itemize}
+  \item Elaboración de las funciones auxiliares \texttt{commas} y
+  \texttt{fit} utilizadas en \texttt{awk}, para añadir separadores de
+  miles y limitar la longitud de los textos, respectivamente.
+
+  \item Desarrollo del algoritmo de ordenación descendente de los
+  sectores según su capitalización bursátil total.
+
+  \item Formateo de los informes \texttt{.txt} mediante tablas de caracteres
+  ASCII, alineación de columnas, cabeceras y presentación de
+  diferencias de precio y capitalización.
+
+  \item Generación de estructuras HTML para las tablas de los
+  informes, definición de estilos CSS e incorporación de numeración
+  y totales.
+
+  \item Revisión de fragmentos de Bash y \texttt{awk}, incluyendo
+  campos auxiliares de ordenación y condiciones para mostrar
+  registros de evolución.
+
+  \item Extensivamente en la generación de tablas y gráficos en el fichero HTML. Generación de Javascript, estilos y parseo de HTML.
+
+\end{itemize}
 
 \end{document}

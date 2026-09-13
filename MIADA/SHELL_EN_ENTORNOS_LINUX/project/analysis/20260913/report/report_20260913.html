@@ -13,55 +13,65 @@
 
 <body>
   <main style="
-    display: flex; 
+    display: flex;
     flex-direction: column;
     max-width: 1000px !important;
     justify-content: center;
     align-self: center;
     align-content: center;
     margin: auto;
-    
-    border: 1px solid; 
-    border-color: lightgray; 
-    padding-left: 18px;
-    padding-right: 18px;
+
+    border: 1px solid;
+    border-color: lightgray;
 
     background-color: white !important;
   ">
     <section>
-      <h1 style="font-size: 40px">Análisis y evolución de las 500 empresas más rentables de
+      <h1 style="font-size: 30px; font-family:'Courier New', Courier, monospace; padding-left: 18px; padding-right: 18px; ">Análisis y evolución de las 500 empresas más rentables de
         la bolsa estadounidense (S&P 500) </h1>
-      <p>En este documento se hace un reporte de los datos de las 500 empresas con más beneficios en la bolsa
-        estadounidense (S&P 500), entre los cuales encontramos un análisis de los sectores más rentables y de los
-        mayores ganadores, un ranking de capitalización bursátil y un informe que recoge la evolución del precio de
-        acción y de la capitalización de las empresas en base a los registros guardados en el proyecto.
-      </p>
-      <p><b>Fecha del informe</b> — 13/09/2026</p>
-      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <p style="padding-left: 18px; padding-right: 18px;  font-family:'Courier New', Courier, monospace;"><b>Fecha del informe</b> — 13/09/2026</p>
+      <div style="    
+        padding-left: 18px;
+        padding-right: 18px; 
+        display: flex; flex-direction: row; justify-content: space-between; font-size: small; font-family:'Courier New', Courier, monospace;">
         <p><b>MIADA UPV</b> — SHELL Y ENTORNOS LINUX</p>
         <p><b>Alumno</b> — Yassin Pellicer Lamla</p>
       </div>
-      <hr>
-      <div>
-        <h2>Ranking de compañías con mayor capitalización bursátil</h2>
-        <em>En orden descendiente</em>
+      <div class="analysis-tabs" role="tablist" aria-label="Análisis bursátil">
+        <button type="button" id="tab-companies" role="tab" aria-controls="analysis-companies" aria-selected="true" tabindex="0">Compañías</button>
+        <button type="button" id="tab-sectors" role="tab" aria-controls="analysis-sectors" aria-selected="false" tabindex="-1">Sectores</button>
+        <button type="button" id="tab-winners" role="tab" aria-controls="analysis-winners" aria-selected="false" tabindex="-1">Mayores ganadores</button>
+        <button type="button" id="tab-evolution" role="tab" aria-controls="analysis-evolution" aria-selected="false" tabindex="-1">Evolución</button>
+      </div>
+
+      <div id="analysis-companies" role="tabpanel" aria-labelledby="tab-companies" tabindex="0">
+        <div class="chart-card" id="companyChartCard" hidden>
+          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías por capitalización</h3>
+          <div class="chart-canvas chart-canvas--ranking">
+            <canvas id="companyMarketCapChart"></canvas>
+          </div>
+        </div>
+
+        <div class="ranking-pagination" id="companiesPagination" role="group" aria-label="Páginas del ranking" hidden>
+          <button type="button" class="ranking-previous" aria-label="20 anteriores"> &lt; Anteriores</button>
+          <span class="ranking-status" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" class="ranking-next" aria-label="20 siguientes">Siguientes &gt; </button>
+        </div>
 
         <div style="
-          max-height: 600px; 
+          max-height: 600px;
           overflow-y: auto;
-          border: 2px solid; 
-          border-color: lightgray; 
-          
-          margin-top: 10px; 
-          margin-bottom: 10px;
-          
-          border-radius: 10px;
-          corner-shape: squircle;
+
+          margin-top: 0;
+          margin-bottom: 0;
+
+          border-radius: 0;
+
         ">
           <table style="
-            width: 100%; 
-            border-radius: 10px;
-            corner-shape: squircle;
+            width: 100%;
+            border-radius: 0;
+
           ">
             <thead>
               <tr>
@@ -2989,21 +2999,29 @@
         <p class="table-row-total">Total de filas procesadas: 485</p>
       </div>
 
-      <div>
-        <h2>Ranking de sectores con mayor capitalización bursátil</h2>
-        <em>En orden descendiente</em>
+      <div id="analysis-sectors" role="tabpanel" aria-labelledby="tab-sectors" tabindex="0" hidden>
+        <div class="chart-card" id="sectorChartCard" hidden>
+          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Capitalización bursátil por sector</h3>
+          <div class="chart-canvas chart-canvas--ranking">
+            <canvas id="sectorMarketCapChart"></canvas>
+          </div>
+        </div>
 
-        <div style="
-          max-height: 800px; 
+        <div class="ranking-pagination" id="sectorsPagination" role="group" aria-label="Páginas del ranking" hidden>
+          <button type="button" class="ranking-previous" aria-label="20 anteriores">&lt; Anteriores</button>
+          <span class="ranking-status" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" class="ranking-next" aria-label="20 siguientes">Siguientes &gt;</button>
+        </div>
+
+        <div id="sectorRankingData" style="
+          max-height: 800px;
           overflow-y: auto;
-          border: 2px solid; 
-          border-color: lightgray; 
-          
-          margin-top: 10px; 
-          margin-bottom: 10px;
-          
-          border-radius: 10px;
-          corner-shape: squircle;
+
+          margin-top: 0;
+          margin-bottom: 0;
+
+          border-radius: 0;
+
         ">
     <div class="sector-table">
       <table>
@@ -8794,26 +8812,35 @@
         <p class="table-row-total">Total de filas procesadas: 485</p>
       </div>
 
-      <div>
-        <h2>Ranking de mayores ganadores</h2>
-        <em>En orden descendiente, y teniendo en cuenta la cercanía a su máximo bursátil en las últimas 52 semanas</em>
+      <div id="analysis-winners" role="tabpanel" aria-labelledby="tab-winners" tabindex="0" hidden>
+        <div class="chart-card" id="winnersChartCard" hidden>
+          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías más cercanas a su máximo de 52 semanas</h3>
+          <div class="chart-canvas chart-canvas--ranking">
+            <canvas id="winnersChart"></canvas>
+          </div>
+          <p class="chart-note">Una menor distancia indica una mayor cercanía al máximo.</p>
+        </div>
+
+        <div class="ranking-pagination" id="winnersPagination" role="group" aria-label="Páginas del ranking" hidden>
+          <button type="button" class="ranking-previous" aria-label="20 anteriores">&lt; Anteriores</button>
+          <span class="ranking-status" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" class="ranking-next" aria-label="20 siguientes">Siguientes &gt;</button>
+        </div>
 
         <div style="
-          max-height: 600px; 
+          max-height: 600px;
           overflow-y: auto;
-          border: 2px solid; 
-          border-color: lightgray; 
-          
-          margin-top: 10px; 
-          margin-bottom: 10px;
-          
-          border-radius: 10px;
-          corner-shape: squircle;
+
+          margin-top: 0;
+          margin-bottom: 0;
+
+          border-radius: 0;
+
         ">
           <table style="
-            width: 100%; 
-            border-radius: 10px;
-            corner-shape: squircle;
+            width: 100%;
+            border-radius: 0;
+
           ">
             <thead>
               <tr>
@@ -8826,7 +8853,7 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody id="topMarketWinners">
               <tr>
                 <td class="row-number">1</td>
                 <td>DELL</td>
@@ -12705,21 +12732,28 @@
         <p class="table-row-total">Total de filas procesadas: 484</p>
       </div>
 
-      <div>
-        <h2>Evolución de los precios y capitalización bursátil</h2>
-        <em>En orden descendiente, empezando por aquellas con mayor capitalización en bolsa</em>
+      <div id="analysis-evolution" role="tabpanel" aria-labelledby="tab-evolution" tabindex="0" hidden>
+        <div class="chart-card" id="evolutionChartCard" hidden>
+          <div class="chart-toolbar">
+            <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Evolución por compañía</h3>
+            <label for="evolutionCompanySelect">Compañía</label>
+            <select id="evolutionCompanySelect"></select>
+          </div>
+          <div class="chart-canvas chart-canvas--evolution">
+            <canvas id="evolutionChart"></canvas>
+          </div>
+          <p class="chart-note">El precio usa el eje izquierdo y la capitalización bursátil, el derecho.</p>
+        </div>
 
-        <div style="
-          max-height: 800px; 
+        <div id="evolutionData" style="
+          max-height: 800px;
           overflow-y: auto;
-          border: 2px solid; 
-          border-color: lightgray; 
-          
-          margin-top: 10px; 
-          margin-bottom: 10px;
-          
-          border-radius: 10px;
-          corner-shape: squircle;
+
+          margin-top: 0;
+          margin-bottom: 0;
+
+          border-radius: 0;
+
         ">
     <div class="sector-table">
       <table>
@@ -42214,7 +42248,7 @@
 
     <footer>
       <hr>
-      <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: smaller;">
+      <div style="padding-left: 18px; padding-right: 18px; display: flex; flex-direction: row; justify-content: space-between; font-size: smaller;">
         <p><b>MIADA UPV</b> 2026/2027</p>
         <p>Yassin Pellicer Lamla</p>
       </div>
@@ -42223,6 +42257,7 @@
 
 
   <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 
