@@ -60,7 +60,6 @@
     }
   };
 
-  const pageSize = 20;
   const padRank = value => String(value).padStart(3, "0");
   const rankings = {};
 
@@ -71,15 +70,20 @@
       const previous = pager.querySelector(".ranking-previous");
       const next = pager.querySelector(".ranking-next");
       const status = pager.querySelector(".ranking-status");
-      const state = rankings[key] = { page: 0 };
+      const sizeSelect = document.getElementById(`${key}PageSize`);
+      const state = rankings[key] = { page: 0, pageSize: 20, highlights: [] };
       state.update = () => {
-        const start = state.page * pageSize;
-        const visible = rows.slice(start, start + pageSize);
+        state.highlights.forEach(animation => animation.cancel());
+        state.highlights = [];
+        previous.setAttribute("aria-label", `${state.pageSize} anteriores`);
+        next.setAttribute("aria-label", `${state.pageSize} siguientes`);
+        const start = state.page * state.pageSize;
+        const visible = rows.slice(start, start + state.pageSize);
         rows.forEach((row, index) => {
-          row.element.hidden = index < start || index >= start + pageSize;
+          row.element.hidden = index < start || index >= start + state.pageSize;
         });
         previous.disabled = start === 0;
-        next.disabled = start + pageSize >= rows.length;
+        next.disabled = start + state.pageSize >= rows.length;
         status.textContent = `${padRank(start + 1)}–${padRank(start + visible.length)} de ${padRank(rows.length)}`;
         if (!window.Chart) return;
         document.getElementById(cardId).hidden = false;
@@ -98,6 +102,27 @@
             options: {
               ...commonOptions,
               indexAxis: "y",
+              onHover: (event, elements, chart) => {
+                chart.canvas.style.cursor = elements.length ? "pointer" : "default";
+              },
+              onClick: (event, elements) => {
+                if (!elements.length) return;
+                const entry = rows[state.page * state.pageSize + elements[0].index];
+                if (!entry) return;
+                state.highlights.forEach(animation => animation.cancel());
+                const target = key === "sectors"
+                  ? entry.highlightElement || entry.element.querySelector(".table-title, .table-header") || entry.element.querySelector("td") || entry.element
+                  : entry.element;
+                const cells = target.matches("tr") ? [...target.querySelectorAll("td")] : [target];
+                state.highlights = cells.map(cell => cell.animate([
+                  { backgroundColor: "#dbeafe", offset: 0 },
+                  { backgroundColor: "#dbeafe", offset: 0.5 },
+                  { backgroundColor: getComputedStyle(cell).backgroundColor, offset: 1 }
+                ], { duration: 2000, easing: "linear" }));
+                target.setAttribute("tabindex", "-1");
+                target.focus({ preventScroll: true });
+                target.scrollIntoView({ block: "center", inline: "nearest", behavior: "smooth" });
+              },
               plugins: {
                 legend: { display: false },
                 tooltip: { callbacks: { label: context => `${label}: ${format(context.parsed.x)}` } }
@@ -114,7 +139,14 @@
         if (state.page > 0) { state.page--; state.update(); }
       });
       next.addEventListener("click", () => {
-        if ((state.page + 1) * pageSize < rows.length) { state.page++; state.update(); }
+        if ((state.page + 1) * state.pageSize < rows.length) { state.page++; state.update(); }
+      });
+      sizeSelect.addEventListener("change", () => {
+        const size = Number(sizeSelect.value);
+        if (![20, 50, 100].includes(size)) return;
+        state.pageSize = size;
+        state.page = 0;
+        state.update();
       });
       pager.hidden = false;
       state.update();
@@ -157,7 +189,7 @@
     if (sectorIndex < 0 || capIndex < 0) return [];
     return [...table.querySelectorAll("tbody tr")].map((row) => {
       const cells = row.querySelectorAll("td");
-      return { element: row, label: text(cells[sectorIndex]), value: parseNumber(text(cells[capIndex])) };
+      return { element: row, highlightElement: cells[sectorIndex], label: text(cells[sectorIndex]), value: parseNumber(text(cells[capIndex])) };
     });
   }
 

@@ -225,6 +225,12 @@ td:first-child {
   min-width: 0;
 }
 
+.chart-scroll {
+  max-height: 680px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .chart-canvas--ranking {
   height: 520px;
 }
@@ -250,7 +256,6 @@ td:first-child {
   color: #4b5563;
   font-size: 0.9em;
 }
-
 
 .ranking-pagination {
   display: flex;
@@ -307,4 +312,20 @@ table[data-fixed-columns] {
 table[data-fixed-columns] th,
 table[data-fixed-columns] td {
   overflow-wrap: anywhere;
+}
+
+.ranking-size-label {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.ranking-page-size {
+  font: inherit;
+  padding: 2px 6px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  background: white;
 }

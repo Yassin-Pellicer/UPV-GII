@@ -46,9 +46,20 @@
 
       <div id="analysis-companies" role="tabpanel" aria-labelledby="tab-companies" tabindex="0">
         <div class="chart-card" id="companyChartCard" hidden>
-          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías por capitalización</h3>
-          <div class="chart-canvas chart-canvas--ranking">
-            <canvas id="companyMarketCapChart"></canvas>
+          <div class="chart-toolbar">
+            <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías por capitalización</h3>
+            <label class="ranking-size-label" for="companiesPageSize">Registros
+              <select class="ranking-page-size" id="companiesPageSize">
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+          </div>
+          <div class="chart-scroll" tabindex="0" role="region" aria-label="Gráfico del ranking">
+            <div class="chart-canvas chart-canvas--ranking">
+              <canvas id="companyMarketCapChart"></canvas>
+            </div>
           </div>
         </div>
 
@@ -3001,9 +3012,20 @@
 
       <div id="analysis-sectors" role="tabpanel" aria-labelledby="tab-sectors" tabindex="0" hidden>
         <div class="chart-card" id="sectorChartCard" hidden>
-          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Capitalización bursátil por sector</h3>
-          <div class="chart-canvas chart-canvas--ranking">
-            <canvas id="sectorMarketCapChart"></canvas>
+          <div class="chart-toolbar">
+            <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Capitalización bursátil por sector</h3>
+            <label class="ranking-size-label" for="sectorsPageSize">Registros
+              <select class="ranking-page-size" id="sectorsPageSize">
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+          </div>
+          <div class="chart-scroll" tabindex="0" role="region" aria-label="Gráfico del ranking">
+            <div class="chart-canvas chart-canvas--ranking">
+              <canvas id="sectorMarketCapChart"></canvas>
+            </div>
           </div>
         </div>
 
@@ -8814,9 +8836,20 @@
 
       <div id="analysis-winners" role="tabpanel" aria-labelledby="tab-winners" tabindex="0" hidden>
         <div class="chart-card" id="winnersChartCard" hidden>
-          <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías más cercanas a su máximo de 52 semanas</h3>
-          <div class="chart-canvas chart-canvas--ranking">
-            <canvas id="winnersChart"></canvas>
+          <div class="chart-toolbar">
+            <h3 style="font-family:'Courier New', Courier, monospace; margin: 0px !important;">Compañías más cercanas a su máximo de 52 semanas</h3>
+            <label class="ranking-size-label" for="winnersPageSize">Registros
+              <select class="ranking-page-size" id="winnersPageSize">
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+          </div>
+          <div class="chart-scroll" tabindex="0" role="region" aria-label="Gráfico del ranking">
+            <div class="chart-canvas chart-canvas--ranking">
+              <canvas id="winnersChart"></canvas>
+            </div>
           </div>
           <p class="chart-note">Una menor distancia indica una mayor cercanía al máximo.</p>
         </div>
