@@ -1,0 +1,484 @@
+---
+title: "HW0 · R Essentials for Programmers"
+subtitle: "R for Data Science · Pre-course notebook"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+> **Goal of this notebook.** Before our first session you will (1) get a working R + RStudio environment, and (2) learn R's dialect of things you already know as a programmer: variables, vectors, indexing, data frames, functions. Nothing here is conceptually new to you — but R does several things *differently*, and those differences are exactly what this notebook drills.
+>
+> **How to work through it (~2.5-3 hours).** Read top to bottom, **run every chunk** (click the green ▶, or `Ctrl/Cmd + Enter` line by line), and complete the exercise chunks marked **Ex.** When everything works, press **Knit**.
+>
+
+---
+
+# Part 0 · Setup
+
+1. Install **R** (≥ 4.1): <https://cran.r-project.org/>
+2. Install **RStudio Desktop**: <https://posit.co/download/rstudio-desktop/>
+3. *Plan B if your install fights back:* create a free account at <https://posit.cloud> and work in the browser — everything in this course runs there too. But try the local install first and ask on the course forum if stuck; a working local setup pays off all course.
+4. In RStudio: **File → New Project → New Directory**, call it `r4ds-course`. Projects keep your files and working directory sane — we will always work inside this project.
+5. Download `HW0_R_Essentials.Rmd` and `data1.txt` from Poliformat **into the project folder**, and open the `.Rmd` in RStudio.
+
+This document is an **R Markdown notebook**: text + executable code chunks. Insert a chunk with `Ctrl/Cmd + Alt + I`. Run one with the green ▶. Try it:
+
+```{r}
+2 + 3
+```
+
+If you see `[1] 5` (ignore the `[1]` — it indexes the output), your environment works.
+
+> 🐍 **Coming from Python?** Throughout this notebook, boxes like this one translate R's habits into terms you already know. First one: RStudio ≈ your IDE + console + environment inspector in one window; an RStudio *Project* ≈ a virtualenv-less project folder that sets the working directory for you.
+
+---
+
+# Part 1 · R as a calculator, objects & help ⏱ 10′
+
+```{r}
+4 ^ 2
+round(3.1415)
+factorial(3)
+sqrt(9)
+```
+
+Assignment uses `<-` (convention; `=` also works but reserve it for function arguments):
+
+```{r}
+a <- 1
+b <- 2
+a + b
+```
+
+Rules and habits:
+
+* R is **case sensitive** (`a` and `A` are different objects).
+* Names can't start with a number; avoid names R already uses (`mean`, `pi`, ...). Remove an object with `rm(a)`.
+* Get help with `?round`; search the docs with `??regression`.
+* If your console prompt turns into a `+`, R thinks your command is unfinished — finish it or press `Esc`.
+
+🧰 **Toolbox for this exercise** — two things we haven't shown yet:
+
+| | |
+|---|---|
+| `>` `>=` `<` `<=` `==` `!=` | comparisons — they return `TRUE` or `FALSE` (note `==` to test equality, not `=`) |
+| `a & b` | logical AND: TRUE only when both sides are TRUE (OR is <code>a &#124; b</code>) |
+
+**Ex. 1** — warm-up quickies. Compute, in code:
+
+1. The factorial of the rounding of `2.0015 + 1`
+2. Is `7` greater than or equal to `2 * 4`?
+3. Does the sum of 3 and 4 equal the product of 2 and 3?
+4. If `x <- 5`: is `x^2 < 26` **and** `x*2 > 8`?
+5. Is the rounded value of `3.6` plus `2` less than or equal to `7`?
+
+```{r ex01}
+factorial(round(2.0015 + 1))
+7 >= (2 * 4)
+(3 + 4) == (2 * 3)
+x <- 5; (x^2 < 26) && (x*2 > 8)
+round(3.6) + 2 <= 7
+```
+
+---
+
+# Part 2 · Vectors, types & coercion ⏱ 25′
+
+**The core fact about R: there are no scalars.** `x <- 3` creates a numeric *vector* of length 1. The basic constructor is `c()` (combine):
+
+```{r}
+vec <- c(1, 2, 3, 10, 100)
+vec
+length(vec)
+```
+
+Every object has a type. The atomic ones you'll meet daily: **numeric** (`3.14`), **character** (`"hello"` — always quoted), **logical** (`TRUE`/`FALSE`, abbreviable `T`/`F`).
+
+```{r}
+class(0.00001)
+class("hello")
+class(3 < 4)
+```
+
+A vector holds **one type only**. Mix types and R silently **coerces** to the most general one (`logical → numeric → character`):
+
+```{r}
+c(1, "R", TRUE)      # all become character
+TRUE + 5             # TRUE becomes 1
+as.numeric(c("1", "2", "three"))  # forced coercion; impossible values become NA
+```
+
+> 🐍 **Coming from Python?** `c(1, "a")` is like a NumPy array, not a Python list — one dtype for the whole thing, with silent up-casting. R's list (Part 6) is the heterogeneous container. Also note: `TRUE`/`FALSE`, not `True`/`False`.
+
+**Factors** are R's categorical type — a vector of labels stored as integers with a fixed set of *levels*. You'll meet them constantly in data science:
+
+```{r}
+pet <- c("cat", "dog", "dog", "cat", "cat", "snake", "parrot", "cat")
+fpet <- factor(pet)
+fpet
+levels(fpet)
+table(fpet)                       # counts per level
+```
+
+`table()` also crosses two factors into a contingency table, and `prop.table()` turns counts into proportions — you'll use both in Ex. 8.
+
+Matrices exist too (a vector with dimensions); we'll rarely need them for data analysis, but recognize them:
+
+```{r}
+m <- matrix(1:6, nrow = 2)
+m
+t(m)          # transpose
+m * 2         # element-wise math
+```
+
+🧰 **Toolbox** — sequence builders (Part 4 studies them properly; use them as shown):
+
+| | |
+|---|---|
+| `a:b` | the integer sequence a, a+1, ..., b — e.g. `1:5` |
+| `rep(x, times = 4)` | repeat a vector end to end |
+| `matrix(v, nrow = 5)` | pour a vector into a matrix, filling **by columns** (seen above) |
+
+**Ex. 2** — build these:
+
+1. The numbers 1 to 12, stored in `x`
+2. Four repetitions of the sequence `6, 2, 4`
+3. Six 9s, then five 2s, then four 5s, stored in a **5 × 3 matrix** filled column-wise
+
+```{r ex02}
+x <- c(1:12); x
+sequence <- c(6, 2, 4)
+rep(sequence, 4)
+m <- matrix(c(rep(9,6), rep(2, 5), rep(5, 4)), nrow = 5)
+m
+```
+
+---
+
+# Part 3 · Vectorized operations & logical tests ⏱ 15′
+
+Operations apply **element-wise, no loop required**. This is the single most important habit change for the course:
+
+```{r}
+vec <- c(1, 2, 3, 10, 100)
+vec * 4
+vec + vec
+vec > 5                 # comparisons vectorize too
+```
+
+Comparison and set operators: `>` `>=` `<` `<=` `==` `!=` and `%in%` (membership). Combine logical vectors with `&` `|` `!`, summarize them with `any()` / `all()`, count with `sum()` (TRUE counts as 1), locate with `which()`:
+
+```{r}
+vec %in% c(2, 3, 4)
+sum(vec > 5)            # how many elements exceed 5?
+which(vec > 5)          # ...and where are they?
+```
+
+> ⚠️ **Recycling.** If two vectors have different lengths, R recycles the shorter one (`c(1,2,3,4) + c(10,20)` gives `11 22 13 24`) — silently if lengths divide evenly. Powerful, and a classic source of bugs. When in doubt, check `length()`.
+
+🧰 **Toolbox**:
+
+| | |
+|---|---|
+| `seq(from, to, by = )` | numeric sequence with any step — e.g. `seq(0, 1, by = 0.25)` |
+| `x %% y` | modulo, the division remainder — `x %% 2 == 0` tests "is x even?" |
+| `abs(x)` | absolute value |
+
+**Ex. 3** — using vectorized logic only (no loops):
+
+1. Build the sequence from 0 to 1 in steps of 0.15 (`seq()`). How many elements are greater than 0.5?
+2. From the numbers 3 to 18, keep only those that are multiples of both 2 and 3 (`%%` is the modulo operator)
+3. Let `z <- seq(-2, 2, by = 0.5)`. Build a logical vector indicating, for each element, whether its absolute value is *strictly* between 0.5 and 1.5
+
+```{r ex03}
+q <- seq(0,1, 0.15)
+sum(q > 0.5)
+
+n <- 3:18
+n[n %% 2 == 0 & n %% 3 == 0]
+
+z <- seq(-2, 2, by = 0.5)
+0.5 < abs(z) & 1.5 > abs(z)
+
+```
+
+---
+
+# Part 4 · Sequences & (reproducible) randomness ⏱ 10′
+
+You've met `:`, `seq()` and `rep()`. For random data, R has `r` + distribution name: `rnorm()`, `runif()`, `rbinom()`, ... plus `sample()` for resampling. **`set.seed()` makes randomness reproducible** — a habit this course will insist on:
+
+```{r}
+set.seed(42)
+rnorm(3, mean = 5, sd = 1)
+```
+
+🧰 **Toolbox** — the four basic descriptive statistics, all vectorized:
+
+| | |
+|---|---|
+| `mean(x)` · `median(x)` | centre of the data |
+| `var(x)` · `sd(x)` | spread of the data (sd = square root of var) |
+
+**Ex. 4** — reproducible randomness:
+
+1. With seed **100**, generate `x100`: 20 draws from a standard normal distribution
+2. Compute its mean, median, variance and standard deviation
+3. Re-run the generation twice: once re-setting the seed, once without. In a comment: what happens, and why does this matter for data science?
+
+```{r ex04}
+set.seed(100)
+x100 <- rnorm(200)
+mean(x100) ; median(x100); var(x100); sd(x100);
+```
+
+---
+
+# Part 5 · Subsetting — R's superpower ⏱ 25′
+
+**Indexing starts at 1.** Brackets `[ ]` always mean *subset*. Four kinds of index:
+
+```{r}
+vec <- c(6, 1, 3, 6, 10, 5)
+vec[2]                    # by position (1-based!)
+vec[c(5, 6)]              # several positions
+vec[-c(5, 6)]             # negative = everything EXCEPT (this is NOT Python's -1!)
+vec[vec > 5]              # logical: keep where TRUE  <- the important one
+names(vec) <- c("a", "b", "c", "d", "e", "f")
+vec[c("a", "d")]          # by name
+```
+
+> 🐍 **Coming from Python?** Three traps in one line: R is **1-based**; `vec[-1]` means *drop* the first element (not "last element"); and there is no `vec[1:3]`-excludes-the-end — `1:3` includes 3. Also `()` call functions and `[]` subset — `vec(1)` is an error.
+
+Two dimensions → two indices, `[rows, columns]`; leave one blank to mean "all":
+
+```{r}
+df <- data.frame(
+  name       = c("John", "Paul", "George", "Ringo"),
+  birth      = c(1940, 1942, 1943, 1940),
+  instrument = c("guitar", "bass", "guitar", "drums")
+)
+df[2, 3]
+df[1, ]                       # first row, all columns
+df[, "instrument"]            # all rows, one column
+df$instrument                 # same thing — $ is the everyday shortcut
+df[df$birth == 1940, c("name", "instrument")]   # logical rows + named columns
+```
+
+🧰 **Toolbox** — two extras beyond `[ ]`, `$` and logical indexing:
+
+| | |
+|---|---|
+| `subset(df, condition)` | rows of `df` where the condition holds (friendlier cousin of `df[cond, ]`; more in Part 7) |
+| `head(x, n)` | the first `n` elements (or rows) of `x` |
+
+**Ex. 5** — the classic: write **as many different ways as you can** (aim for ≥ 5) to extract the value `"John"` from `df`. Verify each one runs.
+
+```{r ex05}
+# Your code here
+
+```
+
+---
+
+# Part 6 · Lists — the heterogeneous container ⏱ 15′
+
+A **list** holds anything, including other lists — it's the closest thing to a Python list/dict:
+
+```{r}
+animal <- list(order = "carnivore", family = "feline", species = "lynx")
+animal$order          # by name, like a dict
+animal[[1]]           # by position: [[ ]] returns the ELEMENT
+animal[1]             # single [ ] returns a (sub)LIST — compare the printouts!
+```
+
+The train metaphor: if a list is a train, `x[[3]]` is *the cargo in wagon 3*; `x[1:2]` is *a shorter train*. Getting `[` vs `[[` wrong is the classic R beginner error — data frames are lists of columns, so this matters daily.
+
+🧰 **Toolbox**:
+
+| | |
+|---|---|
+| `names(x) <- c("a", "b", ...)` | baptise the elements of a vector or list; afterwards `x$a` works |
+| `lst[[i]]` vs `lst[i]` | the *element* in wagon `i` vs a *shorter train* — reread the metaphor above if in doubt |
+
+**Ex. 6** — given `lst <- list(c(1, 2), TRUE, c("a", "b", "c"))`:
+
+1. Extract the vector `c(1, 2)` and `sum()` it (why does `sum(lst[1])` fail?)
+2. Add a fourth element, `8.5`, then give the list the names `alpha`, `beta`, `gamma`, `delta`
+3. Extract `"b"` from inside the third element
+
+```{r ex06}
+# Your code here
+
+```
+
+---
+
+# Part 7 · Data frames — where data science happens ⏱ 30′
+
+A **data frame** is a table: a list of equal-length column vectors, each with its own type. Rows = observations, columns = variables. It is *the* data structure of this course.
+
+```{r}
+d <- data.frame(name = c("Anne", "Joe", "Mario", "Rose", "Mary"),
+                age  = c(21, 34, 54, 27, 41))
+d
+d$city <- c("Valencia", "Barcelona", "Madrid", "Valencia", "Valencia")  # new column
+d[d$city == "Valencia" & d$age > 25, ]
+subset(d, city == "Valencia", select = c(name, age))   # friendlier equivalent
+nrow(d); ncol(d); dim(d)
+d[order(d$age), ]          # sort rows by age (order() gives the permutation)
+```
+
+First contact with **real data from a file**. `data1.txt` (from Poliformat, already in your project folder) holds measurements of students from two Finnish cities — space-delimited, no header row.
+
+🧰 **Toolbox** — file import and first-look tools:
+
+| | |
+|---|---|
+| `read.table(file, header = , sep = )` | read a delimited text file into a data frame (`sep = ""` = any whitespace) |
+| `str(df)` | compact overview: dimensions, column types, first values |
+| `names(df)` | the column names (assign to it to rename, as with vectors) |
+| `head(df)` | the first rows — always look before you compute |
+
+**Ex. 7** — load and inspect:
+
+a) Read it with `read.table("data/data1.txt", header = FALSE, sep = "")` into an object called **`students`** 
+b) Name the columns `height`, `shoesize`, `gender`, `population`
+c) Check R read it correctly (`str()`, `head()`, `dim()`)
+d) Print the column names only
+e) Print the `height` column
+
+```{r ex07}
+# Your code here
+
+```
+
+🧰 **Toolbox** — reminders from Part 2's factors:
+
+| | |
+|---|---|
+| `table(x)` · `table(x, y)` | frequency counts · cross-tabulation (contingency table) |
+| `prop.table(t, margin)` | turn counts into proportions: `margin = 1` per row, `2` per column, omitted = of the total |
+
+**Ex. 8** — describe:
+
+f) What is the gender distribution? And the distribution across sampling sites (`population`)?
+g) Show both at once with a contingency table; then convert it to proportions *per gender* (`prop.table()` with the right margin)
+
+```{r ex08}
+# Your code here
+
+```
+
+**Ex. 9** — split:
+
+h) Make two subsets by gender — once with data-frame indexing, once with `subset()`
+i) Make two subsets: students strictly below vs at-or-above the **median height** (careful: someone may sit exactly on the median — decide and say where they go)
+
+```{r ex09}
+# Your code here
+
+```
+
+---
+
+# Part 8 · Special values: NA and friends ⏱ 10′
+
+Real data is full of holes. R marks a missing value as `NA`, and NA is *contagious* — any computation touching it returns NA. This is a feature: it forces you to decide.
+
+```{r}
+b <- c(1, 2, 3, 4, NA)
+sum(b)
+sum(b, na.rm = TRUE)          # most summary functions have na.rm
+is.na(b)                      # never test with == NA (try it: NA == NA is NA!)
+```
+
+Relatives you'll meet: `NaN` (0/0), `Inf` (1/0), `NULL` (the empty object). For whole tables, `complete.cases()` flags rows with no missing values.
+
+**Ex. 10** — given `v <- c(2, NA, 7, NA, 1, 9)`:
+
+1. How many values are missing? (count them in code)
+2. Compute the mean, ignoring NAs
+3. Build the vector of non-missing values
+
+```{r ex10}
+# Your code here
+
+```
+
+---
+
+# Part 9 · Control flow, functions & why we avoid loops ⏱ 15′
+
+You know `if`/`for`/`while` — here is R's syntax, compactly:
+
+```{r}
+grade <- 7
+if (grade >= 5) "pass" else "fail"
+
+for (i in 1:3) print(i)
+
+i <- 1
+while (i <= 3) { i <- i + 1 }
+```
+
+Functions — the last evaluated expression is the return value (explicit `return()` optional):
+
+```{r}
+celsius_to_fahrenheit <- function(c) c * 9/5 + 32
+celsius_to_fahrenheit(20)
+```
+
+**But:** in R, most loops you'd write in other languages are replaced by vectorized operations or by *apply*-family helpers (`sapply(x, f)` applies `f` to each element — you'll meet its tidyverse cousins in Session 1):
+
+```{r}
+myvector <- c(3.5, 7.8, 4.2, 2.5)
+sapply(myvector, round)     # same as round(myvector) — which is better still
+```
+
+*Optional (+10′):* run `R_Loops_benchmarking.R` from Poliformat to see the speed gap between a `for` loop and vectorized code on a million elements. It will change how you write R.
+
+🧰 **Toolbox**:
+
+| | |
+|---|---|
+| `seq_len(n)` | the sequence `1:n`, but safe when `n = 0` — the idiomatic way to loop over rows: `for (i in seq_len(nrow(df)))` |
+| `df$new <- ...` | assigning to a column that doesn't exist yet *creates* it (Part 7) |
+
+**Ex. 11** — the same job three ways, on `students`. Convert `height` from cm to metres:
+
+1. As a new column `height_m`, with a **vectorized** operation (one line, no loop)
+2. As `height_m2`, with a `for` loop over rows
+3. As `height_m3`, with `sapply()` and a function **`to_meters`** that you define
+4. In a comment: which version will you use for the rest of your life?
+
+```{r ex11}
+# Your code here
+
+```
+
+---
+
+# Part 10 · Packages — install the course pack ⏱ 10′
+
+R's power lives in its ~23,000 CRAN packages. Install once, then load per session with `library()`. Install the packages this course uses (this takes a few minutes — let it run):
+
+```{r, eval=FALSE}
+install.packages(c("tidyverse", "nycflights13", "janitor", "skimr", "rmarkdown"))
+```
+
+* **tidyverse** — the data-science dialect of R we'll use all course (ggplot2, dplyr, tidyr, stringr, lubridate, ...)
+* **nycflights13** — practice data for the homework drills
+* **janitor**, **skimr** — cleaning & data-overview helpers for Session 1
+* **rmarkdown** — knits this very document
+
+
+---

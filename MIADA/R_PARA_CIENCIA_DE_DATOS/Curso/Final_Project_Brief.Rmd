@@ -1,0 +1,68 @@
+---
+title: "Final Project"
+subtitle: "R for Data Science"
+date: "Deadline: **October 18, 2026** · Submit on Poliformat"
+output:
+  html_document:
+    theme: flatly
+    toc: false
+---
+
+## The mission
+
+In class we answered one question for one client in one city: *where, what type of listing, at what price — in València*. Now do it **for a city of your own**, end to end, without the rails.
+
+Work in **groups of 2 people (preferred) or individually**, and play one of two roles (your choice, state it in the report):
+
+* **The investor's advisor** — same client, new market: where should she buy, what should she list, at what price?
+* **The city council analyst** — the other side: how concentrated is the market, who controls it, is it licensed, where does it pressure housing?
+
+## The cities and the data
+
+Ten cities are on offer — **Amsterdam, Barcelona, Berlin, Lisbon, Madrid, Málaga, Mallorca, Porto, Rome, Sevilla** — with all the data ready to download (one folder per city, with the Inside Airbnb files you know from class):
+
+> 📦 **Data download:** [OneDrive folder](https://upvedues-my.sharepoint.com/:f:/g/personal/fermarpl_upv_edu_es/IgAQyF4tAKG1T6R6uDWPn9u0ASNjKnZglf7X47VlwhVWs6I?e=bxDqZ6)
+
+**Claiming a city:** write your names in the shared GSheet under the city you choose. At most **2 groups per city**, first come first served. València itself is taken (we used it in class), but a *comparison* with València counts toward the extra mile.
+
+> 📦 **City-claims:** [GSheet](https://docs.google.com/spreadsheets/d/1bqt6XlRl0yLrSoGNr42mXqDPNd4n-tdYvkFb0on-Bak/edit?usp=sharing)
+
+
+## Deliverables (both)
+
+1. **Reproducible report** — R Markdown knitted to HTML, **with all the code included**: the data and how you loaded it, your cleaning decisions (what you fixed and why), your findings with **at least 6 polished figures** (takeaway titles, units on the axes, source captions), one simple model with its interpretation in plain language, and conclusions **and limitations**. It must knit top-to-bottom from a clean session.
+2. **Video, 5–10 minutes** — present the analysis and its findings, pitched at the *client*, not at the professor. They don't know what a tibble is; they do care where their money goes.
+
+## How it's graded (100 pts)
+
+| Criterion | Pts | What excellent looks like |
+|---|---:|---|
+| Cleaning & wrangling | 20 | Correct and idiomatic; decisions documented ("we dropped X because…"); the report rebuilds everything from the raw files |
+| EDA depth & insight | 25 | Questions driven by curiosity; several questions answered but at least one non-obvious finding, honestly caveated; group sizes checked before rankings; ... |
+| Visualization quality | 10 | Right geom for each question; titles state findings; ordered categories; readable scales (log where skewed, € and % labelled); ... |
+| Model & interpretation | 10 | Sensible specification; coefficients read correctly in plain language; R² and residuals discussed without overclaiming; ... |
+| Communication | 25 | The report reads as a client narrative and knits from a clean session; the video lands the message in 5–10 minutes |
+| Extra mile | 10 | València comparison, interactivity (`leaflet`/`plotly`), review text analysis, creative angles |
+
+**On AI assistants:** you may use them the way you'll use them at work (as a pair programmer). Two conditions: declare the use in one line at the end of the report, and be ready to explain *any* line of your code in an oral, in-person check **if the teacher has doubts about the student's authorship**. Code you can't explain is code you didn't write.
+
+
+## Checklist (before you submit)
+
+☐ Names on the city-claims sheet match the submission 
+
+☐ Report knits top-to-bottom in a fresh R session, relative paths only 
+
+☐ All code included 
+
+☐ 6+ figures, each with a takeaway title
+
+☐ Model read in words, limitations section written 
+
+☐ Video 5–10 min 
+
+☐ AI-use note included 
+
+☐ Everyone in the group can explain everything.
+
+---

@@ -1,0 +1,493 @@
++================================================================+
+| TOP MARKET CAP COMPANIES                                       |
++================================================================+
+| Date: 16/09/2026 | Processed entries: 485                      |
++--------------------+----------+--------------------------------+
+| Market Cap         | Symbol   | Company                        |
++--------------------+----------+--------------------------------+
+|  5,123,268,935,680 | NVDA     | Nvidia                         |
+|  4,835,635,625,984 | AAPL     | Apple Inc.                     |
+|  4,219,083,161,600 | GOOGL    | Alphabet Inc. (Class A)        |
+|  4,175,666,610,176 | GOOG     | Alphabet Inc. (Class C)        |
+|  3,691,387,289,600 | MSFT     | Microsoft                      |
+|  2,679,535,828,992 | AMZN     | Amazon                         |
+|  1,707,440,472,064 | META     | Meta Platforms                 |
+|  1,619,549,356,032 | AVGO     | Broadcom                       |
+|  1,408,329,580,544 | TSLA     | Tesla Inc.                     |
+|  1,047,625,072,640 | MU       | Micron Technology              |
+|  1,013,116,305,408 | LLY      | Lilly (Eli)                    |
+|    936,984,051,712 | JPM      | JPMorgan Chase                 |
+|    860,188,704,768 | WMT      | Walmart                        |
+|    823,093,886,976 | AMD      | Advanced Micro Devices         |
+|    701,300,277,248 | V        | Visa Inc.                      |
+|    696,228,970,496 | XOM      | ExxonMobil                     |
+|    643,924,885,504 | JNJ      | Johnson & Johnson              |
+|    513,492,254,720 | INTC     | Intel                          |
+|    502,190,211,072 | MA       | Mastercard                     |
+|    464,822,566,912 | ABBV     | AbbVie                         |
+|    433,960,550,400 | CSCO     | Cisco                          |
+|    427,178,360,832 | CVX      | Chevron Corporation            |
+|    424,381,382,656 | ORCL     | Oracle Corporation             |
+|    416,208,388,096 | BAC      | Bank of America                |
+|    414,671,765,504 | PLTR     | Palantir Technologies          |
+|    399,729,623,040 | COST     | Costco                         |
+|    381,679,108,096 | KO       | Coca-Cola Company (The)        |
+|    360,173,633,536 | CAT      | Caterpillar Inc.               |
+|    354,754,592,768 | MRK      | Merck & Co.                    |
+|    345,570,574,336 | DELL     | Dell Technologies              |
+|    340,666,351,616 | PG       | Procter & Gamble               |
+|    338,945,310,720 | LRCX     | Lam Research                   |
+|    337,432,805,376 | UNH      | UnitedHealth Group             |
+|    334,239,432,704 | AMAT     | Applied Materials              |
+|    324,370,890,752 | NFLX     | Netflix                        |
+|    323,976,396,800 | MS       | Morgan Stanley                 |
+|    318,583,537,664 | GE       | GE Aerospace                   |
+|    306,823,626,752 | PANW     | Palo Alto Networks             |
+|    304,774,217,728 | HD       | Home Depot (The)               |
+|    302,542,454,784 | PM       | Philip Morris International    |
+|    284,378,365,952 | GS       | Goldman Sachs                  |
+|    271,313,207,296 | WFC      | Wells Fargo                    |
+|    263,486,701,568 | RTX      | RTX Corporation                |
+|    248,293,965,824 | CRWD     | CrowdStrike                    |
+|    243,214,565,376 | ANET     | Arista Networks                |
+|    240,576,823,296 | TXN      | Texas Instruments              |
+|    237,152,223,232 | TMO      | Thermo Fisher Scientific       |
+|    235,121,950,720 | GEV      | GE Vernova                     |
+|    233,997,910,016 | IBM      | IBM                            |
+|    228,416,569,344 | C        | Citigroup                      |
+|    219,526,004,736 | KLAC     | KLA Corporation                |
+|    219,090,763,776 | AXP      | American Express               |
+|    213,763,194,880 | VZ       | Verizon                        |
+|    213,415,378,944 | LIN      | Linde plc                      |
+|    210,399,952,896 | CRM      | Salesforce                     |
+|    203,088,412,672 | AMGN     | Amgen                          |
+|    200,581,758,976 | QCOM     | Qualcomm                       |
+|    193,585,053,696 | TMUS     | T-Mobile US                    |
+|    191,482,331,136 | APH      | Amphenol                       |
+|    186,405,093,376 | SCHW     | Charles Schwab Corporation     |
+|    185,092,997,120 | PEP      | PepsiCo                        |
+|    184,434,556,928 | DE       | Deere & Company                |
+|    183,754,014,720 | DIS      | Walt Disney Company (The)      |
+|    183,095,738,368 | T        | AT&T                           |
+|    181,405,450,240 | GILD     | Gilead Sciences                |
+|    178,877,628,416 | MCD      | McDonald's                     |
+|    176,551,018,496 | ABT      | Abbott Laboratories            |
+|    175,504,195,584 | STX      | Seagate Technology             |
+|    175,097,741,312 | ADI      | Analog Devices                 |
+|    172,007,047,168 | BLK      | BlackRock                      |
+|    169,652,879,360 | COP      | ConocoPhillips                 |
+|    169,110,257,664 | NEE      | NextEra Energy                 |
+|    168,711,503,872 | UNP      | Union Pacific Corporation      |
+|    167,720,337,408 | WELL     | Welltower                      |
+|    165,732,696,064 | BA       | Boeing                         |
+|    157,026,009,088 | PFE      | Pfizer                         |
+|    152,408,162,304 | ETN      | Eaton Corporation              |
+|    151,444,226,048 | BX       | Blackstone Inc.                |
+|    148,528,431,104 | WDC      | Western Digital                |
+|    147,177,160,704 | DHR      | Danaher Corporation            |
+|    146,705,006,592 | NOW      | ServiceNow                     |
+|    145,900,077,056 | UBER     | Uber                           |
+|    137,056,763,904 | TJX      | TJX Companies                  |
+|    135,128,145,920 | ISRG     | Intuitive Surgical             |
+|    132,048,887,808 | PLD      | Prologis                       |
+|    131,889,537,024 | CB       | Chubb Limited                  |
+|    130,858,049,536 | NEM      | Newmont                        |
+|    130,438,594,560 | VRTX     | Vertex Pharmaceuticals         |
+|    130,182,201,344 | BMY      | Bristol Myers Squibb           |
+|    128,726,507,520 | BKNG     | Booking Holdings               |
+|    128,603,250,688 | PGR      | Progressive Corporation        |
+|    126,899,347,456 | COF      | Capital One                    |
+|    126,470,217,728 | FTNT     | Fortinet                       |
+|    123,669,528,576 | GLW      | Corning Inc.                   |
+|    123,117,641,728 | LMT      | Lockheed Martin                |
+|    121,610,895,360 | SPGI     | S&P Global                     |
+|    120,849,907,712 | CVS      | CVS Health                     |
+|    119,919,181,824 | MDT      | Medtronic                      |
+|    118,349,594,624 | ACN      | Accenture                      |
+|    116,593,909,760 | PH       | Parker Hannifin                |
+|    116,564,811,776 | MO       | Altria                         |
+|    115,374,047,232 | MPC      | Marathon Petroleum             |
+|    114,318,721,024 | VLO      | Valero Energy                  |
+|    110,101,200,896 | SBUX     | Starbucks                      |
+|    109,855,072,256 | ADP      | Automatic Data Processing      |
+|    109,186,719,744 | LOW      | Lowe's                         |
+|    107,975,819,264 | SYK      | Stryker Corporation            |
+|    106,219,708,416 | PSX      | Phillips 66                    |
+|    104,880,021,504 | MCK      | McKesson Corporation           |
+|    102,459,604,992 | ADBE     | Adobe Inc.                     |
+|    100,787,609,600 | ABNB     | Airbnb                         |
+|     99,630,891,008 | FCX      | Freeport-McMoRan               |
+|     99,360,415,744 | EQIX     | Equinix                        |
+|     98,916,655,104 | CME      | CME Group                      |
+|     98,873,696,256 | SO       | Southern Company               |
+|     97,021,804,544 | GD       | General Dynamics               |
+|     96,941,965,312 | USB      | U.S. Bancorp                   |
+|     96,057,655,296 | PNC      | PNC Financial Services         |
+|     93,010,403,328 | TT       | Trane Technologies             |
+|     92,359,049,216 | KKR      | KKR                            |
+|     92,213,116,928 | PWR      | Quanta Services                |
+|     92,080,955,392 | CEG      | Constellation Energy           |
+|     91,825,528,832 | DUK      | Duke Energy                    |
+|     91,757,666,304 | HCA      | HCA Healthcare                 |
+|     90,551,607,296 | ELV      | Elevance Health                |
+|     90,141,425,664 | CSX      | CSX Corporation                |
+|     89,598,713,856 | HWM      | Howmet Aerospace               |
+|     88,082,792,448 | ICE      | Intercontinental Exchange      |
+|     87,992,795,136 | INTU     | Intuit                         |
+|     87,940,816,896 | MAR      | Marriott International         |
+|     87,615,479,808 | WMB      | Williams Companies             |
+|     87,432,486,912 | MNST     | Monster Beverage               |
+|     87,077,494,784 | UPS      | United Parcel Service          |
+|     86,838,124,544 | WM       | Waste Management               |
+|     86,657,703,936 | CMCSA    | Comcast                        |
+|     84,924,014,592 | MMM      | 3M                             |
+|     83,767,975,936 | JCI      | Johnson Controls               |
+|     82,805,768,192 | AMT      | American Tower                 |
+|     81,996,603,392 | EMR      | Emerson Electric               |
+|     80,903,233,536 | MCO      | Moody's Corporation            |
+|     80,641,122,304 | EOG      | EOG Resources                  |
+|     80,440,565,760 | SLB      | Schlumberger                   |
+|     79,698,485,248 | REGN     | Regeneron Pharmaceuticals      |
+|     79,613,730,816 | CTAS     | Cintas                         |
+|     79,258,730,496 | MDLZ     | Mondelez International         |
+|     78,835,105,792 | TRV      | Travelers Companies (The)      |
+|     78,464,286,720 | SHW      | Sherwin-Williams               |
+|     77,639,761,920 | MSI      | Motorola Solutions             |
+|     77,481,156,608 | SPG      | Simon Property Group           |
+|     77,213,032,448 | GM       | General Motors                 |
+|     76,978,241,536 | ECL      | Ecolab                         |
+|     76,497,281,024 | ITW      | Illinois Tool Works            |
+|     76,339,077,120 | CI       | Cigna                          |
+|     75,470,979,072 | NOC      | Northrop Grumman               |
+|     75,446,665,216 | CDNS     | Cadence Design Systems         |
+|     74,178,740,224 | HPE      | Hewlett Packard Enterprise     |
+|     74,066,247,680 | CMI      | Cummins                        |
+|     72,956,026,880 | FDX      | FedEx                          |
+|     72,579,923,968 | ROST     | Ross Stores                    |
+|     71,924,088,832 | NSC      | Norfolk Southern Railway       |
+|     70,464,798,720 | SNPS     | Synopsys                       |
+|     70,275,047,424 | WBD      | Warner Bros. Discovery         |
+|     70,143,410,176 | TGT      | Target Corporation             |
+|     69,354,037,248 | CL       | Colgate-Palmolive              |
+|     69,272,731,648 | HLT      | Hilton Worldwide               |
+|     68,891,099,136 | ORLY     | O'Reilly Auto Parts            |
+|     68,518,703,104 | KMI      | Kinder Morgan                  |
+|     68,297,744,384 | RSG      | Republic Services              |
+|     67,703,775,232 | DLR      | Digital Realty                 |
+|     66,675,806,208 | RCL      | Royal Caribbean Group          |
+|     65,659,768,832 | AEP      | American Electric Power        |
+|     65,037,590,528 | ALL      | Allstate                       |
+|     64,703,508,480 | APD      | Air Products                   |
+|     64,628,260,864 | AON      | Aon                            |
+|     64,478,273,536 | HON      | Honeywell                      |
+|     64,458,653,696 | PCAR     | Paccar                         |
+|     63,582,818,304 | AJG      | Arthur J. Gallagher & Co.      |
+|     63,577,698,304 | BSX      | Boston Scientific              |
+|     63,496,966,144 | OXY      | Occidental Petroleum           |
+|     62,416,543,744 | MET      | MetLife                        |
+|     61,692,518,400 | COR      | Cencora                        |
+|     61,643,259,904 | TFC      | Truist Financial               |
+|     61,565,911,040 | URI      | United Rentals                 |
+|     61,258,653,696 | TRGP     | Targa Resources                |
+|     59,975,028,736 | TDG      | TransDigm Group                |
+|     59,796,062,208 | GWW      | W. W. Grainger                 |
+|     59,708,616,704 | OKE      | ONEOK                          |
+|     59,231,182,848 | FANG     | Diamondback Energy             |
+|     58,932,903,936 | AFL      | Aflac                          |
+|     58,719,965,184 | NUE      | Nucor                          |
+|     58,313,752,576 | TEL      | TE Connectivity                |
+|     57,398,149,120 | MRNA     | Moderna                        |
+|     57,077,362,688 | NXPI     | NXP Semiconductors             |
+|     56,697,856,000 | FAST     | Fastenal                       |
+|     56,463,003,648 | DVN      | Devon Energy                   |
+|     56,304,472,064 | BKR      | Baker Hughes                   |
+|     56,175,321,088 | D        | Dominion Energy                |
+|     56,143,908,864 | MPWR     | Monolithic Power Systems       |
+|     55,637,475,328 | CTVA     | Corteva                        |
+|     55,552,458,752 | O        | Realty Income                  |
+|     55,435,333,632 | PSA      | Public Storage                 |
+|     54,108,741,632 | CAH      | Cardinal Health                |
+|     53,832,544,256 | F        | Ford Motor Company             |
+|     53,800,075,264 | GRMN     | Garmin                         |
+|     53,750,300,672 | AME      | Ametek                         |
+|     53,732,327,424 | NKE      | Nike Inc.                      |
+|     53,347,893,248 | KEYS     | Keysight Technologies          |
+|     53,096,706,048 | SRE      | Sempra                         |
+|     52,925,640,704 | EA       | Electronic Arts                |
+|     52,038,021,120 | TER      | Teradyne                       |
+|     51,879,882,752 | DAL      | Delta Air Lines                |
+|     50,855,538,688 | STT      | State Street Corporation       |
+|     50,642,157,568 | BDX      | Becton Dickinson               |
+|     49,877,549,056 | NDAQ     | Nasdaq Inc.                    |
+|     49,579,814,912 | FITB     | Fifth Third Bancorp            |
+|     49,420,533,760 | EW       | Edwards Lifesciences           |
+|     49,408,303,104 | AMP      | Ameriprise Financial           |
+|     49,172,856,832 | ETR      | Entergy                        |
+|     48,073,351,168 | EBAY     | eBay                           |
+|     47,626,248,192 | HUM      | Humana                         |
+|     47,502,450,688 | VST      | Vistra Corp.                   |
+|     47,338,500,096 | ADSK     | Autodesk                       |
+|     46,977,482,752 | WAB      | Wabtec                         |
+|     46,490,345,472 | LHX      | L3Harris                       |
+|     46,401,236,992 | ROK      | Rockwell Automation            |
+|     46,032,351,232 | PYPL     | PayPal                         |
+|     45,783,015,424 | CARR     | Carrier Global                 |
+|     45,426,528,256 | VTR      | Ventas                         |
+|     45,279,739,904 | XEL      | Xcel Energy                    |
+|     44,387,684,352 | IQV      | IQVIA                          |
+|     44,074,512,384 | CMG      | Chipotle Mexican Grill         |
+|     43,471,564,800 | EXC      | Exelon                         |
+|     42,852,409,344 | KDP      | Keurig Dr Pepper               |
+|     42,371,006,464 | A        | Agilent Technologies           |
+|     42,112,491,520 | PAYX     | Paychex                        |
+|     41,742,520,320 | ADM      | Archer Daniels Midland         |
+|     41,161,949,184 | PRU      | Prudential Financial           |
+|     40,952,336,384 | WAT      | Waters Corporation             |
+|     40,572,395,520 | CBRE     | CBRE Group                     |
+|     40,235,880,448 | IDXX     | Idexx Laboratories             |
+|     39,729,426,432 | AIG      | American International Group   |
+|     39,659,028,480 | LYV      | Live Nation Entertainment      |
+|     39,623,028,736 | TTWO     | Take-Two Interactive           |
+|     39,592,419,328 | MSCI     | MSCI                           |
+|     39,214,116,864 | DHI      | D. R. Horton                   |
+|     38,920,765,440 | ED       | Consolidated Edison            |
+|     38,819,692,544 | MCHP     | Microchip Technology           |
+|     38,416,285,696 | YUM      | Yum! Brands                    |
+|     38,173,634,560 | SYY      | Sysco                          |
+|     37,972,000,768 | ROP      | Roper Technologies             |
+|     37,633,941,504 | ODFL     | Old Dominion                   |
+|     37,305,860,096 | NTAP     | NetApp                         |
+|     37,100,998,656 | KR       | Kroger                         |
+|     36,846,718,976 | HIG      | Hartford (The)                 |
+|     35,993,333,760 | MLM      | Martin Marietta Materials      |
+|     35,913,437,184 | AXON     | Axon Enterprise                |
+|     35,176,071,168 | EXPE     | Expedia Group                  |
+|     35,098,738,688 | PEG      | Public Service Enterprise G... |
+|     34,823,110,656 | EL       | Estée Lauder Companies (The)   |
+|     34,702,995,456 | UAL      | United Airlines Holdings       |
+|     34,420,260,864 | KVUE     | Kenvue                         |
+|     34,286,946,304 | STLD     | Steel Dynamics                 |
+|     34,241,751,040 | HSY      | Hershey Company (The)          |
+|     33,991,254,016 | MTB      | M&T Bank                       |
+|     33,841,948,672 | HBAN     | Huntington Bancshares          |
+|     33,728,669,696 | WEC      | WEC Energy Group               |
+|     33,423,704,064 | CNC      | Centene Corporation            |
+|     33,354,622,976 | IRM      | Iron Mountain                  |
+|     33,227,411,456 | EQT      | EQT Corporation                |
+|     33,112,875,008 | ACGL     | Arch Capital Group             |
+|     33,097,248,768 | RMD      | ResMed                         |
+|     32,817,238,016 | KMB      | Kimberly-Clark                 |
+|     32,701,493,248 | NTRS     | Northern Trust                 |
+|     32,622,837,760 | DXCM     | Dexcom                         |
+|     32,416,874,496 | RJF      | Raymond James Financial        |
+|     32,291,020,800 | VMC      | Vulcan Materials Company       |
+|     32,010,250,240 | CCI      | Crown Castle                   |
+|     31,939,981,312 | BIIB     | Biogen                         |
+|     31,022,215,168 | JBL      | Jabil                          |
+|     30,498,570,240 | HPQ      | HP Inc.                        |
+|     30,343,010,304 | ZTS      | Zoetis                         |
+|     30,302,459,904 | EXR      | Extra Space Storage            |
+|     30,282,944,512 | CCL      | Carnival                       |
+|     29,901,977,600 | WTW      | Willis Towers Watson           |
+|     29,717,757,952 | HAL      | Halliburton                    |
+|     29,583,458,304 | CFG      | Citizens Financial Group       |
+|     29,171,265,536 | KHC      | Kraft Heinz                    |
+|     28,961,124,352 | PCG      | PG&E Corporation               |
+|     28,939,536,384 | GEHC     | GE HealthCare                  |
+|     28,737,187,840 | CPRT     | Copart                         |
+|     28,520,392,704 | AEE      | Ameren                         |
+|     28,504,109,056 | CTSH     | Cognizant                      |
+|     28,498,122,752 | ON       | ON Semiconductor               |
+|     28,408,958,976 | FOXA     | Fox Corporation (Class A)      |
+|     28,242,323,456 | CBOE     | Cboe Global Markets            |
+|     27,901,040,640 | IR       | Ingersoll Rand                 |
+|     27,744,333,824 | TDY      | Teledyne Technologies          |
+|     27,510,913,024 | DG       | Dollar General                 |
+|     27,428,577,280 | AWK      | American Water Works           |
+|     27,382,904,832 | ATO      | Atmos Energy                   |
+|     27,271,049,216 | DGX      | Quest Diagnostics              |
+|     27,262,679,040 | VICI     | Vici Properties                |
+|     27,134,683,136 | DTE      | DTE Energy                     |
+|     26,872,305,664 | VRSN     | Verisign                       |
+|     26,772,701,184 | CPAY     | Corpay                         |
+|     26,730,629,120 | LVS      | Las Vegas Sands                |
+|     26,656,638,976 | MTD      | Mettler Toledo                 |
+|     26,461,097,984 | WRB      | W. R. Berkley Corporation      |
+|     26,347,575,296 | CINF     | Cincinnati Financial           |
+|     26,283,393,024 | AVB      | AvalonBay Communities          |
+|     26,273,966,080 | LH       | LabCorp                        |
+|     26,229,749,760 | FE       | FirstEnergy                    |
+|     26,075,850,752 | OTIS     | Otis Worldwide                 |
+|     25,687,152,640 | WST      | West Pharmaceutical Services   |
+|     25,643,472,896 | JBHT     | J.B. Hunt                      |
+|     25,450,522,624 | DOV      | Dover Corporation              |
+|     25,369,196,544 | FOX      | Fox Corporation (Class B)      |
+|     25,343,565,824 | PFG      | Principal Financial Group      |
+|     25,316,308,992 | ES       | Eversource Energy              |
+|     25,285,269,504 | RF       | Regions Financial Corporation  |
+|     25,205,180,416 | EXPD     | Expeditors International       |
+|     25,099,833,344 | XYL      | Xylem Inc.                     |
+|     25,018,195,968 | CNP      | CenterPoint Energy             |
+|     25,007,065,088 | PPL      | PPL Corporation                |
+|     24,747,706,368 | SYF      | Synchrony Financial            |
+|     24,676,423,680 | INCY     | Incyte                         |
+|     24,611,481,600 | EQR      | Equity Residential             |
+|     24,399,521,792 | FFIV     | F5 Inc.                        |
+|     23,743,852,544 | DRI      | Darden Restaurants             |
+|     23,545,745,408 | GPN      | Global Payments                |
+|     23,438,495,744 | VRSK     | Verisk Analytics               |
+|     23,414,245,376 | SMCI     | Supermicro                     |
+|     23,392,423,936 | BG       | Bunge Global                   |
+|     23,350,759,424 | TPR      | Tapestry Inc.                  |
+|     23,317,047,296 | PPG      | PPG Industries                 |
+|     23,277,389,824 | VLTO     | Veralto                        |
+|     23,273,748,480 | ULTA     | Ulta Beauty                    |
+|     23,168,667,648 | HUBB     | Hubbell Incorporated           |
+|     23,156,690,944 | KEY      | KeyCorp                        |
+|     22,926,895,104 | SW       | Smurfit WestRock               |
+|     22,757,404,672 | PHM      | PulteGroup                     |
+|     22,495,856,640 | BRO      | Brown & Brown                  |
+|     22,418,141,184 | CHD      | Church & Dwight                |
+|     22,325,551,104 | L        | Loews Corporation              |
+|     22,280,208,384 | NRG      | NRG Energy                     |
+|     22,233,913,344 | TROW     | T. Rowe Price                  |
+|     21,906,524,160 | OMC      | Omnicom Group                  |
+|     21,745,436,672 | FSLR     | First Solar                    |
+|     21,561,870,336 | DOW      | Dow Inc.                       |
+|     21,493,833,728 | IFF      | International Flavors & Fra... |
+|     21,294,405,632 | FICO     | Fair Isaac                     |
+|     21,162,821,632 | DLTR     | Dollar Tree                    |
+|     21,136,373,760 | LYB      | LyondellBasell                 |
+|     21,114,834,944 | STZ      | Constellation Brands           |
+|     20,995,450,880 | EIX      | Edison International           |
+|     20,671,004,672 | CMS      | CMS Energy                     |
+|     20,600,418,304 | PKG      | Packaging Corporation of Am... |
+|     20,512,368,640 | CF       | CF Industries                  |
+|     20,502,323,200 | STE      | Steris                         |
+|     19,973,754,880 | RL       | Ralph Lauren Corporation       |
+|     19,631,198,208 | AMCR     | Amcor                          |
+|     19,629,377,536 | EFX      | Equifax                        |
+|     19,556,747,264 | GIS      | General Mills                  |
+|     19,555,010,560 | BBY      | Best Buy                       |
+|     19,465,345,024 | NI       | NiSource                       |
+|     19,428,976,640 | SBAC     | SBA Communications             |
+|     19,412,211,712 | BR       | Broadridge Financial Solutions |
+|     19,388,360,704 | SNA      | Snap-on                        |
+|     19,288,473,600 | LEN      | Lennar                         |
+|     19,256,459,264 | FIS      | Fidelity National Informati... |
+|     19,220,178,944 | CDW      | CDW                            |
+|     19,216,097,280 | LUV      | Southwest Airlines             |
+|     19,124,037,632 | VTRS     | Viatris                        |
+|     19,030,581,248 | CHTR     | Charter Communications         |
+|     19,028,922,368 | ESS      | Essex Property Trust           |
+|     18,770,497,536 | ZBH      | Zimmer Biomet                  |
+|     18,693,871,616 | GEN      | Gen Digital                    |
+|     18,491,486,208 | EVRG     | Evergy                         |
+|     18,487,169,024 | TSN      | Tyson Foods                    |
+|     18,419,263,488 | CHRW     | C.H. Robinson                  |
+|     18,115,934,208 | NWS      | News Corp (Class B)            |
+|     18,061,006,848 | GPC      | Genuine Parts Company          |
+|     18,000,080,896 | IP       | International Paper            |
+|     17,290,901,504 | DD       | DuPont                         |
+|     17,225,029,632 | NDSN     | Nordson Corporation            |
+|     17,209,954,304 | TSCO     | Tractor Supply                 |
+|     17,110,197,248 | LNT      | Alliant Energy                 |
+|     17,048,862,720 | FTV      | Fortive                        |
+|     16,960,065,536 | J        | Jacobs Solutions               |
+|     16,913,880,064 | BEN      | Franklin Resources             |
+|     16,758,409,216 | NVR      | NVR Inc.                       |
+|     16,610,165,760 | APA      | APA Corporation                |
+|     16,427,741,184 | IEX      | IDEX Corporation               |
+|     16,324,826,112 | INVH     | Invitation Homes               |
+|     16,322,038,784 | NWSA     | News Corp (Class A)            |
+|     16,248,281,088 | ROL      | Rollins Inc.                   |
+|     16,218,613,760 | LDOS     | Leidos                         |
+|     16,214,782,976 | ZBRA     | Zebra Technologies             |
+|     16,149,551,104 | BALL     | Ball Corporation               |
+|     16,065,206,272 | WY       | Weyerhaeuser                   |
+|     15,643,297,792 | RVTY     | Revvity                        |
+|     15,421,447,168 | KIM      | Kimco Realty                   |
+|     15,374,296,064 | HST      | Host Hotels & Resorts          |
+|     15,330,348,032 | SOLV     | Solventum                      |
+|     15,147,730,944 | AKAM     | Akamai Technologies            |
+|     14,809,801,728 | MAA      | Mid-America Apartment Commu... |
+|     14,552,984,576 | EG       | Everest Group                  |
+|     14,461,475,840 | TYL      | Tyler Technologies             |
+|     14,404,206,592 | PTC      | PTC Inc.                       |
+|     14,292,376,576 | DOC      | Healthpeak Properties          |
+|     14,112,022,528 | AIZ      | Assurant                       |
+|     13,882,783,744 | TXT      | Textron                        |
+|     13,844,294,656 | REG      | Regency Centers                |
+|     13,710,973,952 | TRMB     | Trimble Inc.                   |
+|     13,589,363,712 | IVZ      | Invesco                        |
+|     13,582,269,440 | MAS      | Masco                          |
+|     13,542,550,528 | SWKS     | Skyworks Solutions             |
+|     13,404,938,240 | MKC      | McCormick & Company            |
+|     13,387,673,600 | ALB      | Albemarle Corporation          |
+|     13,377,054,720 | SWK      | Stanley Black & Decker         |
+|     13,317,240,832 | GL       | Globe Life                     |
+|     13,146,687,488 | ALLE     | Allegion                       |
+|     13,144,009,728 | CRL      | Charles River Laboratories     |
+|     13,104,363,520 | ERIE     | Erie Indemnity                 |
+|     13,000,381,440 | SJM      | J.M. Smucker Company (The)     |
+|     12,999,182,336 | AVY      | Avery Dennison                 |
+|     12,966,191,104 | GDDY     | GoDaddy                        |
+|     12,824,684,544 | UDR      | UDR Inc.                       |
+|     12,788,035,584 | CSGP     | CoStar Group                   |
+|     12,727,110,656 | BWA      | BorgWarner                     |
+|     12,723,620,864 | HAS      | Hasbro                         |
+|     12,353,202,176 | IT       | Gartner                        |
+|     12,257,974,272 | BAX      | Baxter International           |
+|     12,179,419,136 | DVA      | DaVita                         |
+|     11,901,937,664 | CPT      | Camden Property Trust          |
+|     11,547,214,848 | BXP      | BXP Inc.                       |
+|     11,501,617,152 | PNW      | Pinnacle West                  |
+|     11,441,793,024 | HRL      | Hormel Foods                   |
+|     11,344,230,400 | TECH     | Bio-Techne                     |
+|     11,012,008,960 | HII      | Huntington Ingalls Industries  |
+|     10,890,545,152 | LULU     | Lululemon Athletica            |
+|     10,804,878,336 | MOH      | Molina Healthcare              |
+|     10,802,249,728 | JKHY     | Jack Henry & Associates        |
+|     10,558,892,032 | AES      | AES Corporation                |
+|     10,555,455,488 | DECK     | Deckers Brands                 |
+|     10,540,347,392 | CLX      | Clorox                         |
+|     10,442,858,496 | ALGN     | Align Technology               |
+|     10,422,923,264 | UHS      | Universal Health Services      |
+|     10,415,446,016 | QRVO     | Qorvo                          |
+|     10,357,033,984 | MTCH     | Match Group                    |
+|     10,327,882,752 | GNRC     | Generac                        |
+|     10,282,465,280 | DPZ      | Domino's                       |
+|     10,220,440,576 | PAYC     | Paycom                         |
+|     10,129,572,864 | COO      | Cooper Companies (The)         |
+|     10,034,485,248 | MGM      | MGM Resorts                    |
+|      9,959,571,456 | FRT      | Federal Realty Investment T... |
+|      9,854,856,192 | FDS      | FactSet                        |
+|      9,753,800,704 | HSIC     | Henry Schein                   |
+|      9,656,879,104 | PODD     | Insulet Corporation            |
+|      9,109,003,264 | ARE      | Alexandria Real Estate Equi... |
+|      9,083,958,272 | APTV     | Aptiv                          |
+|      9,030,168,576 | PNR      | Pentair                        |
+|      8,928,865,280 | WYNN     | Wynn Resorts                   |
+|      8,736,188,416 | MHK      | Mohawk Industries              |
+|      8,494,798,848 | KMX      | CarMax                         |
+|      8,093,622,784 | MOS      | Mosaic Company (The)           |
+|      7,776,688,640 | AOS      | A. O. Smith                    |
+|      7,531,837,440 | EMN      | Eastman Chemical Company       |
+|      7,322,045,952 | TAP      | Molson Coors Beverage Company  |
+|      7,188,056,064 | CAG      | Conagra Brands                 |
+|      6,557,202,432 | NCLH     | Norwegian Cruise Line Holdings |
+|      6,477,306,880 | BLDR     | Builders FirstSource           |
+|      6,474,081,792 | LW       | Lamb Weston                    |
+|      6,371,508,224 | EPAM     | EPAM Systems                   |
+|      6,369,685,504 | CPB      | Campbell Soup Company          |
+|      6,063,817,216 | POOL     | Pool Corporation               |
+|      6,041,998,848 | CZR      | Caesars Entertainment          |
+|      5,920,248,320 | LKQ      | LKQ Corporation                |
+|      5,749,814,784 | MKTX     | MarketAxess                    |
+|      5,466,886,656 | TFX      | Teleflex                       |
+|      5,182,344,704 | CE       | Celanese                       |
+|      4,924,359,168 | AMTM     | Amentum                        |
+|      4,852,351,488 | ENPH     | Enphase Energy                 |
+|      1,408,801,920 | FMC      | FMC Corporation                |
+|          3,550,961 | PARA     | Paramount Global               |
++--------------------+----------+--------------------------------+

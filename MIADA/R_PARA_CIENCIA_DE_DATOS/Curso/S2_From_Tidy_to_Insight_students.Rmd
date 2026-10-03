@@ -1,0 +1,551 @@
+---
+title: "Session 2 · From tidy data to insight"
+subtitle: "R for Data Science · The València Airbnb project"
+author: "Your name here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    fig_width: 7
+    fig_height: 4.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+> **Where we are.** Session 1 ended with `listings_clean.rds`. The data pack also provides `calendar_monthly.rds` and `city_month.csv` — the output of HW1's optional Part D, ready-made so everyone has them. Today: graphics with ggplot2, the EDA loop, and a first model. By the end, answers for our client.
+
+**Today's route:**
+
+| Block | ⏱ | What we learn |
+|---|---|---|
+| 1 · Grammar of graphics | 75′ | `ggplot()`: aes, geoms, scales, facets, themes |
+| EXTRA · 2 · The EDA loop | 70′ | question → transform → plot → repeat; the calendar data joins in |
+| EXTRA · 3 · A first model | 40′ | `lm()`, reading coefficients, the bargain detector |
+| 4 · Wrap-up | — | today in one slide, the final project handout |
+
+Blocks marked **EXTRA** are for working through on your own after class.
+
+```{r libraries}
+library(tidyverse)
+library(broom)      # tidy model output
+library(scales)     # nice axis labels (€, %, thousands)
+
+listings <- read_rds("data/listings_clean.rds")
+snapshot_date <- ymd("2026-07-02")
+```
+
+---
+
+# Block 1 · The grammar of graphics ⏱ 75′
+
+Every ggplot is the same sentence: **data + aesthetic mappings + geometry**, plus optional layers that refine it.
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>) +
+  aes(x = <VAR>, y = <VAR>, colour = <VAR>) +   # map variables to visual channels
+  geom_<SOMETHING>()                             # draw them
+```
+
+## 1.0 · Sixty seconds of geoms
+
+The same sentence with a different `geom_` answers a different kind of question — distribution, comparison, relationship, amount:
+
+```{r}
+p_data <- listings |> filter(!is.na(price_eur), price_eur < 500)
+
+ggplot(p_data) + aes(x = price_eur) + geom_histogram(bins = 30)       # how is one variable distributed?
+ggplot(p_data) + aes(x = room_type, y = price_eur) + geom_boxplot()   # how does it differ across groups?
+ggplot(p_data) + aes(x = accommodates, y = price_eur) + geom_point()  # how do two variables relate?
+p_data |> count(zone) |>
+  ggplot() + aes(x = zone, y = n) + geom_col()                        # how much of each?
+```
+
+The geoms you will use most:
+
+```{r, eval=FALSE}
+geom_histogram()   # distribution of one numeric variable
+geom_density()     # its smoothed cousin
+geom_boxplot()     # distribution of a number, by group
+geom_point()       # scatter: two numeric variables
+geom_jitter()      # scatter + a little noise, for overlapping points
+geom_line()        # ordered data - time, almost always
+geom_col()         # bars with heights you computed
+geom_bar()         # bars that count the rows for you
+geom_smooth()      # trend line on top of a scatter
+geom_text()        # numbers or labels drawn on the plot
+```
+
+There are ~50 geoms; the [ggplot2 cheatsheet](https://posit.co/resources/cheatsheets/) is the catalogue. Today we need half a dozen.
+
+## 1.1 · Aesthetics: more channels, more variables
+
+`x` and `y` are only two of the visual channels — the **aesthetics** — a variable can be mapped to. The main ones:
+
+* `x`, `y` — position;
+* `colour` — the colour of points, lines and outlines; `fill` — the colour *inside* bars and boxes;
+* `size` (points), `linewidth` (lines), `shape` (point symbol), `linetype` (solid/dashed/dotted), `alpha` (transparency).
+
+Map a third variable to one of them and the legend appears on its own:
+
+```{r}
+# colour mapped to a category: one colour per room type
+ggplot(p_data) +
+  aes(x = accommodates, y = price_eur, colour = room_type) +
+  geom_point(alpha = 0.4)
+
+# fill is the "inside" colour - one fill per zone:
+ggplot(p_data) +
+  aes(x = zone, y = price_eur, fill = zone) +
+  geom_boxplot()
+
+# linetype: tells groups apart even in black and white
+# (geom_density = a smoothed histogram)
+ggplot(p_data) +
+  aes(x = price_eur, linetype = room_type) +
+  geom_density() +
+  scale_x_log10()
+```
+
+One distinction to get right from day one — **mapping** vs **setting**:
+
+* **inside `aes()`** → *mapped*: the channel varies with the data, and gets a legend;
+* **outside `aes()`**, as a geom argument → *set*: one constant value for every row;
+* the classic bug: `aes(colour = "blue")` maps colour to a "variable" whose value is the word `"blue"`, so you get one default reddish colour plus a useless legend. To paint the points blue, set it outside:
+
+```{r}
+ggplot(p_data) +
+  aes(x = accommodates, y = price_eur) +
+  geom_point(colour = "#2c7fb8", alpha = 0.3)   # all points: blue, translucent
+```
+
+## 1.2 · One variable: distributions
+
+Start with the nightly price:
+
+```{r}
+prices <- listings |> filter(!is.na(price_eur))
+
+ggplot(prices) + aes(x = price_eur) + geom_histogram()
+```
+
+Unreadable: a few €9,000 listings flatten everything else. Two fixes — **zoom**, or **change the scale**:
+
+```{r}
+# fix 1: zoom into the market segment we care about
+ggplot(prices |> filter(price_eur < 500)) +
+  aes(x = price_eur) +
+  geom_histogram(binwidth = 10)
+
+# fix 2: log scale - equal steps = equal *ratios*; right for skewed money data
+ggplot(prices) + aes(x = price_eur) + geom_histogram(bins = 40) + scale_x_log10()
+```
+
+That last line added something new: a **scale layer**.
+
+* Every aesthetic you map (x, y, colour, fill...) has a *scale*: the rule translating data values into positions or colours on screen.
+* You normally don't see them — ggplot adds sensible defaults silently (`scale_x_continuous()`, ...). Writing one yourself **replaces** the default.
+* `scale_x_log10()` swaps the x ruler for a logarithmic one: same data, different axis.
+* The naming pattern is always `scale_<aesthetic>_<kind>()`.
+
+> The log-scale histogram is nearly symmetric: València prices are roughly **log-normal**. Remember this — it is *why* Block 3 models `log(price)`, not price.
+
+## 1.3 · Two variables: distributions across groups
+
+One numeric variable, one categorical: use a **boxplot**.
+
+* the box spans the middle half of the data; the line inside is the **median**;
+* whiskers cover most of the rest; lone dots are outliers;
+* map the category to `x`, the number to `y` — one summarised distribution per group, side by side:
+
+```{r}
+ggplot(prices) +
+  aes(x = room_type, y = price_eur) +
+  geom_boxplot() +
+  scale_y_log10()
+```
+
+Categories default to alphabetical order, which is rarely what you want. **forcats** fixes order and crowding:
+
+```{r}
+# fct_reorder: order boxes by their median price
+ggplot(prices) +
+  aes(x = fct_reorder(room_type, price_eur, .fun = median), y = price_eur) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(x = NULL)
+```
+
+Two more layers before the next chart:
+
+* `labs()` — labels everything: axes (`x =`, `y =`), plot `title`/`subtitle`/`caption`, legends (addressed by their aesthetic: `colour =`, `fill =`); `NULL` removes one;
+* `fct_lump_n(f, n)` — keep the `n` most frequent levels, lump the rest into `"Other"`: the fix for an axis with 70 barrios:
+
+```{r}
+# fct_lump_n + fct_reorder for a barrio bar chart: top 12, ordered, rest lumped
+listings |>
+  mutate(barrio = fct_lump_n(neighbourhood_cleansed, n = 12)) |>
+  count(barrio) |>
+  ggplot() +
+  aes(x = n, y = fct_reorder(barrio, n)) +      # categories read best on the y axis
+  geom_col() +
+  labs(y = NULL, x = "listings")
+```
+
+## 1.4 · Position: a map with zero GIS
+
+Latitude and longitude are just numbers — a scatter plot *is* a map:
+
+```{r}
+ggplot(prices |> filter(price_eur < 500)) +
+  aes(x = longitude, y = latitude, colour = price_eur) +
+  geom_point(alpha = 0.4, size = 0.8) +
+  scale_colour_viridis_c(trans = "log10") +   # colourblind-safe, perceptually even
+  coord_fixed() +
+  labs(colour = "€/night")
+```
+
+`colour` is an aesthetic like any other, so it has a scale too:
+
+* `scale_colour_viridis_c()` — the **viridis** gradient: perceptually uniform (equal data steps = equal colour steps) and colour-blind-safe;
+* the suffix declares the variable type: `_c` continuous (numbers), `_d` discrete (categories);
+* `trans = "log10"` — the log trick from 1.2, inside the colour scale. On a linear scale, the typical €40–€150 listings would share a narrow band of purple while a few €500 outliers took the rest of the gradient; on a log scale, doubling the price always moves the colour by the same amount, so ordinary listings get distinguishable colours.
+
+Ciutat Vella and the beach strip stand out immediately.
+
+## 1.5 · Small multiples: `facet_wrap()`
+
+When groups overlap too much in one panel, give each its own:
+
+```{r}
+ggplot(prices) +
+  aes(x = price_eur) +
+  geom_histogram(bins = 30) +
+  scale_x_log10() +
+  facet_wrap(~ room_type, scales = "free_y")
+```
+
+`facet_wrap(~ room_type)` is the third big idea of the grammar: **small multiples**.
+
+* `~ variable` reads "one panel per level of this variable";
+* panels share the same axes by default — that is what makes them comparable at a glance;
+* `scales = "free_y"` relaxes exactly that: each panel gets its own y range (x stays shared);
+* crossing *two* variables into a grid → `facet_grid(rows ~ cols)`:
+
+```{r}
+# facet_grid: one ROW per zone, one COLUMN per room type - 3 x 2 = 6 panels
+ggplot(prices |> filter(room_type %in% c("Entire home/apt", "Private room"))) +
+  aes(x = price_eur) +
+  geom_histogram(bins = 30) +
+  scale_x_log10() +
+  facet_grid(zone ~ room_type)
+```
+
+Reading a facet grid: scan down a column to compare zones for one room type, across a row to compare room types within one zone.
+
+🧰 **Sprint toolbox** — the new pieces beyond what you just saw demoed:
+
+| Function | What it does |
+|---|---|
+| `geom_jitter(width = , alpha = )` | a scatter that adds a little random horizontal noise, so points stacked on integer x-values stop hiding each other; `alpha` (0–1) makes points translucent |
+| `geom_smooth()` | overlays a fitted trend line (with its uncertainty band) on a scatter |
+| `binwidth = ` / `bins = ` | in `geom_histogram()`: width of each bar / total number of bars |
+| `fct_reorder(cat, num, .fun = median)` | reorder a categorical axis by a statistic of another column (from 1.3) |
+| `labs(x = , y = , title = )` | label axes and titles; `NULL` removes a label |
+
+**Sprint 1** ⏱ 15:00 — four plots, one insight each. For each: build it, then write ONE sentence of what it says.
+
+1. Histogram of `review_scores_rating` — what shape is it, and why might that be?
+2. Boxplots of `price_person` by `zone`, log scale, ordered by median
+3. Bar chart: number of listings in the top 10 barrios, ordered, bars horizontal
+4. Scatter: `accommodates` vs `price_eur` (log y). Points overlap — fix it (`geom_jitter()`, `alpha`). Add `geom_smooth()` — what does the trend line suggest?
+
+```{r ex01}
+# Your code here
+
+```
+
+---
+
+# EXTRA · Block 2 · The EDA loop ⏱ 70′
+
+EDA is a loop: ask a question → transform → plot → ask a better question. Three worked rounds, then your turn.
+
+## 2.1 · Seasonality — the monthly calendar
+
+Two new tables from the data pack, built from the ~2.9-million-row `calendar.csv.gz` (one year of nightly availability, aggregated by month — HW1's optional Part D). First look before plotting, as always:
+
+```{r}
+calendar_monthly <- read_rds("data/calendar_monthly.rds")
+city_month       <- read_csv("data/city_month.csv", show_col_types = FALSE)
+
+head(calendar_monthly, 3)   # one row per listing x month: occupancy proxy + typical minimum stay
+head(city_month, 3)         # one row per month: mean_occ = average occupancy;
+                            # share_full = share of listings with NO bookable night
+                            # at all that month (calendar entirely booked or blocked)
+```
+
+`geom_line()` connects points from left to right — it only makes sense when x has a natural order, usually time. One line = the city's year:
+
+```{r}
+ggplot(city_month) +
+  aes(x = month, y = mean_occ) +
+  geom_line() +
+  geom_point()
+```
+
+The two measures answer different questions:
+
+* `mean_occ` — how full a typical listing's month is;
+* `share_full` — the share of listings with **no bookable night at all** that month.
+
+Both on one chart? **Never use two y-axes** — two different rulers on one panel mislead the reader. Make two plots and stack them: the **patchwork** package combines saved ggplots with `/` (stack) and `+` (side by side):
+
+```{r}
+library(patchwork)   # install.packages("patchwork") the first time
+
+p_occ  <- ggplot(city_month) + aes(x = month, y = mean_occ) +
+  geom_line() + labs(y = "mean occupancy")
+
+p_full <- ggplot(city_month) + aes(x = month, y = share_full) +
+  geom_line() + labs(y = "share fully closed")
+
+p_occ / p_full   # one above the other
+```
+
+Read the two panels with care:
+
+* the calendar is *forward-looking*: months near the snapshot look fuller simply because bookings have had time to accumulate — part of July's 68% is proximity, not demand;
+* `share_full` rises with distance: many hosts haven't opened next spring's calendar yet, so far months are dominated by fully-closed listings;
+* neither panel is a pure demand signal — compare months at a similar distance, or the same month across snapshots.
+
+## 2.2 · The superhost question
+
+Do superhosts charge more — or are they just *placed* better?
+
+We need medians *per zone and superhost status*:
+
+* `group_by()` takes **two** columns — one mini-table per combination (3 zones × 2 statuses = 6);
+* `fill` — the "colour inside" aesthetic of bars: mapped to `host_is_superhost`, each zone gets a pair of bars;
+* `position = "dodge"` — place the pair side by side. The other options: `"stack"` (the default: bars pile on top of each other — good for totals), `"fill"` (stack, then stretch every bar to full height — shows shares instead of values), `"identity"` (each bar drawn at its own value, overlapping — for bars, almost never what you want).
+
+```{r}
+listings |>
+  filter(!is.na(price_eur), !is.na(host_is_superhost), price_eur < 1000) |>
+  group_by(zone, host_is_superhost) |>
+  summarise(median_price = median(price_eur), n = n(), .groups = "drop") |>
+  ggplot() +
+  aes(x = zone, y = median_price, fill = host_is_superhost) +
+  geom_col(position = "dodge") +
+  scale_fill_brewer(palette = "Dark2", labels = c("regular", "superhost"), na.translate = FALSE) +
+  labs(fill = NULL, x = NULL, y = "median €/night")
+```
+
+New scale, same logic — *categorical* colour/fill:
+
+* `scale_fill_brewer(palette = "Dark2")` — a ready-made [ColorBrewer](https://colorbrewer2.org) palette (`"Set2"`, `"Paired"`...): designed for distinguishability, most are colour-blind-safe;
+* `na.translate = FALSE` — keep the NA level out of the legend;
+* to set exact colours yourself: `scale_fill_manual(values = c("regular" = "grey65", "superhost" = "#2c7fb8"))` — likewise `scale_colour_manual()`.
+
+Why split by zone? Because superhosts might simply be located in expensive areas — one overall comparison would mix "superhosts charge more" with "superhosts are in pricier zones". Comparing inside each zone removes (roughly) the location effect: the gap that remains within a zone is not explained by where the listing is. Block 3 does this properly, controlling for every variable at once.
+
+## 2.3 · Reviews over time
+
+Each review has a date, so counting reviews per month shows the platform's activity over time:
+
+* `floor_date(date, "month")` — round every date down to the first day of its month;
+* `count(month)` — tally each month;
+* `geom_line()` — connect the months in order:
+
+```{r}
+reviews <- read_csv("data/reviews.csv.gz", show_col_types = FALSE) |>
+  # Session 1's lesson: in some snapshots the date arrives as "12/10/2010" text
+  mutate(date = if (is.character(date)) dmy(date) else date)
+
+reviews |>
+  count(month = floor_date(date, "month")) |>
+  ggplot() +
+  aes(x = month, y = n) +
+  geom_line() +
+  labs(y = "reviews written", x = NULL)
+```
+
+Each review marks a stay, so the curve traces the market's growth. Find the COVID crater and the recovery.
+
+🧰 **Sprint toolbox**:
+
+| Function | What it does |
+|---|---|
+| `aes(colour = group)` + `geom_line()` | one line per group value, each its own colour — the legend appears by itself |
+| `linewidth = ` | line thickness (lines use `linewidth`, points use `size`) |
+| `scale_colour_brewer(palette = "Dark2")` | colour-blind-friendly palette for categories (fill version: `scale_fill_brewer()`, seen in 2.2) |
+| `scale_x_continuous(labels = label_percent())` | format axis ticks as percentages — siblings: `label_dollar(prefix = "€")`, `label_comma()` (package **scales**) |
+| `left_join(df, join_by(a == b))` | Session 1's join — here to attach each listing's `zone` to `calendar_monthly` |
+
+**Sprint 2** ⏱ 20:00 — pick **one** question from the menu and produce **one** plot plus **one** sentence of insight. Solutions to all five are below — try yours before opening them.
+
+* (a) Does the **Beach** fill up more sharply in summer than the **Centre**? (join `calendar_monthly` to listings' `zone`, then month × zone)
+* (b) Which districts are most dominated by **entire homes**?
+* (c) Do **higher-rated** listings charge more? (rating vs price, and beware the rating pile-up)
+* (d) Do **veteran listings** (`listing_age_yrs`) hold better ratings than recent ones?
+* (e) Where do **long-stay** listings (`long_stay`) live — Centre or periphery?
+
+```{r ex02}
+# Your code here
+
+```
+
+---
+
+# EXTRA · Block 3 · A first model: what drives the price? ⏱ 40′
+
+EDA showed price moves with capacity, room type, zone... **all at once**. A linear model holds everything constant at the same time.
+
+**`lm()` in one slide.** `lm(y ~ x1 + x2, data = df)` fits a *linear regression*:
+
+* it finds the coefficients of `y ≈ b0 + b1·x1 + b2·x2` that minimize the squared errors across all rows;
+* the first argument is a **formula**: `~` reads "explained by", `+` adds predictors;
+* a categorical column (like `room_type`) expands automatically into one yes/no indicator per level, each measured *against a baseline level*;
+* inference, assumptions, diagnostics → your statistics course. Today: fit, read, stay honest.
+
+We model `log(price_eur)` rather than raw price: 1.2 showed prices are log-normal, and log coefficients can be read as *percentages* (below).
+
+First, the **model frame** — the subset the model sees, each filter deliberate:
+
+* known price only;
+* under €1,000 — a few extreme prices would drag the whole fit;
+* the two room types that make an apples-to-apples comparison;
+* `drop_na()` on every predictor: `lm()` would drop incomplete rows silently anyway — better to do it ourselves and *know it*:
+
+```{r}
+model_frame <- listings |>
+  filter(!is.na(price_eur), price_eur < 1000,
+         room_type %in% c("Entire home/apt", "Private room")) |>
+  drop_na(accommodates, baths, review_scores_rating)
+
+m1 <- lm(log(price_eur) ~ accommodates + baths + room_type + zone +
+           review_scores_rating,
+         data = model_frame)
+
+tidy(m1)
+```
+
+`tidy(m1)` (package **broom**) returns the model as a tibble, one row per coefficient:
+
+* `estimate` — the fitted number; `std.error` — its uncertainty;
+* `statistic` / `p.value` — is the effect distinguishable from zero, given the noise? (read lightly today; the full story is stats-course material);
+* note `room_type` became `room_typePrivate room`: a yes/no indicator against the baseline level (entire homes), which lives inside the intercept.
+
+**From estimates to percentages.** The estimates are in log-euros — exact but unreadable. Additive steps in log are multiplicative steps in €: a coefficient `b` multiplies the price by `exp(b)`, so `(exp(b) - 1) × 100` is the **percentage effect**. Put both side by side:
+
+```{r}
+tidy(m1) |>
+  mutate(pct_effect = (exp(estimate) - 1) * 100) |>
+  select(term, estimate, pct_effect)
+```
+
+Two rows by hand — note the asymmetry:
+
+* `accommodates` ≈ 0.13 → `exp(0.13)` ≈ 1.14 → **+14% per guest**;
+* `room_typePrivate room` ≈ −0.66 → `exp(−0.66)` ≈ 0.52 → **−48%** — *not* −66%!
+* shortcut: for |b| < 0.1 (like `zoneCentre`) `estimate` and `pct_effect` nearly coincide — beyond that, do the `exp()`;
+* ignore `pct_effect` on the intercept row: the intercept is the baseline log-price, not an effect.
+
+How to state a coefficient (structure, not exact numbers): *"holding everything else fixed, each extra guest of capacity raises price by about X%"*; *"a private room costs about Y% less than an entire home, same size, same zone"*; *"the Centre premium survives all controls"*. Whatever `review_scores_rating` does — a lot, a little, nothing — report it with its size (Sprint 2's question (c) previewed this).
+
+```{r}
+glance(m1) |> select(r.squared, nobs)
+```
+
+`glance(m1)` returns a one-row model summary. Three numbers, in this order:
+
+* `nobs` — the rows the model *actually* used: compare with `nrow(listings)`; filters + `drop_na()` removed the rest. Always know how much data you modelled.
+* `r.squared` — the share of the variance of `log(price)` explained, 0 to 1: here about half.
+
+The third broom verb, `augment(m, data = df)`, returns your data with the model's per-row columns attached:
+
+* `.fitted` — the model's prediction for that row: here a predicted *log*-price, so `exp(.fitted)` is the prediction in €;
+* `.resid` — the residual, actual − fitted: positive = the listing charges more than the model expects, negative = less;
+* one row per observation the model used, so you can filter, plot and rank predictions like any other table.
+
+Now plot what the model predicts against what is real:
+
+```{r}
+augment(m1, data = model_frame) |>
+  mutate(predicted_eur = exp(.fitted)) |>
+  ggplot() +
+  aes(x = predicted_eur, y = price_eur) +
+  geom_point(alpha = 0.15) +
+  geom_abline(colour = "#2c7fb8", linewidth = 1) +   # reference line: prediction = reality
+  scale_x_log10() + scale_y_log10() +
+  labs(x = "predicted €/night", y = "actual €/night")
+```
+
+(`geom_abline()` draws a reference line — by default slope 1, intercept 0: the 45° diagonal where prediction = reality.) How to read the cloud:
+
+* the cloud tracks the diagonal — the model captures something real;
+* at any predicted price there is wide vertical spread: identical-looking flats charging quite different rates;
+* that spread **is** the missing half of R²: photos, terrace, decor, host skill — everything our table can't see;
+* in the report: *"size, type and location explain about half of the price variation"*. R² of 0.3–0.6 is normal for prices.
+
+## The bargain detector
+
+A strongly **negative** `.resid` is a listing *cheaper than the model thinks it should be* — exactly what our client wants to browse:
+
+```{r}
+bargains <- augment(m1, data = model_frame) |>
+  filter(is_active, number_of_reviews >= 10) |>      # real, live listings only
+  slice_min(.resid, n = 10) |>
+  mutate(expected_eur = exp(.fitted)) |>
+  select(name, neighbourhood_cleansed, room_type,
+         price_eur, expected_eur, review_scores_rating)
+bargains
+```
+
+Two caveats: the model can't see photos or renovation quality (cheap may be cheap *for a reason*), and `exp(.fitted)` is an approximate back-transform. This is a shortlist to visit, not to buy.
+
+*Stretch — a first classifier.* When the outcome is yes/no instead of a number, use **`glm()`** (*generalized* linear models):
+
+* same formula language, plus a `family` argument declaring the outcome type;
+* `family = binomial` = **logistic regression**: it models the *probability* of TRUE;
+* coefficients are in log-odds — for now read only **sign and significance**; positive = associated with being a superhost:
+
+```{r}
+m2 <- glm(host_is_superhost ~ review_scores_rating + number_of_reviews +
+            calculated_host_listings_count,
+          data = listings, family = binomial)
+tidy(m2)   # read the *signs*: what goes with being a superhost?
+```
+
+🧰 **Sprint toolbox** — model-handling tools (all from **broom** except the first):
+
+| Function | What it does |
+|---|---|
+| `update(m, . ~ . + new_var)` | refit an existing model with a tweaked formula: `. ~ .` means "same response, same predictors", then `+`/`-` terms |
+| `tidy(m)` | the coefficient table as a tibble (estimate, std.error, p.value) |
+| `glance(m)` | one-row model summary — `glance(m)$r.squared` picks out the fit |
+| `augment(m, data = df)` | your data plus per-row model columns: `.fitted` (prediction) and `.resid` (actual − predicted) |
+| `exp(x)` | undo the log: `exp(coef) - 1` ≈ the % effect; `exp(.fitted)` ≈ the predicted price in € |
+
+**Sprint 3** ⏱ 15:00:
+
+1. Add `long_stay` and `baths_shared` to `m1` as `m1b`. Does R² improve? Interpret ONE new coefficient in one plain-language sentence.
+2. Re-run the bargain detector on **Centre** listings only. Would you send your client any of the top 5?
+
+```{r ex03}
+# Your code here
+
+```
+
+---
+
+# Block 4 · Wrap-up
+
+* **Grammar of graphics** — every plot is data + `aes()` + geom; swap the geom, change the question. Scales replace silent defaults (`scale_x_log10`, viridis for continuous colour, brewer for categories, `label_percent()` on axes); order categories with `fct_reorder`/`fct_lump_n`; `facet_wrap`/`facet_grid` for small multiples.
+* **The EDA loop** — question → transform → plot → repeat; `group_by()` with two columns; two measures = two stacked plots (patchwork), **never two y-axes**; read data critically (the booking-horizon caveat, silent NA lines after joins).
+* **The model** — `lm(log(price) ~ ...)`; read it with broom: `tidy` (coefficients: `exp(b) − 1` = % effect), `glance` (`nobs`, `r.squared`, `sigma`), `augment` (`.fitted`, `.resid` → the bargain detector); `glm(family = binomial)` for yes/no outcomes.
+
+---

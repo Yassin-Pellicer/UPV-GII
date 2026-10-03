@@ -1,0 +1,529 @@
+---
+title: "Session 1 · From raw data to tidy data"
+subtitle: "R for Data Science · The València Airbnb project"
+author: "Your name here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = TRUE)
+```
+
+> **The brief.** A friend wants to invest in a flat in València and rent it on Airbnb. She has questions: *Where? What kind of listing? At what price?* You are her data scientist. Today we turn the raw data into a clean, analysis-ready table; in Session 2 we interrogate it and answer her.
+>
+> **The data.** [Inside Airbnb](https://insideairbnb.com/get-the-data/) publishes quarterly snapshots of every Airbnb listing in ~100 cities, València included. We work with the **frozen snapshot from Poliformat** (`data/` folder inside your RStudio project) so that everyone has identical data.
+
+**Today's route** — every stop uses the project data:
+
+| Block | ⏱ | What we learn |
+|---|---|---|
+| 1 · First contact | 45′ | the pipe, `read_csv`, `glimpse`, `skim`, `count`, `distinct` |
+| 2 · Cleaning | 75′ | `stringr`, `parse_number`, `lubridate`, NA strategy |
+| 3 · Transform, tidy & join | 60′ | dplyr verbs, grouped summaries, pivots, joins |
+| 4 · Wrap-up | — | save with `write_rds`, today in one slide |
+
+```{r libraries}
+library(tidyverse)   # readr, dplyr, tidyr, stringr, lubridate, forcats, ggplot2...
+library(janitor)     # clean_names() and friends
+library(skimr)       # data overview
+```
+
+```{r snapshot-date}
+# The date the snapshot was taken - our "today" for every date computation.
+# (Why not Sys.Date()? Because the analysis must give the same answer next year.)
+snapshot_date <- ymd("2026-07-02")
+```
+
+---
+
+# Block 1 · First contact with the data ⏱ 45′
+
+One tool before the data: the **pipe** `|>`. It feeds the result on its left into the function on its right, so code reads like a recipe — *take the data, and then filter, and then summarise*:
+
+```{r}
+# these two lines are identical:
+sum(c(3, 7, 1, 9, 4) %in% c(1, 2, 3, 4))
+c(3, 7, 1, 9, 4) %in% c(1, 2, 3, 4) |> sum()
+```
+
+From here on, everything is pipes.
+
+`readr::read_csv()` reads CSV files — including gzip-compressed ones, no unzipping needed — into a **tibble** (a modern data frame: same thing, better printing, fewer surprises):
+
+```{r read-listings}
+listings_raw <- read_csv("data/listings.csv.gz")
+dim(listings_raw)
+```
+
+> 💡 **About that parsing message.** When `read_csv()` prints its column specification, read it — it says what type it guessed for every column:
+>
+> * it usually guesses well, dates included;
+> * the catch: it only looks at the first 1000 rows (`guess_max`). A column whose first 1000 values are blank gets guessed as `logical` and mis-parses from row 1001 on — the #1 "my import is broken" bug with real Inside Airbnb files;
+> * if readr reports parsing problems, `problems()` lists them.
+
+First look — three habits, in order:
+
+* `glimpse()` — the table turned sideways: every column, its type, first values. Your map of what exists.
+* `select() |> head()` — zoom into the few columns you care about right now.
+* `skim()` — the full medical check-up: types, missing values, distributions.
+
+```{r}
+glimpse(listings_raw)      # every column, its type, first values
+```
+
+```{r}
+listings_raw |> select(id, name, neighbourhood_cleansed, room_type, price,
+                       host_since, last_review) |> head()
+```
+
+```{r skim, results='hide'}
+skim(listings_raw)         # full quality report: types, NAs, distributions
+# (output hidden in the knitted version - run it live, it is long and worth it)
+```
+
+Two workhorse questions you will ask of every dataset from now on:
+
+* `n_distinct(x)` — how many *different* values does `x` take? (HW0's `length(unique(x))`, in one word)
+* `count(col)` — a frequency table: one row per distinct value, its count in a column named `n`; `sort = TRUE` puts the biggest first:
+
+```{r}
+n_distinct(listings_raw$host_id)                 # how many different hosts?
+listings_raw |> count(room_type, sort = TRUE)    # how many of each type?
+```
+
+Column names here are already clean `snake_case`. Real-world files often aren't (`"Fecha Alta"`, `"% Ocupación"`...) — make `janitor::clean_names()` a reflex first step:
+
+```{r}
+listings_raw <- listings_raw |> clean_names()    # a no-op here, a lifesaver elsewhere
+```
+
+Every column's meaning is documented in the official [data dictionary](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit) — keep it open, always.
+
+🧰 **Sprint toolbox** — every function you need, in one glance. All the verbs are used piped, e.g. `listings_raw |> count(room_type)`. (`filter`, `mutate` and `summarise` get their proper treatment in Block 3; for now, use them exactly as sketched here.)
+
+| Function | What it does |
+|---|---|
+| `dim(df)` · `nrow(df)` | table dimensions · number of rows |
+| `n_distinct(x)` | how many *different* values `x` contains |
+| `count(col, sort = TRUE)` | frequency table of `col`, biggest first (can take several columns) |
+| `filter(condition)` | keep only the rows where the condition is TRUE |
+| `mutate(new = expr)` | add a new column computed from existing ones |
+| `summarise(name = fun(col))` | collapse the table to one summary row (`min()`, `mean()`, ...) |
+| `mean(is.na(x))` | share of missing values — the TRUE-counts-as-1 trick from HW0 |
+
+**Sprint 1** ⏱ 10:00 — first eight facts for our client. Answer with code, one pipe each:
+
+1. How many listings and how many variables do we have?
+2. How many different hosts? So, on average, how many listings per host?
+3. What share of listings is each `room_type`? (`count()` + `mutate()`)
+4. The 5 neighbourhoods (`neighbourhood_cleansed`) with most listings
+5. How many listings have **never** been reviewed? (`number_of_reviews`)
+6. What share of listings has no `price`? Can we answer "what does an Airbnb cost" ignoring this?
+7. Who is the host with most listings in València? (`host_name` + `host_id` — why both?)
+8. How far back does the platform's memory reach — the *earliest* `first_review` in the data?
+
+```{r ex01}
+# Your code here
+
+```
+
+---
+
+# Block 2 · Cleaning: types, text, dates, NAs ⏱ 75′
+
+Look closely at what `read_csv()` could *not* solve for us:
+
+```{r}
+listings_raw |> select(price, bathrooms_text, host_is_superhost,
+                       license, amenities) |> head()
+```
+
+`price` is text. `bathrooms_text` is text. `license` is a long tangle of text. This is normal: **real data arrives as strings**, and turning strings into usable variables is where a data scientist earns their salary.
+
+## 2.1 · Money: `price` → number
+
+`price` looks like `"$1,050.00"` (the file uses a `$` prefix whatever the real currency — here it means euros). `readr::parse_number()` extracts the number and ignores the decoration:
+
+```{r}
+listings <- listings_raw |>
+  mutate(price_eur = parse_number(price))
+
+listings |> select(price, price_eur) |> filter(!is.na(price)) |> head(4)
+listings |> summarise(n_missing = sum(is.na(price_eur)),
+                      share_missing = mean(is.na(price_eur)))
+```
+
+About 7% of prices are missing — modest, but **never silently drop rows** before asking why they're missing. Our policy, stated out loud: keep all rows; for *price* analyses use the subset with known price. And before shrugging "it's just 7%", check whether the missingness is random or *structural*:
+
+```{r}
+# is missing price random - or structural? Compare against availability:
+listings |>
+  group_by(no_availability = availability_365 == 0) |>
+  summarise(share_na_price = mean(is.na(price_eur)), n = n())
+```
+
+Not random at all: listings with **zero availability** in the coming year are missing their price ~99% of the time — the price is missing *because* the listing is not currently on the market. (In some snapshots this pushes overall missingness above 30%.)
+
+> 💡 **So can we drop them?** It depends on the question being asked:
+>
+> * *"What does booking a night cost?"* — dropping is fine. The price-less listings aren't bookable, so they aren't part of that market.
+> * *"What could my flat charge?"* — dropping is biased. The missing prices belong to inactive listings, not to a random sample.
+> * The rule: dropping NAs is only safe when the missingness has nothing to do with the question.
+
+## 2.2 · Logicals in disguise: `"t"` / `"f"`
+
+In the raw file, `host_is_superhost` and `instant_bookable` are coded `"t"`/`"f"` — and if you check `glimpse()`, they are *already* `<lgl>`: readr recognized the coding and parsed them for us. Verify, and note the NAs:
+
+```{r}
+listings |> count(host_is_superhost)
+```
+
+Don't rely on that luck. Files coded `"yes"/"no"`, `"Sí"/"No"` or `"0"/"1"`-as-text arrive as character, and then the conversion idiom is yours to apply:
+
+```{r}
+# the general pattern (a no-op here, since readr already did it):
+# listings |> mutate(host_is_superhost = host_is_superhost == "yes")
+```
+
+> ⚠️ And never "convert" a column without checking its current type first — running `x == "t"` on an already-logical column silently turns every value into `FALSE`. Check with `class()` or `glimpse()`, *then* transform.
+
+## 2.3 · Text surgery with stringr: `bathrooms_text`
+
+`"1 bath"`, `"1.5 baths"`, `"2 shared baths"`, `"Half-bath"` — three pieces of information tangled in one string: how many, shared or private, and a special word for ½.
+
+```{r}
+listings |> count(bathrooms_text, sort = TRUE) |> head(8)
+
+listings <- listings |>
+  mutate(
+    # first rewrite the special case as text, then parse - no warnings, no branches:
+    baths        = parse_number(
+                     str_replace(bathrooms_text,
+                                 regex("half-?bath", ignore_case = TRUE), "0.5")),
+    baths_shared = str_detect(bathrooms_text, "shared")
+  )
+
+listings |> count(baths, baths_shared, sort = TRUE) |> head(6)
+```
+
+In words:
+
+* `baths` — first rewrite the awkward case (`"Half-bath"` → `"0.5"`, any capitalisation), *then* let `parse_number()` read the leading number of every string;
+* `baths_shared` — ask each string whether the word `"shared"` appears;
+* net result: one tangled column became two clean ones — a number and a logical.
+
+The `stringr` trio to remember:
+
+* `str_detect()` — is the pattern there?
+* `str_remove()` / `str_replace()` — delete it / swap it;
+* `str_extract()` — pull the matching piece out.
+
+All three take regular expressions — of which we use only a pinch in this course.
+
+## 2.4 · Time with lubridate
+
+`read_csv` already parsed `first_review` and `last_review` as dates (ISO format helps). When it doesn't — or when you need to compute with dates — **lubridate** is the toolbox. The essentials in one glance:
+
+* **parse text → date** — `ymd("2026-07-02")`, `dmy("02/07/2026")`, `mdy(...)`: pick the function spelling the order the text is written in (`ymd_hms()` and friends for date-times);
+* **build from pieces** — `make_date(year, month, day)`;
+* **extract components** — `year()`, `month()`, `day()`, `wday(label = TRUE)` for the weekday, `hour()`;
+* **round** — `floor_date(date, "month")`: every date down to the 1st of its month;
+* **arithmetic** — `interval(start, end)` measured with `time_length(span, "years")`; add or subtract calendar periods with `months(12)`, `days(7)`; `today()` is today.
+
+In our data:
+
+```{r}
+listings <- listings |>
+  mutate(
+    listing_age_yrs   = time_length(interval(first_review, snapshot_date), "years"),
+    months_since_rev  = time_length(interval(last_review, snapshot_date), "months"),
+    is_active         = !is.na(last_review) & last_review >= snapshot_date - months(12)
+  )
+
+listings |> summarise(mean_age = mean(listing_age_yrs, na.rm = TRUE),
+                      share_active = mean(is_active))
+```
+
+Line by line:
+
+* `interval(first_review, snapshot_date)` — the time span between two dates;
+* `time_length(span, "years")` — measure that span in the unit you choose (fractional years here);
+* `is_active` reads as a sentence: *has a last review, and it falls within the 12 months before the snapshot* — `months(12)` is lubridate's "twelve calendar months", varying month lengths handled for you.
+
+
+> ⚠️ You'd naturally compute *host tenure* from `host_since` — but in this snapshot `host_since` (and `host_response_*`) arrive **completely empty**. Real sources drift: columns appear, empty out, change format. Check before you trust — and keep a plan B (here: `first_review` as the listing's age on the market).
+
+## 2.5 · Sneaky non-NAs: `na_if()`
+
+**Missingness wears costumes**: `"N/A"`, `"unknown"`, `999`, `"-"` — values that *mean* missing but that R happily treats as valid data. `na_if(x, value)` turns one disguise into a real NA:
+
+```{r}
+rates <- c("92%", "88%", "N/A", "100%")
+parse_number(na_if(rates, "N/A"))
+```
+
+Audit every categorical column with `count()` before trusting it — in several Inside Airbnb snapshots `host_response_time` carries literal `"N/A"` strings (in ours it arrives empty instead). Alternative at import time: `read_csv(..., na = c("", "N/A"))`.
+
+🧰 **Sprint toolbox** — the new pieces for this sprint (everything else you've just seen in action):
+
+| Function | What it does |
+|---|---|
+| `case_when(cond ~ value, ..., TRUE ~ default)` | multi-branch if/else inside `mutate()`: conditions are tried top to bottom, first match wins, `TRUE ~ ...` is the catch-all. E.g. `size = case_when(accommodates <= 2 ~ "small", accommodates <= 5 ~ "medium", TRUE ~ "large")` — a 3-guest flat is "medium" because the first condition already failed |
+| `str_detect(x, pattern)` | TRUE when the pattern appears anywhere in the string (from 2.3) |
+| `str_count(x, pattern)` | how many times the pattern appears in the string |
+| `str_extract(x, pattern)` | pull out the first fragment of text matching the pattern |
+| `year(date)` | the year of a date — same family as `month()`, `day()`, `wday()` |
+| `regex("...", ignore_case = TRUE)` | wrap a pattern to make it case-insensitive |
+
+**Sprint 2** ⏱ 15:00 — your turn to clean. Extend `listings` with:
+
+1. `n_amenities`: how many amenities each listing advertises (count the commas in `amenities` with `str_count()` and add 1). What's the median? And the maximum — is it plausible?
+2. `price_person`: price per accommodated guest
+3. `long_stay`: TRUE when `minimum_nights` ≥ 30 (these are not tourist rentals — how many are there?)
+4. `listed_year`: the year the listing entered the market (proxy: `year(first_review)` — check what `host_since` contains in this snapshot before reaching for it!)
+5. `license_status`: `"licensed"` when `license` contains a `"VT-"` tourist-licence number, `"exempt"` when it mentions Exempt, `"none"` when missing, `"other"` otherwise (`case_when` + `str_detect` — mind the order of the branches!). What share is licensed?
+6. *Stretch:* some hosts SHOUT. How many `name`s contain **no lowercase letters at all**? (`str_detect` with pattern `"^[^a-z]+$"` — a character class: from start `^` to end `$`, only characters that are *not* a–z.)
+
+```{r ex02}
+listings <- listings |>
+  mutate(
+    n_amenities = str_count(amenities, ",") + 1,
+    price_person = price_eur / accommodates,
+    long_stay = minimum_nights >= 30,
+    listed_year = year(first_review),
+    license_status = case_when(
+      is.na(license) ~ "none",
+      str_detect(license, "VT-") ~ "licensed",
+      str_detect(license, regex("exempt", ignore_case = T)) ~ "licensed",
+      TRUE ~ "other"
+    )
+  )
+
+listings |> summarise(median_amen = median(n_amenities), max_amen = max(n_amenities))
+glimpse(listings)
+```
+
+---
+
+# Block 3 · Transform, tidy & join ⏱ 60′
+
+## 3.1 · The dplyr verbs, all together now
+
+Each takes a table, returns a table — that's why they chain:
+
+```{r}
+listings |>
+  filter(room_type == "Entire home/apt", is_active,          # rows
+         neighbourhood_cleansed == "RUSSAFA") |>   # barrios are UPPERCASE in the data!
+  select(name, accommodates, price_eur, review_scores_rating) |>   # columns
+  arrange(desc(review_scores_rating)) |>                     # order
+  head(5)
+```
+
+Top to bottom:
+
+* `filter(...)` — keep rows: entire homes, active, in Russafa (comma-separated conditions combine with AND; note the data spells barrios in UPPERCASE — `== "Russafa"` would silently match *nothing*);
+* `select(...)` — keep four columns;
+* `arrange(desc(...))` — sort by rating, best first;
+* `head(5)` — show five.
+
+Each verb takes a table and returns a table — the chain never breaks, and the code is its own documentation.
+
+`select()` also takes helpers — `starts_with("review_scores")`, `contains("host")`, `where(is.numeric)` — and with 90 columns you will want them.
+
+## 3.2 · Grouped summaries — the heart of EDA
+
+Half of all EDA questions have the same shape: *compute X **per** group*. The answer is always the same two-step — **`group_by()` splits, `summarise()` collapses**:
+
+* `group_by(barrio = neighbourhood_cleansed)` — split into one mini-table per barrio (renaming the column on the fly);
+* `summarise(...)` — reduce each mini-table to a single row, computing whatever you ask:
+  * `n()` — how many rows landed in this group (no arguments needed);
+  * `median(price_eur)` — a robust centre;
+  * `mean(logical)` — our proportion trick ("share of superhosts");
+* the result is itself a small table — one row per barrio — to filter and rank like any other:
+
+```{r}
+barrio_stats <- listings |>
+  filter(!is.na(price_eur)) |>
+  group_by(barrio = neighbourhood_cleansed) |>
+  summarise(n            = n(),
+            median_price = median(price_eur),
+            share_super  = mean(host_is_superhost, na.rm = TRUE)) |>
+  filter(n >= 20)                       # don't rank on 3 listings!
+
+barrio_stats |> slice_max(median_price, n = 5)
+barrio_stats |> slice_min(median_price, n = 5)
+```
+
+`slice_max()` / `slice_min()` show the two ends of the ranking. Read the tables like an analyst, not a printer:
+
+* **top** — the historic centre (El Mercat, la Seu, Sant Francesc) plus Penya-roja and the Cabanyal beachfront;
+* **bottom** — peripheral, residential barrios;
+* every row carries its `n`: you always know how much data stands behind each median — exactly why the `filter(n >= 20)` guard exists.
+
+> 💡 Try the ranking *without* the `filter(n >= 20)` line: a barrio with 3 listings takes the top spot, and adding the guard changes the podium. Never rank groups without checking group size.
+
+## 3.3 · Reshaping with tidyr: `pivot_wider` / `pivot_longer`
+
+A question like *"median price per district **and** room type"* produces **long** data: one row per district × room-type combination — perfect for computing, awkward for humans, who want a grid (districts as rows, room types as columns):
+
+* `pivot_wider(names_from = , values_from = )` — one new **column** per value of `names_from`, filled with the numbers in `values_from`;
+* `pivot_longer()` — the inverse: melt columns back into rows (the direction real-world spreadsheets usually need);
+* `.groups = "drop"` inside `summarise()` — book-keeping: un-group the result, silence dplyr's message.
+
+```{r}
+price_table <- listings |>
+  filter(!is.na(price_eur)) |>
+  group_by(district = neighbourhood_group_cleansed, room_type) |>
+  summarise(median_price = median(price_eur), .groups = "drop")
+
+price_table |> head(4)                                  # long: one row per combo
+
+price_wide <- price_table |>
+  pivot_wider(names_from = room_type, values_from = median_price)
+price_wide |> head(6)                                   # wide: one row per district
+
+# and back - pivot_longer is how you *tidy* spreadsheet-shaped data:
+price_wide |> pivot_longer(-district,
+                           names_to = "room_type", values_to = "median_price") |> head(4)
+```
+
+## 3.4 · One value per cell: `separate_rows()` on `amenities` *(stretch)*
+
+`amenities` crams a whole list into one cell — `["Wifi", "Kitchen", ...]` — breaking tidy data's *one value per cell* rule. Two moves untangle it:
+
+* `str_remove_all()` — delete every bracket and quote (the pattern `'[\\[\\]"]'` is a character class listing the three symbols to delete);
+* `separate_rows(amenities, sep = ", ")` — split each cell at the commas: **each amenity gets its own row**;
+* the table explodes from ~8,000 rows to a few hundred thousand — precisely what makes amenities countable with `count()`:
+
+```{r}
+amen <- listings |>
+  select(id, amenities) |>
+  mutate(amenities = str_remove_all(amenities, '[\\[\\]"]')) |>
+  separate_rows(amenities, sep = ", ")
+
+amen |> count(amenities, sort = TRUE) |> head(8)
+# share of listings with air conditioning - in València, not a detail:
+amen |> filter(amenities == "Air conditioning") |> nrow() / nrow(listings)
+```
+
+## 3.5 · More than one table: joins
+
+Real analyses are multi-table. Ours also has `reviews.csv.gz` — one row per review. A **join** matches rows of two tables through a shared key column. The one you will use 90% of the time:
+
+* `left_join(A, B)` — **enrich**: every row of A survives, gaining B's columns where the key matches; rows with no match get NA.
+
+The rest of the family, for when you need them: `inner_join()` keeps only the rows that match in *both* tables; `right_join()` and `full_join()` change which side survives (all of B / all of both); `anti_join()` returns the rows of A *without* a match in B — useful for spotting misspelled or outdated keys. Same syntax as `left_join()` in every case.
+
+Two helpers before the first join:
+
+* `tribble()` — write a small tibble row by row: perfect for hand-made lookup tables like the one below;
+* `join_by(a == b)` — declare which column of the left table matches which of the right;
+* unmatched left-table rows survive with NA — we make that explicit with `replace_na()`:
+
+```{r}
+# ENRICH with left_join(): attach a zone classification we define ourselves
+zones <- tribble(
+  ~district,           ~zone,
+  "CIUTAT VELLA",      "Centre",
+  "L'EIXAMPLE",        "Centre",
+  "EXTRAMURS",         "Centre",
+  "POBLATS MARITIMS",  "Beach",     # note: the data spells districts WITHOUT
+  "CAMINS AL GRAU",    "Beach",     # accents - copy strings exactly as they
+  "ALGIROS",           "Beach",     # appear, or the join silently misses
+)
+
+listings <- listings |>
+  left_join(zones, join_by(neighbourhood_group_cleansed == district)) |>
+  mutate(zone = replace_na(zone, "Rest of the city"))   # unmatched rows got NA
+
+listings |> count(zone)
+```
+
+```{r}
+# The reviews file: one row per review, ~450k rows. Depending on the snapshot
+# it has 2 columns (listing_id, date) or 6 (+ review id, reviewer, comments) -
+# we only use two of them.
+reviews <- read_csv("data/reviews.csv.gz", show_col_types = FALSE)
+nrow(reviews)
+class(reviews$date)   # check before trusting: dates wear costumes too
+
+# In some files the date arrives as TEXT like "12/10/2010" (day/month/year).
+# Then max(date) would compare it alphabetically - silently wrong.
+# Parse it explicitly; if readr already made it a Date, leave it be:
+reviews <- reviews |>
+  mutate(date = if (is.character(date)) dmy(date) else date)
+
+rev_stats <- reviews |>
+  group_by(listing_id) |>
+  summarise(n_rev_file = n(), last_rev_file = max(date))
+
+listings <- listings |>
+  left_join(rev_stats, join_by(id == listing_id)) |>
+  mutate(n_rev_file = replace_na(n_rev_file, 0))        # no match = zero reviews
+
+# audit: does the reviews file agree with number_of_reviews?
+listings |> summarise(agreement = mean(n_rev_file == number_of_reviews))
+```
+
+> ⚠️ If you peek at `reviews.csv.gz` in **Excel** you may see dates reshuffled to your locale and accents mangled into `Ã©`, `Ã­`... That is Excel guessing wrong, not the data: the file is UTF-8 and R reads it correctly. Inspect data with R, not with a spreadsheet.
+
+> 💡 **The join ritual.** `left_join` + `replace_na` + a check, every time you join:
+>
+> * *keep everything* — `left_join` never drops rows from the left table;
+> * *make absence explicit* — `replace_na` turns "no match" into a real value (here: 0 reviews);
+> * *verify* — compare against a second source (`number_of_reviews` from the listings file). Agreement is high but rarely 1.0: deleted reviews, files scraped on different days, listings removed between scrapes.
+
+🧰 **Sprint toolbox**:
+
+| Function | What it does |
+|---|---|
+| `slice_max(col, n = 10)` | the 10 rows with the largest `col` (`slice_min()` = smallest); after `group_by()` it works *per group* — add `with_ties = FALSE` to force exactly one row each |
+| `pull(col)` | extract one column as a plain vector — the pipe-friendly `$` |
+| `mean(logical_col)` | share of TRUEs: the idiom for proportions ("share of superhosts") |
+| `x %in% set` | membership test from HW0 — handy for filtering by a list of ids |
+
+**Sprint 3** ⏱ 15:00 — the client is listening:
+
+1. Top 10 barrios by **median price of entire homes** (known price, ≥ 20 such listings). Is the ranking what a valenciano would expect? What would you double-check before repeating it to the client?
+2. Which `zone` has the highest share of superhosts? And the highest median `review_scores_rating`?
+3. For each zone, the single **most-reviewed** listing (`slice_max` inside `group_by`) — name, barrio, reviews
+4. *Stretch:* among **Centre** listings, the 5 most common amenities (reuse `amen` + a join or `%in%`)
+
+```{r ex03}
+# Your code here
+
+```
+
+---
+
+# Block 4 · Wrap-up
+
+One save, so that today's work travels to Session 2 — `write_rds()` keeps every column type intact:
+
+```{r save}
+write_rds(listings, "data/listings_clean.rds")
+dim(listings)
+```
+
+**Today in one slide:**
+
+* **Import** — `read_csv()` (gz included); meet the data with `glimpse()`, `skim()`, `count()`, `n_distinct()`; `clean_names()` as a reflex.
+* **Clean** — `parse_number()` for money; `str_detect/replace/extract/count` for text; `interval()` + `time_length()` for dates; `case_when()` for categories; NAs: audit before dropping — missingness can be *structural* (our price ↔ availability).
+* **Transform** — the verbs `filter`, `select`, `mutate`, `arrange`; the two-step `group_by() |> summarise()`; rank with `slice_max/min`, never without `n`.
+* **Tidy & join** — `pivot_wider/longer`, `separate_rows`; `left_join` to enrich (`inner`, `right`, `full`, `anti` for the other flavours), `replace_na` afterwards.
+* **Habits** — check the type before trusting (`glimpse`, `class`); strings must match *exactly* (UPPERCASE barrios!); if it doesn't knit, it doesn't exist.
+
+That clean table is where Session 2 starts: we *look* at it (ggplot2), interrogate it (EDA), and model it.
+
+**Before Session 2 HW1, on Poliformat:**
+
+* three extra notebooks (dplyr, stringr, lubridate) — further practice.
+* one **optional chore**: aggregate `calendar.csv.gz` (~3 million rows!) into a monthly availability/price table per listing.
+
+---

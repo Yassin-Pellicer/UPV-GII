@@ -1,0 +1,296 @@
+---
+title: "HW1 · Consolidation Kit"
+subtitle: "R for Data Science · Between Sessions 1 and 2 (~5 h)"
+author: "Your name here"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+library(tidyverse)
+library(nycflights13)
+```
+
+> **What this is.** Session 1 taught you the tools *while* using them; this kit makes them yours through repetition — first on fresh data (`nycflights13`: all 336,776 flights that left New York in 2013), then back on our València project. Part D is not a drill: **Session 2 runs on its output** (a ready-made copy is provided with the course pack, but building it yourself is the real rep).
+>
+> **You need:** your `r4ds-course` project from Session 1, with the `data/` folder (including `calendar.csv.gz`) and `data/listings_clean.rds` (saved at the end of Session 1; a ready-made copy is also provided in the course pack).
+
+
+```{r snapshot-date}
+snapshot_date <- ymd("2026-07-02")   # the snapshot date of our frozen data pack
+```
+
+---
+
+# Part A · dplyr reps ⏱ 75′
+
+## A1–A5 · New York, 2013
+
+**Ex. A1** — All flights that departed **JFK** and arrived more than two hours late (`arr_delay` > 120). Show a few rows.
+
+```{r ex01}
+# Your code here
+
+```
+
+**Ex. A2** — The five flights with the **longest distance**. Show carrier, flight, origin, destination, distance. (Several flights share the same route — what do you notice?)
+
+```{r ex02}
+# Your code here
+
+```
+
+**Ex. A3** — Average **airtime** and **distance** per carrier, sorted by airtime. *Bonus:* join `airlines` to show full carrier names.
+
+```{r ex03}
+# Your code here
+
+```
+
+**Ex. A4** — The **busiest calendar day** of 2013 (most departures). `count()` can take several columns at once.
+
+```{r ex04}
+# Your code here
+
+```
+
+**Ex. A5** — The **plane** (tail number) with most flights, excluding missing tail numbers.
+
+```{r ex05}
+# Your code here
+
+```
+
+## A6–A10 · Back to València
+
+```{r load-clean}
+listings <- read_rds("data/listings_clean.rds")
+dim(listings)
+```
+
+**Ex. A6** — Among **active** listings (`is_active`), the median **price per person** (`price_person`) for each room type. Which is the cheapest way to sleep in València?
+
+```{r ex06}
+# Your code here
+
+```
+
+**Ex. A7** — For each **district** (`neighbourhood_group_cleansed`), the share of listings that are entire homes. Top 5 districts — does touristification concentrate where you expected?
+
+```{r ex07}
+# Your code here
+
+```
+
+**Ex. A8** — **Professional hosts:** how many hosts have 10 or more listings, and what share of all València listings do they control? (Two steps: `count(host_id)`, then summarise the counts.)
+
+```{r ex08}
+# Your code here
+
+```
+
+**Ex. A9** — A **value-for-money shortlist** for our client: known price, at least 20 reviews, rating ≥ 4.8 — the 10 cheapest per person. Show name, barrio, price_person, rating, reviews.
+
+```{r ex09}
+# Your code here
+
+```
+
+**Ex. A10** — Cross `license_status` with `zone`: counts as a **wide table** (rows = license_status, one column per zone). Where do the unlicensed concentrate? (`count()` + `pivot_wider()`)
+
+```{r ex10}
+# Your code here
+
+```
+
+---
+
+# Part B · stringr reps ⏱ 60′
+
+## B1–B5 · Warm-up on built-in data
+
+**Ex. B1** — In `storms`: build `storm_id` joining name and year with a hyphen (`str_c()`); extract the first three letters of the name as `prefix` (`str_sub()`); count observations per prefix.
+
+```{r ex11}
+# Your code here
+
+```
+
+**Ex. B2** — In `flights`: drop missing `tailnum`, extract the first two characters as `prefix`, count flights per prefix. (What does the dominant prefix tell you about US plane registrations?)
+
+```{r ex12}
+# Your code here
+
+```
+
+**Ex. B3** — In `airlines`: which carriers have the phrase `"Air Lines"` (exactly, two words) in their name? (`str_detect()`)
+
+```{r ex13}
+# Your code here
+
+```
+
+**Ex. B4** — In `planes`: standardise `manufacturer` so that "AIRBUS INDUSTRIE" and "AIRBUS" both become "Airbus", and "BOEING" becomes "Boeing" (`str_replace()`). **Order matters** — why must "AIRBUS INDUSTRIE" be replaced before "AIRBUS"?
+
+```{r ex14}
+# Your code here
+
+```
+
+**Ex. B5** — In `mpg` (ggplot2): the three most frequent three-letter prefixes of `model`.
+
+```{r ex15}
+# Your code here
+
+```
+
+## B6–B9 · Back to València
+
+**Ex. B6** — How many listing **names** contain the word "loft" (any capitalisation)? Use `regex(..., ignore_case = TRUE)`. *Try the same for "beach|playa|platja" — with `|` meaning OR.*
+
+```{r ex16}
+# Your code here
+
+```
+
+**Ex. B7** — Tourist licences hide inside long registration strings like `"Valencia - Regional registration number<br />VT-41540-V<br />..."`. Among non-missing `license` values: what share contains a `VT-` code? Then `str_extract()` the code itself as `license_code` (pattern `"VT-\\d+-V"` — `\\d+` = one or more digits). How many *distinct* codes are there — and why might that be smaller than the number of licensed listings?
+
+```{r ex17}
+# Your code here
+
+```
+
+**Ex. B8** — What share of **hosts** (careful: hosts, not listings — `distinct(host_id, ...)`) declare a `host_location` outside Spain? (`str_ends()`, negate the result; ignore missing locations.)
+
+```{r ex18}
+# Your code here
+
+```
+
+**Ex. B9** — Without `separate_rows()`, just with `str_detect()` on the raw `amenities` string: the share of listings offering a **Pool**, per `zone`. Beach vs Centre — who wins?
+
+```{r ex19}
+# Your code here
+
+```
+
+---
+
+# Part C · lubridate reps ⏱ 60′
+
+## C1–C4 · Warm-up on built-in data
+
+**Ex. C1** — In `storms`: build a `date` column with `make_date(year, month, day)` and a `datetime` with `make_datetime(year, month, day, hour)`; then count observations per weekday (`wday(date, label = TRUE)`).
+
+```{r ex20}
+# Your code here
+
+```
+
+**Ex. C2** — In `flights`: build `sched_dep` with `make_datetime(year, month, day, hour, minute)`; compute the actual departure as `sched_dep + minutes(dep_delay)`; count how many flights actually departed on the **next calendar day** (compare `date()` of both).
+
+```{r ex21}
+# Your code here
+
+```
+
+**Ex. C3** — In `economics` (ggplot2): add `year` and `month_name` columns (`year()`, `month(..., label = TRUE)`); mean personal savings rate (`psavert`) per year; which year saved most?
+
+```{r ex22}
+# Your code here
+
+```
+
+**Ex. C4** — In `weather` (nycflights13): add a `weekday` column from `time_hour` (`wday(..., label = TRUE)`); mean temperature per weekday. The plotting line is a gift — run it and read it; ggplot2 is Session 2's opening act.
+
+```{r ex23}
+# Your code here
+
+```
+
+## C5–C7 · Back to València
+
+**Ex. C5** — **Listing cohorts:** how many listings per `year(first_review)`? Which entry year contributes most listings still visible today? (Why not `host_since`? Look at what that column contains in this snapshot...)
+
+```{r ex24}
+# Your code here
+
+```
+
+**Ex. C6** — **Recency buckets.** Compute `months_since_rev = time_length(interval(last_review, snapshot_date), "months")`, then classify with `case_when()`: ≤ 12 → `"active"`, ≤ 24 → `"cooling"`, > 24 → `"dormant"`, never reviewed → `"no reviews"`. Show counts and shares — how much of the "market" is actually dead stock?
+
+```{r ex25}
+# Your code here
+
+```
+
+**Ex. C7** — In which **calendar month** do listings receive their *first* review most often? (`month(first_review, label = TRUE)`.) A first hint of seasonality — Session 2 will do this properly.
+
+```{r ex26}
+# Your code here
+
+```
+
+---
+
+# Part D · The project chore: taming `calendar.csv.gz` ⏱ 90′
+
+The calendar file has **one row per listing per night** for the next ~12 months: is that night available to book, and under which minimum/maximum-stay rules. That's ~2.9 million rows — your laptop can take it, but every wasteful step now costs seconds instead of milliseconds. This is deliberate: a small taste of *bigger* data. (Older snapshots also carried a nightly `price` column; this one doesn't — schema drift again, and our aggregates adapt.)
+
+```{r read-calendar}
+system.time(
+  calendar <- read_csv("data/calendar.csv.gz", show_col_types = FALSE)
+)
+dim(calendar)
+glimpse(calendar)
+```
+
+Note what readr did: `date` is already a Date, `available` ("t"/"f") is already logical — remember Session 1: *check, don't assume*.
+
+**Ex. D1** — Add the grouping key: `month` (`floor_date(date, "month")` — the first day of each month). Check the result with `head()`. (Note what readr already solved: `date` is a Date, `available` is logical.)
+
+```{r ex27}
+# Your code here
+
+```
+
+**Ex. D2** — **Coverage audit.** Count the number of distinct days per `month`. Which months are incomplete, and why? Keep only complete months (compare with `days_in_month()`) in a filtered copy `calendar_full`.
+
+```{r ex28}
+# Your code here
+
+```
+
+**Ex. D3** — **The deliverable.** Build `calendar_monthly`: one row per `listing_id` × `month` with `occ_share` = share of nights **not** available, and `med_min_nights` = the median minimum-stay rule that month. *(Name the object and columns exactly like this — the auto-check and Session 2 depend on them.)* Then think: `occ_share` mixes truly booked nights with host-blocked nights. Is it an over- or under-estimate of demand? We'll carry this caveat into Session 2.
+
+```{r ex29}
+# Your code here
+
+```
+
+**Ex. D4** — **City pulse.** From `calendar_monthly`, build `city_month`: per month, the mean of `occ_share` (call it `mean_occ`) and the share of listings that are **completely** blocked or booked that month (`share_full` — compare `occ_share == 1`). Which month is the fullest? Does it match your intuition about València?
+
+```{r ex30}
+# Your code here
+
+```
+
+**Ex. D5** — Save `calendar_monthly` to `data/calendar_monthly.rds` (`write_rds()`) and `city_month` to `data/city_month.csv` (`write_csv()`). Then free the big object: `rm(calendar, calendar_full)` — 3 million rows deserve a tidy exit.
+
+```{r ex31}
+# Your code here
+
+```
+
+*Optional preview of Session 2 — one line, one insight:*
+
+```{r}
+ggplot(city_month, aes(x = month, y = mean_occ)) + geom_line() + geom_point()
+```
+
+---
