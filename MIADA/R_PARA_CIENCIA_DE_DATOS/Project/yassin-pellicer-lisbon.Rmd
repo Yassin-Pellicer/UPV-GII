@@ -1,0 +1,839 @@
+---
+title: "Análisis Exploratorio de Datos de los Alquileres Vacacionales en Lisboa"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = "center",
+  fig.width = 16,
+  fig.height = 9,
+  out.width = "100%",
+  fig.show = "hold"
+)
+```
+
+## 1. Introducción
+
+Este proyecto forma parte de la asignatura *R for Data Science* y se centra en el análisis del mercado de alojamientos turísticos de Airbnb en  **el distrito Lisboa, Portugal**. El objetivo principal es transformar los datos originales en información útil que permita tomar decisiones de inversión fundamentadas.
+
+El análisis se desarrolla desde la perspectiva de **un analista del ayuntamiento**, con el propósito de evaluar la distribución y concentración del mercado de alojamientos turísticos en Lisboa. Para ello, se estudiará quién controla la oferta, el grado de cumplimiento de las licencias turísticas y las zonas donde la actividad de Airbnb podría generar una mayor presión sobre el mercado de la vivienda residencial.
+
+Para ello, se utilizará el lenguaje de programación R, aplicando diferentes técnicas de limpieza, transformación, exploración y visualización de datos. Se analizarán variables como la ubicación de los alojamientos, el tipo de propiedad, los precios y otras características relevantes del mercado.
+
+Finalmente, el objetivo es identificar patrones y posibles oportunidades de inversión que permitan formular recomendaciones basadas en datos y facilitar una toma de decisiones más informada.
+
+## 2. Importación de los datasets y librerías
+
+Para llevar a cabo estas tareas será necesario cargar las librerías y los datasets objeto de análisis
+
+```{r}
+# Importing libraries
+library(readr)
+library(tidyverse)
+library(janitor)
+library(skimr) 
+
+library(ggplot2)
+library(scales)
+library(forcats)
+
+# Importing csv
+listings <- read_csv("./listings.csv")
+calendar <- read_csv("./calendar.csv")
+neighbourhoods <- read_csv("./neighbourhoods.csv")
+reviews <- read_csv("./reviews.csv")
+
+# Viewing the results
+glimpse(listings)
+glimpse(calendar)
+glimpse(neighbourhoods)
+glimpse(reviews)
+```
+## 3. Limpieza de los datos
+
+Antes de manipular los datos será necesario limpiar y procesar algunas columnas cuya información viene incompleta o mal formateada. Realizaremos las siguientes conversiones.
+
+### Estandarización de nombres y eliminación de duplicados; eliminación de columnas sin ningún valor
+
+```{r}
+# Standardize column names
+listings <- listings |> clean_names()
+calendar <- calendar |> clean_names()
+neighbourhoods <- neighbourhoods |> clean_names()
+reviews <- reviews |> clean_names()
+
+# Check missing values
+listings |> summarise(across(everything(), ~sum(is.na(.x))))
+
+# Check duplicated listings
+sum(duplicated(listings$id))
+
+# Remove duplicated listings
+listings <- listings |>
+  distinct(id, .keep_all = TRUE)
+
+# Check dimensions
+dim(listings)
+```
+
+No hay líneas duplicadas. Sin embargo, hay algunas columnas cuyo número de valores N/A es idéntico al número de registros del dataset. Dado que estas columnas no serán útiles para nada en nuestro análisis, se eliminarán.
+
+```{r}
+# Remove columns where all values are NA
+tidy_listings <- listings |>
+  select(where(~ !all(is.na(.))))
+
+# Count missing values in each remaining column
+tidy_listings |>
+  summarise(across(everything(), ~ sum(is.na(.x))))
+```
+También se eliminarán columnas que no aportan información relevante en el análisis, como identificadores técnicos, datos de _scrapeo_, URLs, descripciones e información redundante.
+
+```{r}
+# Remove unnecessary columns
+tidy_listings <- tidy_listings |>
+  select(
+    -any_of(c(
+      # URLs and images
+      "listing_url",
+      "picture_url",
+      "host_url",
+      "host_profile_url",
+      "host_picture_url",
+      "host_thumbnail_url",
+
+      # Technical identifiers
+      "scrape_id",
+      "host_profile_id",
+
+      # Descriptive text
+      "description",
+      "neighborhood_overview",
+      "host_about",
+      "host_verifications",
+
+      # Additional price information
+      "price_quote_raw",
+      "price_quote_total_price",
+      "price_quote_checkin_date",
+      "price_quote_checkout_date",
+
+      # Redundant stay variables
+      "minimum_minimum_nights",
+      "maximum_minimum_nights",
+      "minimum_maximum_nights",
+      "maximum_maximum_nights"
+    ))
+  )
+
+# Check remaining dimensions
+dim(tidy_listings)
+
+# View remaining variables
+glimpse(tidy_listings)
+```
+
+### Limpieza de los precios
+
+El dataset contiene diferentes variables relacionadas con el precio de los alojamientos. Para el análisis, se utilizará price_quote_price_per_night, ya que representa el precio por noche. Por ello, se eliminará la columna original price y se renombrará price_quote_price_per_night como price. Finalmente, se convertirán sus valores a formato numérico, eliminando los símbolos monetarios sin realizar ninguna conversión de divisa.
+
+```{r}
+# Remove old price column and rename price_quote_price_per_night
+tidy_listings <- tidy_listings |>
+  select(-price) |>
+  rename(price = price_quote_price_per_night)
+
+# Convert price to numeric if necessary
+tidy_listings <- tidy_listings |>
+  mutate(price = parse_number(as.character(price)))
+
+# Check results
+tidy_listings |>
+  select(price) |>
+  filter(!is.na(price))
+```
+El análisis anterior muestra que hay algunas entradas de precio sin ningún valor (N/A). Si se analiza cómo se relaciona la falta de precio con la disponibilidad descubrimos una implicación directa, donde más del 99,9% de entradas sin precio pertenecen a ofertas sin disponibilidad. Dado que estas entradas pueden ser todavía útiles en análisis como el de densidad de oferta no serán eliminados.
+
+```{r}
+listings |>
+  group_by(no_availability = availability_365 == 0) |>
+  summarise(share_na_price = mean(is.na(price)), n = n())
+```
+Al análisis ayudará también crear una variable de **price_per_person** que divida el precio por noche de la oferta por el número de personas capaces de reservarlo.
+
+```{r}
+tidy_listings <- tidy_listings |>
+  mutate(
+    price_per_person = if_else(
+      !is.na(accommodates) & accommodates > 0,
+      price / accommodates,
+      NA_real_
+    )
+  )
+```
+
+### Limpieza y tratamiento de fechas
+
+Ahora se convertirán las fechas del dataset para asegurar que los campos fecha tienen un formato homogéneo
+
+```{r}
+# Convert dates
+listings <- listings |>
+  mutate(
+    first_review = as.Date(first_review),
+    last_review = as.Date(last_review),
+    last_scraped = as.Date(last_scraped),
+  )
+```
+
+### Tratamiento de _Bathroom text_ y _baths_
+
+```{r}
+listings |> count(bathrooms_text, sort = TRUE) |> head(n= Inf)
+```
+Se puede ver que el tratamiento del campo _baths y de _Bathroom_text_ es un poco ambiguo, ya que no deja claras las características del baño. Se estandarizarán estas dos columnas con nuevos campos:
+
+
+```{r}
+tidy_listings <- tidy_listings |>
+  mutate(
+    bathrooms = parse_number(
+      str_replace(
+        bathrooms_text,
+        regex("half-?bath", ignore_case = TRUE),
+        "0.5"
+      )
+    ),
+    bathrooms_shared = str_detect(bathrooms_text, "shared")
+  )
+
+tidy_listings |>
+  count(bathrooms, bathrooms_shared, sort = TRUE) |>
+  head(n= Inf)
+```
+
+### Tratamiento de _amenities_
+
+_Amenities_ es un campo cuyas entradas son listas de comodidades (como bien dice su nombre). Los campos lista son incómodos y difíciles de tratar/visualizar. Por ello se adaptará este campo en múltiples columnas. Para generar resultados más significativos eliminaremos las amenities con un conteo menor a 5000. Mantendremos esta tabla separada del listado.
+
+```{r}
+amenities <- tidy_listings |>
+  select(id, amenities) |>
+  mutate(amenities = str_remove_all(amenities, '[\\[\\]"]')) |>
+  separate_rows(amenities, sep = ", ") |> 
+  add_count(amenities) |>
+  filter(n >= 5000) |>
+  select(-n)
+
+# We drop amenities from tidy_listings
+tidy_listings <- tidy_listings |>
+  select(-amenities)
+
+amenities |> count(amenities, sort = TRUE) |> head(n = Inf)
+```
+El dataset resultante es el siguiente
+
+```{r}
+glimpse(tidy_listings)
+```
+
+
+## 4. Análisis Exploratorio de Datos
+
+Desde la perspectiva de **un analista del ayuntamiento**, el objetivo es estudiar cómo se distribuye y concentra la oferta de alojamientos turísticos de Airbnb en Lisboa, quién controla el mercado y en qué medida esta actividad puede generar presión sobre la vivienda residencial. Asimismo, se analizará la situación de las licencias turísticas y las diferencias entre barrios, con el fin de identificar posibles desequilibrios y aportar información útil para la planificación y regulación municipal.
+
+El análisis se estructura en torno a cuatro preguntas:
+
+### 4.1. ¿Cómo se distribuye la oferta de alojamientos turísticos entre los distintos barrios de Lisboa?
+#### 4.1.1 Distribución del precio de los alojamientos
+
+Para ello primero analizaremos el precio mediano, la media de precio por noche, el precio máximo y el número de listados
+
+```{r}
+# Dataset containing listings with valid positive prices
+price_listings <- tidy_listings |>
+  filter(!is.na(price), price > 0)
+
+# Descriptive statistics
+price_listings |>
+  summarise(
+    n_listings = n(),
+    mean_price = mean(price),
+    median_price = median(price),
+    min_price = min(price),
+    max_price = max(price),
+    sd_price = sd(price)
+  )
+
+# Calculate the 99th percentile for visualization
+price_p99 <- quantile(price_listings$price, 0.99, na.rm = TRUE)
+```
+Se generará un histograma que facilite la interpretación.
+
+```{r}
+p_data <- tidy_listings |>
+  select(price) |>
+  filter(!is.na(price), price > 0, price < price_p99)
+
+p_data
+
+ggplot(p_data, aes(x = price)) +
+  geom_histogram(
+    binwidth = 2 * IQR(p_data$price) / nrow(p_data)^(1/3),
+    fill = "#2C7FB8",
+    color = "white",
+    alpha = 0.85
+  ) +
+  labs(
+    title = "Histograma de precios del alquiler vacacional",
+    subtitle = "Considerado únicamente el 99% de la distribución excluyendo valores extremos",
+    x = "Precio por noche (€)",
+    y = "Número de alojamientos",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15),
+    plot.subtitle = element_text(color = "gray40", size = 11),
+    plot.caption = element_text(color = "gray50", size = 9),
+    panel.grid.minor = element_blank()
+  )
+```
+
+La media y la mediana permiten evaluar el nivel general de precios. La comparación entre ambas resulta especialmente interesante porque los alojamientos turísticos pueden presentar precios extremadamente elevados que distorsionan la media. Esto es lo que ocurre con, al menos, el 1% de alojamientos (que están por encima de 1000 euros la noche) que se han excluido de la representación.
+
+La distribución de los precios está sesgada a la izquierda, en concordancia con los datos de mediana y media. En el histograma se utilizará la fórmula de Freedman-Diaconis para ajustar automáticamente la cantidad de _bins_ a la representación adecuada.
+
+#### 4.1.2 Distribución de alojamientos y precio por barrio
+
+Para estudiar la concentración territorial de Airbnb, se agruparán todos los anuncios por `neighbourhood_cleansed`, sin separar los resultados por municipio. Se mostrarán los 20 barrios con más alojamientos, considerando todos los registros, incluidos aquellos sin información de precio.
+
+```{r fig.width=11, fig.height=8}
+# Count listings by neighbourhood across the entire dataset
+neighbourhood_counts <- tidy_listings |>
+  filter(!is.na(neighbourhood_cleansed)) |>
+  count(neighbourhood_cleansed, sort = TRUE, name = "n") |>
+  slice_head(n = 20)
+
+neighbourhood_counts
+
+# One chart for all neighbourhoods
+ggplot(neighbourhood_counts, aes(
+  x = reorder(neighbourhood_cleansed, n),
+  y = n
+)) +
+  geom_col(fill = "#2C7FB8", width = 0.7) +
+  geom_text(aes(label = n), hjust = -0.15, size = 3.5) +
+  coord_flip(clip = "off") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "La oferta turística se concentra en determinados barrios de Lisboa",
+    subtitle = "Los 20 barrios con más anuncios de Airbnb en el conjunto de los datos",
+    x = NULL,
+    y = "Número de alojamientos",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "gray40", size = 10),
+    axis.text.y = element_text(size = 9),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+Este gráfico permite identificar los barrios con mayor número absoluto de anuncios. No mide la densidad de alojamientos por superficie ni su proporción respecto al parque residencial.
+
+A continuación, se analizará el precio medio anunciado por noche en cada barrio. Para reducir la influencia de precios extremos, se excluirán los precios superiores al percentil 99. Además, se exigirá un mínimo de 10 anuncios con precio válido por barrio para evitar que promedios basados en muy pocos registros encabecen la clasificación.
+
+```{r fig.width=11, fig.height=8}
+# Calculate average price by neighbourhood across the entire dataset
+neighbourhood_prices <- tidy_listings |>
+  filter(
+    !is.na(neighbourhood_cleansed),
+    !is.na(price),
+    price > 0,
+    price < price_p99
+  ) |>
+  group_by(neighbourhood_cleansed) |>
+  summarise(
+    mean_price = mean(price),
+    mean_price_per_person = mean(price_per_person, na.rm = TRUE),
+    median_price = median(price),
+    n = n(),
+    .groups = "drop"
+  ) |>
+  filter(n >= 10) |>
+  slice_max(mean_price, n = 20, with_ties = FALSE)
+
+neighbourhood_prices
+
+# One chart with the 20 neighbourhoods with highest average price
+  ggplot(neighbourhood_prices, aes(
+    x = reorder(neighbourhood_cleansed, mean_price),
+    y = mean_price
+  )) +
+  geom_col(fill = "#00A34A", width = 0.7) +
+  geom_text(aes(label = round(mean_price, 0)), hjust = -0.15, size = 3.5) +
+  coord_flip(clip = "off") +
+  scale_y_continuous(
+    labels = scales::label_number(suffix = " $"),
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  labs(
+    title = "Precio medio según el barrio",
+    subtitle = "20 barrios con mayor precio medio; mínimo 10 anuncios y precios bajo el percentil 99",
+    x = NULL,
+    y = "Precio medio por noche ($)",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "gray40", size = 10),
+    axis.text.y = element_text(size = 9),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+Se pueden comparar así los barrios que concentran más anuncios con aquellos que registran precios medios más elevados, sin separar la muestra por municipio. El precio anunciado no equivale al ingreso realizado ni demuestra por sí solo mayor rentabilidad.
+
+#### 4.1.3 Distribución del tipo de vivienda y del número de huéspedes
+
+Finalmente, se representará en un único diagrama de dispersión la relación entre la capacidad máxima y el precio por persona por noche de los alojamientos de todos los barrios. Los colores distinguirán los tipos de alojamiento, no los municipios.
+
+```{r fig.width=11, fig.height=7}
+# Prepare all neighbourhoods for a single scatterplot
+capacity_price_data <- tidy_listings |>
+  filter(
+    !is.na(neighbourhood_cleansed),
+    !is.na(accommodates),
+    accommodates > 0,
+    !is.na(room_type),
+    !is.na(price),
+    price > 0,
+    price < price_p99
+  )
+
+room_colors <- c(
+  "Entire home/apt" = "#984EA3",
+  "Private room" = "#1A9850",
+  "Shared room" = "#D6604D",
+  "Hotel room" = "#C7A600"
+)
+
+ggplot(capacity_price_data, aes(
+  x = accommodates,
+  y = price,
+  color = room_type
+)) +
+  geom_jitter(width = 0.2, height = 0, alpha = 0.35, size = 1.3) +
+  scale_color_manual(values = room_colors, name = "Tipo de alojamiento") +
+  scale_x_continuous(breaks = scales::breaks_pretty(n = 12)) +
+  labs(
+    title = "Relación entre capacidad y precio de los alojamientos",
+    subtitle = "Todos los barrios | Precios inferiores al percentil 99",
+    x = "Capacidad máxima de huéspedes (personas)",
+    y = "Precio por noche ($)",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  guides(color = guide_legend(override.aes = list(alpha = 1, size = 3))) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "gray40", size = 10),
+    plot.caption = element_text(color = "gray50", size = 9),
+    panel.grid.minor = element_blank(),
+    legend.position = "right",
+    legend.title = element_text(face = "bold")
+  )
+```
+
+Ahora se verá si algún tipo de alquiler prevalece en los barrios de Lisboa
+
+```{r}
+room_colors <- c(
+  "Entire home/apt" = "#984EA3",
+  "Private room" = "#1A9850",
+  "Shared room" = "#D6604D",
+  "Hotel room" = "#C7A600"
+)
+
+p_data <- tidy_listings |>
+  filter(
+    !is.na(latitude),
+    !is.na(longitude),
+    !is.na(room_type)
+  )
+
+ggplot(p_data, aes(
+  x = longitude,
+  y = latitude,
+  color = room_type
+)) +
+  geom_point(
+    alpha = 0.5,
+    size = 1.2
+  ) +
+  scale_color_manual(
+    values = room_colors,
+    name = "Tipo de alojamiento"
+  ) +
+  labs(
+    title = "Distribución espacial de los tipos de alojamiento en Lisboa",
+    subtitle = "Cada punto representa un anuncio de Airbnb",
+    x = "Longitud",
+    y = "Latitud",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "gray40", size = 10),
+    panel.grid.minor = element_blank(),
+    legend.position = "right"
+  )
+```
+En vista de los resultados obtenidos, la oferta de alojamientos turísticos se concentra de forma desigual entre barrios. Entre las zonas de Lisboa que merecen especial atención destacan los barrios históricos de Santa Maria Maior y Misericórdia, que presentan una elevada cantidad de anuncios.
+
+El tipo de alquiler de "Entire home/apt" es el más abundante salvo en barrios puntuales del centro histórico de Lisboa, donde se ofrece más bien "Private room", como Alvalade, Areeiro y Avenidas Novas. Esta modalidad de alquiler que tienen explica por qué no las encontramos en el ranking de precios más altos, ya que los alquileres de habitación privada lideran las posiciones más económicas. Esto se extiende al ámbito general; las habitaciones privadas y compartidas predominan entre las opciones más económicas y de menor capacidad, mientras que las viviendas completas concentran la mayor parte de los alojamientos de mayor capacidad y precio.
+
+Asimismo, se observa una relación generalmente positiva entre la capacidad máxima de huéspedes y el precio por noche, especialmente en las viviendas completas, que predominan entre los alojamientos de mayor capacidad y precio.
+
+### 4.2. ¿Qué grado de concentración presenta el mercado y qué proporción de los alojamientos está gestionada por grandes propietarios?
+#### 4.2.1 Proporción de los alojamientos gestionada por grandes propietarios
+
+```{r fig.width=11, fig.height=4}
+host_data <- tidy_listings |>
+  filter(!is.na(host_id)) |>
+  count(host_id, name = "n_listings") |>
+  mutate(
+    host_category = case_when(
+      n_listings == 1 ~ "1 alojamiento",
+      n_listings <= 5 ~ "2-5 alojamientos",
+      n_listings <= 10 ~ "6-10 alojamientos",
+      TRUE ~ "Más de 10 alojamientos"
+    )
+  ) |>
+  group_by(host_category) |>
+  summarise(
+    n_hosts = n(),
+    total_listings = sum(n_listings),
+    .groups = "drop"
+  ) |>
+  mutate(
+    share_listings = 100 * total_listings / sum(total_listings)
+  )
+
+host_data
+```
+
+Es decir, sólo el 25% de la oferta es publicada por particulares con un único alojamiento, mientras que más del 30% está concentrada en grandes tenedores.
+
+#### 4.2.2 Grado de concentración del mercado
+
+Se hará a continuación un ranking con las entidades o personas con mayor cantidad de propiedades alquiladas.
+
+```{r fig.width=11, fig.height=4}
+host_data <- tidy_listings |>
+  filter(!is.na(host_id)) |>
+  group_by(host_id, host_name) |>
+  summarise(
+    n_listings = n(),
+    .groups = "drop"
+  ) |>
+  arrange(desc(n_listings)) |>
+  slice_head(n = 100)
+
+host_data
+```
+Ahora se estudiará la presencia de estas entidades en los distintos barrios de Lisboa
+
+```{r fig.width=16, fig.height=14, out.width="100%"}
+# Top 20 hosts with most listings
+top_hosts <- tidy_listings |>
+  count(host_id, host_name, sort = TRUE) |>
+  filter(!is.na(host_id)) |>
+  distinct(host_id, .keep_all = TRUE) |>
+  slice_head(n = 20)
+
+# Top 20 neighbourhoods per listings
+top_barrios <- tidy_listings |>
+  filter(host_id %in% top_hosts$host_id) |>
+  count(neighbourhood_cleansed, sort = TRUE) |>
+  filter(!is.na(neighbourhood_cleansed)) |>
+  slice_head(n = 20) |>
+  pull(neighbourhood_cleansed)
+
+# Percentage calculation
+datos <- tidy_listings |>
+  filter(neighbourhood_cleansed %in% top_barrios) |>
+  group_by(neighbourhood_cleansed) |>
+  mutate(total_barrio = n()) |>
+  ungroup() |>
+  filter(host_id %in% top_hosts$host_id) |>
+  count(host_id, neighbourhood_cleansed, total_barrio) |>
+  mutate(porcentaje = 100 * n / total_barrio) |>
+  left_join(top_hosts |> select(host_id, host_name), by = "host_id") |>
+  mutate(
+    anfitrion = paste0(coalesce(host_name, "Sin nombre"), " (", host_id, ")")
+  )
+
+# Heatmap
+ggplot(datos, aes(
+  x = reorder(neighbourhood_cleansed, porcentaje, FUN = sum),
+  y = reorder(anfitrion, porcentaje, FUN = sum),
+  fill = porcentaje
+)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = paste0(round(porcentaje, 1), "%")), size = 2.7) +
+  scale_x_discrete(limits = function(x) rev(x)) +
+  scale_fill_gradient(
+    low = "#E8EAF6",
+    high = "#512DA8",
+    name = "Cuota del barrio (%)"
+  ) +
+  labs(
+    title = "Concentración territorial de los principales anfitriones",
+    subtitle = "20 anfitriones y 20 barrios ordenados por porcentaje acumulado",
+    x = "Barrio",
+    y = "Anfitrión",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1),
+    panel.grid = element_blank()
+  )
+```
+
+El mapa de calor muestra que **la concentración de anuncios turísticos varía considerablemente entre anfitriones y barrios**. Se observa que algunos de los principales operadores, como *Feels Like Home*, *BnBird Homes* o *GuestHomes*, mantienen una presencia distribuida entre numerosos barrios, aunque sus cuotas individuales suelen ser relativamente reducidas. Esto indica una estrategia de gestión territorialmente diversificada, sin que necesariamente dominen el mercado de un barrio concreto.
+
+Por otra parte, se identifican **casos de concentración local muy elevada** como *Holidu* en Ribamar, con cuotas que superan el 30 % en determinadas zonas. También destacan otros anfitriones que concentran entre el 20 % y el 30 % de la oferta de algunos barrios. Estos resultados muestran que, aunque ciertos operadores gestionan numerosos alojamientos repartidos por el territorio, otros tienen una presencia especialmente dominante a escala local. Esto explica por qué los precios en algunas zonas como Ribamar son tan elevados; la ausencia de competidores en la zona permite ajustar los precios a como desee el grupo que los gestiona.
+
+### 4.3 ¿Cuál es la situación de las licencias turísticas de los alojamientos anunciados?
+#### 4.3.1. Distribución de las licencias por barrio
+
+Primero se averiguará el porcentaje total de viviendas con licencia que están anunciadas
+
+```{r}
+license_data <- tidy_listings |>
+  mutate(
+    has_license = !is.na(license) & str_trim(license) != ""
+  ) |>
+  count(has_license, name = "n_listings") |>
+  mutate(
+    percentage = round(100 * n_listings / sum(n_listings), 2)
+  )
+
+license_data
+```
+
+Como se puede ver, casi el 96% de las ofertas son de viviendas con licencia. Ahora se verá la distribución de apartamentos sin licencia por barrio.
+
+```{r}
+neighbour_license <- tidy_listings |>
+  group_by(neighbourhood_cleansed) |>
+  summarise(
+    total_listings = n(),
+    no_license = sum(is.na(license) | str_trim(license) == ""),
+    percentage = round(100 * no_license / total_listings, 2),
+    .groups = "drop"
+  ) |>
+  arrange(desc(no_license))
+
+neighbour_license
+```
+#### 4.3.2. Relación entre las viviendas sin licencia turística y su precio.
+
+Ahora se estudiará la relación entre la licencia y el precio medio del alojamiento
+
+```{r}
+# Calculate price statistics by license status
+license_price <- tidy_listings |>
+  filter(
+    !is.na(price),
+    price > 0,
+    price < price_p99
+  ) |>
+  mutate(
+    license_status = if_else(
+      !is.na(license) & str_trim(license) != "",
+      "Con licencia declarada",
+      "Sin licencia declarada"
+    )
+  ) |>
+  group_by(license_status) |>
+  summarise(
+    n_listings = n(),
+    mean_price = mean(price),
+    median_price = median(price),
+    .groups = "drop"
+  )
+
+license_price
+```
+
+Del análisis puede observarse que los distritos con mayor oferta son asimismo los que mayor cantidad de viviendas sin licencia ofertan. Esto es un problema ya que la cantidad de viviendas con licencia se regula para limitar la cantidad de alquiler vacacional en cada barrio a como máximo el 10% de la vivienda en total. Un valor menor al real camufla alquileres vacacionales como residenciales y presiona al sector inmobiliario de larga duración.
+
+También puede verse que el precio no parece verse influenciado por que el alojamiento tenga licencia o no ya que viene a ser idénticos para ambos casos.
+
+### 4.4. ¿Cómo se relacionan el tipo de inmueble, la ocupación y el precio por noche?
+
+Para analizar la relación entre el tipo de alojamiento, su ocupación aproximada y el precio por noche, se utilizará un modelo de regresión lineal múltiple.
+
+La variable dependiente será `price`, mientras que las variables explicativas serán `room_type` y un indicador de ocupación calculado a partir de `availability_365`.
+
+
+#### 4.4.1. Preparación de los datos
+
+En primer lugar, se calculará el porcentaje de días no disponibles durante el año y se eliminarán los registros con información incompleta. Asimismo, se excluirá el 1% de precios más elevados para reducir la influencia de valores extremos.
+
+```{r}
+# Prepare data for regression
+model_data <- tidy_listings |>
+  filter(
+    !is.na(price),
+    price > 0,
+    !is.na(availability_365),
+    between(availability_365, 0, 365),
+    !is.na(room_type)
+  ) |>
+  mutate(
+    ocupacion_estimada = 100 * (365 - availability_365) / 365,
+    room_type = factor(room_type)
+  )
+
+# Remove extreme prices
+price_p99 <- quantile(model_data$price, 0.99, na.rm = TRUE)
+
+model_data <- model_data |>
+  filter(price <= price_p99) |>
+  mutate(
+    room_type = relevel(room_type, ref = "Entire home/apt")
+  )
+
+# Check observations
+nrow(model_data)
+```
+
+#### 4.4.2. Modelo de regresión lineal
+
+Para estudiar la relación entre el precio, el tipo de alojamiento y los días no disponibles, se utilizará una regresión lineal con interacción entre las variables explicativas.
+
+Esto permitirá comprobar si la relación entre disponibilidad y precio es diferente según el tipo de alojamiento.
+
+```{r}
+# Fit linear regression with interaction
+modelo <- lm(
+  price ~ ocupacion_estimada * room_type,
+  data = model_data
+)
+
+# Model results
+summary(modelo)
+```
+
+Según puede verse en el resultado del fitting, el modelo de regresión es estadísticamente significativo con un p-value inferior a 0,0001. Sin embargo, su R² es sólo del 14% de la variación del precio, por lo que no resulta un modelo tan efectivo a la hora de explicar la varianza de los precios (ya que depende de muchos más factores de los analizados).
+
+#### 4.4.3. Visualización de la regresión lineal
+
+Se representarán los precios observados y las rectas de regresión ajustadas para cada tipo de alojamiento.
+
+Para mejorar la visualización, se excluirán únicamente del gráfico los precios superiores al percentil 95 de cada categoría, evitando que los valores extremos dificulten la interpretación. El modelo seguirá utilizando todos los registros de `model_data`.
+
+```{r fig.width=12, fig.height=8}
+# Prepare points for visualization
+plot_data <- model_data |>
+  group_by(room_type) |>
+  filter(price <= quantile(price, 0.95, na.rm = TRUE)) |>
+  ungroup()
+
+# Predictions using the full regression model
+pred_data <- expand.grid(
+  ocupacion_estimada = seq(0, 100, length.out = 100),
+  room_type = levels(model_data$room_type)
+)
+
+predicciones <- predict(
+  modelo,
+  newdata = pred_data,
+  interval = "confidence"
+)
+
+pred_data <- bind_cols(
+  pred_data,
+  as.data.frame(predicciones)
+)
+
+# Regression visualization
+ggplot() +
+  geom_point(
+    data = plot_data,
+    aes(x = ocupacion_estimada, y = price),
+    color = "#6B8FA8",
+    alpha = 0.20,
+    size = 0.8
+  ) +
+  geom_ribbon(
+    data = pred_data,
+    aes(
+      x = ocupacion_estimada,
+      ymin = lwr,
+      ymax = upr
+    ),
+    fill = "#E76F51",
+    alpha = 0.18
+  ) +
+  geom_line(
+    data = pred_data,
+    aes(
+      x = ocupacion_estimada,
+      y = fit
+    ),
+    color = "#D14936",
+    linewidth = 1.3
+  ) +
+  facet_wrap(
+    ~ room_type,
+    scales = "free_y",
+    ncol = 2
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 100, 25)
+  ) +
+  labs(
+    title = "Relación entre precio y días no disponibles",
+    subtitle = "Regresión lineal por tipo de alojamiento",
+    x = "Días no disponibles (%)",
+    y = "Precio por noche (€)",
+    caption = "Fuente: Inside Airbnb | Elaboración propia"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 15),
+    plot.subtitle = element_text(color = "gray40"),
+    strip.text = element_text(face = "bold", size = 11),
+    panel.grid.minor = element_blank(),
+    plot.caption = element_text(color = "gray50")
+  )
+```
+
+El gráfico permite observar la dispersión de precios de los alojamientos y la tendencia estimada mediante regresión lineal para cada modalidad. Puede verse que los apartamentos de modalidad "Entire home" no presentan una variación en su precio dependiendo de su porcentaje de disponibilidad. Sin embargo, las habitaciones privadas, las de hotel y las compartidas sí lo hacen, en especial las privadas con un descenso significativo según su disponibilidad cae.
+
+## 5. Conclusiones
+
+El mercado turístico de Lisboa presenta una notable concentración territorial y empresarial. Desde la perspectiva municipal, resulta prioritario supervisar las licencias, vigilar la concentración de alojamientos y estudiar sus posibles efectos sobre la disponibilidad de vivienda residencial.
+
+Distribución territorial: La oferta de Airbnb se concentra de forma desigual en Lisboa, especialmente en barrios como Santa Maria Maior y Misericórdia. Los precios también varían según la ubicación, el tipo de alojamiento y su capacidad.
+
+Concentración del mercado: Existe una importante presencia de grandes operadores, que gestionan más del 30% de los alojamientos, frente al 25% correspondiente a anfitriones con una única propiedad. Algunos operadores alcanzan cuotas especialmente elevadas en determinados barrios.
+
+Licencias turísticas: Aproximadamente el 96% de los alojamientos declara disponer de licencia turística. No se observan grandes diferencias de precio entre alojamientos con y sin licencia declarada, aunque resulta necesario supervisar posibles irregularidades.
+
+Ocupación y precios: La relación entre los días no disponibles y el precio es débil en las viviendas completas y más negativa en las habitaciones privadas. El modelo inicial explica únicamente el 14,2% de la variación de los precios, lo que evidencia la importancia de otros factores.
+
+
