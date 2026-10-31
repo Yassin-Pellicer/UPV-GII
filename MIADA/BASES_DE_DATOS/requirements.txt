@@ -1,0 +1,13 @@
+# Notebooks
+pandas>=2.0.0                # también sql_orm_imdb.ipynb
+sqlalchemy>=2.0.0            # sql_sqlalchemy.ipynb, sql_orm_docencia.ipynb, sql_orm_imdb.ipynb
+ipywidgets>=8.0.0            # sql_interactivo.ipynb
+jupyter>=1.0.0
+notebook>=6.5.0
+
+# Controladores de los SGBD (SQLite viene con Python)
+mysql-connector-python>=8.0.0   # MariaDB / MySQL
+psycopg2-binary>=2.9.0          # PostgreSQL (también scripts/bd/imdb_postgres_poblar.py)
+
+# Scripts
+requests>=2.28.0             # scripts/bd/imdb_sqlite_poblar.py (descarga los ficheros de IMDb)
